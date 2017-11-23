@@ -1,0 +1,13 @@
+To run the project you need to import the api :
+ 
+Click right on the project name. 
+
+Click on build path.
+
+Click configure build path.
+
+Click on add external JARs.
+
+Choose the two api's.
+
+You also need to put the folder(s) into your workspace.
