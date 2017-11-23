@@ -8,6 +8,7 @@ import java.util.Scanner;
  * This class implement @see {@link Filtering}
  * @author Orel and Samuel.
  */
+
 public class FilteringId implements Filtering {
 
 	/**
