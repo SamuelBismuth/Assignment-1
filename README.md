@@ -18,4 +18,12 @@ The software consists of three interfaces, which are its main functions: reading
 The software classes have classes of JUnit that test that there are no exceptions and that the code runs correctly.
 
 # What contains the project ?
-
+The folder API which contains the two api we used.
+The folder Assignment-1 which contains the code.
+The folder results which is the result you obtain after running the code.
+The folder Samples of folder which contains folder of csv files you need to run the project.
+A picture ClassDiagram.
+The license.
+The notice you need to read to run the project.
+The report with more explanation about the project.
+The documentation, it's a compress folder which contains the javadoc of the project.
