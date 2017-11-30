@@ -18,6 +18,7 @@ public class WriteCsv extends UserChoice implements WriteFile {
 	private PrintWriter outs;
 	private ArrayList<Wifi> array;
 	private String fileNameExport;
+	private int count;
 
 	/**
 	 * Test constructor.
@@ -25,7 +26,7 @@ public class WriteCsv extends UserChoice implements WriteFile {
 	public WriteCsv(ArrayList<Wifi> array, String test) {
 		this.array = array;
 	}
-	
+
 	/**
 	 * Constructor.
 	 * @param array.
@@ -62,11 +63,12 @@ public class WriteCsv extends UserChoice implements WriteFile {
 
 	/**
 	 * This method check if the wifi got a new time or not, then, write the data we need.
-	 * @param array,
+	 * @param array.
 	 */
 	public void checkData(ArrayList<Wifi> array) {
 		for (int i = 0; i < array.size(); i++) {
-			if (isFirst(array, i)) {
+			if (isFirst(i)) {
+				count = 0;
 				outs.print(array.get(i).getTime().getTime() + ",");
 				outs.print(array.get(i).getId() + ",");
 				outs.print(array.get(i).getPointLocation().getLatitude() + ",");
@@ -76,8 +78,10 @@ public class WriteCsv extends UserChoice implements WriteFile {
 				addNetwork(array.get(i));
 			}
 			else {
-				addNetwork(array.get(i));
-				while (i > 10 && moreThanTen(array, i)) i++;
+				if(count < 9) {
+					addNetwork(array.get(i));
+					count++;
+				}
 			}
 		}
 		createFile();
@@ -106,7 +110,7 @@ public class WriteCsv extends UserChoice implements WriteFile {
 			new OpenFile(fileNameExport); // Open the file.
 		} 
 		catch (IOException ex) {
-			System.out.println("Error writing file." + ex);
+			System.out.println("Error writing file. " + ex);
 		}
 	}
 
@@ -114,40 +118,23 @@ public class WriteCsv extends UserChoice implements WriteFile {
 
 	/**
 	 * The method allow us to know if we need a new line.
-	 * @param matrix
-	 * @param i
-	 * @return false if the time is new
-	 * @return true if not
+	 * @param matrix.
+	 * @param i.
+	 * @return false if the time is new.
+	 * @return true if not.
 	 */
-	private boolean isFirst(ArrayList<Wifi> matrix,  int i) {
+	private boolean isFirst(int i) {
 		if (i == 0) return true;
-		if(array.get(i).getTime().equals(matrix.get(i - 1).getTime())) return false;
+		if(array.get(i).getTime().equals(array.get(i - 1).getTime())) return false;
 		outs.println();
 		return true;
 	}
 
 	/**
-	 * The method controls the number of wifi networks.
-	 * @param array
-	 * @param i
-	 * @return true if there is more than 10 wifi
-	 * @return false if not
-	 */
-	private boolean moreThanTen(ArrayList<Wifi> array, int i) {
-		try {
-			if(array.get(i).getTime().equals(array.get(i - 10).getTime())) return true;
-			return false;
-		}
-		catch (IndexOutOfBoundsException ex) {
-			return false;
-		}
-	}
-
-	/**
 	 * The method counts the number of wifi in the line.
-	 * @param array
-	 * @param i
-	 * @return the number of wifi
+	 * @param array.
+	 * @param i.
+	 * @return the number of wifi.
 	 */
 	private String wifiNetworks(ArrayList<Wifi> array, int i) {
 		int count = 1;

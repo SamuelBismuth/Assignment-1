@@ -2,6 +2,7 @@ package assignment1;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * This class reads a folder, and sends all the files in the method read file.
@@ -26,7 +27,8 @@ public class ReadFolder implements Read {
 	 */
 	public ReadFolder(String folderName) {
 		read(folderName);
-		new Sort(array);
+		Collections.sort(array);
+		new WriteCsv(array);
 	}
 
 	/**

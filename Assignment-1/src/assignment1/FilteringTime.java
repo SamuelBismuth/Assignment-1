@@ -42,8 +42,8 @@ public class FilteringTime extends Verification implements Filtering {
 		System.out.println("Input the end of the period of time please : yyyy-mm-dd hh:mm:ss :");
 		String time_end = new Scanner(System.in).nextLine();
 		if (time_begining.length() == 19 && time_end.length() == 19) {
-			GregorianCalendar dateBegining = stringToDate(time_begining);
-			GregorianCalendar dateEnd = stringToDate(time_end);
+			GregorianCalendar dateBegining = stringToDate1(time_begining);
+			GregorianCalendar dateEnd = stringToDate1(time_end);
 			if (dateBegining.before(dateEnd)) {
 				new WriteKmlTime(array, dateBegining, dateEnd);
 			}

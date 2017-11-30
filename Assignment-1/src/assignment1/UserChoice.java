@@ -39,7 +39,7 @@ public class UserChoice {
 			}
 		}
 		catch (InputMismatchException ex) {
-			System.out.println("Error on the input." + ex);
+			System.out.println("Error on the input. " + ex);
 			userChoice(array);
 		}
 	}

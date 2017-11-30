@@ -84,7 +84,7 @@ public class ReadFile extends Verification implements Read {
 		Wifi wifi = null;
 		GregorianCalendar time = new GregorianCalendar();
 		try {
-			time = stringToDate(record.get("FirstSeen")); 
+			time = stringToDate1(record.get("FirstSeen")); 
 		}
 		catch (InputException ex) {
 			System.out.println("Error on the Firstseen of the csv file. " + ex);

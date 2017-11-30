@@ -8,7 +8,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * @author Orel and Samuel.
  */
 
-public class Wifi {
+public class Wifi implements Comparable<Wifi> {
 	
 	private GregorianCalendar time;
 	private String id;
@@ -94,5 +94,18 @@ public class Wifi {
 	protected void setName(String name) {
 		this.name = name;
 	}
-	
+
+
+	/**
+	 * @param wifi.
+	 */
+	public int compareTo(Wifi wifi) {
+		if (wifi.getClass().equals(Wifi.class)){
+			if (this.id.compareTo(wifi.getId()) != 0) return 0;
+			if (this.time.compareTo(wifi.getTime()) == 0)
+				return Integer.compare(this.signal, wifi.getSignal());
+			return this.time.compareTo(wifi.getTime());
+		}
+		return -1;
+	}
 }

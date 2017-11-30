@@ -30,7 +30,6 @@ public class Main {
 		String folderName = new Scanner(System.in).nextLine();
 		String folderPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + folderName;
 		new ReadFolder(folderPath);
-		
 	}
 	
 }

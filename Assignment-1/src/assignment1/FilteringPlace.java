@@ -42,11 +42,11 @@ public class FilteringPlace extends Verification implements Filtering {
 	public void filteringBy(ArrayList<Wifi> array) throws InputException {
 		try { 
 			System.out.println("Input an latitude please :");
-			double pointLatitude = new Scanner(System.in).nextDouble();
+			double pointLatitude = Double.parseDouble(new Scanner(System.in).nextLine());
 			System.out.println("Input an longitude please :");
-			double pointLongitude = new Scanner(System.in).nextDouble();
+			double pointLongitude = Double.parseDouble(new Scanner(System.in).nextLine());
 			System.out.println("Input a radius please (meters) :");
-			double radius = new Scanner(System.in).nextDouble();
+			double radius = Double.parseDouble(new Scanner(System.in).nextLine());
 			if(checkLatitude(pointLatitude) && checkLongitude(pointLongitude) && radius >= 0) {
 				EarthCoordinate pointLocation = new EarthCoordinate(pointLongitude, pointLatitude, 0.0); // Latitude 0.0 by default.
 				new WriteKmlPlace(array, pointLocation, radius);
