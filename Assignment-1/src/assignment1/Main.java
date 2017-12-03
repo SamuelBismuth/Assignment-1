@@ -1,6 +1,8 @@
 package assignment1;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -29,7 +31,22 @@ public class Main {
 		System.out.println("Input the name of the folder please :");
 		String folderName = new Scanner(System.in).nextLine();
 		String folderPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + folderName;
-		new ReadFolder(folderPath);
+		ArrayList<Wifi> array = new ArrayList<Wifi>();
+		
+		//beginning the algorithm.
+	
+		Read rd = new ReadFolder(array);
+		rd.read(folderPath);
+		Collections.sort(array);
+		new WriteCsv(array);
+		UserChoice user = new UserChoice();
+		user.userChoice(array);
 	}
+	
+//	public static void do2(,Filtering f,WriteFile w){
+//		rd.read(folderName);
+//		f.filteringBy(array);
+//		w.addNetwork(wifi);
+//	}
 	
 }

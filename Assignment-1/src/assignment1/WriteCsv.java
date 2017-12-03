@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Orel and Samuel
  */
 
-public class WriteCsv extends UserChoice implements WriteFile {
+public class WriteCsv implements WriteFile {
 
 	private FileWriter fw;
 	private PrintWriter outs;
@@ -85,7 +85,6 @@ public class WriteCsv extends UserChoice implements WriteFile {
 			}
 		}
 		createFile();
-		userChoice(array);
 	}
 
 	/**
@@ -98,7 +97,6 @@ public class WriteCsv extends UserChoice implements WriteFile {
 		outs.print(wifi.getFrequency() + ",");
 		outs.print(wifi.getSignal() + ",");
 	}
-
 
 	/**
 	 * This method create the file and open it.

@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class UserChoice {
 
+	
 	/**
 	 * This methode use a @see {@link Scanner} to recuperate the input of the user.
 	 * You need to put 1 if you want to filtering the csv by the time, 2 by the Id, 3 by the place.

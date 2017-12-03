@@ -2,7 +2,6 @@ package assignment1;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * This class reads a folder, and sends all the files in the method read file.
@@ -13,22 +12,13 @@ import java.util.Collections;
 public class ReadFolder implements Read {
 
 	private ArrayList<Wifi> array = new ArrayList<Wifi>();
-
-	/**
-	 * Test constructor.
-	 */
-	public ReadFolder(ArrayList<Wifi> array) {
-		this.array = array;
-	}
 	
 	/**
 	 * Constructor.
 	 * @param fileFolder.
 	 */
-	public ReadFolder(String folderName) {
-		read(folderName);
-		Collections.sort(array);
-		new WriteCsv(array);
+	public ReadFolder(ArrayList<Wifi> array) {
+		this.array = array;
 	}
 
 	/**
