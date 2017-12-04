@@ -42,11 +42,4 @@ public class Main {
 		UserChoice user = new UserChoice();
 		user.userChoice(array);
 	}
-	
-//	public static void do2(,Filtering f,WriteFile w){
-//		rd.read(folderName);
-//		f.filteringBy(array);
-//		w.addNetwork(wifi);
-//	}
-	
 }
