@@ -42,9 +42,12 @@ public class WriteKmlPlace extends WriteKml implements WriteFile {
 	 * @exception InputException : printStackTrace.
 	 */
 	public void checkData(ArrayList<Wifi> array) {
-		for (Wifi wifi : array)
-			if(sameMac(array, wifi) && wifi.getPointLocation().distanceTo(pointLocation) <= radius) 
+		for (Wifi wifi : array) {
+			System.out.println(wifi.getPointLocation().distanceTo(pointLocation));
+			System.out.println((radius * 1000));
+			if(sameMac(array, wifi) && wifi.getPointLocation().distanceTo(pointLocation) <= (radius * 100)) 
 				addNetwork(wifi);
+		}
 		try {
 			createFile();
 		} 
