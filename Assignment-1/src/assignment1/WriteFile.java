@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public interface WriteFile {
 
 	public void initialize();
-	abstract void checkData(ArrayList<Wifi> array);
-	public void addNetwork(Wifi wifi);
-	public void createFile() throws InputException;
+	abstract void checkData(ArrayList<Scan> array, String fileNameExport);
+	public void addNetwork(Scan scan);
+	public void createFile(String fileNameExport) throws InputException;
 	
 }

@@ -6,40 +6,38 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
-import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
- * This class reads a file and input into an array list the object @see {@link Wifi}.
+ * This class reads a file and input into an array list the object @see {@link Scan}.
  * This class use the API commons-csv @see {@link https://commons.apache.org/proper/commons-csv/}.
  * This class implements @see {@link Read} and extends @see {@link Verification}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
  */
 
-public class ReadFile extends Verification implements Read {
+public class ReadFile implements Read {
 
 	private File file;
-	private ArrayList<Wifi> array;
-	
+	private ArrayList<CsvFile> array;
+
 	/**
 	 * Test constructor.
 	 */
-	public ReadFile(File file, ArrayList<Wifi> array) {
+	public ReadFile(File file, ArrayList<CsvFile> array) {
 		this.file = file;
 		this.array = array;
 	}
-	
+
 	/**
 	 * Constructor.
 	 * @param file.
 	 * @param folderName.
 	 * @param array.
 	 */
-	protected ReadFile(File file, String folderName, ArrayList<Wifi> array) {
+	protected ReadFile(File file, String folderName, ArrayList<CsvFile> array) {
 		this.file = file;
 		this.array = array;
 		read(folderName);
@@ -57,16 +55,17 @@ public class ReadFile extends Verification implements Read {
 			Reader in = new FileReader(folderName + "/" + file.getName());
 			BufferedReader br = new BufferedReader(in);
 			String firstLine = br.readLine();
+			ArrayList<Line> arrayLine = new ArrayList<Line>();
 			if (checkTheFile(firstLine)) {
-				Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(br);	
+				Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(br);
 				for (CSVRecord record : records) 
-					if (record.get("Type").equals("WIFI") && !record.get("FirstSeen").contains("1970")) 
-						inputWifi(record, firstLine);
+						arrayLine.add(inputLine(record, getId(firstLine)));
+				array.add(new CsvFile(getId(firstLine), arrayLine));
 				in.close();
 				br.close();
 			}
 		}
-		catch(IOException | NumberFormatException ex) { // If there is an error.
+		catch(IOException ex) { // If there is an error.
 			System.out.println("Error reading file : " + ex);
 			System.exit(0);
 		}
@@ -75,36 +74,25 @@ public class ReadFile extends Verification implements Read {
 	//Private methods.
 
 	/**
-	 * The method add a new wifi into the array list.
+	 * This method create a new line.
 	 * @param record
-	 * @param firstLine
-	 * @exception NullPointerException : //do nothing.
+	 * @return {@link Line}.
 	 */
-	private void inputWifi(CSVRecord record, String firstLine) {
-		Wifi wifi = null;
-		GregorianCalendar time = new GregorianCalendar();
-		try {
-			time = stringToDate1(record.get("FirstSeen")); 
-		}
-		catch (InputException ex) {
-			System.out.println("Error on the Firstseen of the csv file. " + ex);
-		}
-		String id = getId(firstLine);
-		EarthCoordinate pointLocation = new EarthCoordinate(Double.parseDouble(record.get("CurrentLongitude")),
-				Double.parseDouble(record.get("CurrentLatitude")), 
-				Double.parseDouble(record.get("AltitudeMeters")));
-		String name = noName(record.get("SSID"));
-		String mac = record.get("MAC");
-		int frequency = channelToFrequency(Integer.parseInt(record.get("Channel")));
-		int signal = Integer.parseInt(record.get("RSSI"));
-		if (checkAltitude(pointLocation.getAltitude()) && checkMac(mac)) 
-			wifi = new Wifi(time, id, pointLocation, name, mac, frequency, signal);
-		try {
-			array.add(wifi);
-		}
-		catch (NullPointerException ex) {
-			//do nothing
-		}
+	private Line inputLine(CSVRecord record, String id) {
+		return new Line(
+				record.get("MAC"),
+				record.get("SSID"),
+				record.get("AuthMode"),
+				record.get("FirstSeen"),
+				record.get("Channel"),
+				record.get("RSSI"),
+				record.get("CurrentLatitude"),
+				record.get("CurrentLongitude"),
+				record.get("AltitudeMeters"),
+				record.get("AccuracyMeters"),
+				record.get("Type"),
+				id
+				);
 	}
 
 	/**
@@ -122,15 +110,15 @@ public class ReadFile extends Verification implements Read {
 		}
 		return null;
 	}
-
+	
 	/**
-	 * The method translate the channel to frequency.
-	 * @param channel.
-	 * @return String frequency.
+	 * The method checks the first line, by asking if contains the header "WigleWifi".
+	 * @param firstLine.
 	 */
-	private int channelToFrequency(int channel) {
-		if (channel >= 1 && channel <= 14) return 2400;
-		else return 5000;
+	protected boolean checkTheFile(String firstLine) {
+		if (firstLine.contains("WigleWifi") && firstLine.contains("display")) return true;
+		return false;
 	}
 
+	
 }

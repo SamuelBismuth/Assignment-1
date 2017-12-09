@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Scanner;
 
 import org.boehn.kmlframework.kml.Document;
 import org.boehn.kmlframework.kml.ExtendedData;
@@ -26,17 +25,7 @@ import org.boehn.kmlframework.kml.TimeStamp;
 public abstract class WriteKml implements WriteFile {
 
 	private Document document = new Document();
-	private String fileNameExport;
-
-	/**
-	 * Constructor.
-	 */
-	@SuppressWarnings("resource")
-	public WriteKml() {
-		System.out.println("Input a name for the kml file you want to create : ");
-		this.fileNameExport = new Scanner(System.in).nextLine() + ".kml";
-	}
-
+	
 	/**
 	 * Initialisation of the kml file, we need to write the links with the icons.
 	 */
@@ -49,47 +38,30 @@ public abstract class WriteKml implements WriteFile {
 	/**
 	 * abstract method, we define it in the other classes.
 	 */
-	public abstract void checkData(ArrayList<Wifi> array);
+	public abstract void checkData(ArrayList<Scan> array, String fileNameExport);
 
-	/**
-	 * 
-	 * @param array.
-	 * @param wifi.
-	 * @return false if the mac already appears.
-	 * @return true otherwise.
-	 */
-	public boolean sameMac(ArrayList<Wifi> array, Wifi wifi) {
-		try {
-			for (int i = 0; !array.get(i).equals(wifi); i++)
-				if(array.get(i).getMac().equals(wifi.getMac())) 
-					return false;
-			return true;
-		}
-		catch (IndexOutOfBoundsException ex) {
-			//There is only one wifi in the array
-			return true;
-		}
-	}
-
+	
 	/**
 	 * This method construcs the placemark.
 	 */
-	public void addNetwork(Wifi wifi) {
-		if(wifi.getName().contains("&")) wifi.setName(wifi.getName().replaceAll("&", "and"));
-		Placemark placemark = new Placemark(wifi.getName());
-		TimeStamp time = new TimeStamp(timeInput(wifi.getTime()));
-		placemark.setTimePrimitive(time);
-		placemark.setExtendedData(extendedData(wifi));
-		placemark.setLocation(wifi.getPointLocation().getLongitude(), wifi.getPointLocation().getLatitude());
-		placemark.setStyleUrl(color(wifi.getSignal()));
-		document.addFeature(placemark);
+	public void addNetwork(Scan scan) {
+		for (Wifi wifi : scan.getArrayStrongerWifi()) {
+			if (wifi.getName().contains("&")) wifi.setName(wifi.getName().replaceAll("&", "and"));
+			Placemark placemark = new Placemark(wifi.getName());
+			TimeStamp time = new TimeStamp(timeInput(scan.getTime()));
+			placemark.setTimePrimitive(time);
+			placemark.setExtendedData(extendedData(scan, wifi));
+			placemark.setLocation(scan.getPointLocation().getLongitude(), scan.getPointLocation().getLatitude());
+			placemark.setStyleUrl(color(wifi.getSignal()));
+			document.addFeature(placemark);
+		}
 	}
 
 	/**
-	 * This method crete the kml file.
+	 * This method create the kml file.
 	 * @exception IOException | {@link KmlException} : Error writing the file.
 	 */
-	public void createFile() throws InputException {
+	public void createFile(String fileNameExport) throws InputException {
 		Kml kml = new Kml();
 		try {
 			document.getFeatures().equals(null);
@@ -100,7 +72,6 @@ public abstract class WriteKml implements WriteFile {
 		kml.setFeature(document);
 		try {
 			kml.createKml(fileNameExport);
-			new OpenFile(fileNameExport);
 		}
 		catch(IOException | KmlException ex) {
 			System.out.println("Error writing the file." + ex);
@@ -108,7 +79,7 @@ public abstract class WriteKml implements WriteFile {
 	}
 
 	// unimplemented private methods.
-
+	
 	/**
 	 * This method generate the data to input a new icon.
 	 * @param color
@@ -125,16 +96,16 @@ public abstract class WriteKml implements WriteFile {
 
 	/**
 	 * This method generate the data.
-	 * @param wifi.
+	 * @param scan.
 	 * @return the extended data.
 	 */
-	private ExtendedData extendedData(Wifi wifi) {
+	private ExtendedData extendedData(Scan scan, Wifi wifi) {
 		ArrayList<SimpleData> array = new ArrayList<SimpleData>();
 		array.add(simpleData("Mac", wifi.getMac()));
 		array.add(simpleData("Frequency", Integer.toString(wifi.getFrequency())));
-		array.add(simpleData("Date", wifi.getTime().getTime().toString()));
+		array.add(simpleData("Date", scan.getTime().getTime().toString()));
 		array.add(simpleData("Signal", Integer.toString(wifi.getSignal())));
-		array.add(simpleData("Id", wifi.getId()));
+		array.add(simpleData("Id", scan.getId()));
 		ExtendedData extendedData = new ExtendedData();
 		extendedData.setSimpleDataElements(array);
 		return extendedData;
@@ -182,4 +153,5 @@ public abstract class WriteKml implements WriteFile {
 		if (data / 10 >= 1) return Integer.toString(data);
 		else return "0" + Integer.toString(data);
 	}
+	
 }

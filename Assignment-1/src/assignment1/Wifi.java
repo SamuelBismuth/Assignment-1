@@ -1,18 +1,13 @@
 package assignment1;
 
-import java.util.GregorianCalendar;
-import org.boehn.kmlframework.coordinates.EarthCoordinate;
-
 /**
  * This class defines a wifi network.
+ * This class implement the interface {@link Comparable}.
  * @author Orel and Samuel.
  */
 
 public class Wifi implements Comparable<Wifi> {
 	
-	private GregorianCalendar time;
-	private String id;
-	private EarthCoordinate pointLocation;
 	private String name;
 	private String mac;
 	private int frequency;
@@ -20,46 +15,18 @@ public class Wifi implements Comparable<Wifi> {
 	
 	/**
 	 * Constructor
-	 * @param time
-	 * @param id
-	 * @param pointLocation
 	 * @param name
 	 * @param mac
 	 * @param frequency
 	 * @param signal
 	 */
-	public Wifi(GregorianCalendar time, String id, EarthCoordinate pointLocation, String name, String mac, 
-			int frequency, int signal) {
-		this.time = time;
-		this.id = id;
-		this.pointLocation = pointLocation;
-		this.name = name;
+	public Wifi(String name, String mac, int frequency, int signal) {
+		this.name = noName(name);
 		this.mac = mac;
 		this.frequency = frequency;
 		this.signal = signal;
 	}
 	
-	/**
-	 * @return time
-	 */
-	protected GregorianCalendar getTime() {
-		return time;
-	}
-	
-	/**
-	 * @return id
-	 */
-	public String getId() {
-		return id;
-	}
-	
-	/**
-	 * @return pointLocation
-	 */
-	protected EarthCoordinate getPointLocation() {
-		return pointLocation;
-	}
-
 	/**
 	 * @return name
 	 */
@@ -95,17 +62,22 @@ public class Wifi implements Comparable<Wifi> {
 		this.name = name;
 	}
 
-
 	/**
+	 * This method compare the signal.
 	 * @param wifi.
 	 */
 	public int compareTo(Wifi wifi) {
-		if (wifi.getClass().equals(Wifi.class)){
-			if (this.id.compareTo(wifi.getId()) != 0) return 0;
-			if (this.time.compareTo(wifi.getTime()) == 0)
-				return Integer.compare(this.signal, wifi.getSignal());
-			return this.time.compareTo(wifi.getTime());
-		}
-		return -1;
+		return Integer.compare(this.signal, wifi.getSignal());
 	}
+	
+	/**
+	 * The methpod checks if the name is empty.
+	 * @param string.
+	 * @return the name of the wifi.
+	 */
+	protected String noName(String wifi) {
+		if (wifi.equals("")) return "No name";
+		return wifi;
+	}
+	
 }

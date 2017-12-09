@@ -15,25 +15,13 @@ public class WriteKmlPlace extends WriteKml implements WriteFile {
 	private double radius;
 	
 	/**
-	 * Test constructor.
-	 * @param pointLocation
-	 * @param radius
-	 */
-	public WriteKmlPlace(EarthCoordinate pointLocation, double radius) {
-		this.pointLocation = pointLocation;
-		this.radius = radius;
-	}
-	/**
 	 * Constructor.
-	 * @param array
 	 * @param pointLocation
 	 * @param radius
 	 */
-	protected WriteKmlPlace(ArrayList<Wifi> array, EarthCoordinate pointLocation, double radius) {
+	protected WriteKmlPlace(EarthCoordinate pointLocation, double radius) {
 		this.pointLocation = pointLocation;
 		this.radius = radius;
-		initialize();
-		checkData(array);
 	}
 	
 	/**
@@ -41,12 +29,13 @@ public class WriteKmlPlace extends WriteKml implements WriteFile {
 	 * @see {@link EarthCoordinate}.
 	 * @exception InputException : printStackTrace.
 	 */
-	public void checkData(ArrayList<Wifi> array) {
-		for (Wifi wifi : array) 
-			if(sameMac(array, wifi) && wifi.getPointLocation().distanceTo(pointLocation) <= (radius * 100)) 
-				addNetwork(wifi);
+	public void checkData(ArrayList<Scan> array, String fileNameExport) {
+		initialize();
+		for (Scan scan : array) 
+			if(scan.getPointLocation().distanceTo(pointLocation) <= radius) 
+				addNetwork(scan);
 		try {
-			createFile();
+			createFile(fileNameExport);
 		} 
 		catch (InputException e) {
 			System.out.println(e);

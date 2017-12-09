@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 public class ReadFolder implements Read {
 
-	private ArrayList<Wifi> array = new ArrayList<Wifi>();
+	private ArrayList<CsvFile> array = new ArrayList<CsvFile>();
 	
 	/**
 	 * Constructor.
 	 * @param fileFolder.
 	 */
-	public ReadFolder(ArrayList<Wifi> array) {
+	public ReadFolder(ArrayList<CsvFile> array) {
 		this.array = array;
 	}
 

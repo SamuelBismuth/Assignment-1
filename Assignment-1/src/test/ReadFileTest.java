@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import assignment1.ReadFile;
-import assignment1.Wifi;
+import assignment1.Scan;
 
 public class ReadFileTest {
 
@@ -17,7 +17,7 @@ public class ReadFileTest {
 		String folderName = "C:/Users/Samuel/workspace/Assignment 1/csvFiles";
 		File folder = new File(folderName);
 		File[] listOfFiles = folder.listFiles();
-		ArrayList<Wifi> array = new ArrayList<Wifi>();
+		ArrayList<Scan> array = new ArrayList<Scan>();
 		ReadFile readFile = new ReadFile(listOfFiles[1], array);
 		readFile.read(folderName);
 		assertEquals(343, array.size());

@@ -13,26 +13,17 @@ public class WriteKmlWithoutFilter extends WriteKml implements WriteFile {
 	 * Empty constructor.
 	 */
 	public WriteKmlWithoutFilter(){}
-	
-	/**
-	 * Constructor.
-	 * @param array
-	 */
-	protected WriteKmlWithoutFilter(ArrayList<Wifi> array) {
-		initialize();
-		checkData(array);
-	}
 
 	/**
 	 * The method check the data, but without filter (only the mac).
 	 * @exception InputException : printStackTrace.
 	 */
-	public void checkData(ArrayList<Wifi> array) {
-		for (Wifi wifi : array)
-			if(sameMac(array, wifi)) 
-				addNetwork(wifi);
+	public void checkData(ArrayList<Scan> array, String fileNameExport) {
+		initialize();
+		for (Scan scan : array)
+			addNetwork(scan);
 		try {
-			createFile();
+			createFile(fileNameExport);
 		} 
 		catch (InputException e) {
 			System.out.println(e);

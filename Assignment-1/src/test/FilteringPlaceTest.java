@@ -6,8 +6,9 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import assignment1.FilteringPlace;
+import assignment1.FilteringKmlPlace;
 import assignment1.InputException;
+import assignment1.Scan;
 import assignment1.Wifi;
 
 public class FilteringPlaceTest {
@@ -20,10 +21,11 @@ public class FilteringPlaceTest {
 	public void testFilteringBy() {
 		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
 		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
-		Wifi wifi = new Wifi(date, "easyId", earth, "easyName", "easyMac", 5000, -90);
-		ArrayList<Wifi> array = new ArrayList<Wifi>();
-		array.add(wifi);
-		FilteringPlace filter = new FilteringPlace();
+		Wifi wifi = new Wifi("easyName", "easyMac", 5000, -90);
+		Scan scan = new Scan(date, "easyId", earth, wifi);
+		ArrayList<Scan> array = new ArrayList<Scan>();
+		array.add(scan);
+		FilteringKmlPlace filter = new FilteringKmlPlace();
 		try {
 			filter.filteringBy(array);
 		} 

@@ -15,7 +15,7 @@ public class WriteKmlTime extends WriteKml implements WriteFile {
 	private GregorianCalendar dateEnd;
 
 	/**
-	 * Test constructor.
+	 * Constructor.
 	 * @param dateBegining
 	 * @param dateEnd
 	 */
@@ -25,29 +25,17 @@ public class WriteKmlTime extends WriteKml implements WriteFile {
 	}
 
 	/**
-	 * Constructor.
-	 * @param array
-	 * @param dateBegining
-	 * @param dateEnd
-	 */
-	protected WriteKmlTime(ArrayList<Wifi> array, GregorianCalendar dateBegining, GregorianCalendar dateEnd) {
-		this.dateBegining = dateBegining;
-		this.dateEnd = dateEnd;
-		initialize();
-		checkData(array);
-	}
-
-	/**
 	 * The method check the data, by the time.
 	 * @see {@link GregorianCalendar}.
 	 * @exception InputException : printStackTrace.
 	 */
-	public void checkData(ArrayList<Wifi> array) {
-		for (Wifi wifi : array)
-			if(wifi.getTime().after(dateBegining) && wifi.getTime().before(dateEnd) && sameMac(array, wifi)) 
-				addNetwork(wifi);
+	public void checkData(ArrayList<Scan> array, String fileNameExport) {
+		initialize();
+		for (Scan scan : array)
+			if(scan.getTime().after(dateBegining) && scan.getTime().before(dateEnd)) 
+				addNetwork(scan);
 		try {
-			createFile();
+			createFile(fileNameExport);
 		} 
 		catch (InputException e) {
 			System.out.println(e);

@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import assignment1.ReadFolder;
-import assignment1.Wifi;
+import assignment1.Scan;
 
 public class ReadFolderTest {
 
 	@Test 
 	public void testRead() {
 		String folderName = "C:/Users/Samuel/workspace/Assignment 1/csvFiles";
-		ArrayList<Wifi> array = new ArrayList<Wifi>();
+		ArrayList<Scan> array = new ArrayList<Scan>();
 		ReadFolder readFolder = new ReadFolder(array);
 		readFolder.read(folderName);
 		assertEquals(2169, array.size());

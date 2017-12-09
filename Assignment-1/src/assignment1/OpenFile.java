@@ -3,7 +3,7 @@ package assignment1;
 import java.io.IOException;
 
 /**
- * This class opens a file with the help of the console.
+ * This class opens a file with the help of the terminal.
  * This class implements @see {@link Read}.
  * @author Orel and Samuel.
  */
