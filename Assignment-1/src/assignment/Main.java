@@ -29,6 +29,7 @@ public class Main {
 	 * TODO : STRONGER MAC (WHAT ABOUT THE ALGORITHM 1) 
 	 * TODO : Generic (check the warning : is there anothere way ?)
 	 * TODO : Question about the two types of classes : is there one class (road of the algorithm) need to be static ?
+	 * TODO : stam
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
