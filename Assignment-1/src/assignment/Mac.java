@@ -3,22 +3,23 @@ package assignment;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import org.boehn.kmlframework.coordinates.EarthCoordinate;
+
 /**
- * This class represente a Mac object.
+ * This class represents a Object Mac.
  * @author Orel and Samuel.
  */
 public class Mac  {
 
 	private String macName;
 	private ArrayList<MacLocation> arrayMacLocation;
-	
+
 	/**
 	 * Constructor.
 	 * @param macName.
 	 * @param arrayMacLocationInformation.
-	 * TODO : sort the array by the signal.
 	 */
-	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
+	protected Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
 		this.macName = macName;
 		this.arrayMacLocation = arrayMacLocationInformation;
 		sort();
@@ -27,33 +28,78 @@ public class Mac  {
 	/**
 	 * @return macName.
 	 */
-	public String getMacName() {
+	protected String getMacName() {
 		return macName;
 	}
 
 	/**
 	 * @return numberOfMac.
 	 */
-	public int getNumberOfMac() {
+	protected int getNumberOfMac() {
 		return arrayMacLocation.size();
 	}
 
 	/**
-	 * @return arrayMacLocationInformation.
+	 * @return arrayMacLocation.
 	 */
-	public ArrayList<MacLocation> getArrayMacLocation() {
+	protected ArrayList<MacLocation> getArrayMacLocation() {
 		return arrayMacLocation;
 	}
-	
-	public void sort() {
-		Collections.sort(arrayMacLocation);
-	}
-	
+
 	/**
-	 * @return strongerSignal
+	 * This method calculates the sum between all pointLocation of the weights.
+	 * @return SumWeightPointLocation.
 	 */
-	public int getStrongerSignal() {
+	protected EarthCoordinate getSumWeightPointLocation() {
+		double sumWeigthLatitude = 0;
+		double sumWeigthLongitude = 0;
+		double sumWeigthAltitude = 0;
+		for(MacLocation macLocation : arrayMacLocation) {
+			sumWeigthLatitude += macLocation.getWeightPointLocation().getLatitude();
+			sumWeigthLongitude += macLocation.getWeightPointLocation().getLongitude();
+			sumWeigthAltitude += macLocation.getWeightPointLocation().getAltitude();
+		}
+		return new EarthCoordinate(
+				sumWeigthLatitude,
+				sumWeigthLongitude,
+				sumWeigthAltitude
+				);
+	}
+
+	/**
+	 * This method calculates the sum between all the signal of the weights.
+	 * @return sumWeigthSignal.
+	 */
+	protected double getSumWeightSignal() {
+		double sumWeigthSignal = 0;
+		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
+		return sumWeigthSignal;
+	}
+
+	/**
+	 * This method return the weight center.
+	 * @return weightCenter.
+	 */
+	protected EarthCoordinate getWeightCenter() {
+		return new EarthCoordinate(
+				getSumWeightPointLocation().getLatitude() / getSumWeightSignal(),
+				getSumWeightPointLocation().getLongitude() / getSumWeightSignal(),
+				getSumWeightPointLocation().getAltitude() / getSumWeightSignal()
+				);
+	}
+
+	/**
+	 * @return strongerSignal.
+	 */
+	protected int getStrongerSignal() {
 		return arrayMacLocation.get(0).getSignal();
+	}
+
+	/**
+	 * This method sort 
+	 */
+	protected void sort() {
+		Collections.sort(arrayMacLocation);
 	}
 
 }

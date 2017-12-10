@@ -2,61 +2,61 @@ package assignment;
 
 /**
  * This class defines a wifi network.
- * This class implement the interface {@link Comparable}.
+ * This class implement the interface {@link Comparable} with {@link Wifi} as a parameter.
  * @author Orel and Samuel.
  */
 
 public class Wifi implements Comparable<Wifi> {
-	
+
 	private String name;
 	private String mac;
 	private int frequency;
 	private int signal;
-	
+
 	/**
-	 * Constructor
-	 * @param name
-	 * @param mac
-	 * @param frequency
-	 * @param signal
+	 * Constructor.
+	 * @param name.
+	 * @param mac.
+	 * @param frequency.
+	 * @param signal.
 	 */
-	public Wifi(String name, String mac, int frequency, int signal) {
+	protected Wifi(String name, String mac, int frequency, int signal) {
 		this.name = noName(name);
 		this.mac = mac;
 		this.frequency = frequency;
 		this.signal = signal;
 	}
-	
+
 	/**
-	 * @return name
+	 * @return name.
 	 */
-		protected String getName() {
+	protected String getName() {
 		return name;
 	}
-	
+
 	/**
-	 * @return mac
+	 * @return mac.
 	 */
 	protected String getMac() {
 		return mac;
 	}
-	
+
 	/**
-	 * @return frequence
+	 * @return frequency.
 	 */
 	protected int getFrequency() {
 		return frequency;
 	}
 
 	/**
-	 * @return signal
+	 * @return signal.
 	 */
-	public int getSignal() {
+	protected int getSignal() {
 		return signal;
 	}
 
 	/**
-	 * @param name
+	 * @param name.
 	 */
 	protected void setName(String name) {
 		this.name = name;
@@ -69,7 +69,7 @@ public class Wifi implements Comparable<Wifi> {
 	public int compareTo(Wifi wifi) {
 		return Integer.compare(this.signal, wifi.getSignal());
 	}
-	
+
 	/**
 	 * The methpod checks if the name is empty.
 	 * @param string.
@@ -79,5 +79,5 @@ public class Wifi implements Comparable<Wifi> {
 		if (wifi.equals("")) return "No name";
 		return wifi;
 	}
-	
+
 }

@@ -2,16 +2,20 @@ package assignment;
 
 import java.util.GregorianCalendar;
 
+/**
+ * This class convert a String to a object {@link GregorianCalendar}.
+ * @author Orel and Samuel.
+ */
 public class Date {
 	
 	/**
 	 * Set the string time of the csv into the object {@link GregorianCalendar}.
-	 * Here the time appears like this : yyyy/mm/dd hh/mm/ss ex : 2017-10-27 16:13:51
+	 * Here the time appears like this : yyyy/mm/dd hh/mm/ss ex : 2017-10-27 16:13:51.
 	 * @param time.
 	 * @return {@link GregorianCalendar}.
 	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
 	 */
-	protected GregorianCalendar stringToDate1(String time) throws InputException {
+	protected GregorianCalendar stringToDate(String time) throws InputException {
 		try {
 			int year = Integer.parseInt(time.substring(0, 4));
 			int month = Integer.parseInt(time.substring(5, 7));
@@ -30,7 +34,7 @@ public class Date {
 	
 	/**
 	 * Set the string time of the csv into the object {@link GregorianCalendar}.
-	 * here the time appears like this : dd/mm/yyyy hh/mm ex : 28/10/2017 20:10
+	 * here the time appears like this : dd/mm/yyyy hh/mm ex : 28/10/2017 20:10.
 	 * @param time.
 	 * @return {@link GregorianCalendar}.
 	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.

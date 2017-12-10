@@ -42,7 +42,8 @@ public abstract class WriteKml implements WriteFile {
 
 	
 	/**
-	 * This method construcs the placemark.
+	 * This method constructs the placemark.
+	 * @param scan.
 	 */
 	public void addNetwork(Scan scan) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
@@ -59,6 +60,7 @@ public abstract class WriteKml implements WriteFile {
 
 	/**
 	 * This method create the kml file.
+	 * @param fileNameExport.
 	 * @exception IOException | {@link KmlException} : Error writing the file.
 	 */
 	public void createFile(String fileNameExport) throws InputException {
@@ -97,6 +99,7 @@ public abstract class WriteKml implements WriteFile {
 	/**
 	 * This method generate the data.
 	 * @param scan.
+	 * @param wifi.
 	 * @return the extended data.
 	 */
 	private ExtendedData extendedData(Scan scan, Wifi wifi) {

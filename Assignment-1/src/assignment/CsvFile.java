@@ -3,8 +3,8 @@ package assignment;
 import java.util.ArrayList;
 
 /**
- * This class represente a csv file.
- * @author Orel and Samuel
+ * This class represente the object csv file.
+ * @author Orel and Samuel.
  */
 public class CsvFile {
 
@@ -13,25 +13,25 @@ public class CsvFile {
 	
 	/**
 	 * Constructor.
-	 * @param id
-	 * @param line
+	 * @param id.
+	 * @param line.
 	 */
-	public CsvFile(String id, ArrayList<Line> arrayLine) {
+	protected CsvFile(String id, ArrayList<Line> arrayLine) {
 		this.id = id;
 		this.arrayLine = arrayLine;
 	}
 
 	/**
-	 * @return id
+	 * @return id.
 	 */
-	public String getId() {
+	protected String getId() {
 		return id;
 	}
 
 	/**
 	 * @return arrayLine.
 	 */
-	public ArrayList<Line> getLine() {
+	protected ArrayList<Line> getLine() {
 		return arrayLine;
 	}
 

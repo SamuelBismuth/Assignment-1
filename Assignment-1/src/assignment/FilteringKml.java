@@ -3,9 +3,9 @@ package assignment;
 import java.util.ArrayList;
 
 /**
- * This interface defines only one method : filteringBy.
- * Then, three classes implements this interface : @see {@link FilteringKmlId}, @see {@link FilteringKmlTime}, @see {@link FilteringKmlPlace} @see {@link FilteringKmlEmpty}.
- * @author Orel and Samuel
+ * This class extends @see {@link Date} and implements @see {@link Filtering}.
+ * This abstract class is extended by : @see {@link FilteringKmlEmpty}, @see {@link FilteringKmlId}, @see {@link FilteringKmlPlace} and @see {@link FilteringKmlTime}.
+ * @author Orel and Samuel.
  */
 public abstract class FilteringKml extends Date implements Filtering {
 

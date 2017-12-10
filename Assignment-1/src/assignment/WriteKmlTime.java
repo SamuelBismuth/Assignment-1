@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 /**
  * This class write the kml file with the time filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
  */
 
 public class WriteKmlTime extends WriteKml implements WriteFile {
@@ -16,8 +16,8 @@ public class WriteKmlTime extends WriteKml implements WriteFile {
 
 	/**
 	 * Constructor.
-	 * @param dateBegining
-	 * @param dateEnd
+	 * @param dateBegining.
+	 * @param dateEnd.
 	 */
 	public WriteKmlTime(GregorianCalendar dateBegining, GregorianCalendar dateEnd) {
 		this.dateBegining = dateBegining;

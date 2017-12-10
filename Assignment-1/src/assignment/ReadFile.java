@@ -11,9 +11,9 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
 /**
- * This class reads a file and input into an array list the object @see {@link Scan}.
+ * This class reads a file and input into an array list the object @see {@link CsvFile}.
  * This class use the API commons-csv @see {@link https://commons.apache.org/proper/commons-csv/}.
- * This class implements @see {@link Read} and extends @see {@link Verification}.
+ * This class implements @see {@link Read}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
  */
@@ -48,7 +48,7 @@ public class ReadFile implements Read {
 	 * We use here the API commons-csv.
 	 * Attention : tu run with the API you need to import him into the project @see README.
 	 * @param folderName.
-	 * @exception IOException | NumberFormatException : print error reading file.
+	 * @exception IOException : print error reading file.
 	 */
 	public void read(String folderName) {
 		try {
@@ -75,7 +75,8 @@ public class ReadFile implements Read {
 
 	/**
 	 * This method create a new line.
-	 * @param record
+	 * @param record.
+	 * @param id.
 	 * @return {@link Line}.
 	 */
 	private Line inputLine(CSVRecord record, String id) {
@@ -114,6 +115,8 @@ public class ReadFile implements Read {
 	/**
 	 * The method checks the first line, by asking if contains the header "WigleWifi".
 	 * @param firstLine.
+	 * @return true if the file is a WigleWifi file.
+	 * @return false if it's not.
 	 */
 	protected boolean checkTheFile(String firstLine) {
 		if (firstLine.contains("WigleWifi") && firstLine.contains("display")) return true;

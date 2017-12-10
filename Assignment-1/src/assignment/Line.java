@@ -1,8 +1,9 @@
 package assignment;
 
 /**
- * This class represente a non modificated line from the csv file brut.
- * @author Orel and Samuel
+ * This class implements @see {@link Comparable} with @see {@link Line} as a parameter.
+ * This class represents a non modificated object line from the csv file brut.
+ * @author Orel and Samuel.
  */
 public class Line implements Comparable<Line> {
 	
@@ -33,7 +34,7 @@ public class Line implements Comparable<Line> {
 	 * @param accuracyMeters
 	 * @param type
 	 */
-	public Line(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
+	protected Line(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
 			String currentLatitude, String currentLongitude, String altitudeMeters, String accuracyMeters,
 			String type, String id) {
 		this.mac = mac;
@@ -53,84 +54,84 @@ public class Line implements Comparable<Line> {
 	/** 
 	 * @return mac
 	 */
-	public String getMac() {
+	protected String getMac() {
 		return mac;
 	}
 
 	/** 
 	 * @return ssid
 	 */
-	public String getSsid() {
+	protected String getSsid() {
 		return ssid;
 	}
 
 	/** 
 	 * @return authMode
 	 */
-	public String getAuthMode() {
+	protected String getAuthMode() {
 		return authMode;
 	}
 
 	/** 
 	 * @return firstseen
 	 */
-	public String getFirstseen() {
+	protected String getFirstseen() {
 		return firstseen;
 	}
 
 	/** 
 	 * @return channel
 	 */
-	public String getChannel() {
+	protected String getChannel() {
 		return channel;
 	}
 
 	/** 
 	 * @return rssi
 	 */
-	public String getRssi() {
+	protected String getRssi() {
 		return rssi;
 	}
 
 	/** 
 	 * @return currentLatitude
 	 */
-	public String getCurrentLatitude() {
+	protected String getCurrentLatitude() {
 		return currentLatitude;
 	}
 
 	/** 
 	 * @return currentLongitude
 	 */
-	public String getCurrentLongitude() {
+	protected String getCurrentLongitude() {
 		return currentLongitude;
 	}
 
 	/** 
 	 * @return altitudeMeters
 	 */
-	public String getAltitudeMeters() {
+	protected String getAltitudeMeters() {
 		return altitudeMeters;
 	}
 
 	/** 
 	 * @return accuracyMeters
 	 */
-	public String getAccuracyMeters() {
+	protected String getAccuracyMeters() {
 		return accuracyMeters;
 	}
 
 	/** 
 	 * @return type
 	 */
-	public String getType() {
+	protected String getType() {
 		return type;
 	}
 	
 	/**
 	 * @return id
 	 */
-	public String getId() {
+	protected String getId() {
 		return id;
 	}
 	
@@ -142,5 +143,4 @@ public class Line implements Comparable<Line> {
 		return this.mac.compareTo(line.getMac());
 	}
 
-	
 }

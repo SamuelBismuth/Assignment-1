@@ -7,8 +7,9 @@ import java.util.Scanner;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
+ * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
  * This class filtering the data by the place : only the sacn in the area that the user choosed will appear in the kml place.
- * This class implement @see {@link FilteringKml}, extends @see {@link Verification} to the use of some methods.
+ * TODO : JUNIT on the radius.
  * @author Orel and Samuel.
  */
 public class FilteringKmlPlace extends FilteringKml implements Filtering {

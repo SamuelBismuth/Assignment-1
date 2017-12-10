@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * This class write the kml file without filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
  */
 public class WriteKmlWithoutFilter extends WriteKml implements WriteFile {
 
@@ -15,7 +15,7 @@ public class WriteKmlWithoutFilter extends WriteKml implements WriteFile {
 	public WriteKmlWithoutFilter(){}
 
 	/**
-	 * The method check the data, but without filter (only the mac).
+	 * The method check the data, but without filter.
 	 * @exception InputException : printStackTrace.
 	 */
 	public void checkData(ArrayList<Scan> array, String fileNameExport) {

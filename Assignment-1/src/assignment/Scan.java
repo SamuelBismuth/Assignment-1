@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
- * This class define a scan.
+ * This class define an object scan.
  * @author Orel and Samuel.
  */
 public class Scan implements ObjectTest {
@@ -24,57 +24,57 @@ public class Scan implements ObjectTest {
 	 * @param pointLocation.
 	 * @param wifi.
 	 */
-	public Scan(GregorianCalendar time, String id, EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
+	protected Scan(GregorianCalendar time, String id, EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
 		this.time = time;
 		this.id = id;
 		this.pointLocation = pointLocation;
 		this.arrayWifi = arrayWifi;
-		Collections.sort(arrayWifi);
+		sort();
 	}
 
 	/**
 	 * @return time.
 	 */
-	public GregorianCalendar getTime() {
+	protected GregorianCalendar getTime() {
 		return time;
 	}
 
 	/**
 	 * @return id.
 	 */
-	public String getId() {
+	protected String getId() {
 		return id;
 	}
 	
 	/**
 	 * @return pointLocation.
 	 */
-	public EarthCoordinate getPointLocation() {
+	protected EarthCoordinate getPointLocation() {
 		return pointLocation;
 	}
 	
 	/**
 	 * @return arrayWifi.
 	 */
-	public ArrayList<Wifi> getArrayWifi() {
+	protected ArrayList<Wifi> getArrayWifi() {
 		return arrayWifi;
 	}
 	
 	/**
 	 * @return wifiNetworks.
 	 */
-	public int getWifiNetworks() {
+	protected int getWifiNetworks() {
 		return arrayWifi.size();
 	}
 	
-	public void sort() {
+	protected void sort() {
 		Collections.sort(arrayWifi);
 	}
 	
 	/**
 	 * @return arrayStrongerWifi.
 	 */
-	public ArrayList<Wifi> getArrayStrongerWifi() {
+	protected ArrayList<Wifi> getArrayStrongerWifi() {
 		if (getWifiNetworks() <= 10) return arrayWifi;
 		else {
 			ArrayList<Wifi> arrayStrongerWifi = new ArrayList<Wifi>();
@@ -88,9 +88,10 @@ public class Scan implements ObjectTest {
 	 * @return true if contains the same mac.
 	 * @return false if not contains the same mac.
 	 */
-	public boolean containsSameMac(String mac) {
+	protected boolean containsSameMac(String mac) {
 		for (Wifi wifi : arrayWifi) 
-			if (wifi.getName().equals(mac)) return true;
+			if (wifi.getName().equals(mac))
+				return true;
 		return false;
 	}
 }

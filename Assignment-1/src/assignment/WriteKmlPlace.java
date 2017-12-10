@@ -7,7 +7,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 /**
  * This class write the kml file with the place filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
+ * TODO : check the radius wit JUNIT.
  */
 public class WriteKmlPlace extends WriteKml implements WriteFile {
 
@@ -16,8 +17,8 @@ public class WriteKmlPlace extends WriteKml implements WriteFile {
 	
 	/**
 	 * Constructor.
-	 * @param pointLocation
-	 * @param radius
+	 * @param pointLocation.
+	 * @param radius.
 	 */
 	protected WriteKmlPlace(EarthCoordinate pointLocation, double radius) {
 		this.pointLocation = pointLocation;

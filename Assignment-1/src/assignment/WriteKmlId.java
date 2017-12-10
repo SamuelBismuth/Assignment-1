@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * This class write the kml file with the id filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
- * @author Orel @author Samuel
+ * @author Orel @author Samuel.
  */
 public class WriteKmlId extends WriteKml implements WriteFile {
 
@@ -22,6 +22,7 @@ public class WriteKmlId extends WriteKml implements WriteFile {
 	/**
 	 * The method check the data, by the id.
 	 * @param array.
+	 * @param fileNameExport.
 	 * @exception InputException : printStackTrace.
 	 */
 	public void checkData(ArrayList<Scan> array, String fileNameExport) {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * This class writes the csv file.
  * This class implement @see {@link WriteFile}.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
  */
 
 public class WriteCsv implements WriteFile {
@@ -45,6 +45,8 @@ public class WriteCsv implements WriteFile {
 	/**
 	 * This method check if the scan got a new time or not, then, write the data we need.
 	 * @param array.
+	 * @param fileNameExport.
+	 * @exception Exception e : print stack trace.
 	 */
 	public void checkData(ArrayList<Scan> array, String fileNameExport) {
 		initialize();
@@ -67,7 +69,7 @@ public class WriteCsv implements WriteFile {
 
 	/**
 	 * This method write the data we need.
-	 * @param wifi.
+	 * @param scan.
 	 */
 	public void addNetwork(Scan scan) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
@@ -80,7 +82,7 @@ public class WriteCsv implements WriteFile {
 	}
 
 	/**
-	 * This method close the methods.
+	 * This method close the methods @see {@link FileWriter} and @see {@link PrintWriter}.
 	 */
 	public void createFile(String fileNameExport) {
 		try {

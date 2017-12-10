@@ -5,6 +5,11 @@ import java.util.Collections;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
+/**
+ * This class sort the csv file by the mac.
+ * This class extends @see {@link SortCsv}.
+ * @author Orel and Samuel
+ */
 public class SortCsvMac extends SortCsv {
 
 	/**
@@ -12,7 +17,11 @@ public class SortCsvMac extends SortCsv {
 	 */
 	public SortCsvMac() {}
 
-	@Override
+	/**
+	 * This method transforms the csvFiles into a list of {@link Mac} object.
+	 * @param arrayCsv.
+	 * @return arrayMac.
+	 */
 	public ArrayList<Mac> sortBy(ArrayList<CsvFile> arrayCsv) {
 		ArrayList<Mac> array = new ArrayList<Mac>();
 		for (CsvFile csvFile : arrayCsv) Collections.sort(csvFile.getLine());
@@ -28,11 +37,22 @@ public class SortCsvMac extends SortCsv {
 		return array;
 	}
 
+	/**
+	 * @param mac.
+	 * @param object.
+	 * @return true if needs to create a new object.
+	 * @return false if doesn't need. 
+	 */
 	public boolean needToCreateObject(String mac, Object object) {
 		Mac macLocation = (Mac) object;
 		return macLocation.getMacName().equals(mac);
 	}
 
+	/**
+	 * This method create a new {@link Mac}.
+	 * @param line.
+	 * @return {@link Mac}.
+	 */
 	public Object addMotherObject(Line line) {
 		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
 		if (line.getType().equals("WIFI")) array.add((MacLocation) addObject(line));
@@ -41,6 +61,11 @@ public class SortCsvMac extends SortCsv {
 				array);
 	}
 
+	/**
+	 * This method create a new {@link MacLocation}.
+	 * @param line.
+	 * @return {@link MacLocation}.
+	 */
 	public Object addObject(Line line) {
 		return new MacLocation(
 				new EarthCoordinate(Double.parseDouble(line.getCurrentLongitude()),

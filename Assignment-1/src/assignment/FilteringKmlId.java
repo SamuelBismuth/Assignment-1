@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
  * This class filtering the data by the id : only the scan with the id that the user choosed will appear in the kml place.
- * This class implement @see {@link FilteringKml}
  * @author Orel and Samuel.
  */
 
@@ -13,7 +13,7 @@ public class FilteringKmlId extends FilteringKml implements Filtering {
 
 	/**
 	 * This method ask the user to input the id.
-	 * @param array.
+	 * @param arrayObject.
 	 * @return {@link WriteKmlId}.
 	 */
 	@SuppressWarnings("resource")

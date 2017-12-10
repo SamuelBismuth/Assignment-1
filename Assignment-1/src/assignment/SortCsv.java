@@ -3,8 +3,9 @@ package assignment;
 import java.util.ArrayList;
 
 /**
- * This interface defines only one method : filteringBy.
+ * This abstract class defines only for methods : sortBy, needToCreateObject, addMotherObject, addObject.
  * Then, two classes implements this interface : @see {@link SortCsvMac}, @see {@link SortCsvTime}.
+ * This method extends @see {@link Date}.
  * @author Orel and Samuel
  */
 public abstract class SortCsv extends Date {

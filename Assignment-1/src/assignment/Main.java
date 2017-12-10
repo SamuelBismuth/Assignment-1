@@ -23,11 +23,12 @@ public class Main {
 	 * And also import the two api's.
 	 * @See NOTICE for more details.
 	 * @param args.
-	 * TODO : For threads, one for the csv sorted, one for the kml, and two for the two algorithm.
+	 * TODO : For threads, one for the csv sorted, one for the kml, and two for the two algorithm. (in function of the algorithms).
 	 * TODO : junit
 	 * TODO : check radius 
-	 * TODO : STRONGER MAC 
-	 * TODO : Generic
+	 * TODO : STRONGER MAC (WHAT ABOUT THE ALGORITHM 1) 
+	 * TODO : Generic (check the warning : is there anothere way ?)
+	 * TODO : Question about the two types of classes : is there one class (road of the algorithm) need to be static ?
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

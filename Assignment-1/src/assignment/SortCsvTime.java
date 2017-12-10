@@ -6,8 +6,9 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
- * This class filtering the csv file with the data needed, and allow maximum ten networks.
- * @author Orel and Samuel
+ * This class sort the csv files by the time.
+ * This class extends @see {@link SortCsv}.
+ * @author Orel and Samuel.
  */
 public class SortCsvTime extends SortCsv {
 
@@ -45,7 +46,7 @@ public class SortCsvTime extends SortCsv {
 		Scan scan = (Scan) object;
 		GregorianCalendar time = new GregorianCalendar();
 		try {
-			time = stringToDate1(timeString); 
+			time = stringToDate(timeString); 
 		}
 		catch (InputException ex) {
 			System.out.println("Error on the Firstseen of the csv file. " + ex);
@@ -63,7 +64,7 @@ public class SortCsvTime extends SortCsv {
 	public Object addMotherObject(Line line) {
 		GregorianCalendar time = new GregorianCalendar();
 		try {
-			time = stringToDate1(line.getFirstseen()); 
+			time = stringToDate(line.getFirstseen()); 
 		}
 		catch (InputException ex) {
 			System.out.println("Error on the Firstseen of the csv file. " + ex);

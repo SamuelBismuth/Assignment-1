@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * This class reads a folder, and sends all the files in the method read file.
  * This class implements @see {@link Read}.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
  */
 
 public class ReadFolder implements Read {

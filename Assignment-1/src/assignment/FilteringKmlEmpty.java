@@ -3,7 +3,8 @@ package assignment;
 import java.util.ArrayList;
 
 /**
- * This class implement @see {@link FilteringKml}.
+ * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
+ * This class do not filter anything.
  * @author Orel and Samuel.
  */
 public class FilteringKmlEmpty extends FilteringKml implements Filtering{

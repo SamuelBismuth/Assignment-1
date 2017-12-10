@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
+ * This class implements @see {@link UserChoice}.
  * This class ask the user how he wants to organize the kml file.
  * By the time, the place or the id...
  * @author Orel and Samuel.
