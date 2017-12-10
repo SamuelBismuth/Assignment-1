@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * Then, three classes implements this interface : @see {@link FilteringKmlId}, @see {@link FilteringKmlTime}, @see {@link FilteringKmlPlace} @see {@link FilteringKmlEmpty}.
  * @author Orel and Samuel
  */
-public abstract class FilteringKml extends Date implements Filtering{
+public abstract class FilteringKml extends Date implements Filtering {
 
-	public abstract WriteFile filteringBy(ArrayList<Scan> array) throws InputException;
+	public abstract WriteFile filteringBy(ArrayList<?> array) throws InputException;
 
 	/**
 	 * @param latitude.

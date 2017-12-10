@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public interface Filtering {
 
-	public WriteFile filteringBy(ArrayList<Scan> array) throws InputException;
+	public WriteFile filteringBy(ArrayList<?> array) throws InputException;
 	
 }

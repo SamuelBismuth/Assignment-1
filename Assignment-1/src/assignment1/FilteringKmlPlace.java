@@ -20,7 +20,8 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering {
 	 * @exception InputMismatchException : Error on the input, try again.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<Scan> array) throws InputException {
+	public WriteFile filteringBy(ArrayList<?> arrayObject) throws InputException {
+		ArrayList<Scan> array = (ArrayList<Scan>) arrayObject;
 		try { 
 			System.out.println("Input an latitude please :");
 			double pointLatitude = Double.parseDouble(new Scanner(System.in).nextLine());

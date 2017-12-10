@@ -12,8 +12,8 @@ public class FilteringKmlEmpty extends FilteringKml implements Filtering{
 	 * @param array.
 	 * @return {@link WriteKmlWithoutFilter}.
 	 */
-	public WriteFile filteringBy(ArrayList<Scan> array) {
+	public WriteFile filteringBy(ArrayList<?> array) {
 		return new WriteKmlWithoutFilter();
 	}
-	
+
 }

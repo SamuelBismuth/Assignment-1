@@ -17,7 +17,8 @@ public class FilteringKmlTime extends FilteringKml implements Filtering {
 	 * @return {@link WriteKmlTime}.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<Scan> array) throws InputException{
+	public WriteFile filteringBy(ArrayList<?> arrayObject) throws InputException {
+		ArrayList<Scan> array = (ArrayList<Scan>) arrayObject;
 		System.out.println("Input the beginning of the period of time please : yyyy-mm-dd hh:mm:ss :");
 		String time_begining = new Scanner(System.in).nextLine();
 		System.out.println("Input the end of the period of time please : yyyy-mm-dd hh:mm:ss :");

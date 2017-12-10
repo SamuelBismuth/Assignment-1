@@ -7,7 +7,7 @@ package assignment1;
  */
 public interface UserChoice {
 
-	public FilteringKml userChoice();
+	public Filtering userChoice() throws InputException;
 	
 }
 

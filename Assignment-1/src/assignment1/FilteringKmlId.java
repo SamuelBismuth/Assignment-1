@@ -17,7 +17,8 @@ public class FilteringKmlId extends FilteringKml implements Filtering {
 	 * @return {@link WriteKmlId}.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<Scan> array) throws InputException {
+	public WriteFile filteringBy(ArrayList<?> arrayObject) throws InputException {
+		ArrayList<Scan> array = (ArrayList<Scan>) arrayObject;
 		System.out.println("Input an Id please :");
 		String id = new Scanner(System.in).nextLine();
 		for(Scan scan : array) 

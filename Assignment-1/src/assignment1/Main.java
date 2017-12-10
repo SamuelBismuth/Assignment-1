@@ -25,53 +25,100 @@ public class Main {
 	 * @param args.
 	 * TODO : For threads, one for the csv sorted, one for the kml, and two for the two algorithm.
 	 * TODO : junit
-	 * TODO : check radius + MAC 
+	 * TODO : check radius 
+	 * TODO : STRONGER MAC 
+	 * TODO : Generic
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+
+		//Get path
 		String folderPathWorkspace = new File(".").getAbsolutePath();
 		System.out.println("Input the name of the folder please :");
 		String folderName = new Scanner(System.in).nextLine();
 		String folderPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + folderName;
-		ArrayList<CsvFile> arrayCsv = new ArrayList<CsvFile>();
-		
-		//Beginning the algorithm.
 
-		//Read
+		//Initialize the array
+		ArrayList<CsvFile> arrayCsv = new ArrayList<CsvFile>();
+		ArrayList<Scan> arrayScan =  new ArrayList<Scan>();
+		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
+
+		//  ==============================
+		//  = BEGINNING OF THE ALGORITHM =
+		//  ==============================
+
+		///////////////////////////////////////
+		//First part : Writting the csv file.//
+		///////////////////////////////////////
+
+		//Read the csv file
 		Read rd = new ReadFolder(arrayCsv);
 		rd.read(folderPath);
-		
-		//Filtering Csv
-		FilteringCsvTime filterTimecsv = new FilteringCsvTime();
-		ArrayList<Scan> array = (ArrayList<Scan>) filterTimecsv.filteringBy(arrayCsv).clone();
-		FilteringCsvMac filterMaccsv = new FilteringCsvMac();
-		ArrayList<Mac> arrayMac = (ArrayList<Mac>) filterMaccsv.filteringBy(arrayCsv).clone();
-		
+
+		//Filtering Csv (time)
+		SortCsvTime filterTimecsv = new SortCsvTime();
+		arrayScan = filterTimecsv.sortBy(arrayCsv);
+
 		//Write Csv
 		System.out.println("Input a name for the csv file you want to create : ");
 		String fileNameCsvExport = new Scanner(System.in).nextLine() + ".csv";
 		WriteFile write = new WriteCsv(fileNameCsvExport);
-		write.checkData(array, fileNameCsvExport);
+		write.checkData(arrayScan, fileNameCsvExport);
+
 		new OpenFile(fileNameCsvExport); // Open the file.
 
+		///////////////////////////////////////
+		//Second part : Writting the kml file.//
+		///////////////////////////////////////
 
-		//Choice of the user kml.
-		UserChoice user = new UserChoiceKml();
-		FilteringKml filter =  user.userChoice();
-		
-		//Filtering kml
+		//Choice of the user (kml).
+		UserChoice choice = new UserChoiceKml();
+		Filtering filter = null;
 		try {
-			write =  filter.filteringBy(array);
+			filter = choice.userChoice();
+		} catch (InputException e2) {
+			e2.printStackTrace();
+		}
+
+		//Filtering csv (kml)
+		try {
+			write =  filter.filteringBy(arrayScan);
 		} 
 		catch (InputException e) {
 			e.printStackTrace();
 		}
-		
+
 		//Write kml
 		System.out.println("Input a name for the kml file you want to create : ");
 		String fileNameKmlExport = new Scanner(System.in).nextLine() + ".kml";
-		write.checkData(array, fileNameKmlExport);
-		new OpenFile(fileNameKmlExport); 
+		write.checkData(arrayScan, fileNameKmlExport);
+
+		new OpenFile(fileNameKmlExport); // Open the file.
+
+		/////////////////////////////
+		//Third part : Algorithm 1.//
+		/////////////////////////////
+		
+		//Filtering csv
+		SortCsvMac filterMaccsv = new SortCsvMac();
+		arrayMac = filterMaccsv.sortBy(arrayCsv);
+		
+		//Choice of the user (mac).
+		choice = new UserChoiceMac(arrayMac);
+		try {
+			filter = choice.userChoice();
+		} 
+		catch (InputException e1) {
+			e1.printStackTrace();
+		}
+		
+		//Filtering csv (kml)
+		try {
+			filter.filteringBy(arrayMac);
+		} 
+		catch (InputException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 }

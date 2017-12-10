@@ -57,4 +57,11 @@ public class MacLocation implements Comparable<MacLocation> {
 		return Integer.compare(this.signal, macLocationInformation.getSignal());
 	}
 
+	/**
+	 * toString
+	 */
+	public String toString() {
+		return "Weight point location =" + getWeightPointLocation().toString() + ", weight signal=" + getWeigthSignal();
+	}
+
 }

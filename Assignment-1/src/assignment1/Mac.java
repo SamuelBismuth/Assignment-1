@@ -10,7 +10,7 @@ import java.util.Collections;
 public class Mac  {
 
 	private String macName;
-	private ArrayList<MacLocation> arrayMacLocationInformation;
+	private ArrayList<MacLocation> arrayMacLocation;
 	
 	/**
 	 * Constructor.
@@ -20,7 +20,7 @@ public class Mac  {
 	 */
 	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
 		this.macName = macName;
-		this.arrayMacLocationInformation = arrayMacLocationInformation;
+		this.arrayMacLocation = arrayMacLocationInformation;
 		sort();
 	}
 
@@ -35,25 +35,25 @@ public class Mac  {
 	 * @return numberOfMac.
 	 */
 	public int getNumberOfMac() {
-		return arrayMacLocationInformation.size();
+		return arrayMacLocation.size();
 	}
 
 	/**
 	 * @return arrayMacLocationInformation.
 	 */
-	public ArrayList<MacLocation> getArrayMacLocationInformation() {
-		return arrayMacLocationInformation;
+	public ArrayList<MacLocation> getArrayMacLocation() {
+		return arrayMacLocation;
 	}
 	
 	public void sort() {
-		Collections.sort(arrayMacLocationInformation);
+		Collections.sort(arrayMacLocation);
 	}
 	
 	/**
 	 * @return strongerSignal
 	 */
 	public int getStrongerSignal() {
-		return arrayMacLocationInformation.get(0).getSignal();
+		return arrayMacLocation.get(0).getSignal();
 	}
 
 }

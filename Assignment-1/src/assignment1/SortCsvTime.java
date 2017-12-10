@@ -9,19 +9,19 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * This class filtering the csv file with the data needed, and allow maximum ten networks.
  * @author Orel and Samuel
  */
-public class FilteringCsvTime extends FilteringCsv {
+public class SortCsvTime extends SortCsv {
 
 	/**
 	 * Empty constructor.
 	 */
-	public FilteringCsvTime() {}
+	public SortCsvTime() {}
 
 	/**
 	 * This method fulfill the array of scan.
 	 * @param arrayCsv
 	 * @return array
 	 */
-	public ArrayList<Object> filteringBy(ArrayList<CsvFile> arrayCsv) {
+	public ArrayList<Scan> sortBy(ArrayList<CsvFile> arrayCsv) {
 		ArrayList<Scan> array = new ArrayList<Scan>();
 		for (CsvFile csvFile : arrayCsv) {
 			for (Line line : csvFile.getLine()) { 
@@ -31,8 +31,8 @@ public class FilteringCsvTime extends FilteringCsv {
 				else if (!line.getFirstseen().contains("1970") && line.getType().equals("WIFI")) array.add((Scan) addMotherObject(line));
 			}
 		}
-		for (Scan scan : array) scan.sort();
-		return (ArrayList<Object>) array.clone();
+		for (Scan scan: array) scan.sort();
+		return array;
 	}
 
 	/**
