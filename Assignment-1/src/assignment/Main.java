@@ -29,6 +29,7 @@ public class Main {
 	 * TODO : STRONGER MAC (WHAT ABOUT THE ALGORITHM 1) 
 	 * TODO : change all the signal (higher = stringer)
 	 * TODO : matala 1, only the powerful mac !
+	 * TODO : algo 2
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
