@@ -25,7 +25,7 @@ public class Mac  {
 	 * @param macName.
 	 * @param arrayMacLocationInformation.
 	 */
-	protected Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
+	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
 		this.macName = macName;
 		this.arrayMacLocation = arrayMacLocationInformation;
 		this.used = false;
@@ -35,21 +35,21 @@ public class Mac  {
 	/**
 	 * @return macName.
 	 */
-	protected String getMacName() {
+	public String getMacName() {//p
 		return macName;
 	}
 
 	/**
 	 * @return numberOfMac.
 	 */
-	protected int getNumberOfMac() {
+	public int getNumberOfMac() {//p
 		return arrayMacLocation.size();
 	}
 
 	/**
 	 * @return arrayMacLocation.
 	 */
-	protected ArrayList<MacLocation> getArrayMacLocation() {
+	public ArrayList<MacLocation> getArrayMacLocation() {//p
 		return arrayMacLocation;
 	}
 
@@ -57,7 +57,7 @@ public class Mac  {
 	 * This method calculates the sum between all pointLocation of the weights.
 	 * @return SumWeightPointLocation.
 	 */
-	protected EarthCoordinate getSumWeightPointLocation() {
+	public EarthCoordinate getSumWeightPointLocation() {//p
 		double sumWeigthLatitude = 0;
 		double sumWeigthLongitude = 0;
 		double sumWeigthAltitude = 0;
@@ -77,7 +77,7 @@ public class Mac  {
 	 * This method calculates the sum between all the signal of the weights.
 	 * @return sumWeigthSignal.
 	 */
-	protected double getSumWeightSignal() {
+	public double getSumWeightSignal() {//p
 		double sumWeigthSignal = 0;
 		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
 		return sumWeigthSignal;
@@ -87,7 +87,7 @@ public class Mac  {
 	 * This method return the weight center.
 	 * @return weightCenter.
 	 */
-	protected EarthCoordinate getWeightCenter() {
+	public EarthCoordinate getWeightCenter() {//p
 		return new EarthCoordinate(
 				getSumWeightPointLocation().getLatitude() / getSumWeightSignal(),
 				getSumWeightPointLocation().getLongitude() / getSumWeightSignal(),
@@ -98,7 +98,7 @@ public class Mac  {
 	/**
 	 * @return strongerSignal.
 	 */
-	protected int getStrongerSignal() {
+	public int getStrongerSignal() {//p
 		return arrayMacLocation.get(0).getSignal();
 	}
 	
@@ -119,7 +119,7 @@ public class Mac  {
 	/**
 	 * This method sort 
 	 */
-	protected void sort() {
+	public void sort() {
 		Collections.sort(arrayMacLocation);
 	}
 
