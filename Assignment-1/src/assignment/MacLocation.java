@@ -16,7 +16,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * @param pointLocation.
 	 * @param signal.
 	 */
-	protected MacLocation(EarthCoordinate pointLocation, int signal) {
+	public MacLocation(EarthCoordinate pointLocation, int signal) {
 		this.pointLocation = pointLocation;
 		this.signal = signal;
 	}
@@ -24,17 +24,17 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return pointLocation.
 	 */
-	protected EarthCoordinate getPointLocation() {
+	public EarthCoordinate getPointLocation() {//p
 		return pointLocation;
 	}
 
 	/**
 	 * @return weightPointLocation = weightSignal * pointLocation.
 	 */
-	protected EarthCoordinate getWeightPointLocation() {
+	public EarthCoordinate getWeightPointLocation() {//p
 		return new EarthCoordinate(
-				this.getWeigthSignal() * pointLocation.getLatitude(),
 				this.getWeigthSignal() * pointLocation.getLongitude(),
+				this.getWeigthSignal() * pointLocation.getLatitude(),
 				this.getWeigthSignal() * pointLocation.getAltitude()
 				);
 	}
@@ -42,14 +42,14 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return signal.
 	 */
-	protected int getSignal() {
+	public int getSignal() {//p
 		return signal;
 	}
 
 	/**
 	 * @return weightSignal = (1 / signal * signal).
 	 */
-	protected double getWeigthSignal() {
+	public double getWeigthSignal() {//p
 		return (1 / Math.pow(this.signal, 2));
 	}
 
@@ -57,7 +57,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * This method compare the signal.
 	 * @param macLocationInformation.
 	 */
-	public int compareTo(MacLocation macLocationInformation) {
+	public int compareTo(MacLocation macLocationInformation) {//p
 		return Integer.compare(this.signal, macLocationInformation.getSignal());
 	}
 
@@ -65,7 +65,8 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * toString.
 	 */
 	public String toString() {
-		return "Weight point location =" + getWeightPointLocation().toString() + ", weight signal=" + getWeigthSignal();
+		return "Signal =" + getSignal() + ", Weight signal=" + getWeigthSignal() +
+			   "Point location =" + getPointLocation().toString() + "Weight point location =" + getWeightPointLocation().toString();
 	}
 
 }
