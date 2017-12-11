@@ -20,7 +20,7 @@ public abstract class SortCsv extends Date {
 	 * @param channel.
 	 * @return String frequency.
 	 */
-	protected int channelToFrequency(int channel) {
+	protected static int channelToFrequency(int channel) {
 		if (channel >= 1 && channel <= 14) return 2400;
 		else return 5000;
 	}

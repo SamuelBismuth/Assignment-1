@@ -15,7 +15,7 @@ public class Date {
 	 * @return {@link GregorianCalendar}.
 	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
 	 */
-	protected GregorianCalendar stringToDate(String time) throws InputException {
+	static protected GregorianCalendar stringToDate(String time) throws InputException {
 		try {
 			int year = Integer.parseInt(time.substring(0, 4));
 			int month = Integer.parseInt(time.substring(5, 7));
@@ -39,7 +39,7 @@ public class Date {
 	 * @return {@link GregorianCalendar}.
 	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
 	 */
-	protected GregorianCalendar stringToDate2(String time) throws InputException {
+	static protected GregorianCalendar stringToDate2(String time) throws InputException {
 		try {
 			int year = Integer.parseInt(time.substring(6, 10));
 			int month = Integer.parseInt(time.substring(3, 5));
@@ -64,7 +64,7 @@ public class Date {
 	 * @return true if the date's format correct.
 	 * @return false if not.
 	 */
-	protected boolean checkTime(int time, int begining, int end) {
+	static protected boolean checkTime(int time, int begining, int end) {
 		if (time >= begining && time <= end) return true;
 		return false;
 	}

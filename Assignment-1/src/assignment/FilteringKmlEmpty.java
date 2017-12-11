@@ -7,14 +7,14 @@ import java.util.ArrayList;
  * This class do not filter anything.
  * @author Orel and Samuel.
  */
-public class FilteringKmlEmpty extends FilteringKml implements Filtering{
+public class FilteringKmlEmpty extends FilteringKml implements Filtering <Scan>{
 	 
 	/**
 	 * @param array.
 	 * @return {@link WriteKmlWithoutFilter}.
 	 */
-	public WriteFile filteringBy(ArrayList<?> array) {
-		return new WriteKmlWithoutFilter();
+	public WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) {
+		return new WriteKmlWithoutFilter(arrayMac);
 	}
 
 }

@@ -12,7 +12,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * TODO : JUNIT on the radius.
  * @author Orel and Samuel.
  */
-public class FilteringKmlPlace extends FilteringKml implements Filtering {
+public class FilteringKmlPlace extends FilteringKml implements Filtering <Scan>{
 
 	/**
 	 * This method ask the user to input the place.
@@ -21,8 +21,7 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering {
 	 * @exception InputMismatchException : Error on the input, try again.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<?> arrayObject) throws InputException {
-		ArrayList<Scan> array = (ArrayList<Scan>) arrayObject;
+	public WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
 		try { 
 			System.out.println("Input an latitude please :");
 			double pointLatitude = Double.parseDouble(new Scanner(System.in).nextLine());
@@ -32,14 +31,14 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering {
 			double radius = Double.parseDouble(new Scanner(System.in).nextLine());
 			if(checkLatitude(pointLatitude) && checkLongitude(pointLongitude) && radius >= 0) {
 				EarthCoordinate pointLocation = new EarthCoordinate(pointLongitude, pointLatitude, 0.0); // Latitude 0.0 by default.
-				return new WriteKmlPlace(pointLocation, radius);
+				return new WriteKmlPlace(pointLocation, radius, arrayMac);
 			}
 			else throw new InputException("There is ne such latitude/longitude/radius.");
 		}
 		catch (InputMismatchException ex) {
 			System.out.println("Error on the input, try again.");
 		}
-		return filteringBy(array);
+		return filteringBy(array, arrayMac);
 	}
 
 }

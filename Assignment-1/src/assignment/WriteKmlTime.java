@@ -19,7 +19,8 @@ public class WriteKmlTime extends WriteKml implements WriteFile {
 	 * @param dateBegining.
 	 * @param dateEnd.
 	 */
-	public WriteKmlTime(GregorianCalendar dateBegining, GregorianCalendar dateEnd) {
+	public WriteKmlTime(GregorianCalendar dateBegining, GregorianCalendar dateEnd, ArrayList<Mac> array) {
+		super(array);
 		this.dateBegining = dateBegining;
 		this.dateEnd = dateEnd;
 	}

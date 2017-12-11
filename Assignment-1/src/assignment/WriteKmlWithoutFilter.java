@@ -10,9 +10,12 @@ import java.util.ArrayList;
 public class WriteKmlWithoutFilter extends WriteKml implements WriteFile {
 
 	/**
-	 * Empty constructor.
+	 * Constructor.
+	 * @param array
 	 */
-	public WriteKmlWithoutFilter(){}
+	public WriteKmlWithoutFilter(ArrayList<Mac> array){
+		super(array);
+	}
 
 	/**
 	 * The method check the data, but without filter.

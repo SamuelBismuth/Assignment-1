@@ -6,14 +6,20 @@ import java.util.Collections;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
- * This class represents a Object Mac.
+ * This class represents all samples of a single wifi router (with a single mac address)
  * @author Orel and Samuel.
  */
 public class Mac  {
 
+	// the mac address of the router
 	private String macName;
+	
+	// all the samples of this router
 	private ArrayList<MacLocation> arrayMacLocation;
 
+	// boolean = true if the mac is already used.
+	private boolean used;
+	
 	/**
 	 * Constructor.
 	 * @param macName.
@@ -22,6 +28,7 @@ public class Mac  {
 	protected Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
 		this.macName = macName;
 		this.arrayMacLocation = arrayMacLocationInformation;
+		this.used = false;
 		sort();
 	}
 
@@ -93,6 +100,20 @@ public class Mac  {
 	 */
 	protected int getStrongerSignal() {
 		return arrayMacLocation.get(0).getSignal();
+	}
+	
+	/**
+	 * @return used
+	 */
+	protected boolean getUsed() {
+		return used;
+	}
+	
+	/**
+	 * @param bool
+	 */
+	protected void setUsed(boolean bool) {
+		this.used = bool;
 	}
 
 	/**

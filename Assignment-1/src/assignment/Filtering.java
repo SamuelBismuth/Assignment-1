@@ -10,8 +10,8 @@ import java.util.ArrayList;
  * FilteringKml is extended by : @see {@link FilteringKmlEmpty}, @see {@link FilteringKmlId}, @see {@link FilteringKmlPlace} and @see {@link FilteringKmlTime}.
  * @author Orel and Samuel.
  */
-public interface Filtering {
+public interface Filtering<T> {
 
-	public WriteFile filteringBy(ArrayList<?> array) throws InputException;
+	public WriteFile filteringBy(ArrayList<T> array, ArrayList<Mac> arrayMac) throws InputException;
 	
 }

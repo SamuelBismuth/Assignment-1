@@ -9,7 +9,7 @@ import java.util.Scanner;
  * By the time, the place or the id...
  * @author Orel and Samuel.
  */
-public class UserChoiceKml implements UserChoice {
+public class UserChoiceKml {
 	
 	/**
 	 * This methode use a @see {@link Scanner} to recuperate the input of the user.

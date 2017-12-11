@@ -10,7 +10,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * This class define an object scan.
  * @author Orel and Samuel.
  */
-public class Scan implements ObjectTest {
+public class Scan {
 	
 	private GregorianCalendar time;
 	private String id;

@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * This abstract class is extended by : @see {@link FilteringKmlEmpty}, @see {@link FilteringKmlId}, @see {@link FilteringKmlPlace} and @see {@link FilteringKmlTime}.
  * @author Orel and Samuel.
  */
-public abstract class FilteringKml extends Date implements Filtering {
+public abstract class FilteringKml implements Filtering<Scan> {
 
-	public abstract WriteFile filteringBy(ArrayList<?> array) throws InputException;
+	public abstract WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException;
 
 	/**
 	 * @param latitude.

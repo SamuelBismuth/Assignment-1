@@ -25,7 +25,12 @@ import org.boehn.kmlframework.kml.TimeStamp;
 public abstract class WriteKml implements WriteFile {
 
 	private Document document = new Document();
-	
+	protected ArrayList<Mac> array;
+
+	public WriteKml(ArrayList<Mac> array) {
+		this.array = array;
+	}
+
 	/**
 	 * Initialisation of the kml file, we need to write the links with the icons.
 	 */
@@ -40,21 +45,23 @@ public abstract class WriteKml implements WriteFile {
 	 */
 	public abstract void checkData(ArrayList<Scan> array, String fileNameExport);
 
-	
+
 	/**
 	 * This method constructs the placemark.
 	 * @param scan.
 	 */
 	public void addNetwork(Scan scan) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
-			if (wifi.getName().contains("&")) wifi.setName(wifi.getName().replaceAll("&", "and"));
-			Placemark placemark = new Placemark(wifi.getName());
-			TimeStamp time = new TimeStamp(timeInput(scan.getTime()));
-			placemark.setTimePrimitive(time);
-			placemark.setExtendedData(extendedData(scan, wifi));
-			placemark.setLocation(scan.getPointLocation().getLongitude(), scan.getPointLocation().getLatitude());
-			placemark.setStyleUrl(color(wifi.getSignal()));
-			document.addFeature(placemark);
+			if (!macUsed(wifi.getMac())) {
+				if (wifi.getName().contains("&")) wifi.setName(wifi.getName().replaceAll("&", "and"));
+				Placemark placemark = new Placemark(wifi.getName());
+				TimeStamp time = new TimeStamp(timeInput(scan.getTime()));
+				placemark.setTimePrimitive(time);
+				placemark.setExtendedData(extendedData(scan, wifi));
+				placemark.setLocation(scan.getPointLocation().getLongitude(), scan.getPointLocation().getLatitude());
+				placemark.setStyleUrl(color(wifi.getSignal()));
+				document.addFeature(placemark);
+			}
 		}
 	}
 
@@ -81,7 +88,7 @@ public abstract class WriteKml implements WriteFile {
 	}
 
 	// unimplemented private methods.
-	
+
 	/**
 	 * This method generate the data to input a new icon.
 	 * @param color
@@ -102,7 +109,7 @@ public abstract class WriteKml implements WriteFile {
 	 * @param wifi.
 	 * @return the extended data.
 	 */
-	private ExtendedData extendedData(Scan scan, Wifi wifi) {
+	private static ExtendedData extendedData(Scan scan, Wifi wifi) {
 		ArrayList<SimpleData> array = new ArrayList<SimpleData>();
 		array.add(simpleData("Mac", wifi.getMac()));
 		array.add(simpleData("Frequency", Integer.toString(wifi.getFrequency())));
@@ -119,7 +126,7 @@ public abstract class WriteKml implements WriteFile {
 	 * @param value.
 	 * @return simple data.
 	 */
-	private SimpleData simpleData(String name, String value) {
+	private static SimpleData simpleData(String name, String value) {
 		SimpleData data = new SimpleData();
 		data.setName(name);
 		data.setValue(value);
@@ -131,7 +138,7 @@ public abstract class WriteKml implements WriteFile {
 	 * @param signal.
 	 * @return the color.
 	 */
-	private String color(int signal) {
+	private static String color(int signal) {
 		if (signal > - 70) return "#grn";
 		else if (signal > -90) return "#ylw";
 		else return "#red";
@@ -141,7 +148,7 @@ public abstract class WriteKml implements WriteFile {
 	 * @param time.
 	 * @return yyyy-mm-ddThh:mm:ssZ.
 	 */
-	private String timeInput(GregorianCalendar time) {
+	private static String timeInput(GregorianCalendar time) {
 		return Integer.toString(time.get(Calendar.YEAR)) + "-" + dataChange((time.get(Calendar.MONTH))) + "-" + 
 				dataChange((time.get(Calendar.DATE))) + "T" + dataChange((time.get(Calendar.HOUR_OF_DAY))) 
 				+ ":" + dataChange((time.get(Calendar.MINUTE))) + ":" + dataChange((time.get(Calendar.SECOND))) + "Z";
@@ -152,9 +159,24 @@ public abstract class WriteKml implements WriteFile {
 	 * @return data if the data is already with two digits.
 	 * @return 0 + data if the data got only one digit.
 	 */
-	private String dataChange(int data) {
+	private static String dataChange(int data) {
 		if (data / 10 >= 1) return Integer.toString(data);
 		else return "0" + Integer.toString(data);
 	}
 	
+	/**
+	 * @param macName
+	 * @return the state used or not of the mac.
+	 */
+	private boolean macUsed(String macName) {
+		for (Mac mac : array) 
+			if(mac.getMacName().equals(macName)) {
+				boolean temp = mac.getUsed();
+				mac.setUsed(true);
+				System.out.println(temp);
+				return temp;
+			}
+		return false;
+	}
+
 }

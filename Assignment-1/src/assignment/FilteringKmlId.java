@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Orel and Samuel.
  */
 
-public class FilteringKmlId extends FilteringKml implements Filtering {
+public class FilteringKmlId extends FilteringKml implements Filtering <Scan>{
 
 	/**
 	 * This method ask the user to input the id.
@@ -17,15 +17,14 @@ public class FilteringKmlId extends FilteringKml implements Filtering {
 	 * @return {@link WriteKmlId}.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<?> arrayObject) throws InputException {
-		ArrayList<Scan> array = (ArrayList<Scan>) arrayObject;
+	public WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
 		System.out.println("Input an Id please :");
 		String id = new Scanner(System.in).nextLine();
 		for(Scan scan : array) 
 			if (id.equals(scan.getId())) 
-				return new WriteKmlId(id);
+				return new WriteKmlId(id, arrayMac);
 			else throw new InputException("Couldn't find the id :" + id);
-		return filteringBy(array);
+		return filteringBy(array, arrayMac);
 	}
 
 }

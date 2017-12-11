@@ -40,9 +40,6 @@ public class MacLocationTest {
 		assertEquals(0, c.compareTo(c));
 		//assertEquals(wpointlocation1, a.getWeightPointLocation());
 		//assertEquals(s, a.toString());
-
-
-		
 	}
 
 }

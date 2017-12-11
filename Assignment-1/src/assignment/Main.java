@@ -27,9 +27,8 @@ public class Main {
 	 * TODO : junit
 	 * TODO : check radius 
 	 * TODO : STRONGER MAC (WHAT ABOUT THE ALGORITHM 1) 
-	 * TODO : Generic (check the warning : is there anothere way ?)
-	 * TODO : Question about the two types of classes : is there one class (road of the algorithm) need to be static ?
-	 * TODO : stam
+	 * TODO : change all the signal (higher = stringer)
+	 * TODO : matala 1, only the powerful mac !
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -60,6 +59,10 @@ public class Main {
 		//Filtering Csv (time)
 		SortCsvTime filterTimecsv = new SortCsvTime();
 		arrayScan = filterTimecsv.sortBy(arrayCsv);
+		
+		//Filtering Csv (mac)
+		SortCsvMac filterMaccsv = new SortCsvMac();
+		arrayMac = filterMaccsv.sortBy(arrayCsv);
 
 		//Write Csv
 		System.out.println("Input a name for the csv file you want to create : ");
@@ -69,22 +72,18 @@ public class Main {
 
 		new OpenFile(fileNameCsvExport); // Open the file.
 
-		///////////////////////////////////////
+		////////////////////////////////////////
 		//Second part : Writting the kml file.//
-		///////////////////////////////////////
+		////////////////////////////////////////
 
 		//Choice of the user (kml).
-		UserChoice choice = new UserChoiceKml();
-		Filtering filter = null;
-		try {
-			filter = choice.userChoice();
-		} catch (InputException e2) {
-			e2.printStackTrace();
-		}
+		UserChoiceKml choice = new UserChoiceKml();
+		Filtering<Scan> filter = null;
+		filter = choice.userChoice();
 
 		//Filtering csv (kml)
 		try {
-			write =  filter.filteringBy(arrayScan);
+			write =  filter.filteringBy(arrayScan, arrayMac);
 		} 
 		catch (InputException e) {
 			e.printStackTrace();
@@ -97,30 +96,30 @@ public class Main {
 
 		new OpenFile(fileNameKmlExport); // Open the file.
 
-		/////////////////////////////
-		//Third part : Algorithm 1.//
-		/////////////////////////////
-		
-		//Filtering csv
-		SortCsvMac filterMaccsv = new SortCsvMac();
-		arrayMac = filterMaccsv.sortBy(arrayCsv);
-		
-		//Choice of the user (mac).
-		choice = new UserChoiceMac(arrayMac);
-		try {
-			filter = choice.userChoice();
-		} 
-		catch (InputException e1) {
-			e1.printStackTrace();
-		}
-		
-		//Filtering csv (kml)
-		try {
-			filter.filteringBy(arrayMac);
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
-		}
+//		/////////////////////////////
+//		//Third part : Algorithm 1.//
+//		/////////////////////////////
+//		
+//		//Filtering csv
+//		SortCsvMac filterMaccsv = new SortCsvMac();
+//		arrayMac = filterMaccsv.sortBy(arrayCsv);
+//		
+//		//Choice of the user (mac).
+//		choice = new UserChoiceMac(arrayMac);
+//		try {
+//			filter = choice.userChoice();
+//		} 
+//		catch (InputException e1) {
+//			e1.printStackTrace();
+//		}
+//		
+//		//Filtering csv (kml)
+//		try {
+//			filter.filteringBy(arrayMac);
+//		} 
+//		catch (InputException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }

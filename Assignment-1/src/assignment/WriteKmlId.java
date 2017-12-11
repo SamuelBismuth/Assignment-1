@@ -15,7 +15,8 @@ public class WriteKmlId extends WriteKml implements WriteFile {
 	 * Constructor.
 	 * @param id
 	 */
-	protected WriteKmlId(String id) {
+	protected WriteKmlId(String id, ArrayList<Mac> array) {
+		super(array);
 		this.id = id;
 	}
 
