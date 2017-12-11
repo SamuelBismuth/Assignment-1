@@ -26,7 +26,6 @@ public class MacLocationTest {
 		MacLocation b = new MacLocation(pointlocation2, signal2);
 		MacLocation c = new MacLocation(pointlocation3, signal3);
 		
-		
 		assertEquals(pointlocation1, a.getPointLocation());
 		assertEquals(pointlocation2, b.getPointLocation());
 		assertEquals(pointlocation3, c.getPointLocation());

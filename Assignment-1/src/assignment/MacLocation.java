@@ -24,14 +24,14 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return pointLocation.
 	 */
-	public EarthCoordinate getPointLocation() {//p
+	public EarthCoordinate getPointLocation() {
 		return pointLocation;
 	}
 
 	/**
 	 * @return weightPointLocation = weightSignal * pointLocation.
 	 */
-	public EarthCoordinate getWeightPointLocation() {//p
+	public EarthCoordinate getWeightPointLocation() {
 		return new EarthCoordinate(
 				this.getWeigthSignal() * pointLocation.getLongitude(),
 				this.getWeigthSignal() * pointLocation.getLatitude(),
@@ -42,14 +42,14 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return signal.
 	 */
-	public int getSignal() {//p
+	public int getSignal() {
 		return signal;
 	}
 
 	/**
 	 * @return weightSignal = (1 / signal * signal).
 	 */
-	public double getWeigthSignal() {//p
+	public double getWeigthSignal() {
 		return (1 / Math.pow(this.signal, 2));
 	}
 
@@ -57,7 +57,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * This method compare the signal.
 	 * @param macLocationInformation.
 	 */
-	public int compareTo(MacLocation macLocationInformation) {//p
+	public int compareTo(MacLocation macLocationInformation) {
 		return Integer.compare(this.signal, macLocationInformation.getSignal());
 	}
 
