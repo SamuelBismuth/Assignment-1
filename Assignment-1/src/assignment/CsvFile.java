@@ -16,7 +16,7 @@ public class CsvFile {
 	 * @param id.
 	 * @param line.
 	 */
-	protected CsvFile(String id, ArrayList<Line> arrayLine) {
+	public CsvFile(String id, ArrayList<Line> arrayLine) {
 		this.id = id;
 		this.arrayLine = arrayLine;
 	}
@@ -24,14 +24,14 @@ public class CsvFile {
 	/**
 	 * @return id.
 	 */
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @return arrayLine.
 	 */
-	protected ArrayList<Line> getLine() {
+	public ArrayList<Line> getLine() {
 		return arrayLine;
 	}
 

@@ -8,7 +8,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 /**
  * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
- * This class filtering the data by the place : only the sacn in the area that the user choosed will appear in the kml place.
+ * This class filtering the data by the place : only the scan in the area that the user choosed will appear in the kml place.
  * TODO : JUNIT on the radius.
  * @author Orel and Samuel.
  */
@@ -30,10 +30,10 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering <Scan>{
 			System.out.println("Input a radius please (meters) :");
 			double radius = Double.parseDouble(new Scanner(System.in).nextLine());
 			if(checkLatitude(pointLatitude) && checkLongitude(pointLongitude) && radius >= 0) {
-				EarthCoordinate pointLocation = new EarthCoordinate(pointLongitude, pointLatitude, 0.0); // Latitude 0.0 by default.
+				EarthCoordinate pointLocation = new EarthCoordinate(pointLongitude, pointLatitude, 0.0); // Altitude 0.0 by default.
 				return new WriteKmlPlace(pointLocation, radius, arrayMac);
 			}
-			else throw new InputException("There is ne such latitude/longitude/radius.");
+			else throw new InputException("There is no such latitude/longitude/radius.");
 		}
 		catch (InputMismatchException ex) {
 			System.out.println("Error on the input, try again.");
