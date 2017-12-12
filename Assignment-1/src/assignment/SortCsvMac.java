@@ -10,7 +10,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * This class extends @see {@link SortCsv}.
  * @author Orel and Samuel
  */
-public class SortCsvMac extends SortCsv {
+public class SortCsvMac implements SortCsv<Mac> {
 
 	/**
 	 * Empty constructor.
@@ -71,7 +71,7 @@ public class SortCsvMac extends SortCsv {
 				new EarthCoordinate(Double.parseDouble(line.getCurrentLongitude()),
 						Double.parseDouble(line.getCurrentLatitude()), 
 						Double.parseDouble(line.getAltitudeMeters())), 
-				channelToFrequency(Integer.parseInt(line.getChannel()))
+				Double.parseDouble(line.getRssi())
 				);
 	}
 

@@ -18,18 +18,10 @@ import org.apache.commons.csv.CSVRecord;
  * @author Orel and Samuel.
  */
 
-public class ReadFile implements Read {
+public class ReadCsv implements Read {
 
-	private File file;
 	private ArrayList<CsvFile> array;
-
-	/**
-	 * Test constructor.
-	 */
-	public ReadFile(File file, ArrayList<CsvFile> array) {
-		this.file = file;
-		this.array = array;
-	}
+	private File file;
 
 	/**
 	 * Constructor.
@@ -37,10 +29,12 @@ public class ReadFile implements Read {
 	 * @param folderName.
 	 * @param array.
 	 */
-	protected ReadFile(File file, String folderName, ArrayList<CsvFile> array) {
-		this.file = file;
+	protected ReadCsv(String folderName, ArrayList<CsvFile> array, File[] listOfFile) {
 		this.array = array;
-		read(folderName);
+		for(File file : listOfFile) {
+			this.file = file;
+			read(folderName);
+		}
 	}
 
 	/**
@@ -58,9 +52,11 @@ public class ReadFile implements Read {
 			ArrayList<Line> arrayLine = new ArrayList<Line>();
 			if (checkTheFile(firstLine)) {
 				Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(br);
-				for (CSVRecord record : records) 
-						arrayLine.add(inputLine(record, getId(firstLine)));
-				array.add(new CsvFile(getId(firstLine), arrayLine));
+				for (CSVRecord record : records) {
+					arrayLine.clear();
+					arrayLine.add(inputLine(record, getId(firstLine)));
+				}
+				array.add(new CsvFile(getId(firstLine), (ArrayList<Line>) arrayLine.clone()));
 				in.close();
 				br.close();
 			}
@@ -79,7 +75,7 @@ public class ReadFile implements Read {
 	 * @param id.
 	 * @return {@link Line}.
 	 */
-	private Line inputLine(CSVRecord record, String id) {
+	public Line inputLine(CSVRecord record, String id) {
 		return new Line(
 				record.get("MAC"),
 				record.get("SSID"),
@@ -101,7 +97,7 @@ public class ReadFile implements Read {
 	 * @param firstLine.
 	 * @return the id.
 	 */
-	private String getId(String firstLine) {
+	private static String getId(String firstLine) {
 		for (int i = 0; i < firstLine.length(); i++) {
 			if(firstLine.substring(i, i + 7).equals("display")) {
 				int j = i + 8;
@@ -111,17 +107,17 @@ public class ReadFile implements Read {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * The method checks the first line, by asking if contains the header "WigleWifi".
 	 * @param firstLine.
 	 * @return true if the file is a WigleWifi file.
 	 * @return false if it's not.
 	 */
-	protected boolean checkTheFile(String firstLine) {
+	protected static boolean checkTheFile(String firstLine) {
 		if (firstLine.contains("WigleWifi") && firstLine.contains("display")) return true;
 		return false;
 	}
 
-	
+
 }

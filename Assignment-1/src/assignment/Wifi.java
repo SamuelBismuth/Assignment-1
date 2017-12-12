@@ -67,7 +67,7 @@ public class Wifi implements Comparable<Wifi> {
 	 * @param wifi.
 	 */
 	public int compareTo(Wifi wifi) {
-		return Integer.compare(this.signal, wifi.getSignal());
+		return Integer.compare(wifi.getSignal(), this.signal);
 	}
 
 	/**

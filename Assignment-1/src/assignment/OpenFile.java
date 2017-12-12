@@ -11,12 +11,9 @@ import java.io.IOException;
 public class OpenFile implements Read {
 
 	/**
-	 * Constructor.
-	 * @param fileName.
+	 * Empty constructor.
 	 */
-	protected OpenFile(String fileName) {
-		read(fileName);
-	}
+	protected OpenFile() {}
 	
 	/**
 	 * Open the file asked for.

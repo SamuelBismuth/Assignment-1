@@ -18,15 +18,15 @@ public class ReadFileTest {
 		File folder = new File(folderName);
 		File[] listOfFiles = folder.listFiles();
 		ArrayList<Scan> array = new ArrayList<Scan>();
-		ReadFile readFile = new ReadFile(listOfFiles[1], array);
+		ReadCsv readFile = new ReadCsv(listOfFiles[1], array);
 		readFile.read(folderName);
 		assertEquals(343, array.size());
 		array.clear();
-		ReadFile readFile2 = new ReadFile(listOfFiles[0], array);
+		ReadCsv readFile2 = new ReadCsv(listOfFiles[0], array);
 		readFile2.read(folderName);
 		assertEquals(0, array.size());
 		array.clear();
-		ReadFile readFile3 = new ReadFile(listOfFiles[2], array);
+		ReadCsv readFile3 = new ReadCsv(listOfFiles[2], array);
 		readFile3.read(folderName);
 		assertEquals(811, array.size());
 	}	

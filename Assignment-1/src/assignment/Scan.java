@@ -60,13 +60,6 @@ public class Scan {
 		return arrayWifi;
 	}
 	
-	/**
-	 * @return wifiNetworks.
-	 */
-	protected int getWifiNetworks() {
-		return arrayWifi.size();
-	}
-	
 	protected void sort() {
 		Collections.sort(arrayWifi);
 	}
@@ -75,12 +68,19 @@ public class Scan {
 	 * @return arrayStrongerWifi.
 	 */
 	protected ArrayList<Wifi> getArrayStrongerWifi() {
-		if (getWifiNetworks() <= 10) return arrayWifi;
+		if (arrayWifi.size() <= 10) return arrayWifi;
 		else {
 			ArrayList<Wifi> arrayStrongerWifi = new ArrayList<Wifi>();
 			for (int i = 0; i < 10; i++)  arrayStrongerWifi.add(arrayWifi.get(i));
 			return arrayStrongerWifi;
 		}
+	}
+	
+	/**
+	 * @return wifiNetworks.
+	 */
+	protected int getWifiNetworks() {
+		return getArrayStrongerWifi().size();
 	}
 	
 	/**

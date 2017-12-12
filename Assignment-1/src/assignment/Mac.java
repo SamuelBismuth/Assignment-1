@@ -11,15 +11,10 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  */
 public class Mac  {
 
-	// the mac address of the router
-	private String macName;
-	
-	// all the samples of this router
-	private ArrayList<MacLocation> arrayMacLocation;
+	private String macName; // the mac address of the router
+	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
+	private boolean used; // boolean = true if the mac is already used.
 
-	// boolean = true if the mac is already used.
-	private boolean used;
-	
 	/**
 	 * Constructor.
 	 * @param macName.
@@ -35,21 +30,21 @@ public class Mac  {
 	/**
 	 * @return macName.
 	 */
-	public String getMacName() {//p
+	public String getMacName() {
 		return macName;
 	}
 
 	/**
 	 * @return numberOfMac.
 	 */
-	public int getNumberOfMac() {//p
+	public int getNumberOfMac() {
 		return arrayMacLocation.size();
 	}
 
 	/**
 	 * @return arrayMacLocation.
 	 */
-	public ArrayList<MacLocation> getArrayMacLocation() {//p
+	public ArrayList<MacLocation> getArrayMacLocation() {
 		return arrayMacLocation;
 	}
 
@@ -57,7 +52,7 @@ public class Mac  {
 	 * This method calculates the sum between all pointLocation of the weights.
 	 * @return SumWeightPointLocation.
 	 */
-	public EarthCoordinate getSumWeightPointLocation() {//p
+	public EarthCoordinate getSumWeightPointLocation() {
 		double sumWeigthLatitude = 0;
 		double sumWeigthLongitude = 0;
 		double sumWeigthAltitude = 0;
@@ -77,7 +72,7 @@ public class Mac  {
 	 * This method calculates the sum between all the signal of the weights.
 	 * @return sumWeigthSignal.
 	 */
-	public double getSumWeightSignal() {//p
+	public double getSumWeightSignal() {
 		double sumWeigthSignal = 0;
 		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
 		return sumWeigthSignal;
@@ -87,7 +82,7 @@ public class Mac  {
 	 * This method return the weight center.
 	 * @return weightCenter.
 	 */
-	public EarthCoordinate getWeightCenter() {//p
+	public EarthCoordinate getWeightCenter() {
 		return new EarthCoordinate(
 				getSumWeightPointLocation().getLatitude() / getSumWeightSignal(),
 				getSumWeightPointLocation().getLongitude() / getSumWeightSignal(),
@@ -98,7 +93,7 @@ public class Mac  {
 	/**
 	 * @return strongerSignal.
 	 */
-	public int getStrongerSignal() {//p
+	public double getStrongerSignal() {
 		return arrayMacLocation.get(0).getSignal();
 	}
 	
@@ -122,5 +117,11 @@ public class Mac  {
 	public void sort() {
 		Collections.sort(arrayMacLocation);
 	}
+
+	public String toString() {
+		return "Mac [macName=" + macName + ", arrayMacLocation=" + arrayMacLocation.toString() + ", used=" + used + "]";
+	}
+	
+	
 
 }

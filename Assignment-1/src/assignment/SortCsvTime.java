@@ -10,7 +10,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * This class extends @see {@link SortCsv}.
  * @author Orel and Samuel.
  */
-public class SortCsvTime extends SortCsv {
+public class SortCsvTime implements SortCsv<Scan> {
 
 	/**
 	 * Empty constructor.
@@ -46,7 +46,7 @@ public class SortCsvTime extends SortCsv {
 		Scan scan = (Scan) object;
 		GregorianCalendar time = new GregorianCalendar();
 		try {
-			time = stringToDate(timeString); 
+			time = Date.stringToDate(timeString); 
 		}
 		catch (InputException ex) {
 			System.out.println("Error on the Firstseen of the csv file. " + ex);
@@ -64,7 +64,7 @@ public class SortCsvTime extends SortCsv {
 	public Object addMotherObject(Line line) {
 		GregorianCalendar time = new GregorianCalendar();
 		try {
-			time = stringToDate(line.getFirstseen()); 
+			time = Date.stringToDate(line.getFirstseen()); 
 		}
 		catch (InputException ex) {
 			System.out.println("Error on the Firstseen of the csv file. " + ex);
@@ -93,5 +93,16 @@ public class SortCsvTime extends SortCsv {
 				Integer.parseInt(line.getRssi())
 				);
 	}
+	
+	/**
+	 * The method translate the channel to frequency.
+	 * @param channel.
+	 * @return String frequency.
+	 */
+	private static int channelToFrequency(int channel) {
+		if (channel >= 1 && channel <= 14) return 2400;
+		else return 5000;
+	}
+	
 
 }

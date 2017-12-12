@@ -56,7 +56,7 @@ public class WriteCsv implements WriteFile {
 			outs.print(scan.getPointLocation().getLatitude() + ",");
 			outs.print(scan.getPointLocation().getLongitude() + ",");
 			outs.print(scan.getPointLocation().getAltitude() + ",");
-			outs.print(scan.getWifiNetworks());
+			outs.print(scan.getWifiNetworks() + ",");
 			addNetwork(scan);
 		}
 		try {

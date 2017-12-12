@@ -9,16 +9,16 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 public class MacLocation implements Comparable<MacLocation> {
 
 	private EarthCoordinate pointLocation;
-	private int signal;
+	private double signal;
 
 	/**
 	 * Constructor.
 	 * @param pointLocation.
 	 * @param signal.
 	 */
-	public MacLocation(EarthCoordinate pointLocation, int signal) {
+	public MacLocation(EarthCoordinate pointLocation, double d) {
 		this.pointLocation = pointLocation;
-		this.signal = signal;
+		this.signal = d;
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return signal.
 	 */
-	public int getSignal() {
+	public double getSignal() {
 		return signal;
 	}
 
@@ -58,7 +58,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * @param macLocationInformation.
 	 */
 	public int compareTo(MacLocation macLocationInformation) {
-		return Integer.compare(this.signal, macLocationInformation.getSignal());
+		return Double.compare(macLocationInformation.getSignal(), this.signal);
 	}
 
 	/**

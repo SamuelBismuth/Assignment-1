@@ -52,7 +52,7 @@ public abstract class WriteKml implements WriteFile {
 	 */
 	public void addNetwork(Scan scan) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
-			if (!macUsed(wifi.getMac())) {
+			if (!macUsed(wifi)) {
 				if (wifi.getName().contains("&")) wifi.setName(wifi.getName().replaceAll("&", "and"));
 				Placemark placemark = new Placemark(wifi.getName());
 				TimeStamp time = new TimeStamp(timeInput(scan.getTime()));
@@ -139,9 +139,9 @@ public abstract class WriteKml implements WriteFile {
 	 * @return the color.
 	 */
 	private static String color(int signal) {
-		if (signal > - 70) return "#grn";
+		if (signal > - 70) return "#red";
 		else if (signal > -90) return "#ylw";
-		else return "#red";
+		else return "#grn";
 	}
 
 	/**
@@ -163,18 +163,20 @@ public abstract class WriteKml implements WriteFile {
 		if (data / 10 >= 1) return Integer.toString(data);
 		else return "0" + Integer.toString(data);
 	}
-	
+
 	/**
 	 * @param macName
 	 * @return the state used or not of the mac.
 	 */
-	private boolean macUsed(String macName) {
+	private boolean macUsed(Wifi wifi) {
 		for (Mac mac : array) 
-			if(mac.getMacName().equals(macName)) {
-				boolean temp = mac.getUsed();
-				mac.setUsed(true);
-				System.out.println(temp);
-				return temp;
+			if(mac.getMacName().equals(wifi.getMac())) {
+				if (mac.getStrongerSignal() == wifi.getSignal()) {
+					boolean temp = mac.getUsed();
+					mac.setUsed(true);
+					return temp;
+				}
+				else return true;
 			}
 		return false;
 	}
