@@ -11,7 +11,7 @@ public class Wifi implements Comparable<Wifi> {
 	private String name;
 	private String mac;
 	private int frequency;
-	private int signal;
+	private double signal;
 
 	/**
 	 * Constructor.
@@ -20,7 +20,7 @@ public class Wifi implements Comparable<Wifi> {
 	 * @param frequency.
 	 * @param signal.
 	 */
-	public Wifi(String name, String mac, int frequency, int signal) {
+	public Wifi(String name, String mac, int frequency, double signal) {
 		this.name = noName(name);
 		this.mac = mac;
 		this.frequency = frequency;
@@ -51,7 +51,7 @@ public class Wifi implements Comparable<Wifi> {
 	/**
 	 * @return signal.
 	 */
-	public int getSignal() {
+	public double getSignal() {
 		return signal;
 	}
 
@@ -67,7 +67,7 @@ public class Wifi implements Comparable<Wifi> {
 	 * @param wifi.
 	 */
 	public int compareTo(Wifi wifi) {
-		return Integer.compare(wifi.getSignal(), this.signal);
+		return Double.compare(wifi.getSignal(), this.signal);
 	}
 
 	/**

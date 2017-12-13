@@ -10,7 +10,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * @author Orel and Samuel.
  * TODO : check the radius with JUNIT.
  */
-public class WriteKmlPlace extends WriteKml implements WriteFile {
+public class WriteKmlPlace extends WriteKml implements WriteFile<Scan> {
 
 	private EarthCoordinate pointLocation;
 	private double radius;
