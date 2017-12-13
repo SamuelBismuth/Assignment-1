@@ -24,7 +24,7 @@ public class Scan {
 	 * @param pointLocation.
 	 * @param wifi.
 	 */
-	protected Scan(GregorianCalendar time, String id, EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
+	public Scan(GregorianCalendar time, String id, EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
 		this.time = time;
 		this.id = id;
 		this.pointLocation = pointLocation;
@@ -35,39 +35,39 @@ public class Scan {
 	/**
 	 * @return time.
 	 */
-	protected GregorianCalendar getTime() {
+	public GregorianCalendar getTime() {
 		return time;
 	}
 
 	/**
 	 * @return id.
 	 */
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 	
 	/**
 	 * @return pointLocation.
 	 */
-	protected EarthCoordinate getPointLocation() {
+	public EarthCoordinate getPointLocation() {
 		return pointLocation;
 	}
 	
 	/**
 	 * @return arrayWifi.
 	 */
-	protected ArrayList<Wifi> getArrayWifi() {
+	public ArrayList<Wifi> getArrayWifi() {
 		return arrayWifi;
 	}
 	
-	protected void sort() {
+	public void sort() {
 		Collections.sort(arrayWifi);
 	}
 	
 	/**
 	 * @return arrayStrongerWifi.
 	 */
-	protected ArrayList<Wifi> getArrayStrongerWifi() {
+	public ArrayList<Wifi> getArrayStrongerWifi() {
 		if (arrayWifi.size() <= 10) return arrayWifi;
 		else {
 			ArrayList<Wifi> arrayStrongerWifi = new ArrayList<Wifi>();
@@ -79,7 +79,7 @@ public class Scan {
 	/**
 	 * @return wifiNetworks.
 	 */
-	protected int getWifiNetworks() {
+	public int getWifiNetworks() {
 		return getArrayStrongerWifi().size();
 	}
 	
@@ -88,9 +88,9 @@ public class Scan {
 	 * @return true if contains the same mac.
 	 * @return false if not contains the same mac.
 	 */
-	protected boolean containsSameMac(String mac) {
+	public boolean containsSameMac(String mac) {
 		for (Wifi wifi : arrayWifi) 
-			if (wifi.getName().equals(mac))
+			if (wifi.getMac().equals(mac))
 				return true;
 		return false;
 	}

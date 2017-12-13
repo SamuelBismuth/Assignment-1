@@ -20,7 +20,7 @@ public class Wifi implements Comparable<Wifi> {
 	 * @param frequency.
 	 * @param signal.
 	 */
-	protected Wifi(String name, String mac, int frequency, int signal) {
+	public Wifi(String name, String mac, int frequency, int signal) {
 		this.name = noName(name);
 		this.mac = mac;
 		this.frequency = frequency;
@@ -30,35 +30,35 @@ public class Wifi implements Comparable<Wifi> {
 	/**
 	 * @return name.
 	 */
-	protected String getName() {
+	public String getName() {
 		return name;
 	}
 
 	/**
 	 * @return mac.
 	 */
-	protected String getMac() {
+	public String getMac() {
 		return mac;
 	}
 
 	/**
 	 * @return frequency.
 	 */
-	protected int getFrequency() {
+	public int getFrequency() {
 		return frequency;
 	}
 
 	/**
 	 * @return signal.
 	 */
-	protected int getSignal() {
+	public int getSignal() {
 		return signal;
 	}
 
 	/**
 	 * @param name.
 	 */
-	protected void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 

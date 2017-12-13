@@ -20,7 +20,7 @@ public class WriteKmlPlace extends WriteKml implements WriteFile {
 	 * @param pointLocation.
 	 * @param radius.
 	 */
-	protected WriteKmlPlace(EarthCoordinate pointLocation, double radius, ArrayList<Mac> array) {
+	public WriteKmlPlace(EarthCoordinate pointLocation, double radius, ArrayList<Mac> array) {
 		super(array);
 		this.pointLocation = pointLocation;
 		this.radius = radius;

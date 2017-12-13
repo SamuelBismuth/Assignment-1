@@ -34,7 +34,7 @@ public class Line implements Comparable<Line> {
 	 * @param accuracyMeters
 	 * @param type
 	 */
-	protected Line(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
+	public Line(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
 			String currentLatitude, String currentLongitude, String altitudeMeters, String accuracyMeters,
 			String type, String id) {
 		this.mac = mac;
@@ -54,84 +54,84 @@ public class Line implements Comparable<Line> {
 	/** 
 	 * @return mac
 	 */
-	protected String getMac() {
+	public String getMac() {
 		return mac;
 	}
 
 	/** 
 	 * @return ssid
 	 */
-	protected String getSsid() {
+	public String getSsid() {
 		return ssid;
 	}
 
 	/** 
 	 * @return authMode
 	 */
-	protected String getAuthMode() {
+	public String getAuthMode() {
 		return authMode;
 	}
 
 	/** 
 	 * @return firstseen
 	 */
-	protected String getFirstseen() {
+	public String getFirstseen() {
 		return firstseen;
 	}
 
 	/** 
 	 * @return channel
 	 */
-	protected String getChannel() {
+	public String getChannel() {
 		return channel;
 	}
 
 	/** 
 	 * @return rssi
 	 */
-	protected String getRssi() {
+	public String getRssi() {
 		return rssi;
 	}
 
 	/** 
 	 * @return currentLatitude
 	 */
-	protected String getCurrentLatitude() {
+	public String getCurrentLatitude() {
 		return currentLatitude;
 	}
 
 	/** 
 	 * @return currentLongitude
 	 */
-	protected String getCurrentLongitude() {
+	public String getCurrentLongitude() {
 		return currentLongitude;
 	}
 
 	/** 
 	 * @return altitudeMeters
 	 */
-	protected String getAltitudeMeters() {
+	public String getAltitudeMeters() {
 		return altitudeMeters;
 	}
 
 	/** 
 	 * @return accuracyMeters
 	 */
-	protected String getAccuracyMeters() {
+	public String getAccuracyMeters() {
 		return accuracyMeters;
 	}
 
 	/** 
 	 * @return type
 	 */
-	protected String getType() {
+	public String getType() {
 		return type;
 	}
 	
 	/**
 	 * @return id
 	 */
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 	
