@@ -31,6 +31,7 @@ public class Main {
 	 * TODO : warning clone arrayList.
 	 * TODO : send null to filtering by (algo1)
 	 * TODO : check for csv file just one id
+	 * ajsdbzx
 	 * TODO : display wait message.
 	 */
 	@SuppressWarnings("resource")
