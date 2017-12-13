@@ -52,13 +52,22 @@ public class SortCsvMac implements SortCsv<Mac> {
 	 * This method create a new {@link Mac}.
 	 * @param line.
 	 * @return {@link Mac}.
+	 * @exception InputException : print stack trace.
 	 */
 	public Object addMotherObject(Line line) {
 		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
 		if (line.getType().equals("WIFI")) array.add((MacLocation) addObject(line));
-		return new Mac(
-				line.getMac(), 
-				array);
+		try {
+			return new Mac(
+					line.getMac(), 
+					array,
+					Date.stringToDate(line.getFirstseen())
+					);
+		} 
+		catch (InputException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	/**

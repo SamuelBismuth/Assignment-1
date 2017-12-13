@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
  * @author Orel and Samuel.
  */
-public class WriteKmlWithoutFilter extends WriteKml implements WriteFile {
+public class WriteKmlWithoutFilter extends WriteKml implements WriteFile<Scan> {
 
 	/**
 	 * Constructor.

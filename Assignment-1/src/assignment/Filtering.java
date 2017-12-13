@@ -12,6 +12,6 @@ import java.util.ArrayList;
  */
 public interface Filtering<T> {
 
-	public WriteFile filteringBy(ArrayList<T> array, ArrayList<Mac> arrayMac) throws InputException;
+	public WriteFile<T> filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException;
 	
 }

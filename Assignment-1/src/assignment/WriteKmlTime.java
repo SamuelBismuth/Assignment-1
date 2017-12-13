@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
  * @author Orel and Samuel.
  */
 
-public class WriteKmlTime extends WriteKml implements WriteFile {
+public class WriteKmlTime extends WriteKml implements WriteFile<Scan> {
 
 	private GregorianCalendar dateBegining;
 	private GregorianCalendar dateEnd;

@@ -90,7 +90,7 @@ public class SortCsvTime implements SortCsv<Scan> {
 				line.getSsid(),
 				line.getMac(),
 				channelToFrequency(Integer.parseInt(line.getChannel())),
-				Integer.parseInt(line.getRssi())
+				Double.parseDouble(line.getRssi())
 				);
 	}
 	

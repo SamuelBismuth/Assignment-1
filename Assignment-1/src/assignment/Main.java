@@ -30,6 +30,8 @@ public class Main {
 	 * TODO : algo 2
 	 * TODO : warning clone arrayList.
 	 * TODO : send null to filtering by (algo1)
+	 * TODO : check for csv file just one id
+	 * TODO : display wait message.
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -41,6 +43,7 @@ public class Main {
 		ArrayList<CsvFile> arrayCsv = new ArrayList<CsvFile>();
 		ArrayList<Scan> arrayScan =  new ArrayList<Scan>();
 		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
+		ArrayList<Scan> arrayRelevantScan = new ArrayList<Scan>();
 
 		//  ==============================
 		//  = BEGINNING OF THE ALGORITHM =
@@ -71,7 +74,7 @@ public class Main {
 //		//Write Csv
 //		System.out.println("Input a name for the csv file you want to create : ");
 //		String fileNameCsvExport = new Scanner(System.in).nextLine() + ".csv";
-//		WriteFile write = new WriteCsv(fileNameCsvExport);
+//		WriteFile write = new WriteCombo(fileNameCsvExport);
 //		write.checkData(arrayScan, fileNameCsvExport);
 //
 //		//Open the file
@@ -84,7 +87,7 @@ public class Main {
 //
 //		//Choice of the user (kml).
 //		UserChoiceKml choice = new UserChoiceKml();
-//		Filtering<Scan> filter = null;
+//		Filtering filter = null;
 //		filter = choice.userChoice();
 //
 //		//Filtering csv (kml)
@@ -99,51 +102,85 @@ public class Main {
 //		System.out.println("Input a name for the kml file you want to create : ");
 //		String fileNameKmlExport = new Scanner(System.in).nextLine() + ".kml";
 //		write.checkData(arrayScan, fileNameKmlExport);
+//		
+//		read = new OpenFile();
+//		read.read(fileNameKmlExport);
 //
-//		new OpenFile(fileNameKmlExport); // Open the file.
-
-		/////////////////////////////
-		//Third part : Algorithm 1.//
-		/////////////////////////////
+//		/////////////////////////////
+//		//Third part : Algorithm 1.//
+//		/////////////////////////////
+//		
+//		//Get file combo path
+//		System.out.println("Input the name of the combo file please :");
+//		String fileComboName = new Scanner(System.in).nextLine();
+//		String fileComboPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + fileComboName;
+//		File file = new File(fileComboPath);
+//		
+//		//Read the combo file
+//		Read read = new ReadCombo(fileComboName, arrayCsv, file);
+//		
+//		//Sort Csv (time)
+//		SortCsv<Scan> sortScan = new SortCsvTime();
+//		arrayScan = sortScan.sortBy(arrayCsv);
+//		
+//		//Sort combo (mac)
+//		SortCsv<Mac> sortMac = new SortCsvMac();
+//		arrayMac = sortMac.sortBy(arrayCsv);
+//		
+//		Filtering<SampleAlgo1> filter = new FilteringCsvMac();
+//		WriteFile<SampleAlgo1> write = null;
+//		
+//		//Filtering the csv
+//		try {
+//			write =  filter.filteringBy(arrayScan, arrayMac);
+//		} 
+//		catch (InputException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		//Write the Csv
+//		System.out.println("Input a name for the csv file you want to create : ");
+//		String fileNameComboExport = new Scanner(System.in).nextLine() + ".csv";
+//		try {
+//			write.createFile(fileNameComboExport);
+//		} 
+//		catch (InputException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		//Open the Csv
+//		read = new OpenFile();
+//		read.read(fileNameComboExport);
 		
-		//Get file combo path
-		System.out.println("Input the name of the combo file please :");
-		String fileComboName = new Scanner(System.in).nextLine();
-		String fileComboPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + fileComboName;
-		File file = new File(fileComboPath);
+
+		//////////////////////////////
+		//Fourth part : Algorithm 2.//
+		//////////////////////////////
+		
+		//Get file combo no gps path
+		System.out.println("Input the name of the folder please :");
+		String fileComboNoGpsName = new Scanner(System.in).nextLine();
+		String fileComboNoGpsPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1) + fileComboNoGpsName;
+		File file = new File(fileComboNoGpsPath);
 		
 		//Read the combo file
-		Read read = new ReadCombo(fileComboName, arrayCsv, file);
+		Read read = new ReadCombo(fileComboNoGpsName, arrayCsv, file);
+		
+		//Sort Csv (time)
+		SortCsv<Scan> sortScan = new SortCsvTime();
+		arrayScan = sortScan.sortBy(arrayCsv);
 		
 		//Sort combo (mac)
 		SortCsv<Mac> sortMac = new SortCsvMac();
 		arrayMac = sortMac.sortBy(arrayCsv);
+
+		//don't know if it's good to do this from here (threading)
+		for (Scan input : arrayScan) 
+			new LocalisationAlgo2(input, arrayScan);
 		
-		//Choice of the user (mac).
-		UserChoice<Mac> choice = new UserChoiceMac(arrayMac);
-		Filtering<Mac> filter  = null;
-		try {
-			filter  = choice.userChoice();
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
-		}
 		
-		//Filtering the csv
-		try {
-			WriteFile write =  filter.filteringBy(arrayMac, null);
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
-		}
+		//Write the arrayScan
 		
-		//Write the Csv
-		System.out.println("Input a name for the csv file you want to create : ");
-		String fileNameCsvExport = new Scanner(System.in).nextLine() + ".csv";
-		
-		//Open the Csv
-		read = new OpenFile();
-		read.read(fileNameCsvExport);
 	}
 
 }

@@ -2,6 +2,7 @@ package assignment;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
@@ -13,6 +14,7 @@ public class Mac  {
 
 	private String macName; // the mac address of the router
 	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
+	private GregorianCalendar date;
 	private boolean used; // boolean = true if the mac is already used.
 
 	/**
@@ -20,13 +22,21 @@ public class Mac  {
 	 * @param macName.
 	 * @param arrayMacLocationInformation.
 	 */
-	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation) {
+	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation, GregorianCalendar date) {
 		this.macName = macName;
 		this.arrayMacLocation = arrayMacLocationInformation;
+		this.date = date;
 		this.used = false;
 		sort();
 	}
 
+	/**
+	 * @return date.
+	 */
+	protected GregorianCalendar getDate() {
+		return date;
+	}
+	
 	/**
 	 * @return macName.
 	 */

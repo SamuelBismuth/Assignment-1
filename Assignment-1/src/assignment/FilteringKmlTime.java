@@ -9,7 +9,7 @@ import java.util.Scanner;
  * This class filtering the data by the time : only the scan on the period of time that the user choosed will appear in the kml place.
  * @author Orel and Samuel.
  */
-public class FilteringKmlTime extends FilteringKml implements Filtering <Scan> {
+public class FilteringKmlTime extends FilteringKml implements Filtering<Scan> {
 
 	/**
 	 * This method ask the user to input the time.
@@ -17,7 +17,7 @@ public class FilteringKmlTime extends FilteringKml implements Filtering <Scan> {
 	 * @return {@link WriteKmlTime}.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
+	public WriteFile<Scan> filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
 		System.out.println("Input the beginning of the period of time please : yyyy-mm-dd hh:mm:ss :");
 		String time_begining = new Scanner(System.in).nextLine();
 		System.out.println("Input the end of the period of time please : yyyy-mm-dd hh:mm:ss :");

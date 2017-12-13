@@ -10,27 +10,34 @@ import java.util.ArrayList;
  * More comments as follow.
  * @author Orel and Samuel.
  */
-public class FilteringCsvMac extends FilteringCsv implements Filtering<Mac> {
-	
-	private String macName;
-	
-	public FilteringCsvMac(String macName) {
-		this.macName = macName;
-	}
+public class FilteringCsvMac extends FilteringCsv implements Filtering<SampleAlgo1> {
+		
+	public FilteringCsvMac() {}
 
-	public WriteFile filteringBy(ArrayList<Mac> arrayObject, ArrayList<Mac> arrayMac)  {
-		ArrayList<Mac> array = arrayObject;
-		Mac mac = findMac(array, macName);
-		System.out.println(mac.getMacName());
-		System.out.println(mac.getNumberOfMac());
-		for (MacLocation macLocation : mac.getArrayMacLocation()) System.out.println(macLocation.toString());
+	public WriteFile<SampleAlgo1> filteringBy(ArrayList<Scan> arrayScan, ArrayList<Mac> arrayMac)  {
+		ArrayList<SampleAlgo1> array = new ArrayList<SampleAlgo1>();
+		int index = 0;
+		for (Mac mac : arrayMac) {
+			Wifi wifi = findMac(arrayScan, mac.getMacName());
+			array.add(new SampleAlgo1 (
+					index++,
+					mac.getMacName(),
+					wifi.getName(),
+					wifi.getFrequency(), 
+					wifi.getSignal(),
+					mac.getWeightCenter(),
+					mac.getDate()
+					));
+		}
+		return new WriteComboAlgo1(array);
+	}
+	
+	private Wifi findMac(ArrayList<Scan> arrayScan, String macName) {
+		for (Scan scan : arrayScan) 
+			for (Wifi wifi : scan.getArrayStrongerWifi())
+				if (wifi.getMac().equals(macName)) 
+					return wifi;
 		return null;
 	}
-	
-	private Mac findMac(ArrayList<Mac> array, String macName) {
-		for (Mac mac : array) if(mac.getMacName().equals(macName)) return mac;
-		return null;
-	}
-
 
 }

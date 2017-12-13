@@ -1,5 +1,5 @@
 package assignment;
 
-public abstract class FilteringCsv implements Filtering<Mac> {
+public abstract class FilteringCsv implements Filtering<SampleAlgo1> {
 
 }

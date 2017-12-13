@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public abstract class FilteringKml implements Filtering<Scan> {
 
-	public abstract WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException;
+	public abstract WriteFile<Scan> filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException;
 
 	/**
 	 * @param latitude.

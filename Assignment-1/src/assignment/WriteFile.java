@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * WriteKml is extended by : @see {@link WriteKmlPlace}, @see {@link WriteKmlId}, @see {@link WriteKmlTime}, @see {@link WriteKmlWithoutFilter}.
  * @author Orel and Samuel.
  */
-public interface WriteFile {
+public interface WriteFile <T>{
 
 	public void initialize();
-	abstract void checkData(ArrayList<Scan> array, String fileNameExport);
+	abstract void checkData(ArrayList<T> array, String fileNameExport);
 	public void addNetwork(Scan scan);
 	public void createFile(String fileNameExport) throws InputException;
 	

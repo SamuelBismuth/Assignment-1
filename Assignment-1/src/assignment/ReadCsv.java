@@ -52,11 +52,10 @@ public class ReadCsv implements Read {
 			ArrayList<Line> arrayLine = new ArrayList<Line>();
 			if (checkTheFile(firstLine)) {
 				Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(br);
-				for (CSVRecord record : records) {
-					arrayLine.clear();
+				for (CSVRecord record : records) 
 					arrayLine.add(inputLine(record, getId(firstLine)));
-				}
-				array.add(new CsvFile(getId(firstLine), (ArrayList<Line>) arrayLine.clone()));
+				
+				array.add(new CsvFile(getId(firstLine), arrayLine));
 				in.close();
 				br.close();
 			}

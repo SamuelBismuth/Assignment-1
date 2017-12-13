@@ -22,7 +22,7 @@ import org.boehn.kmlframework.kml.TimeStamp;
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
  */
-public abstract class WriteKml implements WriteFile {
+public abstract class WriteKml implements WriteFile <Scan>{
 
 	private Document document = new Document();
 	protected ArrayList<Mac> array;
@@ -114,7 +114,7 @@ public abstract class WriteKml implements WriteFile {
 		array.add(simpleData("Mac", wifi.getMac()));
 		array.add(simpleData("Frequency", Integer.toString(wifi.getFrequency())));
 		array.add(simpleData("Date", scan.getTime().getTime().toString()));
-		array.add(simpleData("Signal", Integer.toString(wifi.getSignal())));
+		array.add(simpleData("Signal", Double.toString(wifi.getSignal())));
 		array.add(simpleData("Id", scan.getId()));
 		ExtendedData extendedData = new ExtendedData();
 		extendedData.setSimpleDataElements(array);
@@ -138,7 +138,7 @@ public abstract class WriteKml implements WriteFile {
 	 * @param signal.
 	 * @return the color.
 	 */
-	private static String color(int signal) {
+	private static String color(double signal) {
 		if (signal > - 70) return "#red";
 		else if (signal > -90) return "#ylw";
 		else return "#grn";
