@@ -1,9 +1,16 @@
-package assignment;
+package sort;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
+
+import assignment.CsvFile;
+import assignment.Date;
+import assignment.InputException;
+import assignment.Line;
+import assignment.Scan;
+import assignment.Wifi;
 
 /**
  * This class sort the csv files by the time.
@@ -74,9 +81,9 @@ public class SortCsvTime implements SortCsv<Scan> {
 		return new Scan(
 				time, 
 				line.getId(), 
-				new EarthCoordinate(Double.parseDouble(line.getCurrentLongitude()),
-						Double.parseDouble(line.getCurrentLatitude()), 
-						Double.parseDouble(line.getAltitudeMeters())), 
+				new EarthCoordinate(Double.parseDouble(containsInterogation(line.getCurrentLongitude())),
+						Double.parseDouble(containsInterogation(line.getCurrentLatitude())), 
+						Double.parseDouble(containsInterogation(line.getAltitudeMeters()))), 
 				array);
 	}
 
@@ -104,5 +111,9 @@ public class SortCsvTime implements SortCsv<Scan> {
 		else return 5000;
 	}
 	
+	private String containsInterogation(String str) {
+		if (str.equals("?")) return "0";
+		return str;
+	}
 
 }

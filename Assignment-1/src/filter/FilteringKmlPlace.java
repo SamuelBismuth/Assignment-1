@@ -1,10 +1,16 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
+
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
+import write.WriteFile;
+import write.WriteKmlPlace;
 
 /**
  * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.

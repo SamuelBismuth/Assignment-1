@@ -1,4 +1,4 @@
-package assignment;
+package read;
 
 /**
  * This interface defines only one method : read.

@@ -1,6 +1,12 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
+
+import assignment.Date;
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
+import write.WriteFile;
 
 /**
  * This class extends @see {@link Date} and implements @see {@link Filtering}.

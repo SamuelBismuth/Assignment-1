@@ -1,8 +1,12 @@
-package assignment;
+package write;
 
 import java.util.ArrayList;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
+
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
 
 /**
  * This class write the kml file with the place filter.

@@ -143,4 +143,12 @@ public class Line implements Comparable<Line> {
 		return this.mac.compareTo(line.getMac());
 	}
 
+	@Override
+	public String toString() {
+		return "Line [mac=" + mac + ", ssid=" + ssid + ", authMode=" + authMode + ", firstseen=" + firstseen
+				+ ", channel=" + channel + ", rssi=" + rssi + ", currentLatitude=" + currentLatitude
+				+ ", currentLongitude=" + currentLongitude + ", altitudeMeters=" + altitudeMeters + ", accuracyMeters="
+				+ accuracyMeters + ", type=" + type + ", id=" + id + "]";
+	}
+
 }

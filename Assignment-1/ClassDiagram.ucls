@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <interface id="1" language="java" name="assignment.WriteFile" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="1" language="java" name="write.WriteFile" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="305" x="4955" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="assignment.WriteKmlId" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="write.WriteKmlId" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="305" x="4264" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="assignment.ReadFolder" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/ReadFolder.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="read.ReadFolder" project="Assignment-1" 
+    file="/Assignment-1/src/read/ReadFolder.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="252" x="1332" y="243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="assignment.FilteringKml" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/FilteringKml.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="filter.FilteringKml" project="Assignment-1" 
+    file="/Assignment-1/src/filter/FilteringKml.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="157" width="265" x="3236" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="assignment.FilteringKmlEmpty" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="filter.FilteringKmlEmpty" project="Assignment-1" 
+    file="/Assignment-1/src/filter/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="260" x="2336" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="assignment.FilteringKmlId" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/FilteringKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="filter.FilteringKmlId" project="Assignment-1" 
+    file="/Assignment-1/src/filter/FilteringKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="260" x="2636" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,8 +100,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="assignment.ReadCsv" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/ReadCsv.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="read.ReadCsv" project="Assignment-1" file="/Assignment-1/src/read/ReadCsv.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="216" width="308" x="1624" y="243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -109,8 +109,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="assignment.WriteKmlPlace" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="13" language="java" name="write.WriteKmlPlace" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="306" x="4609" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -127,8 +127,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="15" language="java" name="assignment.Filtering" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Filtering.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="15" language="java" name="filter.Filtering" project="Assignment-1" 
+    file="/Assignment-1/src/filter/Filtering.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="96" width="260" x="2336" y="1592"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -136,8 +136,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="16" language="java" name="assignment.FilteringKmlTime" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="16" language="java" name="filter.FilteringKmlTime" project="Assignment-1" 
+    file="/Assignment-1/src/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="260" x="2936" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -145,8 +145,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="assignment.SortCsvTime" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/SortCsvTime.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="17" language="java" name="sort.SortCsvTime" project="Assignment-1" 
+    file="/Assignment-1/src/sort/SortCsvTime.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="333" x="3557" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -154,8 +154,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="assignment.FilteringKmlPlace" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="18" language="java" name="filter.FilteringKmlPlace" project="Assignment-1" 
+    file="/Assignment-1/src/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="260" x="3236" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -181,8 +181,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="assignment.WriteKml" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteKml.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="21" language="java" name="write.WriteKml" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteKml.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="317" width="310" x="5096" y="243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -199,8 +199,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="assignment.WriteKmlWithoutFilter" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="23" language="java" name="write.WriteKmlWithoutFilter" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="305" x="4955" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -208,8 +208,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="24" language="java" name="assignment.Read" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Read.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="24" language="java" name="read.Read" project="Assignment-1" file="/Assignment-1/src/read/Read.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="96" width="142" x="1624" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -217,8 +217,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="25" language="java" name="assignment.OpenFile" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/OpenFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="25" language="java" name="read.OpenFile" project="Assignment-1" file="/Assignment-1/src/read/OpenFile.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="142" x="1972" y="243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -226,8 +226,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="assignment.WriteCsv" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteCsv.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="26" language="java" name="write.WriteCsv" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteCsv.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="216" width="305" x="3919" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -235,8 +235,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="assignment.WriteKmlTime" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/WriteKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="27" language="java" name="write.WriteKmlTime" project="Assignment-1" 
+    file="/Assignment-1/src/write/WriteKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="405" x="5300" y="600"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -244,8 +244,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="assignment.SortCsvMac" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/SortCsvMac.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="28" language="java" name="sort.SortCsvMac" project="Assignment-1" 
+    file="/Assignment-1/src/sort/SortCsvMac.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="330" x="3930" y="956"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -262,156 +262,140 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="30">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="31" name="array">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="32" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="33">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <generalization id="34">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <realization id="35">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="24"/>  
-  </realization>  
-  <realization id="36">    
-    <end type="SOURCE" refId="13"/>    
+  <realization id="30">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <realization id="37">    
-    <bendpoint x="5735" y="600"/>    
-    <end type="SOURCE" refId="21"/>    
+  <realization id="31">    
+    <end type="SOURCE" refId="23"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <association id="38">    
+  <association id="32">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="39" name="arrayWifi">        
+      <attribute id="33" name="arrayWifi">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="40" minimum="0" maximum="2147483647">        
+      <multiplicity id="34" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="41">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="42">    
+  <realization id="35">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <association id="43">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="44" name="arrayMacLocation">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="45" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="46">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <realization id="47">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="TARGET" refId="15"/>  
   </realization>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <realization id="49">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="24"/>  
-  </realization>  
-  <generalization id="50">    
+  <generalization id="36">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="21"/>  
   </generalization>  
-  <realization id="51">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <realization id="52">    
+  <realization id="37">    
     <end type="SOURCE" refId="27"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <realization id="53">    
+  <realization id="38">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="24"/>  
   </realization>  
-  <realization id="54">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <generalization id="55">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <realization id="56">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="57">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="58" name="array">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="59" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="60">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <realization id="61">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <generalization id="62">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <realization id="63">    
-    <bendpoint x="3526" y="956"/>    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <association id="64">    
+  <association id="39">    
     <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="65" name="arrayLine">        
+      <attribute id="40" name="arrayLine">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="66" minimum="0" maximum="2147483647">        
+      <multiplicity id="41" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="42">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <realization id="45">    
+    <bendpoint x="3526" y="956"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <realization id="46">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <realization id="47">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="48">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="49" name="array">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="50" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="51">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <realization id="53">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <generalization id="54">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <realization id="55">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="59">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="60" name="arrayMacLocation">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="61" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="62">    
+    <bendpoint x="5735" y="600"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -1,4 +1,4 @@
-package assignment;
+package read;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,9 +10,13 @@ import java.util.ArrayList;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
+import assignment.CsvFile;
+import assignment.Line;
+
 public class ReadCombo implements Read {
 
 	private ArrayList<CsvFile> array;
+	private int count = 0;
 
 	/**
 	 * Constructor.
@@ -45,6 +49,7 @@ public class ReadCombo implements Read {
 					for (int i = 0; i < Integer.parseInt(record.get(Header.wifiNetworks)); i++) 
 						arrayLine.add(inputLine(record, i));
 					array.add(new CsvFile(record.get(Header.id), (ArrayList<Line>) arrayLine.clone()));
+					count++;
 				}
 			}
 			in.close();
@@ -76,11 +81,12 @@ public class ReadCombo implements Read {
 	 * @return {@link Line}.
 	 */
 	private Line inputLine(CSVRecord record, int i) {
+		String time = containsSeconds(record.get(Header.time));
 		return new Line(
 				record.get((i * 4) +  7),
 				record.get((i * 4) + 6),
 				"AuthMode",
-				record.get(Header.time),
+				time,
 				record.get((i * 4) + 8),
 				record.get((i * 4) + 9),
 				record.get(Header.latitude),
@@ -90,6 +96,16 @@ public class ReadCombo implements Read {
 				"WIFI",
 				record.get(Header.id)
 				);
+	}
+
+	private String containsSeconds(String str) {
+		String strNew = str.substring(0, 15);
+		if(str.substring(15, 17).equals("AM")) {
+			if (count < 10) strNew += "0" + count;
+			else strNew += count;
+			return strNew;
+		}
+		return str;
 	}
 
 }

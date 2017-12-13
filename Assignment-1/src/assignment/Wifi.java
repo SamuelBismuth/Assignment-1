@@ -61,6 +61,13 @@ public class Wifi implements Comparable<Wifi> {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	/**
+	 * @param signal.
+	 */
+	public void setSignal(double signal) {
+		this.signal = signal;
+	}
 
 	/**
 	 * This method compare the signal.

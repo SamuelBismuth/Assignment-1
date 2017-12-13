@@ -10,7 +10,7 @@ import assignment.Mac;
 import assignment.MacLocation;
 import assignment.Scan;
 import assignment.Wifi;
-import assignment.WriteKmlTime;
+import write.WriteKmlTime;
 
 public class WriteKmlTimeTest {
 	

@@ -99,20 +99,21 @@ public class Scan implements Comparable<Scan> {
 	}
 	/**
 	 * @param mac
-	 * @return true if contains the same mac.
-	 * @return false if not contains the same mac.
+	 * @return wifi if contains the same mac.
+	 * @return null if not contains the same mac.
 	 */
-	public boolean containsSameMac(String mac) {
+	public Wifi containsSameMac(String mac) {
 		for (Wifi wifi : arrayWifi) 
 			if (wifi.getMac().equals(mac))
-				return true;
-		return false;
+				return wifi;
+		return null;
 	}
 
 	public ArrayList<Wifi> getArrayStrongerWifiConstantNumber(int numberConstant) {
+		if (numberConstant > this.getWifiNetworks()) return this.getArrayStrongerWifi();
 		ArrayList<Wifi> array = new ArrayList<Wifi>();
 		for (int i = 0; i < numberConstant; i++) 
-			array.add(arrayWifi.get(i));
+			array.add(this.getArrayStrongerWifi().get(i));
 		return array;
 	}
 
@@ -120,6 +121,6 @@ public class Scan implements Comparable<Scan> {
 	 * Compare the relevant number.
 	 */
 	public int compareTo(Scan scan) {
-		return Double.compare(this.relevantNumber, scan.getRelevantNumber());
+		return Double.compare(scan.getRelevantNumber(), this.relevantNumber);
 	}
 }

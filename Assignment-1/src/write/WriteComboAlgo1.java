@@ -1,9 +1,13 @@
-package assignment;
+package write;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
+import assignment.InputException;
+import assignment.SampleAlgo1;
+import assignment.Scan;
 
 public class WriteComboAlgo1 implements WriteFile <SampleAlgo1>{
 

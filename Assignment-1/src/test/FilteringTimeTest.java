@@ -5,12 +5,12 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import assignment.FilteringKmlTime;
 import assignment.InputException;
 import assignment.Mac;
 import assignment.MacLocation;
 import assignment.Scan;
 import assignment.Wifi;
+import filter.FilteringKmlTime;
 
 public class FilteringTimeTest {
 

@@ -1,8 +1,15 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+
+import assignment.Date;
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
+import write.WriteFile;
+import write.WriteKmlTime;
 
 /**
  * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.

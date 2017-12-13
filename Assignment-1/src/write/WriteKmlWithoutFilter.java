@@ -1,6 +1,10 @@
-package assignment;
+package write;
 
 import java.util.ArrayList;
+
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
 
 /**
  * This class write the kml file without filter.

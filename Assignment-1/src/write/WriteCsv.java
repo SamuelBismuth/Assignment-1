@@ -1,9 +1,11 @@
-package assignment;
+package write;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+
+import assignment.Scan;
 
 /**
  * This class writes the csv file.

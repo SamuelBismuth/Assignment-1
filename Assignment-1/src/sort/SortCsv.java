@@ -1,6 +1,10 @@
-package assignment;
+package sort;
 
 import java.util.ArrayList;
+
+import assignment.CsvFile;
+import assignment.Date;
+import assignment.Line;
 
 /**
  * This abstract class defines only for methods : sortBy, needToCreateObject, addMotherObject, addObject.

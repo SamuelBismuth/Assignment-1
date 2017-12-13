@@ -1,6 +1,11 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
+
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
+import write.WriteFile;
 
 /**
  * This interface defines only one method : filteringBy.

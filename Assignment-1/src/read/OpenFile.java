@@ -1,6 +1,8 @@
-package assignment;
+package read;
 
 import java.io.IOException;
+
+import assignment.InputException;
 
 /**
  * This class opens a file with the help of the terminal.

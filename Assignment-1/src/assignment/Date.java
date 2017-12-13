@@ -16,6 +16,7 @@ public class Date {
 	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
 	 */
 	static protected GregorianCalendar stringToDate(String time) throws InputException {
+		if (time.substring(6, 10).contains(" ")) return stringToDateBoaz(time);
 		try {
 			int year = Integer.parseInt(time.substring(0, 4));
 			int month = Integer.parseInt(time.substring(5, 7));
@@ -56,6 +57,29 @@ public class Date {
 			return null;
 		}
 	}
+	
+	/**
+	 * Set the string time of the csv into the object {@link GregorianCalendar}.
+	 * here the time appears like this : dd/mm/yyyy hh/mm ex : 28/10/2017 20:10.
+	 * @param time.
+	 * @return {@link GregorianCalendar}.
+	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
+	 */
+	static protected GregorianCalendar stringToDateBoaz(String time) throws InputException {
+		try {
+			int year = Integer.parseInt("20" + time.substring(6, 8));
+			int month = Integer.parseInt(time.substring(0, 2));
+			int day = Integer.parseInt(time.substring(3, 5));
+			int hours = Integer.parseInt(time.substring(9, 11));
+			int min = Integer.parseInt(time.substring(12, 14));
+			int sec = Integer.parseInt(time.substring(15, 17));
+				return new GregorianCalendar(year, month, day, hours, min, sec);
+		}
+		catch (NumberFormatException | IndexOutOfBoundsException ex) {
+			System.out.println("Error in the input. " + ex);
+			return null;
+		}
+	}	
 	
 	/**
 	 * @param time.

@@ -30,6 +30,11 @@ public class Mac  {
 		sort();
 	}
 
+	
+	public Mac(EarthCoordinate coordinate) {
+		
+	}
+	
 	/**
 	 * @return date.
 	 */

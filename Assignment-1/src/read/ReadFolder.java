@@ -1,4 +1,4 @@
-package assignment;
+package read;
 
 import java.io.File;
 

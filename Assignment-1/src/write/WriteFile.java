@@ -1,6 +1,9 @@
-package assignment;
+package write;
 
 import java.util.ArrayList;
+
+import assignment.InputException;
+import assignment.Scan;
 
 /**
  * This class interface defines for method : initialize, an abstract method checkData, addNetwork and createFile.

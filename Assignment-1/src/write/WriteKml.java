@@ -1,4 +1,4 @@
-package assignment;
+package write;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,6 +14,11 @@ import org.boehn.kmlframework.kml.Placemark;
 import org.boehn.kmlframework.kml.SimpleData;
 import org.boehn.kmlframework.kml.Style;
 import org.boehn.kmlframework.kml.TimeStamp;
+
+import assignment.InputException;
+import assignment.Mac;
+import assignment.Scan;
+import assignment.Wifi;
 
 /**
  * This absract class write a kml file.

@@ -1,6 +1,13 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
+
+import assignment.Mac;
+import assignment.SampleAlgo1;
+import assignment.Scan;
+import assignment.Wifi;
+import write.WriteComboAlgo1;
+import write.WriteFile;
 
 /**
  * This class extends @see {@link FilteringCsv} and implements @see {@link Filtering}.

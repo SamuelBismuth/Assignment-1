@@ -1,4 +1,4 @@
-package assignment;
+package read;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+
+import assignment.CsvFile;
+import assignment.Line;
 
 /**
  * This class reads a file and input into an array list the object @see {@link CsvFile}.

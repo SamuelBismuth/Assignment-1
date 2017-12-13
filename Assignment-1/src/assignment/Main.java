@@ -4,6 +4,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import read.Read;
+import read.ReadCombo;
+import sort.SortCsv;
+import sort.SortCsvTime;
+
 /**
  * The Main class.
  * About the warnings :
@@ -169,17 +174,14 @@ public class Main {
 		//Sort Csv (time)
 		SortCsv<Scan> sortScan = new SortCsvTime();
 		arrayScan = sortScan.sortBy(arrayCsv);
-		
-		//Sort combo (mac)
-		SortCsv<Mac> sortMac = new SortCsvMac();
-		arrayMac = sortMac.sortBy(arrayCsv);
-
+					
 		//don't know if it's good to do this from here (threading)
+		LocalisationAlgo2 algo2 = new LocalisationAlgo2(arrayScan);
 		for (Scan input : arrayScan) 
-			new LocalisationAlgo2(input, arrayScan);
-		
+			algo2.newCoordinate(input);
 		
 		//Write the arrayScan
+		
 		
 	}
 

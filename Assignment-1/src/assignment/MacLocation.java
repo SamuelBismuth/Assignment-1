@@ -16,9 +16,9 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * @param pointLocation.
 	 * @param signal.
 	 */
-	public MacLocation(EarthCoordinate pointLocation, double d) {
+	public MacLocation(EarthCoordinate pointLocation, double signal) {
 		this.pointLocation = pointLocation;
-		this.signal = d;
+		this.signal = signal;
 	}
 
 	/**

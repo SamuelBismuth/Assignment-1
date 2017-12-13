@@ -1,6 +1,11 @@
-package assignment;
+package filter;
 
 import java.util.ArrayList;
+
+import assignment.Mac;
+import assignment.Scan;
+import write.WriteFile;
+import write.WriteKmlWithoutFilter;
 
 /**
  * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
