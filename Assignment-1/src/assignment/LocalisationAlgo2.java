@@ -31,7 +31,7 @@ public class LocalisationAlgo2 {
 
 	private ArrayList<Scan> getRevelantScan() {
 		ArrayList<Scan> relevantScan = new ArrayList<Scan>();
-		for (Scan data : array) data.setRevelantNumber(input);
+		for (Scan data : array) data.setRelevantNumber(input);
 		Collections.sort(array);
 		for (int i = 0; i < NBOFMAC; i++) 
 			relevantScan.add(array.get(i));

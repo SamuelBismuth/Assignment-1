@@ -10,12 +10,13 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * This class define an object scan.
  * @author Orel and Samuel.
  */
-public class Scan {
+public class Scan implements Comparable<Scan> {
 	
 	private GregorianCalendar time;
 	private String id;
 	private EarthCoordinate pointLocation;
 	private ArrayList<Wifi> arrayWifi;
+	private double relevantNumber;
 	
 	/**
 	 * Constructor.
@@ -84,6 +85,19 @@ public class Scan {
 	}
 	
 	/**
+	 * @param input
+	 */
+	public void setRelevantNumber(Scan input) {
+		this.relevantNumber = RelevantScan.getRelevantNumber(this, input);
+	}
+	
+	/**
+	 * @return relevanrNumber.
+	 */
+	public double getRelevantNumber () {
+		return relevantNumber;
+	}
+	/**
 	 * @param mac
 	 * @return true if contains the same mac.
 	 * @return false if not contains the same mac.
@@ -93,5 +107,19 @@ public class Scan {
 			if (wifi.getMac().equals(mac))
 				return true;
 		return false;
+	}
+
+	public ArrayList<Wifi> getArrayStrongerWifiConstantNumber(int numberConstant) {
+		ArrayList<Wifi> array = new ArrayList<Wifi>();
+		for (int i = 0; i < numberConstant; i++) 
+			array.add(arrayWifi.get(i));
+		return array;
+	}
+
+	/**
+	 * Compare the relevant number.
+	 */
+	public int compareTo(Scan scan) {
+		return Double.compare(this.relevantNumber, scan.getRelevantNumber());
 	}
 }

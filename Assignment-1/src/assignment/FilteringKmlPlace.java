@@ -12,7 +12,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  * TODO : JUNIT on the radius.
  * @author Orel and Samuel.
  */
-public class FilteringKmlPlace extends FilteringKml implements Filtering <Scan>{
+public class FilteringKmlPlace extends FilteringKml implements Filtering <Scan> {
 
 	/**
 	 * This method ask the user to input the place.
@@ -21,7 +21,7 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering <Scan>{
 	 * @exception InputMismatchException : Error on the input, try again.
 	 */
 	@SuppressWarnings("resource")
-	public WriteFile filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
+	public WriteFile<Scan> filteringBy(ArrayList<Scan> array, ArrayList<Mac> arrayMac) throws InputException {
 		try { 
 			System.out.println("Input an latitude please :");
 			double pointLatitude = Double.parseDouble(new Scanner(System.in).nextLine());
