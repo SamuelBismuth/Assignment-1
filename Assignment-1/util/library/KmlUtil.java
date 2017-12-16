@@ -32,7 +32,7 @@ public class KmlUtil {
 			TimeStamp time = new TimeStamp(timeInput(scan.getTime()));
 			placemark.setTimePrimitive(time);
 			placemark.setExtendedData(extendedData(scan, wifi));
-			placemark.setLocation(scan.getPointLocation().getLongitude(), scan.getPointLocation().getLatitude());
+			placemark.setLocation(scan.getPointLocation().getLatitude(), scan.getPointLocation().getLongitude());
 			placemark.setStyleUrl(color(wifi.getSignal()));
 			document.addFeature(placemark);
 		}

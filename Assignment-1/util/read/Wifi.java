@@ -87,4 +87,9 @@ public class Wifi implements Comparable<Wifi> {
 		return wifi;
 	}
 
+	@Override
+	public String toString() {
+		return "Wifi [name=" + name + ", mac=" + mac + ", frequency=" + frequency + ", signal=" + signal + "]";
+	}
+
 }

@@ -34,7 +34,7 @@ public class WigleWifiLine implements Comparable<WigleWifiLine> {
 	 * @param accuracyMeters
 	 * @param type
 	 */
-	protected WigleWifiLine(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
+	public WigleWifiLine(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
 			String currentLatitude, String currentLongitude, String altitudeMeters, String accuracyMeters,
 			String type, String id) {
 		this.mac = mac;

@@ -5,8 +5,8 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithm1.Mac;
-import algorithm1.MacLocation;
+import algorithms.Mac;
+import algorithms.MacLocationAlgo1;
 import filter.FilteringKmlTime;
 import library.InputException;
 import read.SampleScan;
@@ -31,8 +31,8 @@ public class FilteringTimeTest {
 		EarthCoordinate tlv = new EarthCoordinate(34.78176760979483,32.08529989645831, 0.0);//TLV
 		String macname = "easyMac";
 		int signal = -90;
-		MacLocation ml1 = new MacLocation(tlv, signal);
-		ArrayList<MacLocation> array2 = new ArrayList<MacLocation>();
+		MacLocationAlgo1 ml1 = new MacLocationAlgo1(tlv, signal);
+		ArrayList<MacLocationAlgo1> array2 = new ArrayList<MacLocationAlgo1>();
 		array2.add(ml1);
 		Mac m = new Mac(macname, array2);
 		ArrayList<Mac> macs = new ArrayList<Mac>();

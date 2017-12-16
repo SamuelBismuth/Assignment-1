@@ -3,8 +3,8 @@ package filter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import algorithm1.LineAlgo1;
-import algorithm1.Mac;
+import algorithms.LineAlgo1;
+import algorithms.Mac;
 import write.WriteComboAlgo1;
 import write.WriteFile;
 
@@ -13,7 +13,7 @@ import write.WriteFile;
  * This class filter the {@link ArrayList} of {@link Mac} to give the new coordinates by the algorithm 1.
  * @author Orel and Samuel.
  */
-public class FilteringCsvMac implements Filtering<LineAlgo1, Mac> {
+public class FilteringCsvMac implements Filtering<Mac, Mac> {
 
 	/**
 	 * Empty constructor.
@@ -26,11 +26,10 @@ public class FilteringCsvMac implements Filtering<LineAlgo1, Mac> {
 	 * @param arrayMac.
 	 */
 	@Override
-	public WriteFile<LineAlgo1> filteringBy(ArrayList<Mac> arrayMac)  {
-		ArrayList<LineAlgo1> array = new ArrayList<LineAlgo1>();
+	public WriteFile<Mac> filteringBy(ArrayList<Mac> arrayMac)  {
 		int index = 0;
 		for (Mac mac : arrayMac) {
-			array.add(
+			mac.setLineAlgo1(
 					new LineAlgo1(
 							index++,
 							mac.getMacName(),
@@ -42,6 +41,7 @@ public class FilteringCsvMac implements Filtering<LineAlgo1, Mac> {
 							)
 					);
 		}
+		
 		String fileName = getFileName();
 		return new WriteComboAlgo1(fileName);
 	}

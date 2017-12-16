@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import algorithm1.Mac;
+import algorithms.Mac;
 import library.ReadFolder;
-import read.CsvFile;
-import read.ReadWigleWifi;
+import read.ReadCombo;
+import read.SampleScan;
 import read.SortWigleWifiMac;
 
 /**
@@ -24,15 +24,15 @@ public class SortWigleWifiMacTest {
 	 */
 	@Test
 	public void testSortBy() {
-		ArrayList<CsvFile> array = new ArrayList<CsvFile>();
+		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
 		String fileName = ReadFolder.getAbsolutePath();
-		File file = new File("WigleWifi");
-		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, file);
-		readWigleWifi.readBuffer();
+		File file = new File("Combo.csv");
+		ReadCombo readCombo = new ReadCombo(fileName, array, file);
+		readCombo.readBuffer();
 		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
 		SortWigleWifiMac sort = new SortWigleWifiMac();
 		arrayMac = sort.sortBy(array);
-		assertEquals(632,  arrayMac.size());
+		assertEquals(591,  arrayMac.size());
 	}
 
 }

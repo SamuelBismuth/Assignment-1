@@ -6,7 +6,11 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithm1.LineAlgo1;
+import algorithms.LineAlgo1;
+import algorithms.Mac;
+import algorithms.MacLocation;
+import algorithms.MacLocationAlgo1;
+import read.Wifi;
 import write.WriteComboAlgo1;
 
 /**
@@ -20,29 +24,56 @@ public class WriteComboAlgo1Test {
 	 */
 	@Test
 	public void testReceiveData() {
-		ArrayList<LineAlgo1> arraySampleScan = new ArrayList<LineAlgo1>();
-		arraySampleScan.add(
-				new LineAlgo1(
-						0,
-						"mac",
-						"ssid",
-						2500,
-						-40,
+		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
+		ArrayList<MacLocation> arrayMacLocation = new ArrayList<MacLocation>();
+		arrayMacLocation.add(
+				new MacLocationAlgo1(
 						new EarthCoordinate(
-								32.0, 
-								32.0, 
-								0.0
+								32.0,
+								32.0,
+								100.0
 								),
-						new GregorianCalendar(
-								2017,
-								02,
-								12
+						-80,
+						new Wifi (
+								"wifiname",
+								"mac",
+								2400, 
+								-80
 								)
 						)
 				);
-		String fileName = "TableMac";
-		WriteComboAlgo1 write = new WriteComboAlgo1(fileName);
-		write.receiveData(arraySampleScan); 	
+				Mac mac = new Mac(
+						"mac",
+						arrayMacLocation,
+						new GregorianCalendar(
+								12,
+								10,
+								2017
+								)
+						);
+				mac.setLineAlgo1(
+						new LineAlgo1(
+								0,
+								"mac",
+								"ssid",
+								2500,
+								-40,
+								new EarthCoordinate(
+										32.0, 
+										32.0, 
+										0.0
+										),
+								new GregorianCalendar(
+										2017,
+										02,
+										12
+										)
+								)
+						);
+				arrayMac.add(mac);
+				String fileName = "TableMac";
+				WriteComboAlgo1 write = new WriteComboAlgo1(fileName);
+				write.receiveData(arrayMac); 	
 	}
 
 }

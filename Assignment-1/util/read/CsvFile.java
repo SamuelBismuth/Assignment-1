@@ -16,7 +16,7 @@ public class CsvFile {
 	 * @param id.
 	 * @param line.
 	 */
-	protected CsvFile(String id, ArrayList<WigleWifiLine> arrayWigleWifiLine) {
+	public CsvFile(String id, ArrayList<WigleWifiLine> arrayWigleWifiLine) {
 		this.id = id;
 		this.arrayWigleWifiLine = arrayWigleWifiLine;
 	}

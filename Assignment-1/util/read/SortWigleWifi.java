@@ -5,8 +5,9 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithm1.Mac;
-import algorithm1.MacLocation;
+import algorithms.Mac;
+import algorithms.MacLocation;
+import algorithms.MacLocationAlgo1;
 import library.InputException;
 import library.ParseDate;
 
@@ -15,9 +16,9 @@ import library.ParseDate;
  * Then, two classes implements this interface : @see {@link SortWigleWifiMac}, @see {@link SortWigleWifiTime}.
  * @author Orel and Samuel
  */
-public abstract class SortWigleWifi<T> {
+public abstract class SortWigleWifi<T, Y> {
 
-	protected abstract ArrayList<T> sortBy(ArrayList<CsvFile> array);
+	protected abstract ArrayList<T> sortBy(ArrayList<Y> array);
 	protected abstract boolean needToCreateObject(String str, Object object);
 	
 	/**
@@ -43,12 +44,12 @@ public abstract class SortWigleWifi<T> {
 	}
 	
 	/**
-	 * This method create a new {@link MacLocation}.
+	 * This method create a new {@link MacLocationAlgo1}.
 	 * @param line.
-	 * @return {@link MacLocation}.
+	 * @return {@link MacLocationAlgo1}.
 	 */
-	protected static MacLocation addMacLocation(WigleWifiLine line) {
-		return new MacLocation(
+	protected static MacLocationAlgo1 addMacLocation(WigleWifiLine line) {
+		return new MacLocationAlgo1(
 				new EarthCoordinate(Double.parseDouble(line.getCurrentLongitude()),
 						Double.parseDouble(line.getCurrentLatitude()), 
 						Double.parseDouble(line.getAltitudeMeters())), 

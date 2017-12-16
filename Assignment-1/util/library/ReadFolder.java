@@ -33,7 +33,8 @@ public class ReadFolder {
 	 * @return absolutePath
 	 */
 	public static String getAbsolutePath() {
-		return new File(".").getAbsolutePath();
+		String folderPathWorkspace  = new File(".").getAbsolutePath();
+		return folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 	}
 
 }

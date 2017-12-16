@@ -38,18 +38,17 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 */
 	public void readBuffer() {
 		try {
-			BufferedReader br = readFile(file + ".csv");
-			ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
+			BufferedReader br = readFile(folderName + file);
 			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(Header.class).parse(br);
 			for (CSVRecord record : records) {
 				if(goodLine(record)) {
+					ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
 					for (int i = 0; i < Integer.parseInt(record.get(Header.wifiNetworks)); i++) 
 						arrayWifi.add(inputObject(record, Integer.toString(i)));
 					array.add(inputSampleScan(record, arrayWifi));
 				}
 			}
 			br.close();
-
 		}
 		catch(IOException ex) { // If there is an error.
 			System.out.println("Error reading file : " + ex);
@@ -117,7 +116,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @return false if not.
 	 */
 	private static boolean goodLine(CSVRecord record) {
-		if (!record.get(0).equals("") && !record.get(Header.wifiNetworks).contains("#Wifi")) return true;
+		if (!record.get(0).equals("") && !record.get(Header.wifiNetworks).contains("#Wifi networks")) return true;
 		return false;
 	}
 

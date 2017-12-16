@@ -24,7 +24,7 @@ public class ReadWigleWifiTest {
 	public void testRead() {
 		ArrayList<CsvFile> array = new ArrayList<CsvFile>();
 		String fileName = ReadFolder.getAbsolutePath();
-		File file = new File("WigleWifi");
+		File file = new File("WigleWifi.csv");
 		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, file);
 		readWigleWifi.readBuffer();
 		assertEquals(1, array.size());

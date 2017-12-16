@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithm1.Mac;
-import algorithm1.MacLocation;
+import algorithms.Mac;
+import algorithms.MacLocationAlgo1;
 
 public class MacTest {
 
 	@Test
 	public void test() {
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacLocationAlgo1> array = new ArrayList<MacLocationAlgo1>();
 		String macname1 = "orel";
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
@@ -29,9 +29,9 @@ public class MacTest {
 		double wsignal2 = 1/(Math.pow(signal2, 2));
 		double wsignal3 = 1/(Math.pow(signal3, 2));
 		double sumW = wsignal1+wsignal2+wsignal3;
-		MacLocation a = new MacLocation(pointlocation1, signal1);
-		MacLocation b = new MacLocation(pointlocation2, signal2);
-		MacLocation c = new MacLocation(pointlocation3, signal3);
+		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1);
+		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2);
+		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3);
 		array.add(a);
 		array.add(b);
 		array.add(c);

@@ -1,4 +1,4 @@
-package algorithm1;
+package algorithms;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,6 +16,7 @@ public class Mac  {
 	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
 	private GregorianCalendar date;
 	private boolean used; // boolean = true if the mac is already used.
+	private LineAlgo1 lineAlgo1;
 
 	/**
 	 * Constructor.
@@ -26,6 +27,17 @@ public class Mac  {
 		this.macName = macName;
 		this.arrayMacLocation = arrayMacLocationInformation;
 		this.date = date;
+		this.used = false;
+		sort();
+	}
+	
+	/**
+	 * Constructor.
+	 * @param macName.
+	 * @param arrayMacLocationInformation.
+	 */
+	public Mac(ArrayList<MacLocation> arrayMacLocationInformation) {
+		this.arrayMacLocation = arrayMacLocationInformation;
 		this.used = false;
 		sort();
 	}
@@ -120,18 +132,26 @@ public class Mac  {
 	protected void setUsed(boolean bool) {
 		this.used = bool;
 	}
+	
+	/**
+	 * @param arrayLineAlgo1.
+	 */
+	public void setLineAlgo1(LineAlgo1 lineAlgo1) {
+		this.lineAlgo1 = lineAlgo1;
+	}
+
+	/**
+	 * @return arrayLineAlgo1.
+	 */
+	public LineAlgo1 getLineAlgo1() {
+		return lineAlgo1;
+	}
 
 	/**
 	 * This method sort 
 	 */
 	public void sort() {
-		Collections.sort(arrayMacLocation);
+		Collections.sort(arrayMacLocation, MacLocation.Comparators.SIGNAL);
 	}
-
-	public String toString() {
-		return "Mac [macName=" + macName + ", arrayMacLocation=" + arrayMacLocation.toString() + ", used=" + used + "]";
-	}
-	
-	
 
 }

@@ -3,14 +3,15 @@ package read;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import algorithm1.Mac;
+import algorithms.Mac;
+import library.Filter;
 
 /**
  * This class sort the csv file by the mac.
  * This class extends @see {@link SortWigleWifi}.
  * @author Orel and Samuel
  */
-public class SortWigleWifiMac extends SortWigleWifi<Mac> {
+public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
 	
 	/**
 	 * Empty constructor.
@@ -24,8 +25,9 @@ public class SortWigleWifiMac extends SortWigleWifi<Mac> {
 	 * @return arrayMac.
 	 */
 	@Override
-	public ArrayList<Mac> sortBy(ArrayList<CsvFile> arrayCsv) {
+	public ArrayList<Mac> sortBy(ArrayList<SampleScan> arrayScan) {
 		ArrayList<Mac> array = new ArrayList<Mac>();
+		ArrayList<CsvFile> arrayCsv = Filter.fromScanToCvs(arrayScan);
 		for (CsvFile csvFile : arrayCsv) Collections.sort(csvFile.getWigleWifiLine());
 		for (CsvFile csvFile : arrayCsv) {
 			for (WigleWifiLine line : csvFile.getWigleWifiLine()) { 

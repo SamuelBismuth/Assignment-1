@@ -6,19 +6,16 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithm2.RelevantScan;
-
 /**
  * This class define an object scan.
  * @author Orel and Samuel.
  */
-public class SampleScan implements Comparable<SampleScan> {
+public class SampleScan {
 	
 	private GregorianCalendar time;
 	private String id;
 	private EarthCoordinate pointLocation;
 	private ArrayList<Wifi> arrayWifi;
-	private double relevantNumber;
 	
 	/**
 	 * Constructor.
@@ -55,6 +52,14 @@ public class SampleScan implements Comparable<SampleScan> {
 	public EarthCoordinate getPointLocation() {
 		return pointLocation;
 	}
+	
+	/**
+	 * @param pointLocation the pointLocation to set
+	 */
+	public void setPointLocation(EarthCoordinate pointLocation) {
+		this.pointLocation = pointLocation;
+	}
+
 	
 	/**
 	 * @return arrayWifi.
@@ -96,31 +101,22 @@ public class SampleScan implements Comparable<SampleScan> {
 	}
 	
 	/**
-	 * @param input
-	 */
-	protected void setRelevantNumber(SampleScan input) {
-		this.relevantNumber = RelevantScan.getRelevantNumber(this, input);
-	}
-	
-	/**
-	 * @return relevanrNumber.
-	 */
-	protected double getRelevantNumber () {
-		return relevantNumber;
-	}
-	/**
 	 * @param mac
 	 * @return wifi if contains the same mac.
 	 * @return null if not contains the same mac.
 	 */
-	protected Wifi containsSameMac(String mac) {
+	public Wifi containsSameMac(String mac) {
 		for (Wifi wifi : arrayWifi) 
 			if (wifi.getMac().equals(mac))
 				return wifi;
 		return null;
 	}
 
-	protected ArrayList<Wifi> getArrayStrongerWifiConstantNumber(int numberConstant) {
+	/**
+	 * @param numberConstant.
+	 * @return array.
+	 */
+	public ArrayList<Wifi> getArrayStrongerWifiConstantNumber(int numberConstant) {
 		if (numberConstant > this.getWifiNetworks()) return this.getArrayStrongerWifi();
 		ArrayList<Wifi> array = new ArrayList<Wifi>();
 		for (int i = 0; i < numberConstant; i++) 
@@ -128,10 +124,4 @@ public class SampleScan implements Comparable<SampleScan> {
 		return array;
 	}
 
-	/**
-	 * Compare the relevant number.
-	 */
-	public int compareTo(SampleScan scan) {
-		return Double.compare(scan.getRelevantNumber(), this.relevantNumber);
-	}
 }

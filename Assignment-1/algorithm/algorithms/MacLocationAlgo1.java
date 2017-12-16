@@ -1,4 +1,4 @@
-package algorithm1;
+package algorithms;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
@@ -8,7 +8,7 @@ import read.Wifi;
  * This class represents a object MacLocation.
  * @author Orel and Samuel.
  */
-public class MacLocation implements Comparable<MacLocation> {
+public class MacLocationAlgo1 implements MacLocation {
 
 	private EarthCoordinate pointLocation;
 	private double signal;
@@ -19,7 +19,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	 * @param pointLocation.
 	 * @param signal.
 	 */
-	public MacLocation(EarthCoordinate pointLocation, double signal, Wifi wifi) {
+	public MacLocationAlgo1(EarthCoordinate pointLocation, double signal, Wifi wifi) {
 		this.pointLocation = pointLocation;
 		this.signal = signal;
 		this.wifi = wifi;
@@ -28,14 +28,16 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return pointLocation.
 	 */
-	protected EarthCoordinate getPointLocation() {
+	@Override
+	public EarthCoordinate getPointLocation() {
 		return pointLocation;
 	}
 
 	/**
 	 * @return weightPointLocation = weightSignal * pointLocation.
 	 */
-	protected EarthCoordinate getWeightPointLocation() {
+	@Override
+	public EarthCoordinate getWeightPointLocation() {
 		return new EarthCoordinate(
 				this.getWeigthSignal() * pointLocation.getLongitude(),
 				this.getWeigthSignal() * pointLocation.getLatitude(),
@@ -46,6 +48,7 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return wifi.
 	 */
+	@Override
 	public Wifi getWifi() {
 		return wifi;
 	}
@@ -53,31 +56,18 @@ public class MacLocation implements Comparable<MacLocation> {
 	/**
 	 * @return signal.
 	 */
-	protected double getSignal() {
+	@Override
+	public double getSignal() {
 		return signal;
 	}
 
 	/**
 	 * @return weightSignal = (1 / signal * signal).
 	 */
-	protected double getWeigthSignal() {
-		return (1 / Math.pow(this.signal, 2));
+	@Override
+	public double getWeigthSignal() {
+			return (1 / Math.pow(this.signal, 2));
 	}
-
-	/**
-	 * This method compare the signal.
-	 * @param macLocationInformation.
-	 */
-	public int compareTo(MacLocation macLocationInformation) {
-		return Double.compare(macLocationInformation.getSignal(), this.signal);
-	}
-
-	/**
-	 * toString.
-	 */
-	public String toString() {
-		return "Signal =" + getSignal() + ", Weight signal=" + getWeigthSignal() +
-			   "Point location =" + getPointLocation().toString() + "Weight point location =" + getWeightPointLocation().toString();
-	}
-
+	
+	
 }

@@ -1,14 +1,15 @@
-package kml;
+/**
+ * 
+ */
+package test;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import filter.Filtering;
-import library.InputException;
-import library.OpenFile;
+import org.junit.Test;
+
 import library.ReadFolder;
-import library.UserChoice;
 import read.CsvFile;
 import read.ReadCombo;
 import read.ReadCsv;
@@ -16,15 +17,20 @@ import read.ReadFile;
 import read.ReadWigleWifi;
 import read.SampleScan;
 import read.SortWigleWifiTime;
+import read.Wifi;
 import read.WigleWifiLine;
 import write.WriteCombo;
 import write.WriteFile;
 
-public class Main {
+/**
+ * @author Samuel
+ *
+ */
+public class KmlTest {
 
 	@SuppressWarnings("resource")
-	public static void main(String[] args) {
-
+	@Test
+	public void test() {
 		//Get workspace path
 		String folderPathWorkspace = new File(".").getAbsolutePath();
 
@@ -58,39 +64,30 @@ public class Main {
 		arrayScan = sortScan.sortBy(arrayCsv);
 
 		//Write Csv
-		System.out.println("Input a name for the csv file you want to create : ");
-		String fileNameCombo = new Scanner(System.in).nextLine();
-		WriteFile<SampleScan> write = new WriteCombo(fileNameCombo);
+		WriteFile<SampleScan> write = new WriteCombo("TestCombo");
 		write.receiveData(arrayScan);
-
-		//Open the file
-		OpenFile.open(fileNameCombo + ".csv");
-
+		
 		////////////////////////////////////////
 		//Second part : Writting the kml file.//
 		////////////////////////////////////////
 
 		//Read the combo
-		File combo = new File(fileNameCombo);
-		arrayScan = new ArrayList<SampleScan>();
-		ReadCsv<SampleScan> readCombo = new ReadCombo(folderPath, arrayScan, combo);
+		File combo = new File("TestCombo.csv");
+		ArrayList<SampleScan> arrayScan2 = new ArrayList<SampleScan>();
+		ReadCsv<SampleScan> readCombo = new ReadCombo(folderPath, arrayScan2, combo);
 		readCombo.readBuffer();
 
-		//Choice of the user
-		Filtering<SampleScan, SampleScan> filter = UserChoice.userChoice();
-
-		//Filtering kml
-		try {
-			write = filter.filteringBy(arrayScan);
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
+		for (SampleScan scan : arrayScan2) {
+			System.out.print(scan.toString() + " ### ");
+			for (Wifi wifi : scan.getArrayStrongerWifi()) {
+				System.out.print(wifi.toString()+ " ### ");
+			}
+			System.out.println();
 		}
 
-		//Write kml
-		write.receiveData(arrayScan);
-
-		//Open the file
-		OpenFile.open(write.getFileName());
+		//Write Csv
+		WriteFile<SampleScan> write2 = new WriteCombo("TestCombo2");
+		write2.receiveData(arrayScan);
 	}
+
 }

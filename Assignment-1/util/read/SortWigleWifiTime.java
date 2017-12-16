@@ -11,7 +11,7 @@ import library.InputException;
  * This class extends @see {@link SortWigleWifi}.
  * @author Orel and Samuel.
  */
-public class SortWigleWifiTime extends SortWigleWifi<SampleScan> {
+public class SortWigleWifiTime extends SortWigleWifi<SampleScan, CsvFile> {
 	
 	/**
 	 * Constructor.

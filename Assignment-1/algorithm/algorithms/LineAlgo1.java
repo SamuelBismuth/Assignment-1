@@ -1,4 +1,4 @@
-package algorithm1;
+package algorithms;
 
 import java.util.GregorianCalendar;
 

@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import algorithm1.LineAlgo1;
+import algorithms.Mac;
 
-public class WriteComboAlgo1 implements WriteFile<LineAlgo1> {
+public class WriteComboAlgo1 implements WriteFile<Mac> {
 
 	private FileWriter fw;
 	private PrintWriter outs;
@@ -32,18 +32,18 @@ public class WriteComboAlgo1 implements WriteFile<LineAlgo1> {
 	}
 
 	@Override
-	public void receiveData(ArrayList<LineAlgo1> array) {
+	public void receiveData(ArrayList<Mac> array) {
 		writeHeader();
-		for (LineAlgo1 line : array) {
-			outs.print(line.getIndex() + ",");
-			outs.print(line.getMacName() + ",");
-			outs.print(line.getSsid() + ",");
-			outs.print(line.getFrequency() + ",");
-			outs.print(line.getSignal() + ",");
-			outs.print(line.getLocalisation().getLatitude() + ",");
-			outs.print(line.getLocalisation().getLongitude() + ",");
-			outs.print(line.getLocalisation().getAltitude() + ",");
-			outs.print(line.getDate().getTime() + ", ");
+		for (Mac mac : array) {
+			outs.print(mac.getLineAlgo1().getIndex() + ",");
+			outs.print(mac.getLineAlgo1().getMacName() + ",");
+			outs.print(mac.getLineAlgo1().getSsid() + ",");
+			outs.print(mac.getLineAlgo1().getFrequency() + ",");
+			outs.print(mac.getLineAlgo1().getSignal() + ",");
+			outs.print(mac.getLineAlgo1().getLocalisation().getLatitude() + ",");
+			outs.print(mac.getLineAlgo1().getLocalisation().getLongitude() + ",");
+			outs.print(mac.getLineAlgo1().getLocalisation().getAltitude() + ",");
+			outs.print(mac.getLineAlgo1().getDate().getTime() + ", ");
 			outs.println("Approx. w-center algo1");
 		}
 		writeFile();
