@@ -8,8 +8,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import read.CsvFile;
-import read.WigleWifiLine;
+import assignment.CsvFile;
+import assignment.Line;
 
 public class CsvFileTest {
 

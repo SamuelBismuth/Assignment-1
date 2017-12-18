@@ -5,23 +5,24 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import org.junit.Test;
 
-import assignment1.ReadFolder;
-import assignment1.Scan;
+import assignment.InputException;
+import assignment.ReadFolder;
+import assignment.Scan;
+import p.SampleAlgo1;
+import p.WriteComboAlgo1;
 
 public class ReadFolderTest {
 
 	@Test 
 	public void testRead() {
-		String folderName = "C:/Users/Samuel/workspace/Assignment 1/csvFiles";
-		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
-		ReadFolder readFolder = new ReadFolder(array);
-		readFolder.read(folderName);
-		assertEquals(2169, array.size());
-		array.clear();
-		String folderName2 = "C:/Users/Samuel/workspace/Assignment 1/csvFiles9";
-		ReadFolder readFolder2 = new ReadFolder(array);
-		readFolder2.read(folderName2);
-		assertEquals(0, array.size());
+		String fe = "C:/Users/OREL SHALOM/Desktop/f/test.csv";
+		String n = "C:/Users/OREL SHALOM/Desktop/f";
+		ReadFolder readFolder = new ReadFolder();
+		assertEquals(1, readFolder.read(n).length);
+
+		String n2 = "kuyf";
+		if(readFolder.read(n2) == null) //assertEquals(object, object) is deprecated in java so we did a "if" check.
+			System.out.println("there is no such folder!"); 
 	}
 
 }

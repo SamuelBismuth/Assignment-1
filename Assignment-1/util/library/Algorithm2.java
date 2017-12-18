@@ -28,6 +28,12 @@ public class Algorithm2 {
 
 	//Revelant Number
 
+	/**
+	 * This 
+	 * @param input
+	 * @param arrayData
+	 * @return
+	 */
 	public static ArrayList<WeigthAverage> setArrayRelevantNumber(SampleScan input, ArrayList<WeigthAverage> arrayData) {
 		for (WeigthAverage data : arrayData) 
 			inputRelevantNumber(input, data);

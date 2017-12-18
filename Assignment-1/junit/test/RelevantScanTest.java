@@ -8,9 +8,9 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithm2.RelevantScan;
-import read.SampleScan;
-import read.Wifi;
+import assignment.RelevantScan;
+import assignment.Scan;
+import assignment.Wifi;
 
 public class RelevantScanTest {
 
@@ -25,7 +25,7 @@ public class RelevantScanTest {
 		array.add(wifi);
 		array.add(wifi2);
 		array.add(wifi3);
-		SampleScan input = new SampleScan (
+		Scan input = new Scan (
 				date, 
 				"id", 
 				earth, 
@@ -36,7 +36,7 @@ public class RelevantScanTest {
 		ArrayList<Wifi> array1 = new ArrayList<Wifi>();
 		array1.add(wifi4);
 		array1.add(wifi5);
-		SampleScan data = new SampleScan (
+		Scan data = new Scan (
 				date, 
 				"id", 
 				earth, 

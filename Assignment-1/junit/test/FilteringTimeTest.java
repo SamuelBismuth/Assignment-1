@@ -5,12 +5,12 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithms.Mac;
-import algorithms.MacLocationAlgo1;
-import filter.FilteringKmlTime;
-import library.InputException;
-import read.SampleScan;
-import read.Wifi;
+import assignment.FilteringKmlTime;
+import assignment.InputException;
+import assignment.Mac;
+import assignment.MacLocation;
+import assignment.Scan;
+import assignment.Wifi;
 
 public class FilteringTimeTest {
 
@@ -25,14 +25,14 @@ public class FilteringTimeTest {
 		Wifi wifi = new Wifi("easyName", "easyMac", 5000, -90);
 		ArrayList<Wifi> wifis = new ArrayList<Wifi>();
 		wifis.add(wifi);
-		SampleScan scan = new SampleScan(date, "easyId", earth, wifis);
-		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
+		Scan scan = new Scan(date, "easyId", earth, wifis);
+		ArrayList<Scan> array = new ArrayList<Scan>();
 		array.add(scan);
 		EarthCoordinate tlv = new EarthCoordinate(34.78176760979483,32.08529989645831, 0.0);//TLV
 		String macname = "easyMac";
 		int signal = -90;
-		MacLocationAlgo1 ml1 = new MacLocationAlgo1(tlv, signal);
-		ArrayList<MacLocationAlgo1> array2 = new ArrayList<MacLocationAlgo1>();
+		MacLocation ml1 = new MacLocation(tlv, signal);
+		ArrayList<MacLocation> array2 = new ArrayList<MacLocation>();
 		array2.add(ml1);
 		Mac m = new Mac(macname, array2);
 		ArrayList<Mac> macs = new ArrayList<Mac>();

@@ -6,8 +6,8 @@ import java.util.GregorianCalendar;
 
 import org.junit.Test;
 
-import library.Date;
-import library.InputException;
+import assignment.Date;
+import assignment.InputException;
 
 public class DateTest {
 

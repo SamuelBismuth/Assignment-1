@@ -17,16 +17,16 @@ public class ReadFileTest {
 		String folderName = "C:/Users/Samuel/workspace/Assignment 1/csvFiles";
 		File folder = new File(folderName);
 		File[] listOfFiles = folder.listFiles();
-		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
-		ReadWigleWifi readFile = new ReadWigleWifi(listOfFiles[1], array);
+		ArrayList<Scan> array = new ArrayList<Scan>();
+		ReadCsv readFile = new ReadCsv(listOfFiles[1], array);
 		readFile.read(folderName);
 		assertEquals(343, array.size());
 		array.clear();
-		ReadWigleWifi readFile2 = new ReadWigleWifi(listOfFiles[0], array);
+		ReadCsv readFile2 = new ReadCsv(listOfFiles[0], array);
 		readFile2.read(folderName);
 		assertEquals(0, array.size());
 		array.clear();
-		ReadWigleWifi readFile3 = new ReadWigleWifi(listOfFiles[2], array);
+		ReadCsv readFile3 = new ReadCsv(listOfFiles[2], array);
 		readFile3.read(folderName);
 		assertEquals(811, array.size());
 	}	

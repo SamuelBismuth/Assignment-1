@@ -8,6 +8,8 @@ public class LocalisationAlgo2Test {
 
 	@Test
 	public void test() {
+		
+		
 	}
 
 }
