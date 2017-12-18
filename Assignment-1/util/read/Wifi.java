@@ -26,12 +26,21 @@ public class Wifi implements Comparable<Wifi> {
 		this.frequency = frequency;
 		this.signal = signal;
 	}
+	
+	//Getters and setters.
 
 	/**
 	 * @return name.
 	 */
 	public String getName() {
 		return name;
+	}
+	
+	/**
+	 * @param name.
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
@@ -56,18 +65,13 @@ public class Wifi implements Comparable<Wifi> {
 	}
 
 	/**
-	 * @param name.
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	/**
 	 * @param signal.
 	 */
 	public void setSignal(double signal) {
 		this.signal = signal;
 	}
+	
+	//Comparator.
 
 	/**
 	 * This method compare the signal.
@@ -76,6 +80,8 @@ public class Wifi implements Comparable<Wifi> {
 	public int compareTo(Wifi wifi) {
 		return Double.compare(wifi.getSignal(), this.signal);
 	}
+	
+	//Helped function
 
 	/**
 	 * The methpod checks if the name is empty.
@@ -85,11 +91,6 @@ public class Wifi implements Comparable<Wifi> {
 	protected String noName(String wifi) {
 		if (wifi.equals("")) return "No name";
 		return wifi;
-	}
-
-	@Override
-	public String toString() {
-		return "Wifi [name=" + name + ", mac=" + mac + ", frequency=" + frequency + ", signal=" + signal + "]";
 	}
 
 }

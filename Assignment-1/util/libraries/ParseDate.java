@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 /**
- * This class convert a String to a object {@link GregorianCalendar}.
+ * This class convert a String with a data to a object {@link GregorianCalendar}.
  * @author Orel and Samuel.
  */
 public class ParseDate {

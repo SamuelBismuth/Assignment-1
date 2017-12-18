@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 /**
  * This class print the exception message. 

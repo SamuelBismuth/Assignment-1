@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import library.ReadFolder;
+import libraries.ReadFolder;
 
 public class ReadFolderTest {
 

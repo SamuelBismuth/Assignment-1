@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,12 +11,21 @@ import read.SampleScan;
 import read.Wifi;
 
 /**
- * This class calculate all the data by the algorithm 2 formulas.
+ * This class includes all the static function which calculate all the data by the algorithm 2 formulas.
+ * Here all the function are static.
+ * The explnation we could give (as students) is the next one :
+ * Here all the methods are used to be a mathematical reflexion. There is no object into those functions.
+ * For exemple f(x) = 2x + 4 changes the x into 2x + 4, here the methods do the same.
+ * That's why we choosed the do a large class which play the role of library for all the formulas of the algorithm 2.
  * The {@link SampleScan} input and data need to be of the same size, and the noSignal need to be initialize.
  * @author Orel and Samuel.
  */
 public class Algorithm2 {
 
+	/**
+	 * Here all the parameters used by the formulas.
+	 * It's our job to change them for arrive to the best answer possible.
+	 */
 	private static final int numberOfSampleScan = 4;
 	private static final int numberOfWifi = 4;
 	private static final int power = 2;
@@ -29,10 +38,11 @@ public class Algorithm2 {
 	//Revelant Number
 
 	/**
-	 * This 
-	 * @param input
-	 * @param arrayData
-	 * @return
+	 * This method create a {@link ArrayList} of {@link WeigthAverage} from the input and the data.
+	 * This new object {@link WeigthAverage} includes all the data needed for the for the algorithm 2 formulas.
+	 * @param input.
+	 * @param arrayData.
+	 * @return the array of {@link WeigthAverage}.
 	 */
 	public static ArrayList<WeigthAverage> setArrayRelevantNumber(SampleScan input, ArrayList<WeigthAverage> arrayData) {
 		for (WeigthAverage data : arrayData) 
@@ -45,6 +55,17 @@ public class Algorithm2 {
 		return arrayTemp;
 	}
 
+	/**
+	 * This method set the revelant number into the object {@link Mac}.
+	 * What is the revelant number ?
+	 * The revelant number is a number define by the formula : 
+	 * ((Math.abs(input.getSignal())
+						- Math.abs(data.getSignal() - input.getSignal()))
+						/ Math.abs(input.getSignal()) ).
+	 * More this number are high, more we can trust the data of the mac.
+	 * @param input.
+	 * @param data.
+	 */
 	private static void inputRelevantNumber(SampleScan input, WeigthAverage data) {
 		double number = 1;
 		for (Wifi inputWifi : input.getArrayStrongerWifiConstantNumber(numberOfWifi)) {
@@ -58,6 +79,12 @@ public class Algorithm2 {
 		data.setRelevantNumber(number);
 	}
 
+	/**
+	 * This method calculates the revelant number.
+	 * @param input.
+	 * @param data.
+	 * @return the revelant number.
+	 */
 	private static double revelantNumber(Wifi input, Wifi data) {
 		if (data == null) 
 			return 0.1;
@@ -69,13 +96,27 @@ public class Algorithm2 {
 
 	// PI
 
+	/**
+	 * For an {@link ArrayList} of {@link WeigthAverage} given, this method set the number pi.
+	 * @param input.
+	 * @param arrayData.
+	 * @return the array of {@link WeigthAverage}.
+	 */
 	public static ArrayList<WeigthAverage> setArrayPi(SampleScan input, ArrayList<WeigthAverage> arrayData) {
 		for (WeigthAverage data : arrayData) 
 			inputPi(input, data);
 		Collections.sort(arrayData, WeigthAverage.Comparators.PI);
 		return arrayData;
 	}
-
+	
+	/**	 
+	 * This method set the pi number into the object {@link WeigthAverage}.
+	 * What is the pi number ?
+	 * The pi number is a number define by the that follow into the getWeigth function and getDiff function. 
+	 * This number remplace the weigth of the algorithm 1. Recall that weigth = 1 / (signal * signal)
+	 * @param input
+	 * @param data
+	 */
 	private static void inputPi(SampleScan input, WeigthAverage data) {
 		double pi = 1;
 		int count = 0;
@@ -84,6 +125,12 @@ public class Algorithm2 {
 		data.setPi(pi);
 	}
 
+	/**
+	 * This method calculate the weigth number.
+	 * @param input.
+	 * @param data.
+	 * @return the weigth number.
+	 */
 	private static double getWeight(Wifi input, Wifi data) {
 		return
 				norm / (
@@ -97,7 +144,13 @@ public class Algorithm2 {
 								)
 						);
 	}
-
+	
+	/**
+	 * This method calculate the diff number.
+	 * @param input.
+	 * @param data.
+	 * @return the diff number.
+	 */
 	private static double getDiff(Wifi input, Wifi data) {
 		if(data.getSignal() == noSignal) return difNoSignal;
 		else return Math.max(
@@ -108,9 +161,16 @@ public class Algorithm2 {
 						)
 				);
 	}
-	
+
 	//Localisation
 
+	/**
+	 * This method is the finality of the algorithm 2 : it's set the location.
+	 * To do this, the method create a new object {@link MacLocation}. 
+	 * Into this object, all the calculates of the algorithm 1 are made, then, we have the gps coordinates.
+	 * @param input
+	 * @param arrayData
+	 */
 	public static void setLocation(SampleScan input, ArrayList<WeigthAverage> arrayData) {
 		ArrayList<MacLocation> arrayMacLocation = new ArrayList<MacLocation>();
 		for (int i = 0; i < 3; i++) {
@@ -124,5 +184,5 @@ public class Algorithm2 {
 		Mac mac = new Mac(arrayMacLocation);
 		input.setPointLocation(mac.getWeightCenter());
 	}
-	
+
 }

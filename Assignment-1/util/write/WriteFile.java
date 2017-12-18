@@ -2,7 +2,7 @@ package write;
 
 import java.util.ArrayList;
 
-import library.InputException;
+import libraries.InputException;
 
 /**
  * This class interface defines for method : initialize, an abstract method checkData, addNetwork and createFile.

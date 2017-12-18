@@ -6,23 +6,26 @@ import java.util.Scanner;
 
 import org.boehn.kmlframework.kml.Document;
 
-import library.ParseDate;
+import libraries.InputException;
+import libraries.ParseDate;
+import libraries.UserChoice;
 import read.SampleScan;
-import library.InputException;
 import write.WriteFile;
 import write.WriteKmlTime;
 
 /**
- * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
+ * This class implements @see {@link Filtering}.
  * This class filtering the data by the time : only the scan on the period of time that the user choosed will appear in the kml place.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
-public class FilteringKmlTime extends FilteringKml implements Filtering<SampleScan, SampleScan> {
+public class FilteringKmlTime implements Filtering<SampleScan> {
 
 	/**
 	 * This method ask the user to input the time.
 	 * @param array.
 	 * @return {@link WriteKmlTime}.
+	 * We define our own exception if there is a wrong input about the time.
 	 */
 	@SuppressWarnings("resource")
 	@Override
@@ -35,7 +38,7 @@ public class FilteringKmlTime extends FilteringKml implements Filtering<SampleSc
 			GregorianCalendar dateBegining = ParseDate.stringToDate(time_begining);
 			GregorianCalendar dateEnd = ParseDate.stringToDate(time_end);
 			if (dateBegining.before(dateEnd)) {
-				String fileName = getFileName();
+				String fileName = UserChoice.getFileName("kml");
 				Document document = new Document();
 				return new WriteKmlTime(fileName, document, dateBegining, dateEnd);
 			}

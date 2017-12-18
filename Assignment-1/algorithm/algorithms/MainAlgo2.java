@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import library.Algorithm2;
-import library.OpenFile;
+import libraries.Algorithm2;
+import libraries.OpenFile;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;

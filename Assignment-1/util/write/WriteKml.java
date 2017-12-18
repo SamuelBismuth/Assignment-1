@@ -7,8 +7,8 @@ import org.boehn.kmlframework.kml.Document;
 import org.boehn.kmlframework.kml.Kml;
 import org.boehn.kmlframework.kml.KmlException;
 
-import library.InputException;
-import library.KmlUtil;
+import libraries.InputException;
+import libraries.KmlUtil;
 import read.SampleScan;
 
 /**

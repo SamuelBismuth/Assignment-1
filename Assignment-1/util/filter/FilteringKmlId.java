@@ -5,22 +5,25 @@ import java.util.Scanner;
 
 import org.boehn.kmlframework.kml.Document;
 
-import library.InputException;
+import libraries.InputException;
+import libraries.UserChoice;
 import read.SampleScan;
 import write.WriteFile;
 import write.WriteKmlId;
 
 /**
- * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
+ * This class extends implements @see {@link Filtering}.
  * This class filtering the data by the id : only the scan with the id that the user choosed will appear in the kml place.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
-public class FilteringKmlId extends FilteringKml implements Filtering<SampleScan, SampleScan> {
+public class FilteringKmlId implements Filtering<SampleScan> {
 
 	/**
 	 * This method ask the user to input the id.
 	 * @param arrayObject.
 	 * @return {@link WriteKmlId}.
+	 * We define our own exception if the id it's not found.
 	 */
 	@SuppressWarnings("resource")
 	@Override
@@ -29,7 +32,7 @@ public class FilteringKmlId extends FilteringKml implements Filtering<SampleScan
 		String id = new Scanner(System.in).nextLine();
 		for(SampleScan scan : array) 
 			if (id.equals(scan.getId())) {
-				String fileName = getFileName();
+				String fileName = UserChoice.getFileName("kml");
 				Document document = new Document();
 				return new WriteKmlId(fileName, document, id);
 			}

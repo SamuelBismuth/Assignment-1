@@ -12,6 +12,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
  */
 public class Mac  {
 
+	private static final int numberOfSampleScan = 4;
+
 	private String macName; // the mac address of the router
 	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
 	private GregorianCalendar date;
@@ -25,21 +27,21 @@ public class Mac  {
 	 */
 	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation, GregorianCalendar date) {
 		this.macName = macName;
-		this.arrayMacLocation = arrayMacLocationInformation;
+		sort(arrayMacLocationInformation);
+		this.arrayMacLocation = defineArrayListWithFinalNumber(arrayMacLocationInformation);
 		this.date = date;
 		this.used = false;
-		sort();
 	}
-	
+
 	/**
 	 * Constructor.
 	 * @param macName.
 	 * @param arrayMacLocationInformation.
 	 */
 	public Mac(ArrayList<MacLocation> arrayMacLocationInformation) {
-		this.arrayMacLocation = arrayMacLocationInformation;
+		sort(arrayMacLocationInformation);
+		this.arrayMacLocation = defineArrayListWithFinalNumber(arrayMacLocationInformation);
 		this.used = false;
-		sort();
 	}
 
 	/**
@@ -48,7 +50,7 @@ public class Mac  {
 	public GregorianCalendar getDate() {
 		return date;
 	}
-	
+
 	/**
 	 * @return macName.
 	 */
@@ -118,21 +120,21 @@ public class Mac  {
 	protected double getStrongerSignal() {
 		return arrayMacLocation.get(0).getSignal();
 	}
-	
+
 	/**
 	 * @return used
 	 */
 	protected boolean getUsed() {
 		return used;
 	}
-	
+
 	/**
 	 * @param bool
 	 */
 	protected void setUsed(boolean bool) {
 		this.used = bool;
 	}
-	
+
 	/**
 	 * @param arrayLineAlgo1.
 	 */
@@ -150,8 +152,20 @@ public class Mac  {
 	/**
 	 * This method sort 
 	 */
-	public void sort() {
-		Collections.sort(arrayMacLocation, MacLocation.Comparators.SIGNAL);
+	public void sort(ArrayList<MacLocation> array) {
+		Collections.sort(array, MacLocation.Comparators.SIGNAL);
 	}
 
+	//private method.
+
+	private ArrayList<MacLocation> defineArrayListWithFinalNumber(ArrayList<MacLocation> arrayMacLocationInformation) {
+		if (arrayMacLocationInformation.size() < numberOfSampleScan) 
+			return arrayMacLocationInformation;
+		else {
+			ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+			for (int i = 0; i < numberOfSampleScan; i++) 
+				array.add(arrayMacLocationInformation.get(i));
+			return array;
+		}
+	}
 }

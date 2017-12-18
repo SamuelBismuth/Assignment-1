@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.io.File;
 
@@ -30,6 +30,7 @@ public class ReadFolder {
 	}
 	
 	/**
+	 * This method return the absolut path, where are found the file.
 	 * @return absolutePath
 	 */
 	public static String getAbsolutePath() {

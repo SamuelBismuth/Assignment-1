@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import algorithms.Mac;
-import library.ReadFolder;
+import libraries.ReadFolder;
 import read.ReadCombo;
 import read.SampleScan;
 import read.SortWigleWifiMac;

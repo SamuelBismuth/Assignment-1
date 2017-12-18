@@ -3,26 +3,26 @@ package read;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import library.ParseDate;
-import library.InputException;
+import libraries.InputException;
+import libraries.ParseDate;
 
 /**
  * This class sort the csv files by the time.
  * This class extends @see {@link SortWigleWifi}.
  * @author Orel and Samuel.
+ * @param <SampleScan, CsvFile>.
  */
 public class SortWigleWifiTime extends SortWigleWifi<SampleScan, CsvFile> {
 	
 	/**
-	 * Constructor.
-	 * @param arrayCsv.
+	 * Empty constructor.
 	 */
 	public SortWigleWifiTime() {                                   }
 
 	/**
 	 * This method fulfill the array of scan.
-	 * @param arrayCsv
-	 * @return array
+	 * @param arrayCsv.
+	 * @return array.
 	 */
 	@Override
 	public ArrayList<SampleScan> sortBy(ArrayList<CsvFile> arrayCsv) {
@@ -40,8 +40,9 @@ public class SortWigleWifiTime extends SortWigleWifi<SampleScan, CsvFile> {
 	}
 
 	/**
-	 * @param timeString
-	 * @param scan
+	 * This method should say if needs to create a {@link SampleScan} object.
+	 * @param timeString.
+	 * @param scan.
 	 * @return true if the time did not change.
 	 * @return false if the time has change.
 	 */

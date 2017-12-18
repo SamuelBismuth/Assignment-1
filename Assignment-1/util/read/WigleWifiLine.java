@@ -21,18 +21,19 @@ public class WigleWifiLine implements Comparable<WigleWifiLine> {
 	private String id;
 
 	/**
-	 * Constructor
-	 * @param mac
-	 * @param ssid
-	 * @param authMode
-	 * @param firstseen
-	 * @param channel
-	 * @param rssi
-	 * @param currentLatitude
-	 * @param currentLongitude
-	 * @param altitudeMeters
-	 * @param accuracyMeters
-	 * @param type
+	 * Constructor.
+	 * @param mac.
+	 * @param ssid.
+	 * @param authMode.
+	 * @param firstseen.
+	 * @param channel.
+	 * @param rssi.
+	 * @param currentLatitude.
+	 * @param currentLongitude.
+	 * @param altitudeMeters.
+	 * @param accuracyMeters.
+	 * @param type.
+	 * @param id.
 	 */
 	public WigleWifiLine(String mac, String ssid, String authMode, String firstseen, String channel, String rssi,
 			String currentLatitude, String currentLongitude, String altitudeMeters, String accuracyMeters,
@@ -50,90 +51,94 @@ public class WigleWifiLine implements Comparable<WigleWifiLine> {
 		this.type = type;
 		this.id = id;
 	}
+	
+	//Getters.
 
 	/** 
-	 * @return mac
+	 * @return mac.
 	 */
 	protected String getMac() {
 		return mac;
 	}
 
 	/** 
-	 * @return ssid
+	 * @return ssid.
 	 */
 	protected String getSsid() {
 		return ssid;
 	}
 
 	/** 
-	 * @return authMode
+	 * @return authMode.
 	 */
 	protected String getAuthMode() {
 		return authMode;
 	}
 
 	/** 
-	 * @return firstseen
+	 * @return firstseen.
 	 */
 	protected String getFirstseen() {
 		return firstseen;
 	}
 
 	/** 
-	 * @return channel
+	 * @return channel.
 	 */
 	protected String getChannel() {
 		return channel;
 	}
 
 	/** 
-	 * @return rssi
+	 * @return rssi.
 	 */
 	protected String getRssi() {
 		return rssi;
 	}
 
 	/** 
-	 * @return currentLatitude
+	 * @return currentLatitude.
 	 */
 	protected String getCurrentLatitude() {
 		return currentLatitude;
 	}
 
 	/** 
-	 * @return currentLongitude
+	 * @return currentLongitude.
 	 */
 	protected String getCurrentLongitude() {
 		return currentLongitude;
 	}
 
 	/** 
-	 * @return altitudeMeters
+	 * @return altitudeMeters.
 	 */
 	protected String getAltitudeMeters() {
 		return altitudeMeters;
 	}
 
 	/** 
-	 * @return accuracyMeters
+	 * @return accuracyMeters.
 	 */
 	protected String getAccuracyMeters() {
 		return accuracyMeters;
 	}
 
 	/** 
-	 * @return type
+	 * @return type.
 	 */
 	protected String getType() {
 		return type;
 	}
 	
 	/**
-	 * @return id
+	 * @return id.
 	 */
 	protected String getId() {
 		return id;
 	}
+	
+	//Comparator.
 	
 	/**
 	 * This method compare by the mac address.

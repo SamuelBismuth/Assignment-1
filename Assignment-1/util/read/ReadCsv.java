@@ -8,7 +8,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 
 /**
- * This class read a csv file.
+ * This abstract class read a csv file. (it's could be a combo file, or a wigle Wifi file).
  * @author Orel and Samuel.
  * @param <T>.
  */
@@ -30,12 +30,16 @@ public abstract class ReadCsv <T> {
 		this.file = file;
 	}
 
+	/**
+	 * abstract method, we define it in the other classes.
+	 */
 	public abstract void readBuffer();
 	
 	/**
-	 * Read the buffer.
+	 * This method read the buffer.
 	 * @param path.
 	 * @return the buffer.
+	 * @exception IOException : error reading file.
 	 */
 	public BufferedReader readFile(String path) {
 		try {

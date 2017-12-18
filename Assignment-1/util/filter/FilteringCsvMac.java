@@ -1,10 +1,10 @@
 package filter;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import algorithms.LineAlgo1;
 import algorithms.Mac;
+import libraries.UserChoice;
 import write.WriteComboAlgo1;
 import write.WriteFile;
 
@@ -12,10 +12,9 @@ import write.WriteFile;
  * This class implements @see {@link Filtering}.
  * This class filter the {@link ArrayList} of {@link Mac} to give the new coordinates by the algorithm 1.
  * @author Orel and Samuel.
+ * @param <Mac>.
  */
-public class FilteringCsvMac implements Filtering<Mac, Mac> {
-
-	private static final int numberOfSampleScan = 4;
+public class FilteringCsvMac implements Filtering<Mac> {
 
 	/**
 	 * Empty constructor.
@@ -26,6 +25,7 @@ public class FilteringCsvMac implements Filtering<Mac, Mac> {
 	 * This method create an {@link ArrayList} of {@link LineAlgo1} from an ArrayList of {@link Mac}.
 	 * In the object {@link LineAlgo1} is found all the information needed to create the new coordinates.
 	 * @param arrayMac.
+	 * @return {@link WriteComboAlgo1}.
 	 */
 	@Override
 	public WriteFile<Mac> filteringBy(ArrayList<Mac> arrayMac)  {
@@ -44,13 +44,8 @@ public class FilteringCsvMac implements Filtering<Mac, Mac> {
 					);
 		}
 		
-		String fileName = getFileName();
+		String fileName = UserChoice.getFileName("csv");
 		return new WriteComboAlgo1(fileName);
 	}
 
-	@SuppressWarnings("resource")
-	private static String getFileName() {
-		System.out.println("Input a name for the csv file you want to create : ");
-		return new Scanner(System.in).nextLine() + ".csv";
-	}
 }

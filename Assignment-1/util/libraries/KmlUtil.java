@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -16,7 +16,13 @@ import read.SampleScan;
 import read.Wifi;
 
 /**
- * This class contains static function which may help the construction of the kml file.
+ * This class contains statics functions which may help the construction of the kml file.
+ * Here all the function are static.
+ * The explnation we could give (as students) is the next one :
+ * The creation of the kml file should not depends of object.
+ * Then, it's getting closer of methematical function like f(x) = 2x + 4 like we saw in {@link Algorithm2}.
+ * Here the difference is that the x should be a string, and so the method does not return a number but a string.
+ * (return or side effect in the document for exemple).
  * @author Orel and Samuel
  */
 public class KmlUtil {
@@ -24,6 +30,7 @@ public class KmlUtil {
 	/**
 	 * This method constructs the placemark.
 	 * @param scan.
+	 * @param document.
 	 */
 	public static void addPlacemark(SampleScan scan, Document document) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
@@ -39,8 +46,9 @@ public class KmlUtil {
 	}
 
 	/**
-	 * This method generate the data to input a new icon.
-	 * @param color
+	 * This method generates the data to input a new icon.
+	 * @param color.
+	 * @param document.
 	 */
 	public static void addIcon(String color, Document document) {
 		Style style = new Style();
@@ -53,7 +61,7 @@ public class KmlUtil {
 	}
 
 	/**
-	 * This method generate the data.
+	 * This method generate the extended data. (it's display like a table in the kml file).
 	 * @param scan.
 	 * @param wifi.
 	 * @return the extended data.
@@ -71,6 +79,7 @@ public class KmlUtil {
 	}
 
 	/**
+	 * This method constructs the simple data.
 	 * @param name.
 	 * @param value.
 	 * @return simple data.
@@ -83,17 +92,19 @@ public class KmlUtil {
 	}
 
 	/**
-	 * if signal > - 70 green icon, if signal > -90 yellow icon, else red icon.
+	 * The method is defines which color for which signal.
+	 * if signal > - 70 red icon, if signal > -90 yellow icon, else green icon.
 	 * @param signal.
 	 * @return the color.
 	 */
 	public static String color(double signal) {
-		if (signal > - 70) return "#red";
+		if (signal > - 70) return "#grn";
 		else if (signal > -90) return "#ylw";
-		else return "#grn";
+		else return "#red";
 	}
 
 	/**
+	 * This method return the time like asked by google map to dipslay the timeline.
 	 * @param time.
 	 * @return yyyy-mm-ddThh:mm:ssZ.
 	 */
@@ -104,6 +115,7 @@ public class KmlUtil {
 	}
 
 	/**
+	 * This function make 1 min to 01 min, like google map ask for.
 	 * @param data.
 	 * @return data if the data is already with two digits.
 	 * @return 0 + data if the data got only one digit.
@@ -114,6 +126,7 @@ public class KmlUtil {
 	}
 	
 	/**
+	 * This function check the latitude.
 	 * @param latitude.
 	 * @return true if the data is good.
 	 * @return if the data is not good.
@@ -125,6 +138,7 @@ public class KmlUtil {
 	}
 
 	/**
+	 * This function check the longitude.
 	 * @param longitude.
 	 * @return true if the data is good.
 	 * @return if the data is not good.

@@ -7,25 +7,27 @@ import java.util.Scanner;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.boehn.kmlframework.kml.Document;
 
-import library.InputException;
-import library.KmlUtil;
+import libraries.InputException;
+import libraries.KmlUtil;
+import libraries.UserChoice;
 import read.SampleScan;
 import write.WriteFile;
 import write.WriteKmlPlace;
 
 /**
- * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
+ * This class implements @see {@link Filtering}.
  * This class filtering the data by the place : only the scan in the area that the user choosed will appear in the kml place.
- * TODO : JUNIT on the radius.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
-public class FilteringKmlPlace extends FilteringKml implements Filtering <SampleScan, SampleScan> {
+public class FilteringKmlPlace implements Filtering <SampleScan> {
 
 	/**
 	 * This method ask the user to input the place.
 	 * @param array.
 	 * @return {@link WriteKmlPlace}.
 	 * @exception InputMismatchException : Error on the input, try again.
+	 * We define our own exception if the place it's not found.
 	 */
 	@SuppressWarnings("resource")
 	@Override
@@ -39,7 +41,7 @@ public class FilteringKmlPlace extends FilteringKml implements Filtering <Sample
 			double radius = Double.parseDouble(new Scanner(System.in).nextLine());
 			if(KmlUtil.checkLatitude(pointLatitude) && KmlUtil.checkLongitude(pointLongitude) && radius >= 0) {
 				EarthCoordinate pointLocation = new EarthCoordinate(pointLongitude, pointLatitude, 0.0); // Altitude 0.0 by default.
-				String fileName = getFileName();
+				String fileName = UserChoice.getFileName("kml");
 				Document document = new Document();
 				return new WriteKmlPlace(fileName, document, pointLocation, radius);
 			}

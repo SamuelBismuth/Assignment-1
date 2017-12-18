@@ -8,14 +8,17 @@ import java.util.ArrayList;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
-import library.ReadFolder;
+import libraries.ReadFolder;
 
 /**
+ * This class extends {@link ReadCsv} and implements @see {@link ReadFile}.
  * This class reads a file and input into an array list the object @see {@link CsvFile}.
  * This class use the API commons-csv @see {@link https://commons.apache.org/proper/commons-csv/}.
  * This class implements @see {@link Read}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
+ * @param <WigleWifiLine>.
+ * @param <CsvFile>.
  */
 
 public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWifiLine> {
@@ -28,9 +31,9 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 	 * This method reads the file from @see {@link ReadFolder} and put into an array list the data we need.
 	 * We use here the API commons-csv.
 	 * Attention : tu run with the API you need to import him into the project @see README.
-	 * @param folderName.
 	 * @exception IOException : print error reading file.
 	 */
+	@Override
 	public void readBuffer() {
 		try {
 			BufferedReader br = readFile(folderName + file);
@@ -56,6 +59,7 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 	 * @param id.
 	 * @return {@link WigleWifiLine}.
 	 */
+	@Override
 	public WigleWifiLine inputObject(CSVRecord record, String id) {
 		return new WigleWifiLine(
 				record.get("MAC"),

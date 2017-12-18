@@ -5,9 +5,9 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.kml.Document;
 
-import library.Filter;
-import library.InputException;
-import library.KmlUtil;
+import libraries.Filter;
+import libraries.InputException;
+import libraries.KmlUtil;
 import read.SampleScan;
 
 /**

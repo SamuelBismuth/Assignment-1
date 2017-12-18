@@ -8,16 +8,29 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import algorithms.Mac;
 import algorithms.MacLocation;
 import algorithms.MacLocationAlgo1;
-import library.InputException;
-import library.ParseDate;
+import libraries.Algorithm2;
+import libraries.InputException;
+import libraries.KmlUtil;
+import libraries.ParseDate;
 
 /**
- * This abstract class defines only for methods : sortBy, needToCreateObject, addMotherObject, addObject.
+ * This abstract class defines two abtsracts methods : sortBy, needToCreateObject.
  * Then, two classes implements this interface : @see {@link SortWigleWifiMac}, @see {@link SortWigleWifiTime}.
+ * 
+ * The main goal of this abstract class is to sort the {@link CsvFile} like wished, either by the {@link Mac} adress, or by the Time.
+ * 
+ * All the functions defined here are static for the same reason of @see {@link Algorithm2} or, @see {@link KmlUtil}.
+ * TODO : check if it's right to define static method into an abstract class.
+ * 
  * @author Orel and Samuel
+ * @param <T>.
+ * @param <Y>.
  */
 public abstract class SortWigleWifi<T, Y> {
 
+	/**
+	 * abstracts methods, we define it in the other classes.
+	 */
 	protected abstract ArrayList<T> sortBy(ArrayList<Y> array);
 	protected abstract boolean needToCreateObject(String str, Object object);
 	
@@ -113,8 +126,9 @@ public abstract class SortWigleWifi<T, Y> {
 	}
 	
 	/**
+	 * This method check if the localisation is known.
 	 * @param str.
-	 * @return str.
+	 * @return str or "0".
 	 */
 	protected static String containsInterogation(String str) {
 		if (str.equals("?")) return "0";

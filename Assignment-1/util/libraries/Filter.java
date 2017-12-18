@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,11 +9,16 @@ import read.SampleScan;
 import read.Wifi;
 import read.WigleWifiLine;
 
+/**
+ * This class includes statics functions that hedlped to the filtering of the data.
+ * @author Orel and Samuel.
+ */
 public class Filter {
 
 	/**
 	 * Thanks to Yehonathan, and Yshai, that's helped me to build this function.
 	 * This method receive an {@link ArrayList} of {@link SampleScan}, and return the same arrayList, but without the duplicate mac.
+	 * This method use a {@link HashMap}.
 	 * @param array.
 	 * @return array.
 	 */
@@ -34,6 +39,11 @@ public class Filter {
 				.removeIf(wifiSpot -> !wifiSpot.equals(map.get(wifiSpot.getMac()))));
 	}
 
+	/**
+	 * This method parse a {@link SampleScan} object into a {@link CsvFile} object.
+	 * @param arrayScan
+	 * @return array of {@link CsvFile}.
+	 */
 	public static ArrayList<CsvFile> fromScanToCvs(ArrayList<SampleScan> arrayScan) {
 		ArrayList<CsvFile> arrayCsv = new ArrayList<CsvFile>();
 		for (SampleScan scan : arrayScan) {

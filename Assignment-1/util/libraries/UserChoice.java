@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -11,7 +11,6 @@ import filter.FilteringKmlTime;
 import read.SampleScan;
 
 /**
- * This class implements @see {@link UserChoice}.
  * This class ask the user how he wants to organize the kml file.
  * By the time, the place or the id...
  * @author Orel and Samuel.
@@ -25,7 +24,7 @@ public class UserChoice {
 	 * @exception InputMismatchException : Error on the input.
 	 */
 	@SuppressWarnings("resource")
-	public static Filtering<SampleScan, SampleScan> userChoice() {
+	public static Filtering<SampleScan> userChoice() {
 		try {
 			System.out.println("How to filtering ? input 1, 2, 3. \n"
 					+ "1 : time, 2 : Id, 3 : place, otherwise no filter.");
@@ -45,6 +44,17 @@ public class UserChoice {
 			System.out.println("Error on the input. " + ex);
 			return userChoice();
 		}
+	}
+	
+	/**
+	 * This method make the user choice a file name for the file.
+	 * @param file.
+	 * @return the fileName choosed.
+	 */
+	@SuppressWarnings("resource")
+	public static String getFileName(String file) {
+		System.out.println("Input a name for the " + file + " file you want to create : ");
+		return new Scanner(System.in).nextLine();
 	}
 
 }

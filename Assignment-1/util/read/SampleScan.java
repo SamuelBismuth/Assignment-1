@@ -22,7 +22,7 @@ public class SampleScan {
 	 * @param time.
 	 * @param id.
 	 * @param pointLocation.
-	 * @param wifi.
+	 * @param arrayWifi.
 	 */
 	public SampleScan(GregorianCalendar time, String id, EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
 		this.time = time;
@@ -32,6 +32,8 @@ public class SampleScan {
 		sort();
 	}
 
+	//Getters and setters.
+	
 	/**
 	 * @return time.
 	 */
@@ -60,7 +62,6 @@ public class SampleScan {
 		this.pointLocation = pointLocation;
 	}
 
-	
 	/**
 	 * @return arrayWifi.
 	 */
@@ -68,11 +69,8 @@ public class SampleScan {
 		return arrayWifi;
 	}
 	
-	public void sort() {
-		Collections.sort(arrayWifi);
-	}
-	
 	/**
+	 * This method return an array of size ten maximum.
 	 * @return arrayStrongerWifi.
 	 */
 	public ArrayList<Wifi> getArrayStrongerWifi() {
@@ -85,34 +83,7 @@ public class SampleScan {
 	}
 	
 	/**
-	 * @return wifiNetworks.
-	 */
-	public int getWifiNetworks() {
-		return getArrayStrongerWifi().size();
-	}
-	
-	/**
-	 * @param id
-	 * @return this.
-	 */
-	public SampleScan sameId(String id) {
-		if (this.getId().equals(id)) return this;
-		return null;
-	}
-	
-	/**
-	 * @param mac
-	 * @return wifi if contains the same mac.
-	 * @return null if not contains the same mac.
-	 */
-	public Wifi containsSameMac(String mac) {
-		for (Wifi wifi : arrayWifi) 
-			if (wifi.getMac().equals(mac))
-				return wifi;
-		return null;
-	}
-
-	/**
+	 * This method return an array of size numberConstant maximum.
 	 * @param numberConstant.
 	 * @return array.
 	 */
@@ -122,6 +93,46 @@ public class SampleScan {
 		for (int i = 0; i < numberConstant; i++) 
 			array.add(this.getArrayStrongerWifi().get(i));
 		return array;
+	}
+	
+	/**
+	 * @return wifiNetworks.
+	 */
+	public int getWifiNetworks() {
+		return getArrayStrongerWifi().size();
+	}
+	
+	//Sort.
+	
+	public void sort() {
+		Collections.sort(arrayWifi);
+	}
+	
+	
+	//Helped functions.
+	
+	/**
+	 * This method return the scan which contains the id requierd.
+	 * @param id
+	 * @return this.
+	 * @return null if not contains the id.
+	 */
+	public SampleScan sameId(String id) {
+		if (this.getId().equals(id)) return this;
+		return null;
+	}
+	
+	/**
+	 * This method return the wifi which contains the mac requierd.
+	 * @param mac
+	 * @return wifi if contains the same mac.
+	 * @return null if not contains the same mac.
+	 */
+	public Wifi containsSameMac(String mac) {
+		for (Wifi wifi : arrayWifi) 
+			if (wifi.getMac().equals(mac))
+				return wifi;
+		return null;
 	}
 
 }

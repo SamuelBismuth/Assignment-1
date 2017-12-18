@@ -7,7 +7,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
 import filter.FilteringKmlTime;
-import library.InputException;
+import libraries.InputException;
 import read.SampleScan;
 import read.Wifi;
 

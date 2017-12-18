@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import filter.Filtering;
-import library.InputException;
-import library.OpenFile;
-import library.ReadFolder;
-import library.UserChoice;
+import libraries.InputException;
+import libraries.OpenFile;
+import libraries.ReadFolder;
+import libraries.UserChoice;
 import read.CsvFile;
 import read.ReadCombo;
 import read.ReadCsv;
@@ -98,7 +98,7 @@ public class MainKml {
 		readCombo.readBuffer();
 		
 		//Choice of the user
-		Filtering<SampleScan, SampleScan> filter = UserChoice.userChoice();
+		Filtering<SampleScan> filter = UserChoice.userChoice();
 
 		//Filtering kml
 		try {

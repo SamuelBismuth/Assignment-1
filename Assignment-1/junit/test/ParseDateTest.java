@@ -9,8 +9,8 @@ import java.util.GregorianCalendar;
 
 import org.junit.Test;
 
-import library.ParseDate;
-import library.InputException;
+import libraries.InputException;
+import libraries.ParseDate;
 
 /**
  * @author Samuel
@@ -64,7 +64,7 @@ public class ParseDateTest {
 	}
 
 	/**
-	 * Test method for {@link library.ParseDate#stringToDateDataBase(java.lang.String)}.
+	 * Test method for {@link libraries.ParseDate#stringToDateDataBase(java.lang.String)}.
 	 */
 	@Test
 	public void testStringToDateDataBase() {

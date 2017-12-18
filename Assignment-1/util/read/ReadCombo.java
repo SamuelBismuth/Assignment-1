@@ -9,13 +9,16 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import library.ParseDate;
-import library.InputException;
-import library.ReadFolder;
+import libraries.InputException;
+import libraries.ParseDate;
+import libraries.ReadFolder;
 
 /**
+ * This class extends @see {@link ReadCsv} and implements @see {@link Read}.
  * This class read a combo.
- * @author Orel and Samuel
+ * @author Orel and Samuel.
+ * @param <SampleScan>.
+ * @param <Wifi>.
  */
 public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 
@@ -33,9 +36,9 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * This method reads the file from @see {@link ReadFolder} and put into an array list the data we need.
 	 * We use here the API commons-csv.
 	 * Attention : tu run with the API you need to import him into the project @see README.
-	 * @param folderName.
 	 * @exception IOException : print error reading file.
 	 */
+	@Override
 	public void readBuffer() {
 		try {
 			BufferedReader br = readFile(folderName + file);
@@ -50,7 +53,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 			}
 			br.close();
 		}
-		catch(IOException ex) { // If there is an error.
+		catch(IOException ex) { 
 			System.out.println("Error reading file : " + ex);
 			System.exit(0);
 		}
@@ -59,9 +62,10 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	/**
 	 * This method input a new {@link SampleScan} into the array.
 	 * @param record
-	 * @param wifiNetwork
-	 * @return {@link WigleWifiLine}.
+	 * @param i
+	 * @return {@link Wifi}.
 	 */
+	@Override
 	public Wifi inputObject(CSVRecord record, String i) {
 		int count = Integer.parseInt(i);
 		return new Wifi(
@@ -79,6 +83,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @param record
 	 * @param array
 	 * @return sampleScan.
+	 * @exception NumberFormatException | {@link InputException} : error on the date.
 	 */
 	private SampleScan inputSampleScan(CSVRecord record, ArrayList<Wifi> array) {
 		try {
@@ -101,7 +106,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	}
 
 	/**
-	 * This method check if the cordinate a known.
+	 * This method check if the cordinate are known.
 	 * @param coordinate.
 	 * @return coordinate.
 	 */
@@ -111,6 +116,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	}
 
 	/**
+	 * This method check if the line is good.
 	 * @param record.
 	 * @return true if the line is good.
 	 * @return false if not.

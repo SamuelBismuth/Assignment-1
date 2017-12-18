@@ -4,16 +4,18 @@ import java.util.ArrayList;
 
 import org.boehn.kmlframework.kml.Document;
 
+import libraries.UserChoice;
 import read.SampleScan;
 import write.WriteFile;
 import write.WriteKmlWithoutFilter;
 
 /**
- * This class extends @see {@link FilteringKml} and implements @see {@link Filtering}.
+ * This class implements @see {@link Filtering}.
  * This class do not filter anything.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
-public class FilteringKmlEmpty extends FilteringKml implements Filtering<SampleScan, SampleScan> {
+public class FilteringKmlEmpty implements Filtering<SampleScan> {
 	 
 	/**
 	 * @param array.
@@ -21,7 +23,7 @@ public class FilteringKmlEmpty extends FilteringKml implements Filtering<SampleS
 	 */
 	@Override
 	public WriteFile<SampleScan> filteringBy(ArrayList<SampleScan> array) {
-		String fileName = getFileName();
+		String fileName = UserChoice.getFileName("kml");
 		Document document = new Document();
 		return new WriteKmlWithoutFilter(fileName, document);
 	}

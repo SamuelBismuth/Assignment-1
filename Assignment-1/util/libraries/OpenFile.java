@@ -1,4 +1,4 @@
-package library;
+package libraries;
 
 import java.io.IOException;
 
@@ -14,13 +14,11 @@ public class OpenFile {
 	 * @exception InputException : Error opening the file.
 	 */
 	public static void open(String fileName) {
-		try
-		{
+		try {
 			Process p = Runtime.getRuntime().exec("cmd.exe /c" + fileName);
 			new java.io.BufferedReader(new java.io.InputStreamReader(p.getInputStream()));
 		}
-		catch (IOException ex)
-		{
+		catch (IOException ex) {
 			System.out.println("Error opening the file." + ex);		
 		}
 	}

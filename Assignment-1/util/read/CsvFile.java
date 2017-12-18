@@ -3,7 +3,7 @@ package read;
 import java.util.ArrayList;
 
 /**
- * This class represente the object csv file.
+ * This class represents the object csv file.
  * @author Orel and Samuel.
  */
 public class CsvFile {

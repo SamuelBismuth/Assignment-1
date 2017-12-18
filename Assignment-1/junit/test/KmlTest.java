@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
-import library.ReadFolder;
+import libraries.ReadFolder;
 import read.CsvFile;
 import read.ReadCombo;
 import read.ReadCsv;
