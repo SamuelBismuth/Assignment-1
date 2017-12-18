@@ -1,17 +1,17 @@
 package test;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
+//
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
+//
+//import read.WigleWifiLine;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+public class WigleWifiLineTest {
 
-import assignment.Line;
-
-public class LineTest {
-
-	@Test
-	public void test() {
+//	@Test
+//	public void test() {
 //		String mac = "dfg";
 //		String ssid = "ert"; 
 //		String authMode = "dfg";
@@ -24,7 +24,7 @@ public class LineTest {
 //		String accuracyMeters = "908";
 //		String type = "987";
 //		String id = "net";
-//		Line ln = new Line(mac, ssid, authMode, firstseen, channel, rssi, currentLatitude, currentLongitude, altitudeMeters, accuracyMeters, type,id); 
+//		WigleWifiLine ln = new WigleWifiLine(mac, ssid, authMode, firstseen, channel, rssi, currentLatitude, currentLongitude, altitudeMeters, accuracyMeters, type,id); 
 //		assertEquals(mac, ln.getMac());
 //		assertEquals(ssid, ln.getSsid());
 //		assertEquals(authMode, ln.getAuthMode());
@@ -38,6 +38,6 @@ public class LineTest {
 //		assertEquals(type, ln.getType());
 //		assertEquals(id, ln.getId());
 //		assertEquals(0, ln.compareTo(ln));
-	}
+//	}
 
 }

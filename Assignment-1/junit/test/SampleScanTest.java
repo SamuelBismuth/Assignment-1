@@ -8,10 +8,10 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import assignment.Scan;
-import assignment.Wifi;
+import read.SampleScan;
+import read.Wifi;
 
-public class ScanTest {
+public class SampleScanTest {
 
 	@Test
 	public void testScan() {
@@ -46,8 +46,8 @@ public class ScanTest {
 		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
 		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
 		String id = "id";
-		Scan scan1 = new Scan(date, id, earth, arrayWifi);
-		Scan scan2 = new Scan(date, id, earth, arrayWifi1);
+		SampleScan scan1 = new SampleScan(date, id, earth, arrayWifi);
+		SampleScan scan2 = new SampleScan(date, id, earth, arrayWifi1);
 		assertEquals(date, scan1.getTime());
 		assertEquals(earth, scan1.getPointLocation());
 		assertEquals(id, scan1.getId());
@@ -56,9 +56,8 @@ public class ScanTest {
 		assertEquals(arrayWifi, scan1.getArrayStrongerWifi());
 		assertEquals(arrayWifi1, scan2.getArrayStrongerWifi());
 		assertEquals(10, scan1.getWifiNetworks());
-		assertEquals(true, scan1.containsSameMac("mac3"));
-		assertEquals(false, scan2.containsSameMac("mac3"));
-
+		assertEquals(wifi2, scan1.containsSameMac("mac3"));
+		assertEquals(null, scan2.containsSameMac("mac4"));
 	}
 
 }

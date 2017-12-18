@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import assignment.MacLocation;
+import algorithms.MacLocation;
+import algorithms.MacLocationAlgo1;
 
 public class MacLocationTest {
 
@@ -22,7 +23,7 @@ public class MacLocationTest {
 		double wsignal3 = 1/(Math.pow(signal3, 2));
 		//String s = "Weight point location = [longitude: 0.03912, latitude: 0.03567, altitude: 0.722222222], weight signal= 0.001111111";
 		
-		MacLocation a = new MacLocation(pointlocation1, signal1);
+		MacLocation a = new MacLocationAlgo1(pointlocation1, signal1);
 		MacLocation b = new MacLocation(pointlocation2, signal2);
 		MacLocation c = new MacLocation(pointlocation3, signal3);
 		

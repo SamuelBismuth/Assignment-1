@@ -42,7 +42,6 @@ public class MainKml {
 	 * TODO : For threads, one for the csv sorted, one for the kml, and two for the two algorithm. (in function of the algorithms).
 	 * TODO : junit
 	 * TODO : display wait message.
-	 * TODO:  WJDVNSCOS
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

@@ -1,35 +1,79 @@
 package test;
 
-import static org.junit.Assert.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import org.junit.Test;
-import p.CsvFile;
-import p.InputException;
-import p.ReadCsv;
-import p.ReadFolder;
-import p.SampleAlgo1;
-import p.WriteComboAlgo1;
+import java.util.GregorianCalendar;
 
+import org.boehn.kmlframework.coordinates.EarthCoordinate;
+import org.junit.Test;
+
+import algorithms.LineAlgo1;
+import algorithms.Mac;
+import algorithms.MacLocation;
+import algorithms.MacLocationAlgo1;
+import read.Wifi;
+import write.WriteComboAlgo1;
+
+/**
+ * @author Orel and Samuel.
+ *
+ */
 public class WriteComboAlgo1Test {
 
-	private ArrayList<SampleAlgo1> array;
-
+	/**
+	 * Test method for {@link write.WriteComboAlgo1#receiveData(java.util.ArrayList)}.
+	 */
 	@Test
-	public void test() throws InputException {
-		String fe = "C:/Users/OREL SHALOM/Desktop/f/test.csv";
-		String n = "C:/Users/OREL SHALOM/Desktop/f";
-		this.array = new ArrayList<SampleAlgo1>();
-		WriteComboAlgo1 wc1 = new WriteComboAlgo1(array);
-		wc1.createFile(fe);
-		ReadFolder rf = new ReadFolder();
-		assertEquals(1,rf.read(n).length);
-		//assertEquals(fe,rf.read(n)[0].toPath()); working. In fe there is "/" but in the path there is "\"
-		
-		
-		
+	public void testReceiveData() {
+		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
+		ArrayList<MacLocation> arrayMacLocation = new ArrayList<MacLocation>();
+		arrayMacLocation.add(
+				new MacLocationAlgo1(
+						new EarthCoordinate(
+								32.0,
+								32.0,
+								100.0
+								),
+						-80,
+						new Wifi (
+								"wifiname",
+								"mac",
+								2400, 
+								-80
+								)
+						)
+				);
+				Mac mac = new Mac(
+						"mac",
+						arrayMacLocation,
+						new GregorianCalendar(
+								12,
+								10,
+								2017
+								)
+						);
+				mac.setLineAlgo1(
+						new LineAlgo1(
+								0,
+								"mac",
+								"ssid",
+								2500,
+								-40,
+								new EarthCoordinate(
+										32.0, 
+										32.0, 
+										0.0
+										),
+								new GregorianCalendar(
+										2017,
+										02,
+										12
+										)
+								)
+						);
+				arrayMac.add(mac);
+				String fileName = "TableMac";
+				WriteComboAlgo1 write = new WriteComboAlgo1(fileName);
+				write.receiveData(arrayMac); 	
 	}
 
 }

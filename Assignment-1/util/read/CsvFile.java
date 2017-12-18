@@ -24,7 +24,7 @@ public class CsvFile {
 	/**
 	 * @return id.
 	 */
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 

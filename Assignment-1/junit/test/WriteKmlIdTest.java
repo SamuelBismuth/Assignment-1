@@ -1,71 +1,51 @@
 package test;
 
-//import java.util.ArrayList;
-//import java.util.GregorianCalendar;
-//import static org.junit.Assert.*;
-//import org.boehn.kmlframework.coordinates.EarthCoordinate;
-//import org.junit.Test;
-//
-//import assignment1.Scan;
-//import assignment1.Wifi;
-//import assignment1.WriteKmlId;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
+import org.boehn.kmlframework.coordinates.EarthCoordinate;
+import org.boehn.kmlframework.kml.Document;
+import org.junit.Test;
+
+import read.SampleScan;
+import read.Wifi;
+import write.WriteKmlId;
+
+/**
+ * @author Orel and Samuel
+ */
 public class WriteKmlIdTest {
-	
-//	@Test 
-//	public void testCheckData() {
-//		WriteKmlId wrt = new WriteKmlId("notEasyId");
-//		WriteKmlId wrt2 = new WriteKmlId("easyId");
-//		ArrayList<Scan> array = new ArrayList<Scan>();
-//		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
-//		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
-//		Wifi wifi = new Wifi("easyName", "easyMac", 5000, -70);
-//		Scan scan = new Scan(date, "easyId", earth, wifi);
-//		GregorianCalendar date2 = new GregorianCalendar(2016, 8, 9, 2, 9, 10);
-//		Wifi wifi2 = new Wifi("easyName", "easyMac", 5000, -90);
-//		Scan scan2 = new Scan(date2, "easyId", earth, wifi2);
-//		Wifi wifi3 = new Wifi("easyName", "easyMac", 5000, -80);
-//		Scan scan3 = new Scan(date2, "easyId", earth, wifi3);
-//		array.add(scan);
-//		array.add(scan2);
-//		array.add(scan3);
-//		wrt.checkData(array); // InputException : there is no placemark in the document
-//		wrt2.checkData(array); // work as we need.  
-//	}
 
 	/**
-	 * Here we also testing the abstract class WriteKml.
+	 * Test method for {@link write.WriteKmlId#receiveData(java.util.ArrayList)}.
 	 */
-	
-//	@Test
-// 	public void testSameMac() {
-//		WriteKmlId wrt = new WriteKmlId("notEasyId");
-//		ArrayList<Scan> array = new ArrayList<Scan>();
-//		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
-//		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
-//		Wifi wifi = new Wifi("easyName", "easyMac", 5000, -70);
-//		Scan scan = new Scan(date, "easyId", earth, wifi);
-//		GregorianCalendar date2 = new GregorianCalendar(2016, 8, 9, 2, 9, 10);
-//		Wifi wifi2 = new Wifi("easyName", "easyMac", 5000, -90);
-//		Scan scan2 = new Scan(date2, "easyId", earth, wifi2);
-//		Wifi wifi3 = new Wifi("easyName", "easyMac", 5000, -80);
-//		Scan scan3 = new Scan(date2, "easyId", earth, wifi3);
-//		array.add(scan);
-//		array.add(scan2);
-//		array.add(scan3);
-//		assertEquals(true, wrt.sameMac(array, scan));
-//		assertEquals(false, wrt.sameMac(array, scan2));
-// 	}
-	
-/**
- * Here we have tested all the private method, but, we need them to be private, and so, junit test can't read private method.
- * If you need to run those tests, you need to change from private to public all the method in the Sort class.
- */
-//	public void testColor() {
-//		WriteKmlId wrt = new WriteKmlId("notEasyId");
-//		assertEquals("#red", wrt.color(-91));
-//		assertEquals("#ylw", wrt.color(-81));
-//		assertEquals("#green", wrt.color(-71));
-//	}
- 	
+	@Test
+	public void testReceiveData() {
+		ArrayList<SampleScan> arraySampleScan = new ArrayList<SampleScan>();
+		ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
+		Wifi wifi = new Wifi("name", "mac", 5000, -70);
+		Wifi wifi2 = new Wifi("name", "mac", 5000, -90);
+		Wifi wifi3 = new Wifi("name", "mac", 5000, -80);
+		arrayWifi.add(wifi);
+		arrayWifi.add(wifi2);
+		arrayWifi.add(wifi3);
+		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
+		GregorianCalendar date2 = new GregorianCalendar(2016, 8, 9, 2, 9, 10);
+		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
+		SampleScan scan = new SampleScan (date, "id1", earth, arrayWifi);
+		SampleScan scan2 = new SampleScan(date2, "id2", earth, arrayWifi);
+		SampleScan scan3 = new SampleScan(date2, "id3", earth, arrayWifi);
+		arraySampleScan.add(scan);
+		arraySampleScan.add(scan2);
+		arraySampleScan.add(scan3);
+		Document document = new Document();
+		String fileName = "Map";
+		String fileName2 = "Map2";
+		WriteKmlId write = new WriteKmlId(fileName, document, "id1");
+		write.receiveData(arraySampleScan); // Must print 3 placemarks.
+		document = new Document();
+		write = new WriteKmlId(fileName2, document, "id");
+		write.receiveData(arraySampleScan); // Must not print placemarks.
+	}
+
 }

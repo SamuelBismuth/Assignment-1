@@ -15,6 +15,8 @@ import write.WriteFile;
  */
 public class FilteringCsvMac implements Filtering<Mac, Mac> {
 
+	private static final int numberOfSampleScan = 4;
+
 	/**
 	 * Empty constructor.
 	 */

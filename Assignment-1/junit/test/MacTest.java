@@ -6,8 +6,10 @@ import java.util.ArrayList;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
-import assignment.Mac;
-import assignment.MacLocation;
+
+import algorithms.Mac;
+import algorithms.MacLocation;
+
 
 public class MacTest {
 

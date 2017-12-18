@@ -5,13 +5,12 @@ import static org.junit.Assert.*;
 import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
-import org.junit.After;
-import org.junit.Before;
+
 import org.junit.Test;
 
-import p.SampleAlgo1;
+import algorithms.LineAlgo1;
 
-public class SampleAlgo1Test {
+public class LineAlgo1Test {
 
 	@Test
 	public void test() {
@@ -22,7 +21,7 @@ public class SampleAlgo1Test {
 		double signal = 987.0;
 		EarthCoordinate localisation = new EarthCoordinate(34.7,32.6,9.0);
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
-		SampleAlgo1 sa = new SampleAlgo1(index, macName, ssid, frequency, signal, localisation, date);
+		LineAlgo1 sa = new LineAlgo1(index, macName, ssid, frequency, signal, localisation, date);
 		assertEquals(index, sa.getIndex());
 		assertEquals(macName, sa.getMacName());
 		assertEquals(ssid, sa.getSsid());

@@ -59,7 +59,7 @@ public class Mac  {
 	/**
 	 * @return numberOfMac.
 	 */
-	protected int getNumberOfMac() {
+	public int getNumberOfMac() {
 		return arrayMacLocation.size();
 	}
 
@@ -94,7 +94,7 @@ public class Mac  {
 	 * This method calculates the sum between all the signal of the weights.
 	 * @return sumWeigthSignal.
 	 */
-	protected double getSumWeightSignal() {
+	public double getSumWeightSignal() {
 		double sumWeigthSignal = 0;
 		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
 		return sumWeigthSignal;
