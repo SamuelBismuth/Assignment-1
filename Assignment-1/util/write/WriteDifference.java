@@ -13,7 +13,7 @@ import algorithms.Difference;
  * @author Orel and Samuel.
  * @param <SampleScan>.
  */
-public class WriteCsvDiff implements WriteFile<Difference> {
+public class WriteDifference implements WriteFile<Difference> {
 
 	private FileWriter fw;
 	private PrintWriter outs;
@@ -24,7 +24,7 @@ public class WriteCsvDiff implements WriteFile<Difference> {
 	 * @param array.
 	 * @exception IOException : printStackTrace.
 	 */
-	public WriteCsvDiff(String fileName) {
+	public WriteDifference(String fileName) {
 		try {
 			fileName += ".csv";
 			this.fileName = fileName;

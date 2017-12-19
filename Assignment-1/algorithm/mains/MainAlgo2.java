@@ -7,12 +7,23 @@ import java.util.Scanner;
 import algorithms.WeigthAverage;
 import libraries.Algorithm2;
 import libraries.OpenFile;
+import libraries.UserChoice;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;
 import write.WriteCombo;
 import write.WriteFile;
 
+/**
+ * The Main class.
+ * About the warnings :
+ * In the book : "Introduction to Java Programming," by Liang (10th ed),
+ * "Note: If you use an IDE such as Eclipse or NetBeans, 
+ * you will get a warning to ask you to close the input to prevent a potential resource leak
+ * Ignore the warning because the input is automatically closed when your program is terminated. 
+ * In this case, there will be no resource leaking." (page 39)
+ * @author Orel and Samuel.
+ */
 public class MainAlgo2 {
 
 	@SuppressWarnings("resource")
@@ -31,8 +42,7 @@ public class MainAlgo2 {
 		ArrayList<WeigthAverage> arrayData =  new ArrayList<WeigthAverage>();
 
 		//Get file input path
-		System.out.println("Input the name of the combo input file please :");
-		String fileInput = new Scanner(System.in).nextLine();
+		String fileInput = UserChoice.getFileName("combo input");
 		String fileInputPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Read the input file
@@ -41,8 +51,7 @@ public class MainAlgo2 {
 		readInput.readBuffer();
 
 		//Get file data path
-		System.out.println("Input the name of the combo Data file please :");
-		String fileData = new Scanner(System.in).nextLine();
+		String fileData = UserChoice.getFileName("combo data");
 		String fileDataPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Read the database file

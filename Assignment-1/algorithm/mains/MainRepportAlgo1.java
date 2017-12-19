@@ -5,17 +5,25 @@ import java.util.ArrayList;
 
 import algorithms.Difference;
 import libraries.Repport;
-import read.ReadCombo;
 import read.ReadComboAlgo1;
 import read.ReadCsv;
 import read.SampleScan;
-import write.WriteCsvDiff;
+import write.WriteDifference;
 import write.WriteFile;
 
-public class MainRepport {
+/**
+ * The Main class.
+ * About the warnings :
+ * In the book : "Introduction to Java Programming," by Liang (10th ed),
+ * "Note: If you use an IDE such as Eclipse or NetBeans, 
+ * you will get a warning to ask you to close the input to prevent a potential resource leak
+ * Ignore the warning because the input is automatically closed when your program is terminated. 
+ * In this case, there will be no resource leaking." (page 39)
+ * @author Orel and Samuel.
+ */
+public class MainRepportAlgo1 {
 
 	private static ArrayList<Difference> arrayDiffAlgo1 = new ArrayList<Difference>();
-	private static ArrayList<Difference> arrayDiffAlgo2 = new ArrayList<Difference>();
 
 	/**
 	 * This main method is used to write the csv file as support of the repport.
@@ -29,7 +37,9 @@ public class MainRepport {
 	 */
 	public static void main(String[] args) {
 
-		//ALGORITHM 1.
+		////////////////
+		//Algorithm 1.//
+		////////////////
 
 		ArrayList<SampleScan> arrayScanBoaz = new ArrayList<SampleScan>();
 		File comboBoaz = new File("Algo1_4_BM3_comb_all_.csv");
@@ -43,26 +53,9 @@ public class MainRepport {
 
 		Repport.algo1(arrayScanBoaz, arrayScan, arrayDiffAlgo1);
 
-		WriteFile<Difference> write = new WriteCsvDiff("DIFFAlgo1");
+		WriteFile<Difference> write = new WriteDifference("DIFFAlgo1");
 		write.receiveData(arrayDiffAlgo1);
 
-		//ALGORITHM 2.
-		
-		ArrayList<SampleScan> arrayScanBoazAlgo2 = new ArrayList<SampleScan>();
-		File comboBoazAlgo2 = new File("Algo2_BM2_TS2.csv");
-		ReadCsv<SampleScan> readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanBoazAlgo2, comboBoazAlgo2);
-		readComboAlgo2.readBuffer();
-
-		ArrayList<SampleScan> arrayScanAlgo2 = new ArrayList<SampleScan>();
-		File comboAlgo2 = new File("Algo2BM2.csv");
-		readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanAlgo2, comboAlgo2);
-		readComboAlgo2.readBuffer();
-
-		Repport.algo2(arrayScanBoazAlgo2, arrayScanAlgo2, arrayDiffAlgo2);
-		
-		WriteFile<Difference> writealgo2 = new WriteCsvDiff("diffAlgo2");
-		writealgo2.receiveData(arrayDiffAlgo2);
-		
 	}
 
 }

@@ -9,8 +9,19 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import algorithms.Difference;
 import read.SampleScan;
 
+/**
+ * This class contains helped functions for the csv we need to create for the repport.
+ * @author Orel and Samuel.
+ */
 public class Repport {
 	
+	/**
+	 * This method create an {@link ArrayList} of {@link Difference}.
+	 * In the object {@link Difference}, we have the absolut difference between the two gps coordinates we want.
+	 * @param arrayBoaz.
+	 * @param array.
+	 * @param arrayDiff.
+	 */
 	public static void algo1(ArrayList<SampleScan> arrayBoaz, ArrayList<SampleScan> array, ArrayList<Difference> arrayDiff) {
 		HashMap<String, EarthCoordinate> map = new HashMap<String, EarthCoordinate>();
 		for (SampleScan scanBoaz : arrayBoaz) 
@@ -22,6 +33,13 @@ public class Repport {
 		}
 	}
 
+	/**
+	 * This method create an {@link ArrayList} of {@link Difference}.
+	 * In the object {@link Difference}, we have the absolut difference between the two gps coordinates we want.
+	 * @param arrayBoaz.
+	 * @param array.
+	 * @param arrayDiff.
+	 */
 	public static void algo2(ArrayList<SampleScan> arrayScanBoazAlgo2, ArrayList<SampleScan> arrayScanAlgo2, ArrayList<Difference> arrayDiffAlgo2) {
 		HashMap<GregorianCalendar, EarthCoordinate> map = new HashMap<GregorianCalendar, EarthCoordinate>();
 		for (SampleScan scanBoaz : arrayScanBoazAlgo2) 
@@ -33,6 +51,13 @@ public class Repport {
 		}
 	}
 
+	/**
+	 * This method create a new object {@link Difference}.
+	 * @param coordinateBoaz.
+	 * @param coordinate.
+	 * @param macName.
+	 * @param array.
+	 */
 	private static void diffCoordinate(EarthCoordinate coordinateBoaz, EarthCoordinate coordinate, String macName, ArrayList<Difference> array) {
 		if (coordinateBoaz != null) {
 			array.add(

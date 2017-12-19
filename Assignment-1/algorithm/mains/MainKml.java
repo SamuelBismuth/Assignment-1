@@ -30,7 +30,6 @@ import write.WriteFile;
  * In this case, there will be no resource leaking." (page 39)
  * @author Orel and Samuel.
  */
-
 public class MainKml {
 
 	/**
@@ -79,8 +78,7 @@ public class MainKml {
 		arrayScan = sortScan.sortBy(arrayCsv);
 
 		//Write Csv
-		System.out.println("Input a name for the csv file you want to create : ");
-		String fileNameCombo = new Scanner(System.in).nextLine();
+		String fileNameCombo = UserChoice.getFileName("csv file");
 		WriteFile<SampleScan> write = new WriteCombo(fileNameCombo);
 		write.receiveData(arrayScan);
 
