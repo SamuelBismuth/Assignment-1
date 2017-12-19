@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import algorithms.Difference;
-import libraries.Repport;
+import libraries.Comparison;
 import read.ReadComboAlgo1;
 import read.ReadCsv;
 import read.SampleScan;
@@ -42,18 +42,18 @@ public class MainRepportAlgo1 {
 		////////////////
 
 		ArrayList<SampleScan> arrayScanBoaz = new ArrayList<SampleScan>();
-		File comboBoaz = new File("Algo1_4_BM3_comb_all_.csv");
+		File comboBoaz = new File("Algo1_BM3_4.csv");
 		ReadCsv<SampleScan> readComboAlgo1 = new ReadComboAlgo1("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanBoaz, comboBoaz);
 		readComboAlgo1.readBuffer();
 
 		ArrayList<SampleScan> arrayScan = new ArrayList<SampleScan>();
-		File combo = new File("Algo1BM3.csv");
+		File combo = new File("Our_Algo1_BM3_4.csv");
 		readComboAlgo1 = new ReadComboAlgo1("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScan, combo);
 		readComboAlgo1.readBuffer();
 
-		Repport.algo1(arrayScanBoaz, arrayScan, arrayDiffAlgo1);
+		Comparison.algo1(arrayScanBoaz, arrayScan, arrayDiffAlgo1);
 
-		WriteFile<Difference> write = new WriteDifference("DIFFAlgo1");
+		WriteFile<Difference> write = new WriteDifference("Compare_Algo1_BM3_4");
 		write.receiveData(arrayDiffAlgo1);
 
 	}

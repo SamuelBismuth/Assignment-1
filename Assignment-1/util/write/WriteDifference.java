@@ -54,6 +54,10 @@ public class WriteDifference implements WriteFile<Difference> {
 		writeFile();
 	}
 
+	/**
+	 * This method calculates the sum between all the gps coordinates and divide the result by the number of sample mac.
+	 * @param array.
+	 */
 	private void sumLocalisation(ArrayList<Difference> array) {
 		double sumLatitude = 0,
 				sumLongitude = 0,

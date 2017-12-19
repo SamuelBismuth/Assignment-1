@@ -13,7 +13,7 @@ import read.SampleScan;
  * This class contains helped functions for the csv we need to create for the repport.
  * @author Orel and Samuel.
  */
-public class Repport {
+public class Comparison {
 	
 	/**
 	 * This method create an {@link ArrayList} of {@link Difference}.

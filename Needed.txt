@@ -1,0 +1,9 @@
+java doc
+class diagram
+repport
+api
+java code
+samples of data
+licence
+notice 
+readme

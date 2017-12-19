@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import algorithms.Difference;
-import libraries.Repport;
+import libraries.Comparison;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;
@@ -42,18 +42,18 @@ public class MainRepportAlgo2 {
 		////////////////
 
 		ArrayList<SampleScan> arrayScanBoazAlgo2 = new ArrayList<SampleScan>();
-		File comboBoazAlgo2 = new File("Algo2_BM2_TS2.csv");
+		File comboBoazAlgo2 = new File("Algo2_BM3_TS2_4.csv");
 		ReadCsv<SampleScan> readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanBoazAlgo2, comboBoazAlgo2);
 		readComboAlgo2.readBuffer();
 
 		ArrayList<SampleScan> arrayScanAlgo2 = new ArrayList<SampleScan>();
-		File comboAlgo2 = new File("Algo2BM2.csv");
+		File comboAlgo2 = new File("Our_Algo2_BM3_TS2_4.csv");
 		readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanAlgo2, comboAlgo2);
 		readComboAlgo2.readBuffer();
 
-		Repport.algo2(arrayScanBoazAlgo2, arrayScanAlgo2, arrayDiffAlgo2);
+		Comparison.algo2(arrayScanBoazAlgo2, arrayScanAlgo2, arrayDiffAlgo2);
 
-		WriteFile<Difference> writealgo2 = new WriteDifference("diffAlgo2");
+		WriteFile<Difference> writealgo2 = new WriteDifference("Compare_Algo2_BM3_TS2_4");
 		writealgo2.receiveData(arrayDiffAlgo2);
 	}
 	

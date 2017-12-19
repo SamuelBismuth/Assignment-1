@@ -307,7 +307,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="libraries.Repport" project="GIS" file="/GIS/util/libraries/Repport.java" 
+  <class id="35" language="java" name="libraries.Comparison" project="GIS" file="/GIS/util/libraries/Comparison.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="608" x="3906" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -487,232 +487,232 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <generalization id="55">    
+  <realization id="55">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="56">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="57">    
     <end type="SOURCE" refId="42"/>    
     <end type="TARGET" refId="33"/>  
   </generalization>  
-  <association id="56">    
+  <realization id="58">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="59">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="57" name="lineAlgo1">        
+      <attribute id="60" name="lineAlgo1">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="58" minimum="0" maximum="1">        
+      <multiplicity id="61" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="59">    
-    <end type="SOURCE" refId="49" navigable="false">      
-      <attribute id="60" name="arrayDiffAlgo2">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="61" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="53" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="62">    
-    <bendpoint x="7850" y="676"/>    
-    <end type="SOURCE" refId="48" navigable="false">      
-      <attribute id="63" name="wifi">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="64" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="65">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="66" name="arrayWifi">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="67" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="68">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="5"/>  
+  <realization id="62">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="13"/>  
   </realization>  
-  <realization id="69">    
+  <realization id="63">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <realization id="65">    
     <bendpoint x="9630" y="676"/>    
     <end type="SOURCE" refId="33"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
-  <realization id="70">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <realization id="71">    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <association id="72">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="73" name="arrayWigleWifiLine">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="74" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="75">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="76">    
-    <end type="SOURCE" refId="37"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <realization id="77">    
-    <end type="SOURCE" refId="51"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <generalization id="78">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="38"/>  
-  </generalization>  
-  <realization id="79">    
-    <end type="SOURCE" refId="39"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <generalization id="80">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="38"/>  
-  </generalization>  
-  <generalization id="81">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <realization id="82">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <realization id="83">    
-    <end type="SOURCE" refId="41"/>    
+  <realization id="66">    
+    <end type="SOURCE" refId="42"/>    
     <end type="TARGET" refId="13"/>  
   </realization>  
-  <association id="84">    
-    <bendpoint x="6822" y="676"/>    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="85" name="arrayWifi">        
+  <association id="67">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="68" name="arrayWifi">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="86" minimum="0" maximum="2147483647">        
+      <multiplicity id="69" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="87">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <generalization id="88">    
-    <end type="SOURCE" refId="44"/>    
+  <generalization id="70">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="38"/>  
   </generalization>  
-  <realization id="89">    
-    <end type="SOURCE" refId="48"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <generalization id="90">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <realization id="91">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <association id="92">    
-    <end type="SOURCE" refId="47" navigable="false">      
-      <attribute id="93" name="arrayDiffAlgo1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="94" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="53" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="95">    
-    <end type="SOURCE" refId="42"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <realization id="96">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <association id="97">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="98" name="arrayMacLocation">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="99" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="100">    
+  <generalization id="71">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="33"/>  
   </generalization>  
-  <realization id="101">    
-    <end type="SOURCE" refId="44"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <realization id="102">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <realization id="103">    
+  <generalization id="72">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="73">    
     <end type="SOURCE" refId="37"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <nesting id="104">    
-    <end type="SOURCE" refId="30"/>    
-    <end type="TARGET" refId="22"/>  
-  </nesting>  
-  <nesting id="105">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="11"/>  
-  </nesting>  
-  <realization id="106">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <association id="107">    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="74">    
     <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="108" name="sampleScan">        
+      <attribute id="75" name="sampleScan">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="109" minimum="0" maximum="1">        
+      <multiplicity id="76" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="27" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="110">    
-    <end type="SOURCE" refId="52"/>    
+  <realization id="77">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <nesting id="78">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </nesting>  
+  <realization id="79">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="80">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="81" name="arrayWigleWifiLine">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="83">    
+    <end type="SOURCE" refId="37"/>    
     <end type="TARGET" refId="13"/>  
+  </realization>  
+  <nesting id="84">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="22"/>  
+  </nesting>  
+  <realization id="85">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="86">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="87">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="89">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="90" name="arrayMacLocation">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="91" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="92">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="93">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <realization id="94">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="95">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="96" name="arrayDiffAlgo1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="97" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <bendpoint x="6822" y="676"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="99" name="arrayWifi">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="100" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="49" navigable="false">      
+      <attribute id="102" name="arrayDiffAlgo2">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="103" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="104">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="105">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <realization id="106">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="107">    
+    <bendpoint x="7850" y="676"/>    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="108" name="wifi">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="109" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="110">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="8"/>  
   </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
