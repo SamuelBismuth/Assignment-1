@@ -1,401 +1,683 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <interface id="1" language="java" name="write.WriteFile" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="305" x="4955" y="956"/>    
+  <class id="1" language="java" name="algorithms.Mac" project="GIS" file="/GIS/algorithm/algorithms/Mac.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="436" width="605" x="10023" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="libraries.UserChoice" project="GIS" file="/GIS/util/libraries/UserChoice.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="284" x="380" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="libraries.OpenFile" project="GIS" file="/GIS/util/libraries/OpenFile.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="145" x="704" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="filter.FilteringCsvMac" project="GIS" file="/GIS/util/filter/FilteringCsvMac.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="329" x="11113" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="read.ReadFile" project="GIS" file="/GIS/util/read/ReadFile.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="250" x="10993" y="1312"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="write.WriteKmlId" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="305" x="4264" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="assignment.Line" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Line.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="596" width="602" x="1332" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="read.ReadFolder" project="Assignment-1" 
-    file="/Assignment-1/src/read/ReadFolder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="252" x="1332" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="filter.FilteringKml" project="Assignment-1" 
-    file="/Assignment-1/src/filter/FilteringKml.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="157" width="265" x="3236" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="filter.FilteringKmlEmpty" project="Assignment-1" 
-    file="/Assignment-1/src/filter/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="260" x="2336" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="assignment.InputException" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/InputException.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="178" x="402" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="assignment.Main" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="152" x="620" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="assignment.Scan" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Scan.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="316" width="480" x="812" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="filter.FilteringKmlId" project="Assignment-1" 
-    file="/Assignment-1/src/filter/FilteringKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="260" x="2636" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="assignment.UserChoiceKml" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/UserChoiceKml.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="203" x="2521" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="read.ReadCsv" project="Assignment-1" file="/Assignment-1/src/read/ReadCsv.java" 
+  <class id="6" language="java" name="write.WriteKmlPlace" project="GIS" file="/GIS/util/write/WriteKmlPlace.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="308" x="1624" y="243"/>    
+    <position height="176" width="426" x="7881" y="676"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="write.WriteKmlPlace" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="306" x="4609" y="600"/>    
+  <class id="7" language="java" name="libraries.KmlUtil" project="GIS" file="/GIS/util/libraries/KmlUtil.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="276" width="359" x="889" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="assignment.Mac" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Mac.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="359" x="2064" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="15" language="java" name="filter.Filtering" project="Assignment-1" 
-    file="/Assignment-1/src/filter/Filtering.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="260" x="2336" y="1592"/>    
+  <interface id="8" language="java" name="algorithms.MacLocation" project="GIS" 
+    file="/GIS/algorithm/algorithms/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="322" x="9661" y="676"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="16" language="java" name="filter.FilteringKmlTime" project="Assignment-1" 
-    file="/Assignment-1/src/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="260" x="2936" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="sort.SortCsvTime" project="Assignment-1" 
-    file="/Assignment-1/src/sort/SortCsvTime.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="333" x="3557" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="18" language="java" name="filter.FilteringKmlPlace" project="Assignment-1" 
-    file="/Assignment-1/src/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="260" x="3236" y="956"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="19" language="java" name="assignment.Wifi" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Wifi.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="316" width="189" x="859" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="20" language="java" name="assignment.Date" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/Date.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="312" x="3388" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="21" language="java" name="write.WriteKml" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteKml.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="317" width="310" x="5096" y="243"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="22" language="java" name="assignment.CsvFile" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/CsvFile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="244" x="1332" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="23" language="java" name="write.WriteKmlWithoutFilter" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="305" x="4955" y="600"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="24" language="java" name="read.Read" project="Assignment-1" file="/Assignment-1/src/read/Read.java" 
+  <class id="9" language="java" name="read.SortWigleWifiMac" project="GIS" file="/GIS/util/read/SortWigleWifiMac.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="142" x="1624" y="600"/>    
+    <position height="156" width="377" x="5414" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="read.SortWigleWifiTime" project="GIS" 
+    file="/GIS/util/read/SortWigleWifiTime.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="387" x="5831" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="algorithms.MacLocation.Comparators" project="GIS" 
+    file="/GIS/algorithm/algorithms/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="283" x="9661" y="1312"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="algorithms.LineAlgo1" project="GIS" 
+    file="/GIS/algorithm/algorithms/LineAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="541" x="10023" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="write.WriteFile" project="GIS" file="/GIS/util/write/WriteFile.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="243" x="8347" y="1312"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="25" language="java" name="read.OpenFile" project="Assignment-1" file="/Assignment-1/src/read/OpenFile.java" 
+  <class id="14" language="java" name="mains.Main" project="GIS" file="/GIS/algorithm/mains/Main.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="116" width="152" x="1288" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="libraries.Filter" project="GIS" file="/GIS/util/libraries/Filter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="142" x="1972" y="243"/>    
+    <position height="136" width="453" x="1480" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="write.WriteCsv" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteCsv.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="305" x="3919" y="600"/>    
+  <class id="16" language="java" name="read.ReadWigleWifi" project="GIS" file="/GIS/util/read/ReadWigleWifi.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="349" x="10604" y="676"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="write.WriteKmlTime" project="Assignment-1" 
-    file="/Assignment-1/src/write/WriteKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="156" width="405" x="5300" y="600"/>    
+  <class id="17" language="java" name="libraries.Algorithm2" project="GIS" file="/GIS/util/libraries/Algorithm2.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="416" width="683" x="1973" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="sort.SortCsvMac" project="Assignment-1" 
-    file="/Assignment-1/src/sort/SortCsvMac.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="330" x="3930" y="956"/>    
+  <class id="18" language="java" name="read.ReadCombo" project="GIS" file="/GIS/util/read/ReadCombo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="196" width="449" x="10993" y="676"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="assignment.MacLocation" project="Assignment-1" 
-    file="/Assignment-1/src/assignment/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="256" width="322" x="1974" y="956"/>    
+  <class id="19" language="java" name="libraries.InputException" project="GIS" 
+    file="/GIS/util/libraries/InputException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="96" width="178" x="2696" y="200"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="30">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="31">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="32">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="33" name="arrayWifi">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="35">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <realization id="37">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="38">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="24"/>  
-  </realization>  
-  <association id="39">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="40" name="arrayLine">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="41" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="42">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <realization id="45">    
-    <bendpoint x="3526" y="956"/>    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <realization id="46">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <realization id="47">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="48">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="49" name="array">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="50" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="51">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <generalization id="52">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <realization id="53">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
+  <class id="20" language="java" name="read.SortWigleWifi" project="GIS" file="/GIS/util/read/SortWigleWifi.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="258" width="385" x="5831" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="write.WriteCombo" project="GIS" file="/GIS/util/write/WriteCombo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="256" width="324" x="4372" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="algorithms.WeigthAverage.Comparators" project="GIS" 
+    file="/GIS/algorithm/algorithms/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="258" x="6853" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="filter.FilteringKmlPlace" project="GIS" 
+    file="/GIS/util/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="449" x="11482" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="libraries.Algorithm1" project="GIS" file="/GIS/util/libraries/Algorithm1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="524" x="2914" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="libraries.ReadFolder" project="GIS" file="/GIS/util/libraries/ReadFolder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="196" x="3478" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="filter.Filtering" project="GIS" file="/GIS/util/filter/Filtering.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="96" width="287" x="11971" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="27" language="java" name="read.SampleScan" project="GIS" file="/GIS/util/read/SampleScan.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="534" x="6258" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="read.Wifi" project="GIS" file="/GIS/util/read/Wifi.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="336" width="220" x="6813" y="1312"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="read.CsvFile" project="GIS" file="/GIS/util/read/CsvFile.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="156" width="336" x="7151" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="algorithms.WeigthAverage" project="GIS" 
+    file="/GIS/algorithm/algorithms/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="296" width="252" x="6813" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="mains.MainKml" project="GIS" file="/GIS/algorithm/mains/MainKml.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="152" x="3714" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="write.WriteKmlTime" project="GIS" file="/GIS/util/write/WriteKmlTime.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="525" x="8347" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="write.WriteKml" project="GIS" file="/GIS/util/write/WriteKml.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="217" width="330" x="8943" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="read.WigleWifiLine" project="GIS" file="/GIS/util/read/WigleWifiLine.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="596" width="669" x="7151" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="libraries.Repport" project="GIS" file="/GIS/util/libraries/Repport.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="608" x="3906" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="filter.FilteringKmlTime" project="GIS" 
+    file="/GIS/util/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="449" x="11971" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="write.WriteKmlId" project="GIS" file="/GIS/util/write/WriteKmlId.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="324" x="8912" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="read.ReadCsv" project="GIS" file="/GIS/util/read/ReadCsv.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="197" width="265" x="10808" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="filter.FilteringKmlEmpty" project="GIS" 
+    file="/GIS/util/filter/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="449" x="12460" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="libraries.ParseDate" project="GIS" file="/GIS/util/libraries/ParseDate.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="374" x="4554" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="write.WriteDifference" project="GIS" file="/GIS/util/write/WriteDifference.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="256" width="334" x="4736" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="write.WriteKmlWithoutFilter" project="GIS" 
+    file="/GIS/util/write/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="324" x="9276" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="filter.FilteringKmlId" project="GIS" file="/GIS/util/filter/FilteringKmlId.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="449" x="12949" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="read.ReadComboAlgo1" project="GIS" file="/GIS/util/read/ReadComboAlgo1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="449" x="11482" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="mains.MainAlgo1" project="GIS" file="/GIS/algorithm/mains/MainAlgo1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="152" x="4968" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="mains.MainAlgo2" project="GIS" file="/GIS/algorithm/mains/MainAlgo2.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="152" x="5160" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="mains.MainRepportAlgo1" project="GIS" 
+    file="/GIS/algorithm/mains/MainRepportAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="185" x="13438" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="algorithms.MacLocationAlgo1" project="GIS" 
+    file="/GIS/algorithm/algorithms/MacLocationAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="236" width="364" x="7841" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="mains.MainRepportAlgo2" project="GIS" 
+    file="/GIS/algorithm/mains/MainRepportAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="185" x="13663" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="50" language="java" name="read.HeaderAlgo1" project="GIS" file="/GIS/util/read/HeaderAlgo1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="276" width="225" x="5352" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="51" language="java" name="algorithms.MacLocationAlgo2" project="GIS" 
+    file="/GIS/algorithm/algorithms/MacLocationAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="236" width="333" x="9650" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="write.WriteComboAlgo1" project="GIS" file="/GIS/util/write/WriteComboAlgo1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="236" width="264" x="5110" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="algorithms.Difference" project="GIS" 
+    file="/GIS/algorithm/algorithms/Difference.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="268" x="13550" y="676"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="54" language="java" name="read.Header" project="GIS" file="/GIS/util/read/Header.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="216" width="174" x="5617" y="200"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
   <realization id="55">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="24"/>  
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="8"/>  
   </realization>  
   <generalization id="56">    
-    <end type="SOURCE" refId="6"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <realization id="57">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <realization id="58">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="59">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="38"/>  
   </generalization>  
-  <generalization id="57">    
-    <end type="SOURCE" refId="18"/>    
+  <realization id="61">    
+    <end type="SOURCE" refId="44"/>    
     <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="62">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="63">    
+    <bendpoint x="9630" y="676"/>    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
   </generalization>  
-  <generalization id="58">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <association id="59">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="60" name="arrayMacLocation">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="61" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="65">    
+    <bendpoint x="7850" y="676"/>    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="66" name="wifi"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
+    <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="62">    
-    <bendpoint x="5735" y="600"/>    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="1"/>  
+  <realization id="68">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="13"/>  
   </realization>  
+  <realization id="69">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="70">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="71">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <nesting id="73">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="22"/>  
+  </nesting>  
+  <realization id="74">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="75">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <association id="76">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="77" name="sampleScan"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="80" name="lineAlgo1"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <end type="SOURCE" refId="49" navigable="false">      
+      <attribute id="83" name="arrayDiffAlgo2"/>      
+      <multiplicity id="84" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="85">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="87">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="88" name="arrayMacLocation"/>      
+      <multiplicity id="89" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="91" name="arrayDiffAlgo1"/>      
+      <multiplicity id="92" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="93">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="94">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <realization id="95">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <realization id="96">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="97">    
+    <bendpoint x="6822" y="676"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="98" name="arrayWifi"/>      
+      <multiplicity id="99" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="100">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="101">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="102" name="arrayWifi"/>      
+      <multiplicity id="103" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="104">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <realization id="105">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="106">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="107" name="arrayWigleWifiLine"/>      
+      <multiplicity id="108" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="109">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </nesting>  
+  <generalization id="110">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
