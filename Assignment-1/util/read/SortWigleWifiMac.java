@@ -2,7 +2,6 @@ package read;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 import algorithms.Mac;
 import libraries.Filter;
@@ -14,7 +13,7 @@ import libraries.Filter;
  * @param <Mac, SampleScan>.
  */
 public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
-	
+
 	/**
 	 * Empty constructor.
 	 * @param arrayCsv.
@@ -29,16 +28,15 @@ public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
 	@Override
 	public ArrayList<Mac> sortBy(ArrayList<SampleScan> arrayScan) {
 		ArrayList<Mac> array = new ArrayList<Mac>();
-		ArrayList<CsvFile> arrayCsv = Filter.fromScanToCvs(arrayScan);
-		System.out.println(arrayCsv.size());
-		for (CsvFile csvFile : arrayCsv) Collections.sort(csvFile.getWigleWifiLine());
-		for (CsvFile csvFile : arrayCsv) {
-			for (WigleWifiLine line : csvFile.getWigleWifiLine()) { 
-				if (array.size() != 0 && needToCreateObject(line.getMac(), array.get(array.size() - 1))) { 
-					if (line.getType().equals("WIFI")) array.get(array.size() - 1).getArrayMacLocation().add(addMacLocation(line));
-				}
-				else if (!line.getFirstseen().contains("1970") && line.getType().equals("WIFI")) array.add(addMac(line));
+		ArrayList<CsvFile> arrayCsvMultipliying = Filter.fromScanToCvs(arrayScan);
+		CsvFile file = getUnionFromTheFile(arrayCsvMultipliying);
+		Collections.sort(file.getWigleWifiLine());
+		for (WigleWifiLine line : file.getWigleWifiLine()) { 
+			if (array.size() != 0 && needToCreateObject(line.getMac(), array.get(array.size() - 1))) { 
+				if (line.getType().equals("WIFI")) array.get(array.size() - 1).getArrayMacLocation().add(addMacLocation(line));
 			}
+			else if (!line.getFirstseen().contains("1970") && line.getType().equals("WIFI")) array.add(addMac(line));
+
 		}
 		for (Mac mac: array) mac.sort(mac.getArrayMacLocation());
 		return array;
@@ -56,18 +54,13 @@ public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
 		Mac macLocation = (Mac) object;
 		return macLocation.getMacName().equals(mac);
 	}
-	
-	private void getUnionFromTheFile(ArrayList<Mac> array) {
-		HashMap<String, Mac> map = new HashMap<String, Mac>();
-		for (Mac mac : array) {
-			if (map.get(mac.getMacName()) == null) 
-				map.put(mac.getMacName(), mac);
-			else {
-				Mac duplicate = map.get(mac.getMacName());
-				
-			}
-		}
-	}
 
+	private CsvFile getUnionFromTheFile(ArrayList<CsvFile> array) {
+		ArrayList<WigleWifiLine> arrayLine = new ArrayList<WigleWifiLine>();
+		for (CsvFile file : array) 
+			for (WigleWifiLine line : file.getWigleWifiLine())
+				arrayLine.add(line);
+		return new CsvFile("id", arrayLine);
+	}
 
 }

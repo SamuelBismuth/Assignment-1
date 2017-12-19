@@ -14,7 +14,7 @@ import algorithms.Difference;
  * @param <SampleScan>.
  */
 public class WriteCsvDiff implements WriteFile<Difference> {
-	
+
 	private FileWriter fw;
 	private PrintWriter outs;
 	private String fileName;
@@ -49,9 +49,25 @@ public class WriteCsvDiff implements WriteFile<Difference> {
 			outs.print(scan.getDiff().getLongitude() + ",");
 			outs.println(scan.getDiff().getAltitude() + ",");
 		}
+		outs.println();
+		sumLocalisation(array);
 		writeFile();
 	}
-	
+
+	private void sumLocalisation(ArrayList<Difference> array) {
+		double sumLatitude = 0,
+				sumLongitude = 0,
+				sumAltitude = 0;
+		for (Difference scan : array) {
+			sumLatitude += scan.getDiff().getLatitude();
+			sumLongitude += scan.getDiff().getLongitude();
+			sumAltitude += scan.getDiff().getAltitude();
+		}
+		outs.println("Average latitude : " + sumLatitude/4);
+		outs.println("Average longitude : " + sumLongitude/4);
+		outs.println("Average altitude : " + sumAltitude/4);
+	}
+
 	/**
 	 * This method write the header of the file we need to write.
 	 */
@@ -82,6 +98,5 @@ public class WriteCsvDiff implements WriteFile<Difference> {
 	public String getFileName() {
 		return fileName;
 	}
-	
+
 }
-	

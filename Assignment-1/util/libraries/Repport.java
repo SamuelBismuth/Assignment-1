@@ -1,6 +1,7 @@
 package libraries;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
@@ -21,6 +22,17 @@ public class Repport {
 		}
 	}
 
+	public static void algo2(ArrayList<SampleScan> arrayScanBoazAlgo2, ArrayList<SampleScan> arrayScanAlgo2, ArrayList<Difference> arrayDiffAlgo2) {
+		HashMap<GregorianCalendar, EarthCoordinate> map = new HashMap<GregorianCalendar, EarthCoordinate>();
+		for (SampleScan scanBoaz : arrayScanBoazAlgo2) 
+			map.put(scanBoaz.getTime(), scanBoaz.getPointLocation());
+		EarthCoordinate coordinateBoaz = new EarthCoordinate();
+		for (SampleScan scan : arrayScanAlgo2) {
+			coordinateBoaz = map.get(scan.getTime());
+			diffCoordinate(coordinateBoaz, scan.getPointLocation(), scan.getTime().getTime().toString() , arrayDiffAlgo2);
+		}
+	}
+
 	private static void diffCoordinate(EarthCoordinate coordinateBoaz, EarthCoordinate coordinate, String macName, ArrayList<Difference> array) {
 		if (coordinateBoaz != null) {
 			array.add(
@@ -35,4 +47,5 @@ public class Repport {
 					);
 		}
 	}
+
 }

@@ -37,12 +37,12 @@ public class MacTest {
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);
-		EarthCoordinate wpointlocation1 = new EarthCoordinate(0.03912,0.03567,0.722222222);
-		EarthCoordinate wpointlocation2 = new EarthCoordinate(16.79381271,15.31276327,310.0425545);
-		EarthCoordinate pointlocationws1 = new EarthCoordinate(0.04897967,0.04464974,0.90929784);
-		EarthCoordinate pointlocationws2 = new EarthCoordinate(28.50479959,25.9774824,532.4570976);
-		EarthCoordinate pointlocationwc1 = new EarthCoordinate(35.21645076,32.10322469,653.7864078);
-		EarthCoordinate pointlocationwc2 = new EarthCoordinate(35.22673264,32.1034296,658.0198453);
+//		EarthCoordinate wpointlocation1 = new EarthCoordinate(0.03912,0.03567,0.722222222);
+//		EarthCoordinate wpointlocation2 = new EarthCoordinate(16.79381271,15.31276327,310.0425545);
+//		EarthCoordinate pointlocationws1 = new EarthCoordinate(0.04897967,0.04464974,0.90929784);
+//		EarthCoordinate pointlocationws2 = new EarthCoordinate(28.50479959,25.9774824,532.4570976);
+//		EarthCoordinate pointlocationwc1 = new EarthCoordinate(35.21645076,32.10322469,653.7864078);
+//		EarthCoordinate pointlocationwc2 = new EarthCoordinate(35.22673264,32.1034296,658.0198453);
 
 		double pi = 0.476988545;
 		double pi1 = 0.17381326;

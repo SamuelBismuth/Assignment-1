@@ -3,7 +3,6 @@ package test;
 import static org.junit.Assert.*;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
-import algorithms.MacLocationAlgo1;
 import algorithms.MacLocationAlgo2;
 
 public class MacLocationAlgo2Test {
