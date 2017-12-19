@@ -84,7 +84,7 @@ public class KmlUtil {
 	 * @param value.
 	 * @return simple data.
 	 */
-	public static SimpleData simpleData(String name, String value) {
+	public static SimpleData simpleData(String name, String value) {//can't check
 		SimpleData data = new SimpleData();
 		data.setName(name);
 		data.setValue(value);
@@ -97,7 +97,7 @@ public class KmlUtil {
 	 * @param signal.
 	 * @return the color.
 	 */
-	public static String color(double signal) {
+	public static String color(double signal) {//done
 		if (signal > - 70) return "#grn";
 		else if (signal > -90) return "#ylw";
 		else return "#red";
@@ -108,7 +108,7 @@ public class KmlUtil {
 	 * @param time.
 	 * @return yyyy-mm-ddThh:mm:ssZ.
 	 */
-	public static String timeInput(GregorianCalendar time) {
+	public static String timeInput(GregorianCalendar time) {//done
 		return Integer.toString(time.get(Calendar.YEAR)) + "-" + dataChange((time.get(Calendar.MONTH))) + "-" + 
 				dataChange((time.get(Calendar.DATE))) + "T" + dataChange((time.get(Calendar.HOUR_OF_DAY))) 
 				+ ":" + dataChange((time.get(Calendar.MINUTE))) + ":" + dataChange((time.get(Calendar.SECOND))) + "Z";
@@ -120,7 +120,7 @@ public class KmlUtil {
 	 * @return data if the data is already with two digits.
 	 * @return 0 + data if the data got only one digit.
 	 */
-	public static String dataChange(int data) {
+	public static String dataChange(int data) {//done
 		if (data / 10 >= 1) return Integer.toString(data);
 		else return "0" + Integer.toString(data);
 	}
@@ -131,7 +131,7 @@ public class KmlUtil {
 	 * @return true if the data is good.
 	 * @return if the data is not good.
 	 */
-	public static boolean checkLatitude(double latitude) {
+	public static boolean checkLatitude(double latitude) {//done
 		if (latitude < -90 || latitude > 90) return false;
 		return true;
 
@@ -143,7 +143,7 @@ public class KmlUtil {
 	 * @return true if the data is good.
 	 * @return if the data is not good.
 	 */
-	public static boolean checkLongitude(double longitude) {
+	public static boolean checkLongitude(double longitude) {//done
 		if (longitude < 0 || longitude > 360) return false;
 		return true;
 	}

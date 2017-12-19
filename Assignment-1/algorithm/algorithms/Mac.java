@@ -86,14 +86,14 @@ public class Mac  {
 	/**
 	 * @return used
 	 */
-	protected boolean getUsed() {
+	public boolean getUsed() {
 		return used;
 	}
 
 	/**
 	 * @param bool
 	 */
-	protected void setUsed(boolean bool) {
+	public void setUsed(boolean bool) {
 		this.used = bool;
 	}
 	
@@ -134,7 +134,7 @@ public class Mac  {
 	 * @param arrayMacLocationInformation
 	 * @return
 	 */
-	private ArrayList<MacLocation> defineArrayListWithFinalNumber(ArrayList<MacLocation> arrayMacLocationInformation) {
+	public ArrayList<MacLocation> defineArrayListWithFinalNumber(ArrayList<MacLocation> arrayMacLocationInformation) {
 		if (arrayMacLocationInformation.size() < numberOfSampleMac) 
 			return arrayMacLocationInformation;
 		else {

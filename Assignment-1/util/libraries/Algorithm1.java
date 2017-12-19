@@ -54,7 +54,7 @@ public class Algorithm1 {
 	 * This method calculates the sum between all the signal of the weights.
 	 * @return sumWeigthSignal.
 	 */
-	private static double getSumWeightSignal(ArrayList<MacLocation> arrayMacLocation) {
+	public static double getSumWeightSignal(ArrayList<MacLocation> arrayMacLocation) {
 		double sumWeigthSignal = 0;
 		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
 		return sumWeigthSignal;

@@ -11,6 +11,9 @@ import read.WigleWifiLine;
 
 public class CsvFileTest {
 
+	/**
+	 * This method check if the functions of the object CsvFile are working.
+	 */
 	@Test
 	public void test() {
 		String id = "net";

@@ -85,7 +85,7 @@ public class Algorithm2 {
 	 * @param data.
 	 * @return the revelant number.
 	 */
-	private static double revelantNumber(Wifi input, Wifi data) {
+	public static double revelantNumber(Wifi input, Wifi data) {
 		if (data == null) 
 			return 0.1;
 		return 
@@ -131,7 +131,7 @@ public class Algorithm2 {
 	 * @param data.
 	 * @return the weigth number.
 	 */
-	private static double getWeight(Wifi input, Wifi data) {
+	public static double getWeight(Wifi input, Wifi data) {
 		return
 				norm / (
 						Math.pow(
@@ -151,7 +151,7 @@ public class Algorithm2 {
 	 * @param data.
 	 * @return the diff number.
 	 */
-	private static double getDiff(Wifi input, Wifi data) {
+	public static double getDiff(Wifi input, Wifi data) {
 		if(data.getSignal() == noSignal) return difNoSignal;
 		else return Math.max(
 				minDif,

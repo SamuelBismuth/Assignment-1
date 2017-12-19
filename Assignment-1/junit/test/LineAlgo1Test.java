@@ -22,6 +22,7 @@ public class LineAlgo1Test {
 		EarthCoordinate localisation = new EarthCoordinate(34.7,32.6,9.0);
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		LineAlgo1 sa = new LineAlgo1(index, macName, ssid, frequency, signal, localisation, date);
+		
 		assertEquals(index, sa.getIndex());
 		assertEquals(macName, sa.getMacName());
 		assertEquals(ssid, sa.getSsid());
