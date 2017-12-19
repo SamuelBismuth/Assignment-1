@@ -6,6 +6,15 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 import read.Wifi;
 
+/**
+ * This interface defines only five methods : getPointLocation, getWeightPointLocation, getWeigthSignal, getSignal and getWifi.
+ * Then, two classes implements this interface :
+ * @see MacLocationAlgo1, and @see {@link MacLocationAlgo2}.
+ * 
+ * The main goal of this class is the defines the gps of the mac adresse.
+ * 
+ * @author Orel and Samuel.
+ */
 public interface MacLocation {
 	
 	public EarthCoordinate getPointLocation();

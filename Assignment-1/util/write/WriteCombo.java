@@ -12,6 +12,7 @@ import read.Wifi;
  * This class writes the csv file.
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
 public class WriteCombo implements WriteFile<SampleScan> {
 
@@ -37,10 +38,8 @@ public class WriteCombo implements WriteFile<SampleScan> {
 	}
 
 	/**
-	 * This method check if the scan got a new time or not, then, write the data we need.
+	 * This method receives the data and for all the scan into the array, write the csv file.
 	 * @param array.
-	 * @param fileNameExport.
-	 * @exception Exception e : print stack trace.
 	 */
 	@Override
 	public void receiveData(ArrayList<SampleScan> array) {
@@ -58,7 +57,7 @@ public class WriteCombo implements WriteFile<SampleScan> {
 	}
 	
 	/**
-	 * This method initialize the file we need to write.
+	 * This method write the header of the file we need to write.
 	 */
 	@Override
 	public void writeHeader() {
@@ -69,6 +68,10 @@ public class WriteCombo implements WriteFile<SampleScan> {
 				"SSID9," + "MAC9," + "Frequency9," + "Signal9," +"SSID10," + "MAC10," + "Frequency10," + "Signal10,");
 	}
 
+	/**
+	 * This method write the file by closing the method.
+	 * @exception IOException : Error writing file.
+	 */
 	@Override
 	public void writeFile() {	
 		try {
@@ -78,6 +81,14 @@ public class WriteCombo implements WriteFile<SampleScan> {
 		catch (IOException ex) {
 			System.out.println("Error writing file : " + ex);
 		}
+	}
+	
+	/**
+	 * @return fileName.
+	 */
+	@Override
+	public String getFileName() {
+		return fileName;
 	}
 	
 	//Private unimplemented method.
@@ -96,11 +107,4 @@ public class WriteCombo implements WriteFile<SampleScan> {
 		outs.println();
 	}
 	
-	/**
-	 * @return fileName.
-	 */
-	public String getFileName() {
-		return fileName;
-	}
-
 }

@@ -1,4 +1,4 @@
-package algorithms;
+package mains;
 
 public class Main {
 	

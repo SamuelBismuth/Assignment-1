@@ -1,4 +1,4 @@
-package algorithms;
+package mains;
 
 import java.io.File;
 import java.util.ArrayList;

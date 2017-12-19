@@ -1,9 +1,10 @@
-package algorithms;
+package mains;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import algorithms.Mac;
 import filter.Filtering;
 import filter.FilteringCsvMac;
 import libraries.InputException;
@@ -58,7 +59,7 @@ public class MainAlgo1 {
 		catch (InputException e) {
 			e.printStackTrace();
 		}
-		
+				
 		//Write the Csv
 		write.receiveData(arrayMac);
 		

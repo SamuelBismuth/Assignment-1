@@ -13,6 +13,7 @@ import read.SampleScan;
  * This class write the kml file without filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
 public class WriteKmlWithoutFilter extends WriteKml implements WriteFile<SampleScan> {
 
@@ -20,7 +21,8 @@ public class WriteKmlWithoutFilter extends WriteKml implements WriteFile<SampleS
 
 	/**
 	 * Constructor.
-	 * @param array
+	 * @param fileName.
+	 * @param document.
 	 */
 	public WriteKmlWithoutFilter(String fileName, Document document){
 		super(fileName, document);

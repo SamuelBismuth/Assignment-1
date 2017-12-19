@@ -4,6 +4,10 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
+/**
+ * This class represents a line of the algorithm 1 combo.
+ * @author Orel and Samuel.
+ */
 public class LineAlgo1 {
 
 	private int index;
@@ -16,13 +20,13 @@ public class LineAlgo1 {
 
 	/**
 	 * Constructor.
-	 * @param index
-	 * @param macName
-	 * @param ssid
-	 * @param frequency
-	 * @param signal
-	 * @param localisation
-	 * @param date
+	 * @param index.
+	 * @param macName.
+	 * @param ssid.
+	 * @param frequency.
+	 * @param signal.
+	 * @param localisation.
+	 * @param date.
 	 */
 	public LineAlgo1(int index, String macName, String ssid, int frequency, double signal, EarthCoordinate localisation,
 			GregorianCalendar date) {
@@ -34,6 +38,8 @@ public class LineAlgo1 {
 		this.localisation = localisation;
 		this.date = date;
 	}
+	
+	//Getters.
 
 	/**
 	 * @return index.

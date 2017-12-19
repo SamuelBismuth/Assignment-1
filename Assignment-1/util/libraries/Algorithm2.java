@@ -181,8 +181,7 @@ public class Algorithm2 {
 							)
 					);
 		}
-		Mac mac = new Mac(arrayMacLocation);
-		input.setPointLocation(mac.getWeightCenter());
+		input.setPointLocation(Algorithm1.getWeightCenter(arrayMacLocation));
 	}
 
 }

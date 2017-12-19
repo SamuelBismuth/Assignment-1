@@ -12,6 +12,7 @@ import org.apache.commons.csv.CSVRecord;
  * We are able to read a Wigle Wifi file, or a combo file.
  * 
  * @author Orel and Samuel.
+ * @param <T>
  */
 public interface ReadFile<T> {
 	

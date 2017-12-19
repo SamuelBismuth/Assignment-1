@@ -5,11 +5,17 @@ import java.util.ArrayList;
 import libraries.InputException;
 
 /**
- * This class interface defines for method : initialize, an abstract method checkData, addNetwork and createFile.
- * Then, six classes implements this interface :
- * Two abstract classes :  @see {@link WriteCsv}, @see {@link WriteKml}.
+ * This class interface defines for method : an abstract method receiveData, writeHeader,  writeFile and getFileName.
+ * Then, seven classes implements this interface :
+ * One abstract classe :  @see {@link WriteKml}.
  * WriteKml is extended by : @see {@link WriteKmlPlace}, @see {@link WriteKmlId}, @see {@link WriteKmlTime}, @see {@link WriteKmlWithoutFilter}.
+ * Also @see {@link WriteCombo}, and @see {@link WriteComboAlgo1} implement thus interface.
+ * 
+ * The main goal of this interface is to write a file.
+ * We are able to write a kml or a cvs file.
+ * 
  * @author Orel and Samuel.
+ * @param <t>
  */
 public interface WriteFile <T> {
 	

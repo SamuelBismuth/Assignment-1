@@ -1,0 +1,265 @@
+Index,Mac Name,Number of macSSID,Frequency,Signal,Lat,Lon,Alt,Time,
+0,1c:b9:c4:15:42:68,1,Ariel_University,-85.0,32.10487307,35.21134308,692.0,Sun Dec 03 08:53:08 IST 2017, Approx. w-center algo1
+1,1c:b9:c4:15:44:58,2,Ariel_University,-88.0,32.10495753300885,35.21119324070796,690.3008849557522,Sun Dec 03 08:53:08 IST 2017, Approx. w-center algo1
+2,1c:b9:c4:16:2d:e8,1,Ariel_University,-88.0,32.1050222,35.21107852,689.0,Sun Dec 03 08:53:24 IST 2017, Approx. w-center algo1
+3,1c:b9:c4:15:25:48,1,Ariel_University,-88.0,32.10503208,35.21092655,687.0,Sun Dec 03 08:53:27 IST 2017, Approx. w-center algo1
+4,1c:b9:c4:16:05:38,1,Ariel_University,-90.0,32.10495375,35.21060853,686.0,Sun Dec 03 08:53:33 IST 2017, Approx. w-center algo1
+5,00:11:6b:11:7e:0c,1,yosh,-84.0,32.10490203,35.21044203,686.0,Sun Dec 03 08:53:36 IST 2017, Approx. w-center algo1
+6,1c:b9:c4:15:44:88,1,Ariel_University,-88.0,32.10490203,35.21044203,686.0,Sun Dec 03 08:53:36 IST 2017, Approx. w-center algo1
+7,1c:b9:c4:15:ed:48,1,Ariel_University,-89.0,32.10490203,35.21044203,686.0,Sun Dec 03 08:53:36 IST 2017, Approx. w-center algo1
+8,1c:b9:c4:16:05:38,1,Ariel_University,-82.0,32.10490203,35.21044203,686.0,Sun Dec 03 08:53:36 IST 2017, Approx. w-center algo1
+9,1c:b9:c4:16:2d:e8,1,Ariel_University,-83.0,32.10490203,35.21044203,686.0,Sun Dec 03 08:53:36 IST 2017, Approx. w-center algo1
+10,1c:b9:c4:14:2b:c8,1,Ariel_University,-90.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+11,1c:b9:c4:15:41:78,1,Ariel_University,-90.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+12,1c:b9:c4:15:42:68,1,Ariel_University,-86.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+13,1c:b9:c4:16:2b:e8,1,Ariel_University,-83.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+14,90:6c:ac:a0:7b:4d,1,EVE,-83.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+15,a2:6c:ac:a0:7b:4d,1,Guest,-82.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+16,c2:6c:ac:9f:fb:1f,1,shapedo,-82.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+17,c2:6c:ac:a0:7b:4d,1,outsense,-80.0,32.1048406,35.21025994,688.0,Sun Dec 03 08:53:39 IST 2017, Approx. w-center algo1
+18,00:1a:dd:f5:df:c5,1,Afikim_Wifi,-87.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+19,1c:b9:c4:15:44:58,1,Ariel_University,-79.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+20,1c:b9:c4:16:05:38,1,Ariel_University,-75.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+21,1c:b9:c4:16:05:78,1,Ariel_University,-86.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+22,74:ea:3a:ad:d1:50,1,TP-LINK_ADD150,-88.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+23,a2:6c:ac:a0:7b:4d,1,Guest,-71.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+24,c2:6c:ac:a0:7b:4d,1,outsense,-72.0,32.10475343,35.21007474,689.0,Sun Dec 03 08:53:42 IST 2017, Approx. w-center algo1
+25,1c:b9:c4:15:25:48,1,Ariel_University,-80.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+26,1c:b9:c4:16:05:78,1,Ariel_University,-80.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+27,1c:b9:c4:96:05:37,1, ,-83.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+28,70:5a:0f:57:04:17,1,DIRECT-B1-HP DeskJet 3830 series,-74.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+29,90:6c:ac:a0:60:4d,1,Guest,-69.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+30,90:6c:ac:a0:7b:4d,1,EVE,-69.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+31,a2:6c:ac:a0:60:4d,1,incentive2,-70.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+32,c2:6c:ac:a0:7b:4d,1,outsense,-67.0,32.10466627,35.20990936,687.0,Sun Dec 03 08:53:45 IST 2017, Approx. w-center algo1
+33,1c:b9:c4:15:23:58,1,Ariel_University,-85.0,32.10457483,35.20975804,687.0,Sun Dec 03 08:53:48 IST 2017, Approx. w-center algo1
+34,74:ea:3a:ad:d1:50,1,TP-LINK_ADD150,-69.0,32.10457483,35.20975804,687.0,Sun Dec 03 08:53:48 IST 2017, Approx. w-center algo1
+35,24:79:2a:2c:5b:d8,1,Ariel_University,-78.0,32.10448173,35.20960715,687.0,Sun Dec 03 08:53:51 IST 2017, Approx. w-center algo1
+36,90:6c:ac:9f:f1:c5,1,CliClap,-82.0,32.10448173,35.20960715,687.0,Sun Dec 03 08:53:51 IST 2017, Approx. w-center algo1
+37,1c:b9:c4:16:1d:78,1,Ariel_University,-83.0,32.10440239,35.20946023,687.0,Sun Dec 03 08:53:54 IST 2017, Approx. w-center algo1
+38,1c:b9:c4:16:cc:d8,1,Ariel_University,-92.0,32.10440239,35.20946023,687.0,Sun Dec 03 08:53:54 IST 2017, Approx. w-center algo1
+39,a2:6c:ac:a0:18:29,1,artsim,-80.0,32.10440239,35.20946023,687.0,Sun Dec 03 08:53:54 IST 2017, Approx. w-center algo1
+40,1c:b9:c4:16:2d:e8,1,Ariel_University,-91.0,32.10430866,35.20932755,687.0,Sun Dec 03 08:53:57 IST 2017, Approx. w-center algo1
+41,00:02:6f:8e:64:67,1, ,-91.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+42,1c:b9:c4:15:1c:b8,1,Ariel_University,-81.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+43,1c:b9:c4:16:cc:d8,1,Ariel_University,-82.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+44,b2:6c:ac:9f:f1:c5,1,paysday,-92.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+45,c2:6c:ac:9f:fb:1f,1,shapedo,-83.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+46,ec:8c:a2:26:b0:e8,1,Ariel_University,-86.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+47,ec:8c:a2:26:d3:68,1,Ariel_University,-64.0,32.10419361,35.20917533,685.0,Sun Dec 03 08:54:00 IST 2017, Approx. w-center algo1
+48,1c:b9:c4:15:fd:48,1,Ariel_University,-84.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+49,1c:b9:c4:16:05:38,1,Ariel_University,-76.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+50,1c:b9:c4:16:28:e8,1,Ariel_University,-76.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+51,1c:b9:c4:16:cc:d8,1,Ariel_University,-76.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+52,8c:0c:90:2e:16:88,1,Ariel_University,-84.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+53,b2:6c:ac:9f:f1:c5,1,paysday,-82.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+54,b2:6c:ac:a0:3d:eb,1,sinusafe,-75.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+55,b2:6c:ac:a0:7b:4d,1,magneto,-78.0,32.10406321,35.20902709,685.0,Sun Dec 03 08:54:03 IST 2017, Approx. w-center algo1
+56,1c:b9:c4:15:23:58,1,Ariel_University,-79.0,32.10391893,35.20892354,686.0,Sun Dec 03 08:54:06 IST 2017, Approx. w-center algo1
+57,1c:b9:c4:16:1d:7c,1,Ariel_University,-89.0,32.10376365,35.20883622,686.0,Sun Dec 03 08:54:09 IST 2017, Approx. w-center algo1
+58,1c:b9:c4:16:d2:88,1,Ariel_University,-89.0,32.10376365,35.20883622,686.0,Sun Dec 03 08:54:09 IST 2017, Approx. w-center algo1
+59,e0:10:7f:1a:bd:98,1,Ariel_University,-88.0,32.10376365,35.20883622,686.0,Sun Dec 03 08:54:09 IST 2017, Approx. w-center algo1
+60,ec:8c:a2:08:78:c8,1,Ariel_University,-85.0,32.10376365,35.20883622,686.0,Sun Dec 03 08:54:09 IST 2017, Approx. w-center algo1
+61,1c:b9:c4:16:28:e8,1,Ariel_University,-65.0,32.10359721,35.20878096,686.0,Sun Dec 03 08:54:12 IST 2017, Approx. w-center algo1
+62,ec:8c:a2:08:78:c8,1,Ariel_University,-77.0,32.10359721,35.20878096,686.0,Sun Dec 03 08:54:12 IST 2017, Approx. w-center algo1
+63,1c:b9:c4:12:7c:c8,1,Ariel_University,-73.0,32.10346795,35.20875946,686.0,Sun Dec 03 08:54:15 IST 2017, Approx. w-center algo1
+64,1c:b9:c4:16:d2:88,1,Ariel_University,-77.0,32.10346795,35.20875946,686.0,Sun Dec 03 08:54:15 IST 2017, Approx. w-center algo1
+65,90:6c:ac:9f:f1:c5,1,CliClap,-87.0,32.10346795,35.20875946,686.0,Sun Dec 03 08:54:15 IST 2017, Approx. w-center algo1
+66,ec:8c:a2:08:94:18,1,Ariel_University,-69.0,32.10346795,35.20875946,686.0,Sun Dec 03 08:54:15 IST 2017, Approx. w-center algo1
+67,1c:b9:c4:16:1d:78,1,Ariel_University,-81.0,32.10333565,35.20874462,687.0,Sun Dec 03 08:54:18 IST 2017, Approx. w-center algo1
+68,1c:b9:c4:16:f4:78,1,Ariel_University,-85.0,32.10333565,35.20874462,687.0,Sun Dec 03 08:54:18 IST 2017, Approx. w-center algo1
+69,34:8f:27:20:8c:18,1,Ariel_University,-86.0,32.10333565,35.20874462,687.0,Sun Dec 03 08:54:18 IST 2017, Approx. w-center algo1
+70,ec:8c:a2:08:94:18,1,Ariel_University,-61.0,32.10333565,35.20874462,687.0,Sun Dec 03 08:54:18 IST 2017, Approx. w-center algo1
+71,1c:b9:c4:12:90:b8,1,Ariel_University,-71.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+72,1c:b9:c4:14:2f:68,1,Ariel_University,-90.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+73,1c:b9:c4:16:28:f8,1,Ariel_University,-80.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+74,1c:b9:c4:16:f4:78,1,Ariel_University,-78.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+75,1c:b9:c4:96:d2:87,1, ,-83.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+76,8c:0c:90:2d:75:e8,1,Ariel_University,-83.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+77,ec:8c:a2:26:b0:e8,1,Ariel_University,-84.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+78,ec:8c:a2:26:d3:68,1,Ariel_University,-87.0,32.10318952,35.20873143,684.0,Sun Dec 03 08:54:21 IST 2017, Approx. w-center algo1
+79,1c:b9:c4:14:2f:68,1,Ariel_University,-82.0,32.10301827,35.20871988,685.0,Sun Dec 03 08:54:24 IST 2017, Approx. w-center algo1
+80,1c:b9:c4:14:33:c8,1,Ariel_University,-84.0,32.10301827,35.20871988,685.0,Sun Dec 03 08:54:24 IST 2017, Approx. w-center algo1
+81,1c:b9:c4:16:05:38,1,Ariel_University,-88.0,32.10301827,35.20871988,685.0,Sun Dec 03 08:54:24 IST 2017, Approx. w-center algo1
+82,1c:b9:c4:16:f1:98,1,Ariel_University,-87.0,32.10301827,35.20871988,685.0,Sun Dec 03 08:54:24 IST 2017, Approx. w-center algo1
+83,8c:0c:90:2e:16:88,1,Ariel_University,-87.0,32.10301827,35.20871988,685.0,Sun Dec 03 08:54:24 IST 2017, Approx. w-center algo1
+84,1c:b9:c4:14:2f:68,1,Ariel_University,-71.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+85,1c:b9:c4:14:33:c8,1,Ariel_University,-75.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+86,1c:b9:c4:16:11:ac,1,Ariel_University,-90.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+87,1c:b9:c4:16:f4:7c,1,Ariel_University,-84.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+88,8c:0c:90:2d:75:e8,1,Ariel_University,-77.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+89,8c:0c:90:ad:75:e3,1, ,-76.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+90,ec:8c:a2:08:78:cc,1,Ariel_University,-85.0,32.10282362,35.20871899,688.0,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+91,f8:d1:11:77:77:c6,1,HelpDesk,-70.0,32.10282362,35.20871899,688.0000000000001,Sun Dec 03 08:54:27 IST 2017, Approx. w-center algo1
+92,1c:b9:c4:16:11:a8,1,Ariel_University,-73.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+93,1c:b9:c4:16:28:f8,1,Ariel_University,-73.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+94,1c:b9:c4:16:ee:98,1,Ariel_University,-82.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+95,62:ab:1b:60:b4:cb,1,Bezeq Free,-86.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+96,a0:ab:1b:60:b4:ca,1,036518749,-87.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+97,ec:8c:a2:26:b1:78,1,Ariel_University,-69.0,32.10263124,35.20876629,687.0,Sun Dec 03 08:54:30 IST 2017, Approx. w-center algo1
+98,1c:b9:c4:12:7c:c8,1,Ariel_University,-73.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+99,1c:b9:c4:14:33:cc,1,Ariel_University,-86.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+100,1c:b9:c4:16:28:e8,1,Ariel_University,-77.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+101,1c:b9:c4:16:d2:88,1,Ariel_University,-86.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+102,1c:b9:c4:16:f1:98,1,Ariel_University,-79.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+103,ec:8c:a2:08:78:c8,1,Ariel_University,-86.0,32.10244119,35.20884914,686.0,Sun Dec 03 08:54:33 IST 2017, Approx. w-center algo1
+104,1c:b9:c4:14:2b:d8,1,Ariel_University,-69.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+105,1c:b9:c4:14:2b:dc,1,Ariel_University,-74.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+106,1c:b9:c4:14:2f:68,1,Ariel_University,-63.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+107,34:8f:27:20:8c:18,1,Ariel_University,-86.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+108,62:ab:1b:60:b4:cb,1,Bezeq Free,-78.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+109,ec:8c:a2:08:94:18,1,Ariel_University,-73.0,32.1022576,35.20894955,688.0,Sun Dec 03 08:54:36 IST 2017, Approx. w-center algo1
+110,1c:b9:c4:12:90:b8,1,Ariel_University,-82.0,32.10212198,35.20912829,688.0,Sun Dec 03 08:54:39 IST 2017, Approx. w-center algo1
+111,1c:b9:c4:16:f1:98,1,Ariel_University,-73.0,32.10212198,35.20912829,688.0,Sun Dec 03 08:54:39 IST 2017, Approx. w-center algo1
+112,1c:b9:c4:16:f4:78,1,Ariel_University,-77.0,32.10212198,35.20912829,688.0,Sun Dec 03 08:54:39 IST 2017, Approx. w-center algo1
+113,c4:12:f5:f6:a0:18,1,lab_6.1.3,-80.0,32.10212198,35.20912829,688.0,Sun Dec 03 08:54:39 IST 2017, Approx. w-center algo1
+114,1c:b9:c4:15:1e:68,1,Ariel_University,-80.0,32.1020322,35.20935702,689.0,Sun Dec 03 08:54:42 IST 2017, Approx. w-center algo1
+115,ec:8c:a2:08:94:1c,1,Ariel_University,-70.0,32.1020322,35.20935702,688.9999999999999,Sun Dec 03 08:54:42 IST 2017, Approx. w-center algo1
+116,1c:b9:c4:15:3a:38,1,Ariel_University,-76.0,32.10196459,35.20960153,690.0,Sun Dec 03 08:54:45 IST 2017, Approx. w-center algo1
+117,00:11:6b:11:02:b7,1,yosh,-81.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+118,1c:b9:c4:14:33:c8,1,Ariel_University,-78.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+119,1c:b9:c4:16:11:a8,1,Ariel_University,-79.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+120,1c:b9:c4:16:28:f8,1,Ariel_University,-76.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+121,a0:ab:1b:60:b4:ca,1,036518749,-87.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+122,ec:8c:a2:26:b1:78,1,Ariel_University,-85.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+123,f8:d1:11:77:77:c6,1,HelpDesk,-88.0,32.10199722,35.2098381,693.0,Sun Dec 03 08:54:48 IST 2017, Approx. w-center algo1
+124,1c:b9:c4:14:2b:d8,1,Ariel_University,-84.0,32.10212708,35.20998301,692.0,Sun Dec 03 08:54:51 IST 2017, Approx. w-center algo1
+125,1c:b9:c4:14:2b:dc,1,Ariel_University,-74.0,32.10212708,35.20998301,692.0,Sun Dec 03 08:54:51 IST 2017, Approx. w-center algo1
+126,1c:b9:c4:14:2f:68,1,Ariel_University,-85.0,32.10212708,35.20998301,692.0,Sun Dec 03 08:54:51 IST 2017, Approx. w-center algo1
+127,62:ab:1b:60:b4:cb,1,Bezeq Free,-87.0,32.10212708,35.20998301,692.0,Sun Dec 03 08:54:51 IST 2017, Approx. w-center algo1
+128,00:1d:aa:81:d8:3c,2,KCG-ADSL,-84.0,32.10264589301599,35.209913520190405,693.9999999999999,Sun Dec 03 08:54:54 IST 2017, Approx. w-center algo1
+129,1c:b9:c4:12:af:78,1,Ariel_University,-79.0,32.10290524,35.20983303,694.0,Sun Dec 03 08:55:11 IST 2017, Approx. w-center algo1
+130,1c:b9:c4:14:2b:88,1,Ariel_University,-86.0,32.10290524,35.20983303,694.0,Sun Dec 03 08:55:11 IST 2017, Approx. w-center algo1
+131,1c:b9:c4:14:30:38,1,Ariel_University,-87.0,32.10290524,35.20983303,694.0,Sun Dec 03 08:55:11 IST 2017, Approx. w-center algo1
+132,1c:b9:c4:15:1e:68,1,Ariel_University,-86.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+133,1c:b9:c4:15:3a:38,1,Ariel_University,-89.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+134,1c:b9:c4:15:ec:38,1,Ariel_University,-78.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+135,1c:b9:c4:16:06:bc,1,Ariel_University,-88.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+136,1c:b9:c4:16:11:a8,1,Ariel_University,-84.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+137,1c:b9:c4:16:ee:98,1,Ariel_University,-85.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+138,40:a5:ef:7a:17:f2,1,2.4V1,-76.0,32.10305306,35.20978446,693.0,Sun Dec 03 08:55:15 IST 2017, Approx. w-center algo1
+139,c4:12:f5:f6:a0:18,1,lab_6.1.3,-85.0,32.10314139,35.20977295,693.0,Sun Dec 03 08:55:17 IST 2017, Approx. w-center algo1
+140,1c:b9:c4:12:90:b8,1,Ariel_University,-87.0,32.10330416,35.20979335,695.0,Sun Dec 03 08:55:20 IST 2017, Approx. w-center algo1
+141,1c:b9:c4:16:06:b8,1,Ariel_University,-75.0,32.10330416,35.20979335,695.0,Sun Dec 03 08:55:20 IST 2017, Approx. w-center algo1
+142,1c:b9:c4:16:ed:38,1,Ariel_University,-74.0,32.10330416,35.20979335,694.9999999999999,Sun Dec 03 08:55:20 IST 2017, Approx. w-center algo1
+143,1c:b9:c4:16:ed:48,1,Ariel_University,-84.0,32.10330416,35.20979335,695.0,Sun Dec 03 08:55:20 IST 2017, Approx. w-center algo1
+144,1c:b9:c4:15:fd:48,1,Ariel_University,-79.0,32.10357832,35.20992695,694.0,Sun Dec 03 08:55:25 IST 2017, Approx. w-center algo1
+145,d8:5d:4c:9e:69:22,1,AUC_4_2_24,-84.0,32.10357832,35.20992695,694.0,Sun Dec 03 08:55:25 IST 2017, Approx. w-center algo1
+146,1c:b9:c4:15:1c:b8,1,Ariel_University,-89.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+147,1c:b9:c4:16:06:b8,1,Ariel_University,-68.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+148,1c:b9:c4:16:06:bc,1,Ariel_University,-72.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+149,24:79:2a:2b:07:b8,1,Ariel_University,-85.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+150,24:79:2a:2b:bd:88,1,Ariel_University,-83.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+151,24:79:2a:2c:5c:18,1,Ariel_University,-81.0,32.10379261,35.21019984,694.0,Sun Dec 03 08:55:30 IST 2017, Approx. w-center algo1
+152,00:1d:aa:81:d8:3c,1,KCG-ADSL,-88.0,32.10392655,35.21040928,695.0,Sun Dec 03 08:55:33 IST 2017, Approx. w-center algo1
+153,1c:b9:c4:12:af:78,1,Ariel_University,-75.0,32.10392655,35.21040928,695.0,Sun Dec 03 08:55:33 IST 2017, Approx. w-center algo1
+154,1c:b9:c4:14:2b:88,1,Ariel_University,-84.0,32.10392655,35.21040928,695.0,Sun Dec 03 08:55:33 IST 2017, Approx. w-center algo1
+155,1c:b9:c4:14:30:38,1,Ariel_University,-87.0,32.10392655,35.21040928,695.0,Sun Dec 03 08:55:33 IST 2017, Approx. w-center algo1
+156,24:79:2a:2c:5b:d8,1,Ariel_University,-87.0,32.10403138,35.21064312,697.0,Sun Dec 03 08:55:36 IST 2017, Approx. w-center algo1
+157,1c:b9:c4:12:90:b8,1,Ariel_University,-87.0,32.10412387,35.21091349,700.0,Sun Dec 03 08:55:40 IST 2017, Approx. w-center algo1
+158,1c:b9:c4:16:ed:38,1,Ariel_University,-76.0,32.10412387,35.21091349,700.0,Sun Dec 03 08:55:40 IST 2017, Approx. w-center algo1
+159,1c:b9:c4:16:ed:48,1,Ariel_University,-83.0,32.10412387,35.21091349,700.0,Sun Dec 03 08:55:40 IST 2017, Approx. w-center algo1
+160,8c:0c:90:2f:d3:d8,1,Ariel_University,-78.0,32.10412387,35.21091349,700.0,Sun Dec 03 08:55:40 IST 2017, Approx. w-center algo1
+161,1c:b9:c4:15:fd:48,1,Ariel_University,-79.0,32.10415215,35.21101715,700.0,Sun Dec 03 08:55:42 IST 2017, Approx. w-center algo1
+162,d8:5d:4c:9e:69:22,1,AUC_4_2_24,-84.0,32.10415215,35.21101715,700.0,Sun Dec 03 08:55:42 IST 2017, Approx. w-center algo1
+163,1c:b9:c4:15:41:78,1,Ariel_University,-71.0,32.10418089,35.21118813,699.0,Sun Dec 03 08:55:45 IST 2017, Approx. w-center algo1
+164,1c:b9:c4:15:1c:b8,1,Ariel_University,-89.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+165,1c:b9:c4:16:06:b8,1,Ariel_University,-83.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+166,1c:b9:c4:16:06:bc,1,Ariel_University,-72.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+167,1c:b9:c4:95:41:77,1, ,-82.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+168,24:79:2a:2b:07:b8,1,Ariel_University,-85.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+169,24:79:2a:2b:bd:88,1,Ariel_University,-83.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+170,24:79:2a:2c:5c:18,1,Ariel_University,-81.0,32.10423611,35.21138319,700.0,Sun Dec 03 08:55:48 IST 2017, Approx. w-center algo1
+171,00:11:6b:11:7e:0c,1,yosh,-93.0,32.10434812,35.21150642,698.0,Sun Dec 03 08:55:51 IST 2017, Approx. w-center algo1
+172,1c:b9:c4:15:44:88,1,Ariel_University,-77.0,32.10434812,35.21150642,698.0,Sun Dec 03 08:55:51 IST 2017, Approx. w-center algo1
+173,1c:b9:c4:15:ed:48,2,Ariel_University,-86.0,32.104431804807184,35.21154665411134,698.0,Sun Dec 03 08:55:51 IST 2017, Approx. w-center algo1
+174,1c:b9:c4:16:cd:18,1,IT-MNG,-93.0,32.10476714,35.2115156,696.0,Sun Dec 03 08:56:00 IST 2017, Approx. w-center algo1
+175,1c:b9:c4:56:cd:18,1,Ariel_University,-92.0,32.10476714,35.2115156,696.0,Sun Dec 03 08:56:00 IST 2017, Approx. w-center algo1
+176,1c:b9:c4:14:2b:c8,1,Ariel_University,-89.0,32.10481492,35.2114539,695.0,Sun Dec 03 08:56:02 IST 2017, Approx. w-center algo1
+177,1c:b9:c4:15:fd:e8,1,IT-MNG,-84.0,32.10481492,35.2114539,695.0,Sun Dec 03 08:56:02 IST 2017, Approx. w-center algo1
+178,1c:b9:c4:15:44:58,1,Ariel_University,-88.0,32.10487501,35.21137457,697.0,Sun Dec 03 08:56:05 IST 2017, Approx. w-center algo1
+179,1c:b9:c4:14:2b:c8,1,Ariel_University,-81.0,32.10488619,35.21135337,698.0,Sun Dec 03 08:56:08 IST 2017, Approx. w-center algo1
+180,1c:b9:c4:16:05:78,1,Ariel_University,-91.0,32.10488619,35.21135337,698.0,Sun Dec 03 08:56:08 IST 2017, Approx. w-center algo1
+181,1c:b9:c4:16:2b:e8,1,Ariel_University,-87.0,32.10488619,35.21135337,698.0,Sun Dec 03 08:56:08 IST 2017, Approx. w-center algo1
+182,1c:b9:c4:14:30:3c,1,Ariel_University,-76.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+183,1c:b9:c4:16:ed:3c,1,Ariel_University,-74.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+184,1c:b9:c4:16:f1:5c,1,Ariel_University,-83.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+185,1c:b9:c4:92:af:77,1, ,-79.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+186,1c:b9:c4:94:30:37,1, ,-79.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+187,3c:52:82:ef:c4:3c,1,DIRECT-3B-HP DeskJet 3630 series,-72.0,32.10296049325714,35.20969913393224,702.1428799579676,Sun Dec 03 09:00:27 IST 2017, Approx. w-center algo1
+188,e4:95:6e:40:87:1a,1,OOP_course,-12.0,32.10298811526831,35.20966517514508,702.0409029813914,Sun Dec 03 09:01:37 IST 2017, Approx. w-center algo1
+189,1c:b9:c4:12:af:7c,1,Ariel_University,-77.0,32.103006095311606,35.20964526642827,702.4456558045867,Sun Dec 03 09:02:19 IST 2017, Approx. w-center algo1
+190,1c:b9:c4:15:ec:3c,1,Ariel_University,-82.0,32.10302056472078,35.209661717337,702.7411783352208,Sun Dec 03 09:02:25 IST 2017, Approx. w-center algo1
+191,1c:b9:c4:16:06:b8,1,Ariel_University,-89.0,32.10302056472078,35.209661717337,702.7411783352208,Sun Dec 03 09:02:25 IST 2017, Approx. w-center algo1
+192,1c:b9:c4:12:af:78,1,Ariel_University,-74.0,32.10302066887821,35.20966235296473,702.7589737898068,Sun Dec 03 09:02:28 IST 2017, Approx. w-center algo1
+193,1c:b9:c4:95:ec:37,1, ,-84.0,32.10302066887821,35.20966235296473,702.7589737898068,Sun Dec 03 09:02:28 IST 2017, Approx. w-center algo1
+194,1c:b9:c4:96:ed:37,2, ,-82.0,32.10302084566238,35.20966436966361,702.8302348628025,Sun Dec 03 09:02:28 IST 2017, Approx. w-center algo1
+195,1c:b9:c4:95:1c:b7,1, ,-90.0,32.10303985479879,35.20968826555523,703.11594160034,Sun Dec 03 09:02:43 IST 2017, Approx. w-center algo1
+196,1c:b9:c4:16:06:b8,1,Ariel_University,-79.0,32.103276346028004,35.20968224845495,703.8508035498224,Sun Dec 03 09:03:01 IST 2017, Approx. w-center algo1
+197,1c:b9:c4:94:2b:87,1, ,-88.0,32.10337113537652,35.209710253406485,704.1006958412728,Sun Dec 03 09:03:07 IST 2017, Approx. w-center algo1
+198,1c:b9:c4:95:ed:b7,1, ,-92.0,32.103422735825944,35.2097119010955,704.24502290678,Sun Dec 03 09:03:10 IST 2017, Approx. w-center algo1
+199,1c:b9:c4:96:ed:47,1, ,-91.0,32.103422735825944,35.2097119010955,704.24502290678,Sun Dec 03 09:03:10 IST 2017, Approx. w-center algo1
+200,1c:b9:c4:16:e5:a8,1,Ariel_University,-81.0,32.10340998113717,35.209694768890756,704.4103268040734,Sun Dec 03 09:03:13 IST 2017, Approx. w-center algo1
+201,1c:b9:c4:96:f1:57,1, ,-82.0,32.10340998113717,35.209694768890756,704.4103268040734,Sun Dec 03 09:03:13 IST 2017, Approx. w-center algo1
+202,1c:b9:c4:14:2b:8c,1,Ariel_University,-82.0,32.10332786597918,35.20965551102127,704.8397895237058,Sun Dec 03 09:03:19 IST 2017, Approx. w-center algo1
+203,1c:b9:c4:15:1c:b8,1,Ariel_University,-75.0,32.10332786597918,35.20965551102127,704.8397895237059,Sun Dec 03 09:03:19 IST 2017, Approx. w-center algo1
+204,d8:5d:4c:9e:69:22,1,AUC_4_2_24,-78.0,32.10332786597918,35.20965551102127,704.8397895237058,Sun Dec 03 09:03:19 IST 2017, Approx. w-center algo1
+205,1c:b9:c4:14:2b:88,1,Ariel_University,-80.0,32.10328570765323,35.20965870751324,705.0684892637616,Sun Dec 03 09:03:22 IST 2017, Approx. w-center algo1
+206,1c:b9:c4:12:af:7c,1,Ariel_University,-72.0,32.10296650575114,35.20968182189735,706.9104159830141,Sun Dec 03 09:03:57 IST 2017, Approx. w-center algo1
+207,1c:b9:c4:15:ec:3c,1,Ariel_University,-77.0,32.10296650575114,35.20968182189735,706.910415983014,Sun Dec 03 09:03:57 IST 2017, Approx. w-center algo1
+208,1c:b9:c4:92:af:77,1, ,-72.0,32.10296650575114,35.20968182189735,706.9104159830141,Sun Dec 03 09:03:57 IST 2017, Approx. w-center algo1
+209,1c:b9:c4:14:30:38,2,Ariel_University,-77.0,32.10288611255085,35.20970300167097,707.1660618041471,Sun Dec 03 09:04:00 IST 2017, Approx. w-center algo1
+210,1c:b9:c4:16:ed:38,1,Ariel_University,-71.0,32.10286049786469,35.20970867310708,707.2411959048158,Sun Dec 03 09:04:03 IST 2017, Approx. w-center algo1
+211,00:1d:aa:81:d8:3c,1,KCG-ADSL,-62.0,32.10278211645307,35.20974214753134,707.5329741136802,Sun Dec 03 09:04:09 IST 2017, Approx. w-center algo1
+212,1c:b9:c4:96:ee:97,1, ,-85.0,32.10275085292877,35.20975955894632,707.6527664802024,Sun Dec 03 09:04:12 IST 2017, Approx. w-center algo1
+213,1c:b9:c4:14:2c:3c,1,Ariel_University,-77.0,32.10271865750214,35.20977438790677,707.7511450557726,Sun Dec 03 09:04:15 IST 2017, Approx. w-center algo1
+214,1c:b9:c4:96:11:a7,1, ,-87.0,32.10268489619051,35.20979541943164,707.828047259109,Sun Dec 03 09:04:18 IST 2017, Approx. w-center algo1
+215,02:21:5c:af:69:82,1,DIRECT-IRDESKTOP-ETE41T5msTU,-90.0,32.10262449933767,35.20987440650553,707.9141706050168,Sun Dec 03 09:04:24 IST 2017, Approx. w-center algo1
+216,1c:b9:c4:16:ee:98,1,Ariel_University,-78.0,32.10260729460685,35.209894056094186,707.9376515551016,Sun Dec 03 09:04:27 IST 2017, Approx. w-center algo1
+217,1c:b9:c4:94:2c:37,1, ,-85.0,32.10262260926248,35.209892845310286,707.959321655685,Sun Dec 03 09:04:30 IST 2017, Approx. w-center algo1
+218,1c:b9:c4:14:2c:38,1,Ariel_University,-76.0,32.10274869091711,35.20982946116112,708.1143382027363,Sun Dec 03 09:04:39 IST 2017, Approx. w-center algo1
+219,00:18:25:12:72:f0,1,Coolnet-Hotspot,-92.0,32.102838751582816,35.209782211668895,708.2738390199131,Sun Dec 03 09:04:45 IST 2017, Approx. w-center algo1
+220,1c:b9:c4:96:d2:87,1, ,-90.0,32.10305305270209,35.209712493355596,709.1751817280435,Sun Dec 03 09:05:15 IST 2017, Approx. w-center algo1
+221,1c:b9:c4:96:f4:77,1, ,-91.0,32.10324601363817,35.20975082065316,709.8736127263887,Sun Dec 03 09:05:34 IST 2017, Approx. w-center algo1
+222,1c:b9:c4:16:06:b8,1,Ariel_University,-72.0,32.10340621094294,35.209824043200406,710.2162712668243,Sun Dec 03 09:05:46 IST 2017, Approx. w-center algo1
+223,1c:b9:c4:15:ed:3c,1,Ariel_University,-91.0,32.10351072327457,35.20990554493647,710.4194107445186,Sun Dec 03 09:05:55 IST 2017, Approx. w-center algo1
+224,1c:b9:c4:15:fd:4c,1,Ariel_University,-83.0,32.10351072327457,35.20990554493647,710.4194107445186,Sun Dec 03 09:05:55 IST 2017, Approx. w-center algo1
+225,1c:b9:c4:95:fd:47,1, ,-88.0,32.10353904388322,35.20994639016426,710.4770498913509,Sun Dec 03 09:05:58 IST 2017, Approx. w-center algo1
+226,1c:b9:c4:16:06:b8,1,Ariel_University,-67.0,32.1035758611245,35.209972255434074,710.5313960647879,Sun Dec 03 09:06:01 IST 2017, Approx. w-center algo1
+227,1c:b9:c4:15:ed:38,1,Ariel_University,-87.0,32.10360315832744,35.210005054877556,710.5814622101553,Sun Dec 03 09:06:04 IST 2017, Approx. w-center algo1
+228,3c:52:82:ef:a4:8b,1,DIRECT-8A-HP DeskJet 3630 series,-82.0,32.10363047533494,35.21005058122789,710.6278805201182,Sun Dec 03 09:06:07 IST 2017, Approx. w-center algo1
+229,00:27:22:f3:bb:2b,1, ,-87.0,32.1036535872341,35.21010138636458,710.6710794188068,Sun Dec 03 09:06:10 IST 2017, Approx. w-center algo1
+230,1c:b9:c4:16:1d:7c,1,Ariel_University,-90.0,32.1036535872341,35.21010138636458,710.6710794188068,Sun Dec 03 09:06:10 IST 2017, Approx. w-center algo1
+231,24:79:2a:2b:07:bc,1,Ariel_University,-85.0,32.10369861480585,35.21017541181782,710.7485234469889,Sun Dec 03 09:06:16 IST 2017, Approx. w-center algo1
+232,24:79:2a:2c:5c:1c,1,Ariel_University,-84.0,32.103724904733575,35.21020742379761,710.7830608193167,Sun Dec 03 09:06:19 IST 2017, Approx. w-center algo1
+233,24:79:2a:ab:07:b7,1, ,-87.0,32.103724904733575,35.21020742379761,710.7830608193167,Sun Dec 03 09:06:19 IST 2017, Approx. w-center algo1
+234,24:79:2a:ab:bd:87,1, ,-84.0,32.103724904733575,35.21020742379761,710.7830608193167,Sun Dec 03 09:06:19 IST 2017, Approx. w-center algo1
+235,60:e3:27:7b:e0:98,1,HelpDesk,-83.0,32.103724904733575,35.21020742379761,710.7830608193167,Sun Dec 03 09:06:19 IST 2017, Approx. w-center algo1
+236,24:79:2a:2b:bd:8c,1,Ariel_University,-83.0,32.103754328139765,35.21024296825823,710.8162814862263,Sun Dec 03 09:06:22 IST 2017, Approx. w-center algo1
+237,1c:b9:c4:96:1d:77,1, ,-90.0,32.10381009568773,35.21028362142391,710.9061260906689,Sun Dec 03 09:06:31 IST 2017, Approx. w-center algo1
+238,1c:b9:c4:96:e5:a7,1, ,-90.0,32.10381009568773,35.21028362142391,710.9061260906689,Sun Dec 03 09:06:31 IST 2017, Approx. w-center algo1
+239,24:79:2a:2b:07:b8,1,Ariel_University,-77.0,32.103804451692376,35.210254888699964,710.9347988784789,Sun Dec 03 09:06:34 IST 2017, Approx. w-center algo1
+240,24:79:2a:ac:5c:17,1, ,-85.0,32.103804451692376,35.210254888699964,710.9347988784789,Sun Dec 03 09:06:34 IST 2017, Approx. w-center algo1
+241,24:79:2a:2b:bd:88,1,Ariel_University,-72.0,32.103796488351406,35.21022896658198,710.9625734578337,Sun Dec 03 09:06:37 IST 2017, Approx. w-center algo1
+242,24:79:2a:2c:5b:d8,1,Ariel_University,-80.0,32.10376657920338,35.21014735283678,711.0143490475475,Sun Dec 03 09:06:43 IST 2017, Approx. w-center algo1
+243,1c:b9:c4:16:28:ec,1,Ariel_University,-84.0,32.10374932461536,35.21009736641098,711.04240246276,Sun Dec 03 09:06:46 IST 2017, Approx. w-center algo1
+244,1c:b9:c4:96:28:e7,1, ,-85.0,32.10374932461536,35.21009736641098,711.04240246276,Sun Dec 03 09:06:46 IST 2017, Approx. w-center algo1
+245,1c:b9:c4:15:1c:bc,1,Ariel_University,-84.0,32.10371197783737,35.21003935734618,711.0753764021061,Sun Dec 03 09:06:49 IST 2017, Approx. w-center algo1
+246,8c:0c:90:2e:e8:18,1,Ariel_University,-90.0,32.10366280622974,35.20997695154486,711.1571521241567,Sun Dec 03 09:06:55 IST 2017, Approx. w-center algo1
+247,1c:b9:c4:15:fd:48,1,Ariel_University,-71.0,32.103633107895774,35.209948179237934,711.2034653404863,Sun Dec 03 09:06:58 IST 2017, Approx. w-center algo1
+248,40:a5:ef:7a:17:f2,1,2.4V1,-93.0,32.103511338353215,35.209857355480956,711.3696457610175,Sun Dec 03 09:07:07 IST 2017, Approx. w-center algo1
+249,1c:b9:c4:16:f1:5c,1,Ariel_University,-75.0,32.10347765964358,35.209844645257576,711.4208310564215,Sun Dec 03 09:07:10 IST 2017, Approx. w-center algo1
+250,8c:0c:90:2e:16:88,1,Ariel_University,-80.0,32.10343949277716,35.209834157782176,711.4667892140303,Sun Dec 03 09:07:13 IST 2017, Approx. w-center algo1
+251,1c:b9:c4:96:f4:77,1, ,-81.0,32.10328866514529,35.20980399820012,711.6736975036425,Sun Dec 03 09:07:25 IST 2017, Approx. w-center algo1
+252,1c:b9:c4:95:ec:37,1, ,-78.0,32.10290399031027,35.20969100791368,712.2357761961763,Sun Dec 03 09:08:16 IST 2017, Approx. w-center algo1
+253,3c:52:82:ef:c4:3c,1,DIRECT-3B-HP DeskJet 3630 series,-67.0,32.10290399031027,35.20969100791368,712.2357761961763,Sun Dec 03 09:08:16 IST 2017, Approx. w-center algo1
+254,1c:b9:c4:15:1e:6c,1,Ariel_University,-83.0,32.10238084673325,35.21000653997084,712.1937426685497,Sun Dec 03 09:08:58 IST 2017, Approx. w-center algo1
+255,1c:b9:c4:95:1e:67,1, ,-83.0,32.10238084673325,35.21000653997084,712.1937426685497,Sun Dec 03 09:08:58 IST 2017, Approx. w-center algo1
+256,1c:b9:c4:95:3a:37,1, ,-80.0,32.10238084673325,35.21000653997084,712.1937426685497,Sun Dec 03 09:08:58 IST 2017, Approx. w-center algo1
+257,40:a5:ef:7a:17:f2,2,2.4V1,-92.0,32.10234668230428,35.21002214095188,712.154305070139,Sun Dec 03 09:08:58 IST 2017, Approx. w-center algo1
+258,1c:b9:c4:15:3d:6c,1,Ariel_University,-84.0,32.10246120400514,35.209976991172944,711.9289257491877,Sun Dec 03 09:09:21 IST 2017, Approx. w-center algo1
+259,1c:b9:c4:14:2c:3c,1,Ariel_University,-67.0,32.102689713395726,35.209867804165086,711.8977402734589,Sun Dec 03 09:09:37 IST 2017, Approx. w-center algo1
+260,30:e1:71:0f:a2:49,1,DIRECT-47-HP DeskJet 3630 series,-79.0,32.102689713395726,35.209867804165086,711.8977402734589,Sun Dec 03 09:09:37 IST 2017, Approx. w-center algo1
+261,2a:56:5a:9e:2e:ce,1,DIRECT-ce-HP M426 LaserJet,-77.0,32.10273836386316,35.209856687440386,711.9071836194796,Sun Dec 03 09:09:40 IST 2017, Approx. w-center algo1
+262,1c:b9:c4:16:06:bc,1,Ariel_University,-88.0,32.102834572431405,35.209826891474435,711.9395606658123,Sun Dec 03 09:09:46 IST 2017, Approx. w-center algo1
+263,1c:b9:c4:12:af:78,1,Ariel_University,-68.0,32.10295813415597,35.2096695193848,712.0551886871242,Sun Dec 03 09:10:00 IST 2017, Approx. w-center algo1

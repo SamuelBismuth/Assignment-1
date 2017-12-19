@@ -2,6 +2,7 @@ package read;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 import algorithms.Mac;
 import libraries.Filter;
@@ -29,6 +30,7 @@ public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
 	public ArrayList<Mac> sortBy(ArrayList<SampleScan> arrayScan) {
 		ArrayList<Mac> array = new ArrayList<Mac>();
 		ArrayList<CsvFile> arrayCsv = Filter.fromScanToCvs(arrayScan);
+		System.out.println(arrayCsv.size());
 		for (CsvFile csvFile : arrayCsv) Collections.sort(csvFile.getWigleWifiLine());
 		for (CsvFile csvFile : arrayCsv) {
 			for (WigleWifiLine line : csvFile.getWigleWifiLine()) { 
@@ -54,5 +56,18 @@ public class SortWigleWifiMac extends SortWigleWifi<Mac, SampleScan> {
 		Mac macLocation = (Mac) object;
 		return macLocation.getMacName().equals(mac);
 	}
+	
+	private void getUnionFromTheFile(ArrayList<Mac> array) {
+		HashMap<String, Mac> map = new HashMap<String, Mac>();
+		for (Mac mac : array) {
+			if (map.get(mac.getMacName()) == null) 
+				map.put(mac.getMacName(), mac);
+			else {
+				Mac duplicate = map.get(mac.getMacName());
+				
+			}
+		}
+	}
+
 
 }

@@ -6,13 +6,15 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
+import libraries.Algorithm1;
+
 /**
- * This class represents all samples of a single wifi router (with a single mac address)
+ * This class represents all samples of a single wifi router (with a single mac address).
  * @author Orel and Samuel.
  */
 public class Mac  {
 
-	private static final int numberOfSampleScan = 4;
+	private static final int numberOfSampleMac = 4;
 
 	private String macName; // the mac address of the router
 	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
@@ -24,6 +26,7 @@ public class Mac  {
 	 * Constructor.
 	 * @param macName.
 	 * @param arrayMacLocationInformation.
+	 * @param date.
 	 */
 	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation, GregorianCalendar date) {
 		this.macName = macName;
@@ -35,7 +38,6 @@ public class Mac  {
 
 	/**
 	 * Constructor.
-	 * @param macName.
 	 * @param arrayMacLocationInformation.
 	 */
 	public Mac(ArrayList<MacLocation> arrayMacLocationInformation) {
@@ -44,6 +46,8 @@ public class Mac  {
 		this.used = false;
 	}
 
+	//Getters and setters.
+	
 	/**
 	 * @return date.
 	 */
@@ -73,48 +77,6 @@ public class Mac  {
 	}
 
 	/**
-	 * This method calculates the sum between all pointLocation of the weights.
-	 * @return SumWeightPointLocation.
-	 */
-	protected EarthCoordinate getSumWeightPointLocation() {
-		double sumWeigthLatitude = 0;
-		double sumWeigthLongitude = 0;
-		double sumWeigthAltitude = 0;
-		for(MacLocation macLocation : arrayMacLocation) {
-			sumWeigthLatitude += macLocation.getWeightPointLocation().getLatitude();
-			sumWeigthLongitude += macLocation.getWeightPointLocation().getLongitude();
-			sumWeigthAltitude += macLocation.getWeightPointLocation().getAltitude();
-		}
-		return new EarthCoordinate(
-				sumWeigthLatitude,
-				sumWeigthLongitude,
-				sumWeigthAltitude
-				);
-	}
-
-	/**
-	 * This method calculates the sum between all the signal of the weights.
-	 * @return sumWeigthSignal.
-	 */
-	public double getSumWeightSignal() {
-		double sumWeigthSignal = 0;
-		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
-		return sumWeigthSignal;
-	}
-
-	/**
-	 * This method return the weight center.
-	 * @return weightCenter.
-	 */
-	public EarthCoordinate getWeightCenter() {
-		return new EarthCoordinate(
-				getSumWeightPointLocation().getLatitude() / getSumWeightSignal(),
-				getSumWeightPointLocation().getLongitude() / getSumWeightSignal(),
-				getSumWeightPointLocation().getAltitude() / getSumWeightSignal()
-				);
-	}
-
-	/**
 	 * @return strongerSignal.
 	 */
 	protected double getStrongerSignal() {
@@ -134,14 +96,7 @@ public class Mac  {
 	protected void setUsed(boolean bool) {
 		this.used = bool;
 	}
-
-	/**
-	 * @param arrayLineAlgo1.
-	 */
-	public void setLineAlgo1(LineAlgo1 lineAlgo1) {
-		this.lineAlgo1 = lineAlgo1;
-	}
-
+	
 	/**
 	 * @return arrayLineAlgo1.
 	 */
@@ -149,6 +104,22 @@ public class Mac  {
 		return lineAlgo1;
 	}
 
+	/**
+	 * @param arrayLineAlgo1.
+	 */
+	public void setLineAlgo1(LineAlgo1 lineAlgo1) {
+		this.lineAlgo1 = lineAlgo1;
+	}
+	
+	/**
+	 * @return weight center.
+	 */
+	public EarthCoordinate getWeightCenter() {
+		return Algorithm1.getWeightCenter(arrayMacLocation);
+	}
+
+	//Comparator.
+	
 	/**
 	 * This method sort 
 	 */
@@ -158,12 +129,17 @@ public class Mac  {
 
 	//private method.
 
+	/**
+	 * This method return an {@link ArrayList} of {@link MacLocation} with the number of sample define in numberOfSampleMac.
+	 * @param arrayMacLocationInformation
+	 * @return
+	 */
 	private ArrayList<MacLocation> defineArrayListWithFinalNumber(ArrayList<MacLocation> arrayMacLocationInformation) {
-		if (arrayMacLocationInformation.size() < numberOfSampleScan) 
+		if (arrayMacLocationInformation.size() < numberOfSampleMac) 
 			return arrayMacLocationInformation;
 		else {
 			ArrayList<MacLocation> array = new ArrayList<MacLocation>();
-			for (int i = 0; i < numberOfSampleScan; i++) 
+			for (int i = 0; i < numberOfSampleMac; i++) 
 				array.add(arrayMacLocationInformation.get(i));
 			return array;
 		}

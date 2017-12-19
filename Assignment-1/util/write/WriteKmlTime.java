@@ -14,16 +14,18 @@ import read.SampleScan;
  * This class write the kml file with the time filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
  * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
-
 public class WriteKmlTime extends WriteKml implements WriteFile<SampleScan> {
 
 	private Document document = new Document();
 	private GregorianCalendar dateBegining;
 	private GregorianCalendar dateEnd;
-
+	
 	/**
 	 * Constructor.
+	 * @param fileName.
+	 * @param document.
 	 * @param dateBegining.
 	 * @param dateEnd.
 	 */

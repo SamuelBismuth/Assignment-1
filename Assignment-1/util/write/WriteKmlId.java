@@ -12,7 +12,8 @@ import read.SampleScan;
 /**
  * This class write the kml file with the id filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
- * @author Orel @author Samuel.
+ * @author Orel and Samuel.
+ * @param <SampleScan>.
  */
 public class WriteKmlId extends WriteKml implements WriteFile <SampleScan>{
 
@@ -22,6 +23,7 @@ public class WriteKmlId extends WriteKml implements WriteFile <SampleScan>{
 	/**
 	 * Constructor.
 	 * @param fileName.
+	 * @param document.
 	 * @param id.
 	 */
 	public WriteKmlId(String fileName, Document document, String id) {
@@ -33,7 +35,6 @@ public class WriteKmlId extends WriteKml implements WriteFile <SampleScan>{
 	/**
 	 * The method check the data, by the id.
 	 * @param array.
-	 * @param fileNameExport.
 	 * @exception InputException : printStackTrace.
 	 */
 	@Override

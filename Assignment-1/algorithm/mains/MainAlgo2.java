@@ -1,9 +1,10 @@
-package algorithms;
+package mains;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import algorithms.WeigthAverage;
 import libraries.Algorithm2;
 import libraries.OpenFile;
 import read.ReadCombo;

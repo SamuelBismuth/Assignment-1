@@ -17,12 +17,18 @@ import read.SampleScan;
  * This class implements @see {@link WriteFile}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
+ * @param <SampleScan>
  */
 public abstract class WriteKml implements WriteFile<SampleScan> {
 
 	private Document document;
 	private String fileName;
 
+	/**
+	 * Constructor.
+	 * @param fileName
+	 * @param document
+	 */
 	public WriteKml(String fileName, Document document) {
 		this.fileName = fileName + ".kml";
 		this.document = document;
@@ -34,8 +40,9 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 	public abstract void receiveData(ArrayList<SampleScan> array);
 
 	/**
-	 * Initialisation of the kml file, we need to write the links with the icons.
+	 * Initialisation of the kml file, write the links with the icons.
 	 */
+	@Override
 	public void writeHeader() {
 		KmlUtil.addIcon("red", document);
 		KmlUtil.addIcon("ylw", document);
@@ -44,9 +51,9 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 
 	/**
 	 * This method create the kml file.
-	 * @param fileNameExport.
 	 * @exception IOException | {@link KmlException} : Error writing the file.
 	 */
+	@Override
 	public void writeFile() throws InputException {
 		try {
 			Kml kml = new Kml();
@@ -62,6 +69,7 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 	/**
 	 * @return fileName.
 	 */
+	@Override
 	public String getFileName() {
 		return fileName;
 	}

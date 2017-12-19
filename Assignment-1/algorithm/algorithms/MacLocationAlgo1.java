@@ -5,7 +5,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import read.Wifi;
 
 /**
- * This class represents a object MacLocation.
+ * This class implements @see {@link MacLocation}.
+ * This class represents a object MacLocation for the data of the algorithm 1.
  * @author Orel and Samuel.
  */
 public class MacLocationAlgo1 implements MacLocation {
@@ -18,12 +19,15 @@ public class MacLocationAlgo1 implements MacLocation {
 	 * Constructor.
 	 * @param pointLocation.
 	 * @param signal.
+	 * @param wifi.
 	 */
 	public MacLocationAlgo1(EarthCoordinate pointLocation, double signal, Wifi wifi) {
 		this.pointLocation = pointLocation;
 		this.signal = signal;
 		this.wifi = wifi;
 	}
+	
+	//Getters.
 
 	/**
 	 * @return pointLocation.
@@ -39,8 +43,8 @@ public class MacLocationAlgo1 implements MacLocation {
 	@Override
 	public EarthCoordinate getWeightPointLocation() {
 		return new EarthCoordinate(
-				this.getWeigthSignal() * pointLocation.getLongitude(),
 				this.getWeigthSignal() * pointLocation.getLatitude(),
+				this.getWeigthSignal() * pointLocation.getLongitude(),
 				this.getWeigthSignal() * pointLocation.getAltitude()
 				);
 	}
@@ -68,6 +72,5 @@ public class MacLocationAlgo1 implements MacLocation {
 	public double getWeigthSignal() {
 			return (1 / Math.pow(this.signal, 2));
 	}
-	
-	
+		
 }

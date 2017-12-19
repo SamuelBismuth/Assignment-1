@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import algorithms.Mac;
+import algorithms.Difference;
 
 /**
- * This class writes a csv with the format of the algorithm 1.
+ * This class writes the csv file for the repports.
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
- * @param <Mac>.
+ * @param <SampleScan>.
  */
-public class WriteComboAlgo1 implements WriteFile<Mac> {
-
+public class WriteCsvDiff implements WriteFile<Difference> {
+	
 	private FileWriter fw;
 	private PrintWriter outs;
 	private String fileName;
@@ -24,7 +24,7 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 	 * @param array.
 	 * @exception IOException : printStackTrace.
 	 */
-	public WriteComboAlgo1(String fileName) {
+	public WriteCsvDiff(String fileName) {
 		try {
 			fileName += ".csv";
 			this.fileName = fileName;
@@ -37,23 +37,17 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 	}
 
 	/**
-	 * This method receives the data and for all the mac into the array, write the csv file.
+	 * This method receives the data and for all the scan into the array, write the csv file.
 	 * @param array.
 	 */
 	@Override
-	public void receiveData(ArrayList<Mac> array) {
+	public void receiveData(ArrayList<Difference> array) {
 		writeHeader();
-		for (Mac mac : array) {
-			outs.print(mac.getLineAlgo1().getIndex() + ",");
-			outs.print(mac.getLineAlgo1().getMacName() + ",");
-			outs.print(mac.getNumberOfMac() + ",");
-			outs.print(mac.getLineAlgo1().getSsid() + ",");
-			outs.print(mac.getLineAlgo1().getSignal() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getLatitude() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getLongitude() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getAltitude() + ",");
-			outs.print(mac.getLineAlgo1().getDate().getTime() + ", ");
-			outs.println("Approx. w-center algo1");
+		for (Difference scan : array) {
+			outs.print(scan.getMacName() + ",");
+			outs.print(scan.getDiff().getLatitude() + ",");
+			outs.print(scan.getDiff().getLongitude() + ",");
+			outs.println(scan.getDiff().getAltitude() + ",");
 		}
 		writeFile();
 	}
@@ -63,7 +57,7 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 	 */
 	@Override
 	public void writeHeader() {
-		outs.println("Index," + "Mac Name,"+ "Number of mac" +"SSID," + "Frequency," + "Signal,"  + "Lat," + "Lon," + "Alt," + "Time,");
+		outs.println("Mac name" + "Diff Lat," + "Diff Lon," + "Diff Alt,");
 	}
 
 	/**
@@ -80,7 +74,7 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 			System.out.println("Error writing file : " + ex);
 		}
 	}
-	
+
 	/**
 	 * @return fileName.
 	 */
@@ -88,5 +82,6 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 	public String getFileName() {
 		return fileName;
 	}
-
+	
 }
+	

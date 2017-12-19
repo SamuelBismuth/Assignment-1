@@ -9,8 +9,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import libraries.InputException;
-import libraries.ParseDate;
 import libraries.ReadFolder;
 
 /**
@@ -20,7 +18,7 @@ import libraries.ReadFolder;
  * @param <SampleScan>.
  * @param <Wifi>.
  */
-public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
+public class ReadComboAlgo1 extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 
 	/**
 	 * Constructor.
@@ -28,7 +26,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @param array
 	 * @param file
 	 */
-	public ReadCombo(String folderName, ArrayList<SampleScan> array, File file) {
+	public ReadComboAlgo1(String folderName, ArrayList<SampleScan> array, File file) {
 		super(folderName, array, file);
 	}
 
@@ -42,14 +40,11 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	public void readBuffer() {
 		try {
 			BufferedReader br = readFile(folderName + file);
-			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(Header.class).parse(br);
+			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(HeaderAlgo1.class).parse(br);
 			for (CSVRecord record : records) {
-				if(goodLine(record)) {
-					ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
-					for (int i = 0; i < Integer.parseInt(record.get(Header.wifiNetworks)); i++) 
-						arrayWifi.add(inputObject(record, Integer.toString(i)));
-					array.add(inputSampleScan(record, arrayWifi));
-				}
+				ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
+				arrayWifi.add(inputObject(record, ""));
+				if (!record.get(HeaderAlgo1.latitude).contains("Lat")) array.add(inputSampleScan(record, arrayWifi));
 			}
 			br.close();
 		}
@@ -67,13 +62,13 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 */
 	@Override
 	public Wifi inputObject(CSVRecord record, String i) {
-		int count = Integer.parseInt(i);
 		return new Wifi(
-				record.get((count * 4) + 6),
-				record.get((count * 4) +  7),
-				Integer.parseInt(record.get((count * 4) + 8)),
-				Double.parseDouble(record.get((count * 4) + 9))
+				record.get(HeaderAlgo1.ssid),
+				record.get(HeaderAlgo1.macName),
+				0, //not in use.
+				0 //not in use.
 				);
+
 	}
 
 	//private unimplemented methods
@@ -83,47 +78,26 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @param record
 	 * @param array
 	 * @return sampleScan.
-	 * @exception NumberFormatException | {@link InputException} : error on the date.
+	 * @exception NumberFormatException : error on the date.
 	 */
 	private SampleScan inputSampleScan(CSVRecord record, ArrayList<Wifi> array) {
 		try {
 			return new SampleScan (  
-					ParseDate.stringToDate(record.get(Header.time)),
-					record.get(Header.id),
+					null,
+					"id", //not in use.
 					new EarthCoordinate(
-							checkCoordinate(record.get(Header.latitude)),
-							checkCoordinate(record.get(Header.longitude)),
-							checkCoordinate(record.get(Header.altitude))
+							Double.parseDouble(record.get(HeaderAlgo1.latitude)),
+							Double.parseDouble(record.get(HeaderAlgo1.longitude)),
+							Double.parseDouble(record.get(HeaderAlgo1.altitude))
 							),
 					array
 					);
 		} 
-		catch (NumberFormatException | InputException e) {
+		catch (NumberFormatException e) {
 			System.out.println("Error on the date. ");
 			e.printStackTrace();
 			return null;
 		}
-	}
-
-	/**
-	 * This method check if the cordinate are known.
-	 * @param coordinate.
-	 * @return coordinate.
-	 */
-	private static Double checkCoordinate(String coordinate) {
-		if (coordinate.equals("?")) return 0.0;
-		return Double.parseDouble(coordinate);
-	}
-
-	/**
-	 * This method check if the line is good.
-	 * @param record.
-	 * @return true if the line is good.
-	 * @return false if not.
-	 */
-	private static boolean goodLine(CSVRecord record) {
-		if (!record.get(0).equals("") && !record.get(Header.wifiNetworks).contains("#Wifi networks")) return true;
-		return false;
 	}
 
 }

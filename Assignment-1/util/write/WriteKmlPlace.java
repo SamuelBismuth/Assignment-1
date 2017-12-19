@@ -11,10 +11,10 @@ import libraries.KmlUtil;
 import read.SampleScan;
 
 /**
- * This class write the kml file with the place filter.
+ * This class writes the kml file with the place filter.
  * This class implements @see {@link WriteFile}, and extends @see {@link WriteKml}.
  * @author Orel and Samuel.
- * TODO : check the radius with JUNIT.
+ * @param <SampleScan>.
  */
 public class WriteKmlPlace extends WriteKml implements WriteFile<SampleScan> {
 
@@ -24,6 +24,8 @@ public class WriteKmlPlace extends WriteKml implements WriteFile<SampleScan> {
 
 	/**
 	 * Constructor.
+	 * @param fileName.
+	 * @param document.
 	 * @param pointLocation.
 	 * @param radius.
 	 */

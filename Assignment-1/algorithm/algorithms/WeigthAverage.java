@@ -6,6 +6,10 @@ import java.util.Comparator;
 import read.SampleScan;
 import read.Wifi;
 
+/**
+ * This class represents a weigth average object.
+ * @author Orel and Samuel.
+ */
 public class WeigthAverage implements Comparable<WeigthAverage> {
 
 	private SampleScan sampleScan;
@@ -21,6 +25,8 @@ public class WeigthAverage implements Comparable<WeigthAverage> {
 		this.sampleScan = sampleScan;
 	}
 
+	//Getters and setters.
+	
 	/**
 	 * @return the sampleScan.
 	 */
@@ -69,6 +75,8 @@ public class WeigthAverage implements Comparable<WeigthAverage> {
 	public void addWifi(Wifi wifi) {
 		this.arrayWifi.add(wifi);
 	}
+	
+	//Comparator.
 	
 	/**
 	 * Compare the relevant number.
