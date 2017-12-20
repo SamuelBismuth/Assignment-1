@@ -8,6 +8,9 @@ import libraries.ReadFolder;
 
 public class ReadFolderTest {
 
+	/**
+	 * This method check that the reading of the folder is good.
+	 */
 	@Test 
 	public void testRead() {
 		String n = "C:/Users/OREL SHALOM/Desktop/f"; //Put a good path.
