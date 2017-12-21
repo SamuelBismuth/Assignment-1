@@ -38,9 +38,6 @@ public class MainKml {
 	 * And also import the two api's.
 	 * @See NOTICE for more details.
 	 * @param args.
-	 * TODO : For threads, one for the csv sorted, one for the kml, and two for the two algorithm. (in function of the algorithms).
-	 * TODO : junit
-	 * TODO : display wait message.
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
