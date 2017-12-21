@@ -1,4 +1,4 @@
-# Assignment-1
+# Assignment
 This is a project coding in java. This project gradually develop a complex system, which enables the collection of geographic information, the production of insights from this information, and the presentation of information in graphical tools. It contains the java files, the folders you need to run the project, a report with more explanation about the project, and the documentation. To run the project you need to put the folders in workspace.
 
 # Authors
