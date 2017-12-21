@@ -22,9 +22,9 @@ public class Filter {
 	 * @param array.
 	 * @return array.
 	 */
-	public static void removeDuplicateMac(ArrayList<SampleScan> array) {//?
+	public static void removeDuplicateMac(ArrayList<SampleScan> array) {
 		Map<String, Wifi> map = new HashMap<>();
-		array.forEach(sampleScan -> sampleScan.getArrayStrongerWifi().forEach(wifi -> {
+		array.forEach(sampleScan -> sampleScan.getArrayWifi().forEach(wifi -> {
 			if (map.containsKey(wifi.getMac())) {
 				if (wifi.compareTo(map.get(wifi.getMac())) == 1) {
 					map.put(wifi.getMac(), wifi);
@@ -32,10 +32,9 @@ public class Filter {
 			}
 			else {
 				map.put(wifi.getMac(), wifi);
-
 			}
 		}));
-		array.forEach(sampleScan -> sampleScan.getArrayStrongerWifi()
+		array.forEach(sampleScan -> sampleScan.getArrayWifi()
 				.removeIf(wifiSpot -> !wifiSpot.equals(map.get(wifiSpot.getMac()))));
 	}
 

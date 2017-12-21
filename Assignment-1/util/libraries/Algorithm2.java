@@ -68,15 +68,20 @@ public class Algorithm2 {
 	 */
 	private static void inputRelevantNumber(SampleScan input, WeigthAverage data) {
 		double number = 1;
+		boolean flag = false;
 		for (Wifi inputWifi : input.getArrayStrongerWifiConstantNumber(numberOfWifi)) {
 			Wifi dataWifi = data.getSampleScan().containsSameMac(inputWifi.getMac());
 			number *= revelantNumber(inputWifi, dataWifi);
 			if (dataWifi == null) 
 				dataWifi = new Wifi("NONE", "NONE", 0, -120);
-			data.addWifi(dataWifi);
+			else flag = true;
+				data.addWifi(dataWifi);
 		}
 		if (number == 1) number = 0;
+		if (flag == true)
 		data.setRelevantNumber(number);
+		else data.setRelevantNumber(0);
+
 	}
 
 	/**
@@ -108,7 +113,7 @@ public class Algorithm2 {
 		Collections.sort(arrayData, WeigthAverage.Comparators.PI);
 		return arrayData;
 	}
-	
+
 	/**	 
 	 * This method set the pi number into the object {@link WeigthAverage}.
 	 * What is the pi number ?
@@ -117,11 +122,12 @@ public class Algorithm2 {
 	 * @param input
 	 * @param data
 	 */
-	private static void inputPi(SampleScan input, WeigthAverage data) {
+	public static void inputPi(SampleScan input, WeigthAverage data) {
 		double pi = 1;
 		int count = 0;
-		for (Wifi wifi : data.getArrayWifi()) 
+		for (Wifi wifi : data.getArrayWifi()) {
 			pi *= getWeight(input.getArrayStrongerWifiConstantNumber(numberOfWifi).get(count), wifi);
+		}
 		data.setPi(pi);
 	}
 
@@ -144,7 +150,7 @@ public class Algorithm2 {
 								)
 						);
 	}
-	
+
 	/**
 	 * This method calculate the diff number.
 	 * @param input.
@@ -182,6 +188,14 @@ public class Algorithm2 {
 					);
 		}
 		input.setPointLocation(Algorithm1.getWeightCenter(arrayMacLocation));
+	}
+
+	public static void mmeset(ArrayList<WeigthAverage> arrayData) {
+		for (WeigthAverage scan : arrayData) {
+			scan.setPi(0);
+			scan.setRelevantNumber(0);
+			scan.getArrayWifi().clear();
+		}
 	}
 
 }

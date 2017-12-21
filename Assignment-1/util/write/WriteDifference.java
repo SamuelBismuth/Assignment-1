@@ -67,9 +67,9 @@ public class WriteDifference implements WriteFile<Difference> {
 			sumLongitude += scan.getDiff().getLongitude();
 			sumAltitude += scan.getDiff().getAltitude();
 		}
-		outs.println("Average latitude : " + sumLatitude/4);
-		outs.println("Average longitude : " + sumLongitude/4);
-		outs.println("Average altitude : " + sumAltitude/4);
+		outs.println("Average latitude : " + sumLatitude/(array.size()));
+		outs.println("Average longitude : " + sumLongitude/(array.size()));
+		outs.println("Average altitude : " + sumAltitude/(array.size()));
 	}
 
 	/**

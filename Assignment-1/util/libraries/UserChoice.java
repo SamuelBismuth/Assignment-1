@@ -53,7 +53,7 @@ public class UserChoice {
 	 */
 	@SuppressWarnings("resource")
 	public static String getFileName(String file) {
-		System.out.println("Input a name for the " + file + " file you want to create : ");
+		System.out.println("Input a name for the " + file + " file you want : ");
 		return new Scanner(System.in).nextLine();
 	}
 

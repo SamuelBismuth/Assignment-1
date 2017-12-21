@@ -42,18 +42,21 @@ public class MainRepportAlgo2 {
 		////////////////
 
 		ArrayList<SampleScan> arrayScanBoazAlgo2 = new ArrayList<SampleScan>();
-		File comboBoazAlgo2 = new File("Algo2_BM3_TS2_4.csv");
+		File comboBoazAlgo2 = new File("Algo2_BM2_TS1_4.csv");
 		ReadCsv<SampleScan> readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanBoazAlgo2, comboBoazAlgo2);
 		readComboAlgo2.readBuffer();
 
 		ArrayList<SampleScan> arrayScanAlgo2 = new ArrayList<SampleScan>();
-		File comboAlgo2 = new File("Our_Algo2_BM3_TS2_4.csv");
+		File comboAlgo2 = new File("Our_Algo2_BM2_TS1_4.csv");
 		readComboAlgo2 = new ReadCombo("C:\\Users\\Samuel\\git\\Assignment-1\\Assignment-1\\", arrayScanAlgo2, comboAlgo2);
 		readComboAlgo2.readBuffer();
 
+		System.out.println(arrayScanAlgo2.get(28).getPointLocation().getLongitudeLatitudeAltitudeString());
+		System.out.println(arrayScanBoazAlgo2.get(28).getPointLocation().getLongitudeLatitudeAltitudeString());
+
 		Comparison.algo2(arrayScanBoazAlgo2, arrayScanAlgo2, arrayDiffAlgo2);
 
-		WriteFile<Difference> writealgo2 = new WriteDifference("Compare_Algo2_BM3_TS2_4");
+		WriteFile<Difference> writealgo2 = new WriteDifference("Compare_Algo2_BM2_TS1_4");
 		writealgo2.receiveData(arrayDiffAlgo2);
 	}
 	

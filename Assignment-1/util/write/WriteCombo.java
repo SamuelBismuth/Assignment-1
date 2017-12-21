@@ -47,9 +47,12 @@ public class WriteCombo implements WriteFile<SampleScan> {
 		for (SampleScan scan : array) {
 			outs.print(scan.getTime().getTime() + ",");
 			outs.print(scan.getId() + ",");
-			outs.print(scan.getPointLocation().getLatitude() + ",");
-			outs.print(scan.getPointLocation().getLongitude() + ",");
-			outs.print(scan.getPointLocation().getAltitude() + ",");
+			if (scan.getPointLocation().getLatitude() != 0) outs.print(scan.getPointLocation().getLatitude() + ",");
+			else outs.print("null,");
+			if (scan.getPointLocation().getLongitude() != 0) outs.print(scan.getPointLocation().getLongitude() + ",");
+			else outs.print("null,");
+			if (scan.getPointLocation().getAltitude() != 0) outs.print(scan.getPointLocation().getAltitude() + ",");
+			else outs.print("null,");
 			outs.print(scan.getWifiNetworks() + ",");
 			addNetwork(scan);
 		}

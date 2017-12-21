@@ -57,84 +57,84 @@ public class WigleWifiLine implements Comparable<WigleWifiLine> {
 	/** 
 	 * @return mac.
 	 */
-	protected String getMac() {
+	public String getMac() {
 		return mac;
 	}
 
 	/** 
 	 * @return ssid.
 	 */
-	protected String getSsid() {
+	public String getSsid() {
 		return ssid;
 	}
 
 	/** 
 	 * @return authMode.
 	 */
-	protected String getAuthMode() {
+	public String getAuthMode() {
 		return authMode;
 	}
 
 	/** 
 	 * @return firstseen.
 	 */
-	protected String getFirstseen() {
+	public String getFirstseen() {
 		return firstseen;
 	}
 
 	/** 
 	 * @return channel.
 	 */
-	protected String getChannel() {
+	public String getChannel() {
 		return channel;
 	}
 
 	/** 
 	 * @return rssi.
 	 */
-	protected String getRssi() {
+	public String getRssi() {
 		return rssi;
 	}
 
 	/** 
 	 * @return currentLatitude.
 	 */
-	protected String getCurrentLatitude() {
+	public String getCurrentLatitude() {
 		return currentLatitude;
 	}
 
 	/** 
 	 * @return currentLongitude.
 	 */
-	protected String getCurrentLongitude() {
+	public String getCurrentLongitude() {
 		return currentLongitude;
 	}
 
 	/** 
 	 * @return altitudeMeters.
 	 */
-	protected String getAltitudeMeters() {
+	public String getAltitudeMeters() {
 		return altitudeMeters;
 	}
 
 	/** 
 	 * @return accuracyMeters.
 	 */
-	protected String getAccuracyMeters() {
+	public String getAccuracyMeters() {
 		return accuracyMeters;
 	}
 
 	/** 
 	 * @return type.
 	 */
-	protected String getType() {
+	public String getType() {
 		return type;
 	}
 	
 	/**
 	 * @return id.
 	 */
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
 	

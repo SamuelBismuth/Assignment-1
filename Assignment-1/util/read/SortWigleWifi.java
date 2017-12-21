@@ -31,7 +31,7 @@ public abstract class SortWigleWifi<T, Y> {
 	/**
 	 * abstracts methods, we define it in the other classes.
 	 */
-	protected abstract ArrayList<T> sortBy(ArrayList<Y> array);
+	public abstract ArrayList<T> sortBy(ArrayList<Y> array);
 	protected abstract boolean needToCreateObject(String str, Object object);
 	
 	/**

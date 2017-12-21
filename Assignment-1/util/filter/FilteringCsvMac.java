@@ -16,10 +16,15 @@ import write.WriteFile;
  */
 public class FilteringCsvMac implements Filtering<Mac> {
 
+	private boolean flag = true;
 	/**
 	 * Empty constructor.
 	 */
 	public FilteringCsvMac() {}
+	
+	public FilteringCsvMac(boolean flag) {
+		this.flag = flag;
+	}
 
 	/**
 	 * This method create an {@link ArrayList} of {@link LineAlgo1} from an ArrayList of {@link Mac}.
@@ -43,8 +48,9 @@ public class FilteringCsvMac implements Filtering<Mac> {
 							)
 					);
 		}
-		
-		String fileName = UserChoice.getFileName("csv");
+		String fileName;
+		if (flag) fileName = UserChoice.getFileName("csv");
+		else fileName = "algo 1";
 		return new WriteComboAlgo1(fileName);
 	}
 

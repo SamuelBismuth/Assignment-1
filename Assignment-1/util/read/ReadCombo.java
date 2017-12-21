@@ -68,6 +68,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	@Override
 	public Wifi inputObject(CSVRecord record, String i) {
 		int count = Integer.parseInt(i);
+		if (record.get((count * 4) + 6).equals("")) count++;
 		return new Wifi(
 				record.get((count * 4) + 6),
 				record.get((count * 4) +  7),
@@ -111,7 +112,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @return coordinate.
 	 */
 	private static Double checkCoordinate(String coordinate) {
-		if (coordinate.equals("?")) return 0.0;
+		if (coordinate.equals("?") || coordinate.equals("null")) return 0.0;
 		return Double.parseDouble(coordinate);
 	}
 

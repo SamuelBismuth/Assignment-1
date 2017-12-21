@@ -59,14 +59,23 @@ public class MainAlgo2 {
 		ReadCsv<SampleScan> readData = new ReadCombo(fileDataPath, arrayDataScan, dataFile);
 		readData.readBuffer();
 
-		for (SampleScan data : arrayDataScan)
+		for (SampleScan data : arrayDataScan) 
 			arrayData.add(new WeigthAverage(data));
 
-		//Set RelevantNumber
+		ArrayList<WeigthAverage> arrayTemp = new ArrayList<WeigthAverage>();
+
+		//Algorithm 2
 		for (SampleScan input : arrayInput) {
-			Algorithm2.setArrayRelevantNumber(input, arrayData);
-			Algorithm2.setArrayPi(input, arrayData);
-			Algorithm2.setLocation(input, arrayData);
+			Algorithm2.mmeset(arrayData);
+			arrayTemp = Algorithm2.setArrayRelevantNumber(input, arrayData);
+			double sum = 0;
+			for (WeigthAverage scan : arrayData) {
+				sum += scan.getRelevantNumber();
+			}
+			if (sum != 0) {
+				Algorithm2.setArrayPi(input, arrayTemp);
+				Algorithm2.setLocation(input, arrayTemp);
+			}
 		}
 
 		//Write the arrayScan
