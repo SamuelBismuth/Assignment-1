@@ -14,7 +14,7 @@ import write.WriteFile;
  * The main goal of this interface is to filtering the data.
  * For an array of object "Y", the function filteringBy filter the data, then, return one class which implements {@link WriteFile}, with the {@link GenericDeclaration} "T".
  * 
- * @author Orel and Samuel.
+ * @author Orel and Samuel. 
  * @param <T>.
  */
 public interface Filtering<T> {
