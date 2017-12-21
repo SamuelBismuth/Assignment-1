@@ -43,6 +43,4 @@ public class WriteArray {
 		this.arrayMac = arrayMac;
 	}
 	
-	
-
 }
