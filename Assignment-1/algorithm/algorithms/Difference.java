@@ -2,7 +2,7 @@ package algorithms;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-public class Difference {
+public class Difference { 
 
 	private EarthCoordinate diff;
 	String macName;
