@@ -1,8 +1,5 @@
 # Assignment-1
-A project coding in java.
-Project assignment 0. 
-Contains the java files, the folders you need to run the project, a repport with more explanation about the project, and the documentation.
-!!!! To run the project you need to change the destination of the folders in the main class. !!!!
+This is a project coding in java. This project gradually develop a complex system, which enables the collection of geographic information, the production of insights from this information, and the presentation of information in graphical tools. It contains the java files, the folders you need to run the project, a report with more explanation about the project, and the documentation. To run the project you need to put the folders in workspace.
 
 # Authors
 Samuel Bismuth, Orel Shalom.
@@ -10,12 +7,11 @@ Samuel Bismuth, Orel Shalom.
 # Explanation of the system and description of the software components
 The program allows reading a folder of files and convert them into an organized csv file containing the geographical information of the phone's signal strength, browsing data, location, speed, mapping and more. In addition, the software takes this file and enables filtering of information by location, time, or list of users and displaying the information on a map, so that each sample is displayed as a point, and each router according to its MAC address will be displayed according to its strongest position.
 
-The software does this by building a KML file (using an API) based on filtering the data and opening it with Google Earth. The file contains the time of each measurement, allowing Google Earth to display measurements on a time line.
+The software does that by building a KML file (using an API) based on filtering the data and opening it with Google Earth. The file contains the time of each measurement, allowing Google Earth to display measurements on a time line.
 
-Also, The user is active in the system. he gives the name of the folder he chooses (found in the workspace), and then chooses a name for the file he wants to create. In addition, he should choose how to filter the KML file by entering the borders of its choice and naming this file.
+In addition, by given a Mac, we will evaluate its location by it's information. We are looking for the number of the most powerful samples of the requested MAC and calculating weighted average by them. We refer to the input of 4 samples each at a different location and at another intensity (of the same Mac). Its position can be calculated by weighted average, when the weight of each point will be according to one divide the power square.
 
-The software consists of three interfaces, which are its main functions: reading a file, writing a file, and filtering a file.
-The software classes have classes of JUnit that test that there are no exceptions and that the code runs correctly.
+In addition, by given several WiFi samples and signal strength, the user's location will be evaluate. We use the same simple algorithm of Weighted center of gravity combined with a method of testing the suitability of each sample to our input. Each of the samples can be graded with regarding to the similarity of our input, and then we take the 4 most similar samples and calculate their weighted center of gravity according to the formula of evaluating the Mac location. By rating the samples and selecting the four most similar samples, we averaged them. This method is based on several parameters. In general, we can see that only the top four samples are very similar to our input sample, so we used them to approximate the position of the receiver.
 
 # What contains the project ?
 The folder API which contains the two api we used.
