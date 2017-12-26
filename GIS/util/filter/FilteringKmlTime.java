@@ -2,16 +2,10 @@ package filter;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
-import java.util.Scanner;
 
-import org.boehn.kmlframework.kml.Document;
-
+import libraries.Filter;
 import libraries.InputException;
-import libraries.ParseDate;
-import libraries.UserChoice;
 import read.SampleScan;
-import write.WriteFile;
-import write.WriteKmlTime;
 
 /**
  * This class implements @see {@link Filtering}.
@@ -20,31 +14,31 @@ import write.WriteKmlTime;
  * @param <SampleScan>.
  */
 public class FilteringKmlTime implements Filtering<SampleScan> {
+	
+	private GregorianCalendar dateBeginning;
+	private GregorianCalendar dateEnd;
 
 	/**
-	 * This method ask the user to input the time.
-	 * @param array.
-	 * @return {@link WriteKmlTime}.
-	 * We define our own exception if there is a wrong input about the time.
+	 * Constructor.
+	 * @param dateBeginning
+	 * @param dateEnd
 	 */
-	@SuppressWarnings("resource")
+	public FilteringKmlTime(GregorianCalendar dateBeginning, GregorianCalendar dateEnd) {
+		this.dateBeginning = dateBeginning;
+		this.dateEnd = dateEnd;
+	}
+	
+	/**
+	 * This method filter by the place.
+	 * @param array.
+	 * @return array.
+	 */
 	@Override
-	public WriteFile<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
-		System.out.println("Input the beginning of the period of time please : yyyy-mm-dd hh:mm:ss :");
-		String time_begining = new Scanner(System.in).nextLine();
-		System.out.println("Input the end of the period of time please : yyyy-mm-dd hh:mm:ss :");
-		String time_end = new Scanner(System.in).nextLine();
-		if (time_begining.length() == 19 && time_end.length() == 19) {
-			GregorianCalendar dateBegining = ParseDate.stringToDate(time_begining);
-			GregorianCalendar dateEnd = ParseDate.stringToDate(time_end);
-			if (dateBegining.before(dateEnd)) {
-				String fileName = UserChoice.getFileName("kml");
-				Document document = new Document();
-				return new WriteKmlTime(fileName, document, dateBegining, dateEnd);
-			}
-			else throw new InputException("Wrong input on the time, the begining time is after the end time.");
-		}
-		else throw new InputException("Wrong input on the time.");
+	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
+		Filter.removeDuplicateMac(array);
+		array.removeIf(SampleScan -> SampleScan.getTime().after(dateBeginning) && SampleScan.getTime().before(dateEnd));
+		if (array.size() == 0) throw new InputException("There array is empty.");
+		return array;
 	}
 
 }

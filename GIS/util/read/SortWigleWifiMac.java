@@ -3,8 +3,10 @@ package read;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import algorithms.Mac;
 import libraries.Filter;
+import objects.CsvFile;
+import objects.Mac;
+import objects.WigleWifiLine;
 
 /**
  * This class sort the csv file by the mac adress.

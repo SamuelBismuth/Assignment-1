@@ -8,12 +8,12 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
 import algorithms.LineAlgo1;
-import algorithms.Mac;
-import algorithms.MacLocation;
-import algorithms.MacLocationAlgo1;
-import algorithms.MacLocationAlgo2;
 import libraries.Algorithm1;
-import read.Wifi;
+import objects.Mac;
+import objects.MacLocation;
+import objects.MacLocationAlgo1;
+import objects.MacLocationAlgo2;
+import objects.Wifi;
 
 
 public class MacTest {

@@ -3,7 +3,7 @@ package testRead;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import read.WigleWifiLine;
+import objects.WigleWifiLine;
 
 public class WigleWifiLineTest {
 

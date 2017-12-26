@@ -7,11 +7,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import algorithms.Mac;
-import algorithms.WeigthAverage;
 import filter.Filtering;
 import filter.FilteringCsvMac;
-import libraries.UserChoice;
+import libraries.User;
+import objects.Mac;
+import objects.WeigthAverage;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;
@@ -50,13 +50,13 @@ public class MainAlgo1Algo2 {
 		String path = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Get file combo path Algo 1
-		String fileComboName = UserChoice.getFileName("combo");
+		String fileComboName = User.getFileName("combo");
 
 		//Get file input path Algo 2
-		String fileInput = UserChoice.getFileName("combo input");
+		String fileInput = User.getFileName("combo input");
 
 		//Get file data path Algo 2
-		String fileData = UserChoice.getFileName("combo data");
+		String fileData = User.getFileName("combo data");
 
 		//Read the combo file Algo 1
 		File combo = new File(fileComboName + ".csv");

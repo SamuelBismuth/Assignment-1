@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import read.CsvFile;
+import objects.CsvFile;
+import objects.Wifi;
+import objects.WigleWifiLine;
 import read.SampleScan;
-import read.Wifi;
-import read.WigleWifiLine;
 
 /**
  * This class includes statics functions that hedlped to the filtering of the data.

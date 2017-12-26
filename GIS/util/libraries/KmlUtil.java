@@ -12,8 +12,8 @@ import org.boehn.kmlframework.kml.SimpleData;
 import org.boehn.kmlframework.kml.Style;
 import org.boehn.kmlframework.kml.TimeStamp;
 
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 /**
  * This class contains statics functions which may help the construction of the kml file.

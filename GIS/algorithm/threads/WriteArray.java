@@ -2,7 +2,7 @@ package threads;
 
 import java.util.ArrayList;
 
-import algorithms.Mac;
+import objects.Mac;
 import write.WriteFile;
 
 public class WriteArray {

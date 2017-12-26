@@ -2,8 +2,8 @@ package threads;
 
 import java.util.ArrayList;
 
-import algorithms.WeigthAverage;
 import libraries.Algorithm2;
+import objects.WeigthAverage;
 import read.SampleScan;
 
 public class RunAlgorithm2 implements Runnable {

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import read.CsvFile;
-import read.WigleWifiLine;
+import objects.CsvFile;
+import objects.WigleWifiLine;
 
 public class CsvFileTest {
 

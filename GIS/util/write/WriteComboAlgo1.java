@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import algorithms.Mac;
+import objects.Mac;
 
 /**
  * This class writes a csv with the format of the algorithm 1.

@@ -8,15 +8,15 @@ import filter.Filtering;
 import libraries.InputException;
 import libraries.OpenFile;
 import libraries.ReadFolder;
-import libraries.UserChoice;
-import read.CsvFile;
+import libraries.User;
+import objects.CsvFile;
+import objects.WigleWifiLine;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.ReadFile;
 import read.ReadWigleWifi;
 import read.SampleScan;
 import read.SortWigleWifiTime;
-import read.WigleWifiLine;
 import write.WriteCombo;
 import write.WriteFile;
 
@@ -75,7 +75,7 @@ public class MainKml {
 		arrayScan = sortScan.sortBy(arrayCsv);
 
 		//Write Csv
-		String fileNameCombo = UserChoice.getFileName("csv file");
+		String fileNameCombo = User.getFileName("csv file");
 		WriteFile<SampleScan> write = new WriteCombo(fileNameCombo);
 		write.receiveData(arrayScan);
 
@@ -93,7 +93,7 @@ public class MainKml {
 		readCombo.readBuffer();
 		
 		//Choice of the user
-		Filtering<SampleScan> filter = UserChoice.userChoice();
+		Filtering<SampleScan> filter = User.userChoice();
 
 		//Filtering kml
 		try {

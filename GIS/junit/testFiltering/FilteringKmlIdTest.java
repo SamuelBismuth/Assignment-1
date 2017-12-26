@@ -1,5 +1,7 @@
 package testFiltering;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
@@ -8,8 +10,8 @@ import org.junit.Test;
 
 import filter.FilteringKmlId;
 import libraries.InputException;
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 /**
  * @author Orel and Samuel.
@@ -39,13 +41,10 @@ public class FilteringKmlIdTest {
 		arraySampleScan.add(scan);
 		arraySampleScan.add(scan2);
 		arraySampleScan.add(scan3);
-		FilteringKmlId filter = new FilteringKmlId();
-		try {
-			filter.filteringBy(arraySampleScan);			
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
-		}
+		assertEquals(arraySampleScan.size(), 3);
+		FilteringKmlId filter = new FilteringKmlId("id2");
+		arraySampleScan = filter.filteringBy(arraySampleScan);		
+		assertEquals(arraySampleScan.size(), 1);
 	}
 
 }

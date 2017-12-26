@@ -5,6 +5,8 @@ import java.util.GregorianCalendar;
 
 import libraries.InputException;
 import libraries.ParseDate;
+import objects.CsvFile;
+import objects.WigleWifiLine;
 
 /**
  * This class sort the csv files by the time.

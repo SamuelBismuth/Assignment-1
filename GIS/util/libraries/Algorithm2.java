@@ -3,12 +3,12 @@ package libraries;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import algorithms.Mac;
-import algorithms.MacLocation;
-import algorithms.MacLocationAlgo2;
-import algorithms.WeigthAverage;
+import objects.Mac;
+import objects.MacLocation;
+import objects.MacLocationAlgo2;
+import objects.WeigthAverage;
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 /**
  * This class includes all the static function which calculate all the data by the algorithm 2 formulas.

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithms.MacLocation;
+import objects.MacLocation;
 
 /**
  * This class includes all the static function which calculate all the data by the algorithm 1 formulas.
