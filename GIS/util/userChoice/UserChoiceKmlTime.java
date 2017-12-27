@@ -7,7 +7,7 @@ import filter.Filtering;
 import filter.FilteringKmlTime;
 import libraries.InputException;
 import libraries.ParseDate;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
  * This class implements @see {@link UserChoice}.

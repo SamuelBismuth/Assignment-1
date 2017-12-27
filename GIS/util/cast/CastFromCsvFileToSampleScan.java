@@ -1,4 +1,4 @@
-package read;
+package cast;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -6,20 +6,20 @@ import java.util.GregorianCalendar;
 import libraries.InputException;
 import libraries.ParseDate;
 import objects.CsvFile;
+import objects.SampleScan;
 import objects.WigleWifiLine;
 
 /**
- * This class sort the csv files by the time.
- * This class extends @see {@link SortWigleWifi}.
+ * This class extends @see {@link CastFromCsvFile} and implements @see {@link Cast}.
+ * This class cast the {@link ArrayList} of {@link CsvFile} to an {@link ArrayList} of {@link SampleScan}.
  * @author Orel and Samuel.
- * @param <SampleScan, CsvFile>.
  */
-public class SortWigleWifiTime extends SortWigleWifi<SampleScan, CsvFile> {
+public class CastFromCsvFileToSampleScan extends CastFromCsvFile<SampleScan> implements Cast<CsvFile, SampleScan> {
 	
 	/**
 	 * Empty constructor.
 	 */
-	public SortWigleWifiTime() {                                   }
+	public CastFromCsvFileToSampleScan() {}
 
 	/**
 	 * This method fulfill the array of scan.
@@ -27,14 +27,14 @@ public class SortWigleWifiTime extends SortWigleWifi<SampleScan, CsvFile> {
 	 * @return array.
 	 */
 	@Override
-	public ArrayList<SampleScan> sortBy(ArrayList<CsvFile> arrayCsv) {
+	public ArrayList<SampleScan> cast(ArrayList<CsvFile> arrayCsv) {
 		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
 		for (CsvFile csvFile : arrayCsv) {
 			for (WigleWifiLine line : csvFile.getWigleWifiLine()) { 
 				if (array.size() != 0 && needToCreateObject(line.getFirstseen(), array.get(array.size() - 1))) {
-					if (line.getType().equals("WIFI")) array.get(array.size() - 1).getArrayWifi().add(addWifi(line));
+					if (line.getType().equals("WIFI")) array.get(array.size() - 1).getArrayWifi().add(newWifi(line));
 				}
-				else if (!line.getFirstseen().contains("1970") && line.getType().equals("WIFI")) array.add(addScan(line));
+				else if (!line.getFirstseen().contains("1970") && line.getType().equals("WIFI")) array.add(newSampleScan(line));
 			}
 		}
 		for (SampleScan scan: array) scan.sort();

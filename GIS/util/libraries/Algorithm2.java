@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import objects.Mac;
-import objects.MacLocation;
-import objects.MacLocationAlgo2;
+import objects.MacInformation;
+import objects.MacInformationAlgo2;
+import objects.SampleScan;
 import objects.WeigthAverage;
 import objects.Wifi;
-import read.SampleScan;
 
 /**
  * This class includes all the static function which calculate all the data by the algorithm 2 formulas.
@@ -42,17 +42,12 @@ public class Algorithm2 {
 	 * This new object {@link WeigthAverage} includes all the data needed for the for the algorithm 2 formulas.
 	 * @param input.
 	 * @param arrayData.
-	 * @return the array of {@link WeigthAverage}.
 	 */
-	public static ArrayList<WeigthAverage> setArrayRelevantNumber(SampleScan input, ArrayList<WeigthAverage> arrayData) {
+	public static void setArrayRelevantNumber(SampleScan input, ArrayList<WeigthAverage> arrayData) {
 		for (WeigthAverage data : arrayData) 
 			inputRelevantNumber(input, data);
 		Collections.sort(arrayData);
-		ArrayList<WeigthAverage> arrayTemp = new ArrayList<WeigthAverage>();
-		for (int i = 0; i < numberOfSampleScan; i++) {
-			arrayTemp.add(arrayData.get(i));
-		}
-		return arrayTemp;
+		arrayData.subList(numberOfSampleScan, arrayData.size()).clear();
 	}
 
 	/**
@@ -172,17 +167,18 @@ public class Algorithm2 {
 
 	/**
 	 * This method is the finality of the algorithm 2 : it's set the location.
-	 * To do this, the method create a new object {@link MacLocation}. 
+	 * To do this, the method create a new object {@link MacInformation}. 
 	 * Into this object, all the calculates of the algorithm 1 are made, then, we have the gps coordinates.
 	 * @param input
 	 * @param arrayData
 	 */
 	public static void setLocation(SampleScan input, ArrayList<WeigthAverage> arrayData) {
-		ArrayList<MacLocation> arrayMacLocation = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> arrayMacLocation = new ArrayList<MacInformation>();
 		for (int i = 0; i < 3; i++) {
 			arrayMacLocation.add(
-					new MacLocationAlgo2(
+					new MacInformationAlgo2(
 							arrayData.get(i).getSampleScan().getPointLocation(),
+							arrayData.get(i).getArrayWifi().get(0),
 							arrayData.get(i).getPi()
 							)
 					);

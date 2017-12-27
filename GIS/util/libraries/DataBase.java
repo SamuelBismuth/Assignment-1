@@ -2,11 +2,11 @@ package libraries;
 
 import java.util.ArrayList;
 
-import algorithms.LineAlgo1;
 import objects.CsvFile;
+import objects.LineAlgo1;
 import objects.Mac;
+import objects.SampleScan;
 import objects.WeigthAverage;
-import read.SampleScan;
 
 public class DataBase {
 

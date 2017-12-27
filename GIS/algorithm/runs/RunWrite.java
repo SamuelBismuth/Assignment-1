@@ -1,28 +1,28 @@
-package threads;
+package runs;
 
 import java.util.ArrayList;
 
 import write.WriteFile;
 
-public class RunWriteCombo<T> implements Runnable {
+public class RunWrite<T> implements Runnable {
 
 	private WriteFile<T> write;
-	private String combo;
+	private String file;
 	private ArrayList<T> array;
 	
-	public RunWriteCombo(WriteFile<T> write, String combo, ArrayList<T> array) {
+	public RunWrite(WriteFile<T> write, String file, ArrayList<T> array) {
 		this.write = write;
- 		this.combo = combo;
+ 		this.file = file;
  		this.array = array;
 	}
 
 	@Override
 	public void run() {
-		System.out.println("Beginning the write of : " + combo);
+		System.out.println("Beginning the write of : " + file);
 		Long start = System.currentTimeMillis();
 		write.receiveData(array);
 		Long end = System.currentTimeMillis();
-		System.out.println("finishing the writing of : " + combo);
+		System.out.println("finishing the writing of : " + file);
 		System.out.println("Time of the wrinting : " + (end - start) + "milliseconds");
 	}
 

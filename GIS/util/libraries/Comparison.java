@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithms.Difference;
-import read.SampleScan;
+import objects.Difference;
+import objects.SampleScan;
 
 /**
  * This class contains helped functions for the csv we need to create for the repport.

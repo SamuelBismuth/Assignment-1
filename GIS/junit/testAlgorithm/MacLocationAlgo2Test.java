@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import objects.MacLocationAlgo2;
+import objects.MacInformationAlgo2;
 
 public class MacLocationAlgo2Test {
 
@@ -15,7 +15,7 @@ public class MacLocationAlgo2Test {
 	public void getPointLocationTest() {
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		double pi = 0.476988545;
-		MacLocationAlgo2 a = new MacLocationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 a = new MacInformationAlgo2(pointlocation1, pi);
 		assertEquals(pointlocation1, a.getPointLocation());
 	}
 	
@@ -28,8 +28,8 @@ public class MacLocationAlgo2Test {
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);
 		double pi = 0.476988545;
 		double pi2 = 0;
-		MacLocationAlgo2 a = new MacLocationAlgo2(pointlocation1, pi);
-		MacLocationAlgo2 c = new MacLocationAlgo2(pointlocation3, pi2);
+		MacInformationAlgo2 a = new MacInformationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 c = new MacInformationAlgo2(pointlocation3, pi2);
 		assertEquals(-120, c.getSignal(),0.001);
 		assertEquals(Math.sqrt(1/pi), a.getSignal(),0.001);
 	}
@@ -41,7 +41,7 @@ public class MacLocationAlgo2Test {
 	public void getWifiTest() {
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		double pi1 = 0.17381326;
-		MacLocationAlgo2 b = new MacLocationAlgo2(pointlocation2, pi1);
+		MacInformationAlgo2 b = new MacInformationAlgo2(pointlocation2, pi1);
 		assertEquals(null, b.getWifi());
 	}
 	
@@ -52,7 +52,7 @@ public class MacLocationAlgo2Test {
 	public void getWeightSinalTest() {
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		double pi = 0.476988545;
-		MacLocationAlgo2 a = new MacLocationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 a = new MacInformationAlgo2(pointlocation1, pi);
 		assertEquals(pi, a.getWeigthSignal(),0.001);
 	}
 	

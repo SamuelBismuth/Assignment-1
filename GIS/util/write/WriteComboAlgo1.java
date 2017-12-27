@@ -5,15 +5,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import objects.Mac;
+import objects.LineAlgo1;
 
 /**
  * This class writes a csv with the format of the algorithm 1.
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
- * @param <Mac>.
+ * @param LineAlgo1.
  */
-public class WriteComboAlgo1 implements WriteFile<Mac> {
+public class WriteComboAlgo1 implements WriteFile<LineAlgo1> {
 
 	private FileWriter fw;
 	private PrintWriter outs;
@@ -41,18 +41,18 @@ public class WriteComboAlgo1 implements WriteFile<Mac> {
 	 * @param array.
 	 */
 	@Override
-	public void receiveData(ArrayList<Mac> array) {
+	public void receiveData(ArrayList<LineAlgo1> array) {
 		writeHeader();
-		for (Mac mac : array) {
-			outs.print(mac.getLineAlgo1().getIndex() + ",");
-			outs.print(mac.getLineAlgo1().getMacName() + ",");
-			outs.print(mac.getNumberOfMac() + ",");
-			outs.print(mac.getLineAlgo1().getSsid() + ",");
-			outs.print(mac.getLineAlgo1().getSignal() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getLatitude() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getLongitude() + ",");
-			outs.print(mac.getLineAlgo1().getLocalisation().getAltitude() + ",");
-			outs.print(mac.getLineAlgo1().getDate().getTime() + ", ");
+		for (LineAlgo1 lineAlgo1 : array) {
+			outs.print(lineAlgo1.getIndex() + ",");
+			outs.print(lineAlgo1.getMacName() + ",");
+			outs.print(lineAlgo1.getNumberOfMac() + ",");
+			outs.print(lineAlgo1.getSsid() + ",");
+			outs.print(lineAlgo1.getSignal() + ",");
+			outs.print(lineAlgo1.getLocalisation().getLatitude() + ",");
+			outs.print(lineAlgo1.getLocalisation().getLongitude() + ",");
+			outs.print(lineAlgo1.getLocalisation().getAltitude() + ",");
+			outs.print(lineAlgo1.getDate().getTime() + ", ");
 			outs.println("Approx. w-center algo1");
 		}
 		writeFile();

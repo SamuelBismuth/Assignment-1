@@ -6,7 +6,7 @@ import filter.Filtering;
 import filter.FilteringKmlId;
 import libraries.DataBase;
 import libraries.InputException;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
  * This class implements @see {@link UserChoice}.

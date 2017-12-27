@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithms.LineAlgo1;
 import libraries.Algorithm1;
+import objects.LineAlgo1;
 import objects.Mac;
-import objects.MacLocation;
-import objects.MacLocationAlgo1;
-import objects.MacLocationAlgo2;
+import objects.MacInformation;
+import objects.MacInformationAlgo1;
+import objects.MacInformationAlgo2;
 import objects.Wifi;
 
 
@@ -23,7 +23,7 @@ public class MacTest {
 	@Test
 	public void getDateTest() {
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		Mac mac1 = new Mac(macName, array, date);
 		assertEquals(date, mac1.getDate());
@@ -35,7 +35,7 @@ public class MacTest {
 	@Test
 	public void getMacNameTest() {
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		Mac mac1 = new Mac(macName, array, date);
 		assertEquals(macName, mac1.getMacName());
@@ -47,11 +47,11 @@ public class MacTest {
 	@Test
 	public void getNumberOfMacTest() {
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		double pi = 0.476988545;
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
-		MacLocationAlgo2 a = new MacLocationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 a = new MacInformationAlgo2(pointlocation1, pi);
 		array.add(a);
 		Mac mac1 = new Mac(macName, array, date);
 		assertEquals(array.size(), mac1.getNumberOfMac());
@@ -63,11 +63,11 @@ public class MacTest {
 	@Test
 	public void getArrayMacLocationTest() {
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		double pi = 0.476988545;
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
-		MacLocationAlgo2 a = new MacLocationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 a = new MacInformationAlgo2(pointlocation1, pi);
 		array.add(a);
 		Mac mac1 = new Mac(macName, array, date);
 		assertEquals(array, mac1.getArrayMacLocation());
@@ -78,7 +78,7 @@ public class MacTest {
 	 */
 	@Test
 	public void getSumWeightPointLocationTest() {
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		double signal1 = -30;		
 		double signal2 = -80;
 		double signal3 = -90;
@@ -89,9 +89,9 @@ public class MacTest {
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);		
 		//EarthCoordinate pointlocationws1 = new EarthCoordinate(0.04897967,0.04464974,0.90929784);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1, w);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2, w1);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3, w2);		
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1, w);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2, w1);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3, w2);		
 		array.add(a);
 		array.add(b);
 		array.add(c);		
@@ -103,7 +103,7 @@ public class MacTest {
 	 */
 	@Test
 	public void getSumWeightSignalTest() {
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		double signal1 = -30;		
 		double signal2 = -80;
 		double signal3 = -90;
@@ -117,9 +117,9 @@ public class MacTest {
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);	
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1, w);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2, w1);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3, w2);		
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1, w);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2, w1);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3, w2);		
 		array.add(a);
 		array.add(b);
 		array.add(c);
@@ -132,7 +132,7 @@ public class MacTest {
 	@Test
 	public void getWeightCenterTest() {
 		//String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		double signal1 = -30;		
 		double signal2 = -80;
 		double signal3 = -90;
@@ -143,9 +143,9 @@ public class MacTest {
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);		
 		//EarthCoordinate pointlocationws1 = new EarthCoordinate(0.04897967,0.04464974,0.90929784);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1, w);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2, w1);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3, w2);		
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1, w);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2, w1);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3, w2);		
 		array.add(a);
 		array.add(b);
 		array.add(c);
@@ -162,7 +162,7 @@ public class MacTest {
 	@Test
 	public void getStrongerSignalTest() {
 		//String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		double signal1 = -30;		
 		double signal2 = -80;
 		double signal3 = -90;
@@ -173,9 +173,9 @@ public class MacTest {
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);		
 		//EarthCoordinate pointlocationws1 = new EarthCoordinate(0.04897967,0.04464974,0.90929784);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1, w);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2, w1);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3, w2);		
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1, w);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2, w1);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3, w2);		
 		array.add(a);
 		array.add(b);
 		array.add(c);
@@ -191,7 +191,7 @@ public class MacTest {
 	public void getUsedTest() {
 		boolean bool = true;
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		Mac mac1 = new Mac(macName, array, date);
 		assertEquals(false, mac1.getUsed());
@@ -205,7 +205,7 @@ public class MacTest {
 	@Test
 	public void getLineAlgo1Test() {
 		String macName = "ndk";
-		ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 		GregorianCalendar date = new GregorianCalendar(2016,23,45,12,45,01);
 		Mac mac1 = new Mac(macName, array, date);
 		int index = 87;
@@ -223,7 +223,7 @@ public class MacTest {
 	 */
 	@Test
 	public void defineArrayListWithFinalNumberTest() {
-		ArrayList<MacLocation> array2 = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> array2 = new ArrayList<MacInformation>();
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);
@@ -235,18 +235,18 @@ public class MacTest {
 		Wifi w = new Wifi("name", "mac", 5000, signal1);
 		Wifi w1 = new Wifi("name", "mac", 5000, signal2);
 		Wifi w2 = new Wifi("name", "mac", 5000, signal3);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1, w);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2, w1);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3, w2);
-		MacLocationAlgo2 d = new MacLocationAlgo2(pointlocation1, pi);
-		MacLocationAlgo2 e = new MacLocationAlgo2(pointlocation2, pi1);
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1, w);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2, w1);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3, w2);
+		MacInformationAlgo2 d = new MacInformationAlgo2(pointlocation1, pi);
+		MacInformationAlgo2 e = new MacInformationAlgo2(pointlocation2, pi1);
 		array2.add(a);
 		array2.add(b);
 		array2.add(c);
 		array2.add(d);
 		array2.add(e);
 		Mac mac = new Mac(array2);
-		ArrayList<MacLocation> array3 = mac.defineArrayListWithFinalNumber(array2);
+		ArrayList<MacInformation> array3 = mac.defineArrayListWithFinalNumber(array2);
 		array2.remove(4);
 		assertEquals(array2, array3);
 	}

@@ -2,7 +2,7 @@ package userChoice;
 
 import filter.Filtering;
 import libraries.InputException;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
  * @author Samuel

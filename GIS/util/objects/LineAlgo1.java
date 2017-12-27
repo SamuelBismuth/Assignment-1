@@ -1,4 +1,4 @@
-package algorithms;
+package objects;
 
 import java.util.GregorianCalendar;
 
@@ -14,6 +14,7 @@ public class LineAlgo1 {
 	private String macName;
 	private String ssid;
 	private int frequency;
+	private int numberOfMac;
 	private double signal;
 	private EarthCoordinate localisation;
 	private GregorianCalendar date;
@@ -28,12 +29,13 @@ public class LineAlgo1 {
 	 * @param localisation.
 	 * @param date.
 	 */
-	public LineAlgo1(int index, String macName, String ssid, int frequency, double signal, EarthCoordinate localisation,
+	public LineAlgo1(int index, String macName, String ssid, int frequency, int numberOfMac, double signal, EarthCoordinate localisation,
 			GregorianCalendar date) {
 		this.index = index;
 		this.macName = macName;
 		this.ssid = ssid;
 		this.frequency = frequency;
+		this.numberOfMac = numberOfMac;
 		this.signal = signal;
 		this.localisation = localisation;
 		this.date = date;
@@ -68,7 +70,13 @@ public class LineAlgo1 {
 	public int getFrequency() {
 		return frequency;
 	}
-
+	
+	/**
+	 * @return numberOfMac.
+	 */
+	public int getNumberOfMac() {
+		return numberOfMac;
+	}
 	/**
 	 * @return signal.
 	 */

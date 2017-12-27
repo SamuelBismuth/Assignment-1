@@ -1,4 +1,4 @@
-package algorithms;
+package objects;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 

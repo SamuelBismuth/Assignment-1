@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import cast.CastFromCsvFileToSampleScan;
 import libraries.ReadFolder;
 import objects.CsvFile;
+import objects.SampleScan;
 import read.ReadWigleWifi;
-import read.SampleScan;
-import read.SortWigleWifiTime;
 
 /**
  * @author Samuel
@@ -20,7 +20,7 @@ import read.SortWigleWifiTime;
 public class SortWigleWifiTimeTest {
 
 	/**
-	 * Test method for {@link read.SortWigleWifiTime#sortBy()}.
+	 * Test method for {@link cast.CastFromCsvFileToSampleScan#sortBy()}.
 	 */
 	@Test
 	public void testSortBy() {
@@ -30,7 +30,7 @@ public class SortWigleWifiTimeTest {
 		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, file);
 		readWigleWifi.readBuffer();
 		ArrayList<SampleScan> arrayScan = new ArrayList<SampleScan>();
-		SortWigleWifiTime sort = new SortWigleWifiTime();
+		CastFromCsvFileToSampleScan sort = new CastFromCsvFileToSampleScan();
 		arrayScan = sort.sortBy(array);
 		assertEquals(200,  arrayScan.size());
 	}

@@ -4,19 +4,19 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import cast.CastFromCsvFileToSampleScan;
 import filter.Filtering;
 import libraries.InputException;
 import libraries.OpenFile;
 import libraries.ReadFolder;
 import libraries.User;
 import objects.CsvFile;
+import objects.SampleScan;
 import objects.WigleWifiLine;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.ReadFile;
 import read.ReadWigleWifi;
-import read.SampleScan;
-import read.SortWigleWifiTime;
 import write.WriteCombo;
 import write.WriteFile;
 
@@ -71,7 +71,7 @@ public class MainKml {
 		}
 
 		//Sort Csv (time)
-		SortWigleWifiTime sortScan = new SortWigleWifiTime();
+		CastFromCsvFileToSampleScan sortScan = new CastFromCsvFileToSampleScan();
 		arrayScan = sortScan.sortBy(arrayCsv);
 
 		//Write Csv

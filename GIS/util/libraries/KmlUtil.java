@@ -12,8 +12,8 @@ import org.boehn.kmlframework.kml.SimpleData;
 import org.boehn.kmlframework.kml.Style;
 import org.boehn.kmlframework.kml.TimeStamp;
 
+import objects.SampleScan;
 import objects.Wifi;
-import read.SampleScan;
 
 /**
  * This class contains statics functions which may help the construction of the kml file.
@@ -22,7 +22,7 @@ import read.SampleScan;
  * The creation of the kml file should not depends of object.
  * Then, it's getting closer of methematical function like f(x) = 2x + 4 like we saw in {@link Algorithm2}.
  * Here the difference is that the x should be a string, and so the method does not return a number but a string.
- * (return or side effect in the document for exemple).
+ * (return or side effect in the document for example).
  * @author Orel and Samuel
  */
 public class KmlUtil {
@@ -123,29 +123,6 @@ public class KmlUtil {
 	public static String dataChange(int data) {//done
 		if (data / 10 >= 1) return Integer.toString(data);
 		else return "0" + Integer.toString(data);
-	}
-	
-	/**
-	 * This function check the latitude.
-	 * @param latitude.
-	 * @return true if the data is good.
-	 * @return if the data is not good.
-	 */
-	public static boolean checkLatitude(double latitude) {//done
-		if (latitude < -90 || latitude > 90) return false;
-		return true;
-
-	}
-
-	/**
-	 * This function check the longitude.
-	 * @param longitude.
-	 * @return true if the data is good.
-	 * @return if the data is not good.
-	 */
-	public static boolean checkLongitude(double longitude) {//done
-		if (longitude < 0 || longitude > 360) return false;
-		return true;
 	}
 	
 }

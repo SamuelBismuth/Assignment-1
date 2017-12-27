@@ -7,9 +7,9 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 import filter.Filtering;
 import filter.FilteringKmlPlace;
+import libraries.Format;
 import libraries.InputException;
-import libraries.KmlUtil;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
  * This class implements @see {@link UserChoice}.
@@ -28,10 +28,10 @@ public class UserChoiceKmlPlace implements UserChoice {
 		try { 
 			System.out.println("Input an latitude please :");
 			double pointLatitude = Double.parseDouble(new Scanner(System.in).nextLine());
-			if (!KmlUtil.checkLatitude(pointLatitude)) throw new InputException("There is no such latitude.");
+			if (!Format.checkLatitude(pointLatitude)) throw new InputException("There is no such latitude.");
 			System.out.println("Input an longitude please :");
 			double pointLongitude = Double.parseDouble(new Scanner(System.in).nextLine());
-			if (!KmlUtil.checkLongitude(pointLongitude)) throw new InputException("There is no such longitude.");
+			if (!Format.checkLongitude(pointLongitude)) throw new InputException("There is no such longitude.");
 			System.out.println("Input a radius please (meters) :");
 			double radius = Double.parseDouble(new Scanner(System.in).nextLine());
 			if (radius > 0) throw new InputException("There is no such radius.");

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
+import libraries.Format;
 import libraries.ReadFolder;
 import objects.CsvFile;
 import objects.WigleWifiLine;
@@ -19,8 +20,8 @@ import objects.WigleWifiLine;
  * This class implements @see {@link Read}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
- * @param <WigleWifiLine>.
- * @param <CsvFile>.
+ * @param WigleWifiLine.
+ * @param CsvFile.
  */
 
 public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWifiLine> {
@@ -41,7 +42,7 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 			BufferedReader br = readFile(folderName + file);
 			String firstLine = br.readLine();
 			ArrayList<WigleWifiLine> arrayLine = new ArrayList<WigleWifiLine>();
-			if (checkTheFile(firstLine)) {
+			if (Format.checkTheFile(firstLine)) {
 				Iterable<CSVRecord> records = CSVFormat.RFC4180.withFirstRecordAsHeader().parse(br);
 				for (CSVRecord record : records) 
 					arrayLine.add(inputObject(record, getId(firstLine)));
@@ -79,7 +80,7 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 				);
 	}
 
-	//Private unimplmented methods.
+	//Private unimplemented methods.
 
 	/**
 	 * The method finds from the first line the id.
@@ -95,17 +96,6 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 			}
 		}
 		return "id";
-	}
-
-	/**
-	 * The method checks the first line, by asking if contains the header "WigleWifi".
-	 * @param firstLine.
-	 * @return true if the file is a WigleWifi file.
-	 * @return false if it's not.
-	 */
-	public static boolean checkTheFile(String firstLine) {
-		if (firstLine.contains("WigleWifi") && firstLine.contains("display")) return true;
-		return false;
 	}
 
 }

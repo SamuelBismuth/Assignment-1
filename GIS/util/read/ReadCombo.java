@@ -9,17 +9,19 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
+import libraries.Format;
 import libraries.InputException;
 import libraries.ParseDate;
 import libraries.ReadFolder;
+import objects.SampleScan;
 import objects.Wifi;
 
 /**
  * This class extends @see {@link ReadCsv} and implements @see {@link Read}.
  * This class read a combo.
  * @author Orel and Samuel.
- * @param <SampleScan>.
- * @param <Wifi>.
+ * @param SampleScan.
+ * @param Wifi.
  */
 public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 
@@ -43,13 +45,13 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	public void readBuffer() {
 		try {
 			BufferedReader br = readFile(folderName + file);
-			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(Header.class).parse(br);
+			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(HeaderCombo.class).parse(br);
 			for (CSVRecord record : records) {
-				if(goodLine(record)) {
+				if(Format.goodLine(record)) {
 					ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
-					for (int i = 0; i < Integer.parseInt(record.get(Header.wifiNetworks)); i++) 
+					for (int i = 0; i < Integer.parseInt(record.get(HeaderCombo.wifiNetworks)); i++) 
 						arrayWifi.add(inputObject(record, Integer.toString(i)));
-					array.add(inputSampleScan(record, arrayWifi));
+					array.add(newSampleScan(record, arrayWifi));
 				}
 			}
 			br.close();
@@ -87,15 +89,15 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	 * @return sampleScan.
 	 * @exception NumberFormatException | {@link InputException} : error on the date.
 	 */
-	private SampleScan inputSampleScan(CSVRecord record, ArrayList<Wifi> array) {
+	private SampleScan newSampleScan(CSVRecord record, ArrayList<Wifi> array) {
 		try {
 			return new SampleScan (  
-					ParseDate.stringToDate(record.get(Header.time)),
-					record.get(Header.id),
+					ParseDate.stringToDate(record.get(HeaderCombo.time)),
+					record.get(HeaderCombo.id),
 					new EarthCoordinate(
-							checkCoordinate(record.get(Header.latitude)),
-							checkCoordinate(record.get(Header.longitude)),
-							checkCoordinate(record.get(Header.altitude))
+							Format.checkCoordinate(record.get(HeaderCombo.latitude)),
+							Format.checkCoordinate(record.get(HeaderCombo.longitude)),
+							Format.checkCoordinate(record.get(HeaderCombo.altitude))
 							),
 					array
 					);
@@ -105,27 +107,6 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 			e.printStackTrace();
 			return null;
 		}
-	}
-
-	/**
-	 * This method check if the cordinate are known.
-	 * @param coordinate.
-	 * @return coordinate.
-	 */
-	private static Double checkCoordinate(String coordinate) {
-		if (coordinate.equals("?") || coordinate.equals("null")) return 0.0;
-		return Double.parseDouble(coordinate);
-	}
-
-	/**
-	 * This method check if the line is good.
-	 * @param record.
-	 * @return true if the line is good.
-	 * @return false if not.
-	 */
-	private static boolean goodLine(CSVRecord record) {
-		if (!record.get(0).equals("") && !record.get(Header.wifiNetworks).contains("#Wifi networks")) return true;
-		return false;
 	}
 
 }

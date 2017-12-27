@@ -3,8 +3,6 @@ package objects;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import read.SampleScan;
-
 /**
  * This class represents a weigth average object.
  * @author Orel and Samuel.

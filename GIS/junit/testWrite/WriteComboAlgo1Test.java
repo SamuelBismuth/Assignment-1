@@ -6,10 +6,10 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithms.LineAlgo1;
+import objects.LineAlgo1;
 import objects.Mac;
-import objects.MacLocation;
-import objects.MacLocationAlgo1;
+import objects.MacInformation;
+import objects.MacInformationAlgo1;
 import objects.Wifi;
 import write.WriteComboAlgo1;
 
@@ -25,9 +25,9 @@ public class WriteComboAlgo1Test {
 	@Test
 	public void testReceiveData() {
 		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
-		ArrayList<MacLocation> arrayMacLocation = new ArrayList<MacLocation>();
+		ArrayList<MacInformation> arrayMacLocation = new ArrayList<MacInformation>();
 		arrayMacLocation.add(
-				new MacLocationAlgo1(
+				new MacInformationAlgo1(
 						new EarthCoordinate(
 								32.0,
 								32.0,

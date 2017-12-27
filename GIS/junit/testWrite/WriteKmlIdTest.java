@@ -7,8 +7,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.boehn.kmlframework.kml.Document;
 import org.junit.Test;
 
+import objects.SampleScan;
 import objects.Wifi;
-import read.SampleScan;
 import write.WriteKmlId;
 
 /**
