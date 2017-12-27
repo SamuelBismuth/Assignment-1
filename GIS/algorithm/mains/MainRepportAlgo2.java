@@ -3,11 +3,11 @@ package mains;
 import java.io.File;
 import java.util.ArrayList;
 
-import algorithms.Difference;
 import libraries.Comparison;
+import objects.Difference;
+import objects.SampleScan;
 import read.ReadCombo;
 import read.ReadCsv;
-import read.SampleScan;
 import write.WriteDifference;
 import write.WriteFile;
 

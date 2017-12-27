@@ -9,10 +9,10 @@ import org.boehn.kmlframework.kml.KmlException;
 
 import libraries.InputException;
 import libraries.KmlUtil;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
- * This absract class write a kml file.
+ * This class write a kml file.
  * This class use the API kmlframework @see {@link https://code.google.com/archive/p/kmlframework/source/default/source}.
  * This class implements @see {@link WriteFile}.
  * @see NOTICE for more informations about how to run with the api.

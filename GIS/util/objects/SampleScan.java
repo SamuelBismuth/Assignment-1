@@ -1,12 +1,10 @@
-package read;
+package objects;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
-
-import objects.Wifi;
 
 /**
  * This class define an object scan.

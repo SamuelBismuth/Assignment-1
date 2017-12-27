@@ -3,17 +3,16 @@ package filter;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import libraries.Filter;
 import libraries.InputException;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
- * This class implements @see {@link Filtering}.
+ * This class extends @see {@link Filtering}.
  * This class filtering the data by the time : only the scan on the period of time that the user choosed will appear in the kml place.
  * @author Orel and Samuel.
  * @param <SampleScan>.
  */
-public class FilteringKmlTime implements Filtering<SampleScan> {
+public class FilteringKmlTime extends Filtering<SampleScan> {
 	
 	private GregorianCalendar dateBeginning;
 	private GregorianCalendar dateEnd;
@@ -35,7 +34,7 @@ public class FilteringKmlTime implements Filtering<SampleScan> {
 	 */
 	@Override
 	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
-		Filter.removeDuplicateMac(array);
+		removeDuplicateMac(array);
 		array.removeIf(SampleScan -> SampleScan.getTime().after(dateBeginning) && SampleScan.getTime().before(dateEnd));
 		if (array.size() == 0) throw new InputException("There array is empty.");
 		return array;

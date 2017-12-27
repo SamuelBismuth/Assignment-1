@@ -9,9 +9,9 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
 import libraries.Algorithm2;
+import objects.SampleScan;
 import objects.WeigthAverage;
 import objects.Wifi;
-import read.SampleScan;
 
 public class Algorithm2Test {
 	

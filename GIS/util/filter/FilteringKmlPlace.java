@@ -4,17 +4,16 @@ import java.util.ArrayList;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import libraries.Filter;
 import libraries.InputException;
-import read.SampleScan;
+import objects.SampleScan;
 
 /**
- * This class implements @see {@link Filtering}.
+ * This class extends @see {@link Filtering}.
  * This class filtering the data by the place : only the scan in the area that the user choosed will appear in the kml place.
  * @author Orel and Samuel.
  * @param <SampleScan>.
  */
-public class FilteringKmlPlace implements Filtering <SampleScan> {
+public class FilteringKmlPlace extends Filtering <SampleScan> {
 
 	private EarthCoordinate coordinate;
 	private double radius;
@@ -36,7 +35,7 @@ public class FilteringKmlPlace implements Filtering <SampleScan> {
 	 */
 	@Override
 	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
-		Filter.removeDuplicateMac(array);
+		removeDuplicateMac(array);
 		array.removeIf(SampleScan -> SampleScan.getPointLocation().distanceTo(coordinate) > radius);
 		if (array.size() == 0) throw new InputException("There array is empty.");
 		return array;

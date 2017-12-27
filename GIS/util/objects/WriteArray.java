@@ -1,8 +1,7 @@
-package threads;
+package objects;
 
 import java.util.ArrayList;
 
-import objects.Mac;
 import write.WriteFile;
 
 public class WriteArray {

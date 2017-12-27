@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import algorithms.Difference;
+import objects.Difference;
 
 /**
  * This class writes the csv file for the repports.

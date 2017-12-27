@@ -1,4 +1,4 @@
-package threads;
+package mains;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -7,15 +7,22 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import cast.CastFromMacToLineAlgo1;
+import cast.Cast;
+import cast.CastFromCsvFileToMac;
 import filter.Filtering;
-import filter.FilteringCsvMac;
 import libraries.User;
+import objects.LineAlgo1;
 import objects.Mac;
+import objects.SampleScan;
 import objects.WeigthAverage;
+import objects.WriteArray;
 import read.ReadCombo;
 import read.ReadCsv;
-import read.SampleScan;
-import read.SortWigleWifiMac;
+import runs.CallableCast;
+import runs.CallableAlgorithm2;
+import runs.RunRead;
+import runs.RunWrite;
 import write.WriteCombo;
 import write.WriteFile;
 
@@ -94,12 +101,12 @@ public class MainAlgo1Algo2 {
 		//Algo 1
 
 		//Sort combo (mac)
-		SortWigleWifiMac sortMac = new SortWigleWifiMac();
+		CastFromCsvFileToMac sortMac = new CastFromCsvFileToMac();
 		ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
 		Future<ArrayList<Mac>> future = execut.submit(new CallableSort<Mac, SampleScan>(sortMac, arrayScan, arrayMac));
 				
 		//Filtering the combo
-		Filtering<Mac> filter = new FilteringCsvMac();	
+		Cast<Mac, LineAlgo1> filter = new CastFromMacToLineAlgo1();	
 		while (!future.isDone());
 		try {
 			arrayMac = future.get();
@@ -108,14 +115,14 @@ public class MainAlgo1Algo2 {
 			e1.printStackTrace();
 		}
 		ExecutorService executFiltering = (ExecutorService) Executors.newSingleThreadExecutor();
-		Future<WriteArray> futureWriteAlgo1 = executFiltering.submit(new CallableFiltering(filter, arrayMac));
+		Future<WriteArray> futureWriteAlgo1 = executFiltering.submit(new CallableCast(filter, arrayMac));
 
 		//Algo 2
 		for (SampleScan data : arrayDataScan) 
 			arrayData.add(new WeigthAverage(data));
 
 		for (SampleScan input : arrayInput) {
-			threadAlgo2Input = new Thread(new RunAlgorithm2(input, arrayData, arrayTemp));
+			threadAlgo2Input = new Thread(new CallableAlgorithm2(input, arrayData, arrayTemp));
 			threadAlgo2Input.start();
 			try {
 				threadAlgo2Input.join();
@@ -143,8 +150,8 @@ public class MainAlgo1Algo2 {
 		//Algo 2
 		WriteFile<SampleScan> writeAlgo2 = new WriteCombo("Algo 2");
 
-		threadAlgo1 = new Thread(new RunWriteCombo<Mac>(writeAlgo1, writeAlgo1.getFileName(), arrayMac));
-		threadAlgo2Input = new Thread(new RunWriteCombo<SampleScan>(writeAlgo2, writeAlgo2.getFileName(), arrayInput));	
+		threadAlgo1 = new Thread(new RunWrite<Mac>(writeAlgo1, writeAlgo1.getFileName(), arrayMac));
+		threadAlgo2Input = new Thread(new RunWrite<SampleScan>(writeAlgo2, writeAlgo2.getFileName(), arrayInput));	
 		
 		threadAlgo1.start();
 		threadAlgo2Input.start();

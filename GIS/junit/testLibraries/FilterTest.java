@@ -9,8 +9,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
 import libraries.Filter;
+import objects.SampleScan;
 import objects.Wifi;
-import read.SampleScan;
 
 public class FilterTest {
 
@@ -42,7 +42,7 @@ public class FilterTest {
 		ArrayList<SampleScan> sc = new ArrayList<SampleScan>();
 		sc.add(scan1);
 		sc.add(scan2);
-		Filter.removeDuplicateMac(sc);
+		CastFromSampleScanToCsvFile.removeDuplicateMac(sc);
 		
 		assertEquals(0, sc.get(1).getArrayStrongerWifi().size());
 		}

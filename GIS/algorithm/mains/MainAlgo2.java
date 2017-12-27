@@ -7,10 +7,10 @@ import java.util.Scanner;
 import libraries.Algorithm2;
 import libraries.OpenFile;
 import libraries.User;
+import objects.SampleScan;
 import objects.WeigthAverage;
 import read.ReadCombo;
 import read.ReadCsv;
-import read.SampleScan;
 import write.WriteCombo;
 import write.WriteFile;
 

@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import cast.CastFromCsvFileToMac;
 import libraries.ReadFolder;
 import objects.Mac;
+import objects.SampleScan;
 import read.ReadCombo;
-import read.SampleScan;
-import read.SortWigleWifiMac;
 
 /**
  * @author Orel and Samuel.
@@ -20,7 +20,7 @@ import read.SortWigleWifiMac;
 public class SortWigleWifiMacTest {
 
 	/**
-	 * Test method for {@link read.SortWigleWifiMac#sortBy()}.
+	 * Test method for {@link cast.CastFromCsvFileToMac#sortBy()}.
 	 */
 	@Test
 	public void testSortBy() {
@@ -30,7 +30,7 @@ public class SortWigleWifiMacTest {
 		ReadCombo readCombo = new ReadCombo(fileName, array, file);
 		readCombo.readBuffer();
 		ArrayList<Mac> arrayMac = new ArrayList<Mac>();
-		SortWigleWifiMac sort = new SortWigleWifiMac();
+		CastFromCsvFileToMac sort = new CastFromCsvFileToMac();
 		arrayMac = sort.sortBy(array);
 		assertEquals(591,  arrayMac.size());
 	}

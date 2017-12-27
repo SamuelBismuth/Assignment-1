@@ -6,7 +6,6 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithms.LineAlgo1;
 import libraries.Algorithm1;
 
 /**
@@ -18,33 +17,29 @@ public class Mac  {
 	private static final int numberOfSampleMac = 4;
 
 	private String macName; // the mac address of the router
-	private ArrayList<MacLocation> arrayMacLocation; // all the samples of this router
+	private ArrayList<MacInformation> arrayMacInformation; // all the samples of this router
 	private GregorianCalendar date;
-	private boolean used; // boolean = true if the mac is already used.
-	private LineAlgo1 lineAlgo1;
 
 	/**
 	 * Constructor.
 	 * @param macName.
-	 * @param arrayMacLocationInformation.
+	 * @param arrayMacInformation.
 	 * @param date.
 	 */
-	public Mac(String macName, ArrayList<MacLocation> arrayMacLocationInformation, GregorianCalendar date) {
+	public Mac(String macName, ArrayList<MacInformation> arrayMacInformation, GregorianCalendar date) {
 		this.macName = macName;
-		sort(arrayMacLocationInformation);
-		this.arrayMacLocation = defineArrayListWithFinalNumber(arrayMacLocationInformation);
+		sort(arrayMacInformation);
+		this.arrayMacInformation = defineArrayListWithFinalNumber(arrayMacInformation);
 		this.date = date;
-		this.used = false;
 	}
 
 	/**
 	 * Constructor.
 	 * @param arrayMacLocationInformation.
 	 */
-	public Mac(ArrayList<MacLocation> arrayMacLocationInformation) {
-		sort(arrayMacLocationInformation);
-		this.arrayMacLocation = defineArrayListWithFinalNumber(arrayMacLocationInformation);
-		this.used = false;
+	public Mac(ArrayList<MacInformation> arrayMacInformation) {
+		sort(arrayMacInformation);
+		this.arrayMacInformation = defineArrayListWithFinalNumber(arrayMacInformation);
 	}
 
 	//Getters and setters.
@@ -67,56 +62,28 @@ public class Mac  {
 	 * @return numberOfMac.
 	 */
 	public int getNumberOfMac() {
-		return arrayMacLocation.size();
+		return arrayMacInformation.size();
 	}
 
 	/**
 	 * @return arrayMacLocation.
 	 */
-	public ArrayList<MacLocation> getArrayMacLocation() {
-		return arrayMacLocation;
+	public ArrayList<MacInformation> getArrayMacLocation() {
+		return arrayMacInformation;
 	}
 
 	/**
 	 * @return strongerSignal.
 	 */
 	protected double getStrongerSignal() {
-		return arrayMacLocation.get(0).getSignal();
-	}
-
-	/**
-	 * @return used
-	 */
-	public boolean getUsed() {
-		return used;
-	}
-
-	/**
-	 * @param bool
-	 */
-	public void setUsed(boolean bool) {
-		this.used = bool;
-	}
-	
-	/**
-	 * @return arrayLineAlgo1.
-	 */
-	public LineAlgo1 getLineAlgo1() {
-		return lineAlgo1;
-	}
-
-	/**
-	 * @param arrayLineAlgo1.
-	 */
-	public void setLineAlgo1(LineAlgo1 lineAlgo1) {
-		this.lineAlgo1 = lineAlgo1;
+		return arrayMacInformation.get(0).getSignal();
 	}
 	
 	/**
 	 * @return weight center.
 	 */
 	public EarthCoordinate getWeightCenter() {
-		return Algorithm1.getWeightCenter(arrayMacLocation);
+		return Algorithm1.getWeightCenter(arrayMacInformation);
 	}
 
 	//Comparator.
@@ -124,22 +91,22 @@ public class Mac  {
 	/**
 	 * This method sort 
 	 */
-	public void sort(ArrayList<MacLocation> array) {
-		Collections.sort(array, MacLocation.Comparators.SIGNAL);
+	public void sort(ArrayList<MacInformation> array) {
+		Collections.sort(array, MacInformation.Comparators.SIGNAL);
 	}
 
 	//private method.
 
 	/**
-	 * This method return an {@link ArrayList} of {@link MacLocation} with the number of sample define in numberOfSampleMac.
+	 * This method return an {@link ArrayList} of {@link MacInformation} with the number of sample define in numberOfSampleMac.
 	 * @param arrayMacLocationInformation
 	 * @return
 	 */
-	public ArrayList<MacLocation> defineArrayListWithFinalNumber(ArrayList<MacLocation> arrayMacLocationInformation) {
+	public ArrayList<MacInformation> defineArrayListWithFinalNumber(ArrayList<MacInformation> arrayMacLocationInformation) {
 		if (arrayMacLocationInformation.size() < numberOfSampleMac) 
 			return arrayMacLocationInformation;
 		else {
-			ArrayList<MacLocation> array = new ArrayList<MacLocation>();
+			ArrayList<MacInformation> array = new ArrayList<MacInformation>();
 			for (int i = 0; i < numberOfSampleMac; i++) 
 				array.add(arrayMacLocationInformation.get(i));
 			return array;

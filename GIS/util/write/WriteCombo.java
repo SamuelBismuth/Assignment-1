@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+import objects.SampleScan;
 import objects.Wifi;
-import read.SampleScan;
 
 /**
  * This class writes the csv file.

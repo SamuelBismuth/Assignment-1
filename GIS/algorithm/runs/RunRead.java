@@ -1,7 +1,7 @@
-package threads;
+package runs;
 
+import objects.SampleScan;
 import read.ReadCsv;
-import read.SampleScan;
 
 public class RunRead implements Runnable {
 

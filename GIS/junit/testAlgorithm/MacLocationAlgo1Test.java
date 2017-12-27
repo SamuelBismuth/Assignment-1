@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import objects.MacLocationAlgo1;
+import objects.MacInformationAlgo1;
 import objects.Wifi;
 
 public class MacLocationAlgo1Test {
@@ -17,7 +17,7 @@ public class MacLocationAlgo1Test {
 		EarthCoordinate pointlocation1 = new EarthCoordinate(35.208,32.103,650.0);
 		double signal1 = -30;		
 		Wifi w = new Wifi("name", "mac", 5000, signal1);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1,w);
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1,w);
 		assertEquals(pointlocation1, a.getPointLocation());
 	}
 
@@ -29,7 +29,7 @@ public class MacLocationAlgo1Test {
 		EarthCoordinate pointlocation2 = new EarthCoordinate(35.205,32.105,660.0);
 		double signal2 = -80;
 		Wifi w1 = new Wifi("name", "mac", 5000, signal2);
-		MacLocationAlgo1 b = new MacLocationAlgo1(pointlocation2, signal2,w1);
+		MacInformationAlgo1 b = new MacInformationAlgo1(pointlocation2, signal2,w1);
 		assertEquals(signal2, b.getSignal(),0.001);
 	}
 	
@@ -41,7 +41,7 @@ public class MacLocationAlgo1Test {
 		EarthCoordinate pointlocation3 = new EarthCoordinate(35.307,32.103,680.0);
 		double signal3 = -90;
 		Wifi w2 = new Wifi("name", "mac", 5000, signal3);
-		MacLocationAlgo1 c = new MacLocationAlgo1(pointlocation3, signal3,w2);
+		MacInformationAlgo1 c = new MacInformationAlgo1(pointlocation3, signal3,w2);
 		assertEquals(w2, c.getWifi());
 	}
 	
@@ -54,7 +54,7 @@ public class MacLocationAlgo1Test {
 		double signal1 = -30;		
 		double wsignal1 = 1 / Math.pow(signal1, 2);
 		Wifi w = new Wifi("name", "mac", 5000, signal1);
-		MacLocationAlgo1 a = new MacLocationAlgo1(pointlocation1, signal1,w);
+		MacInformationAlgo1 a = new MacInformationAlgo1(pointlocation1, signal1,w);
 		assertEquals(wsignal1,a.getWeigthSignal(),0.0001);
 	}
 	

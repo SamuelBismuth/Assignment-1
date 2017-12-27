@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import objects.MacLocation;
+import objects.MacInformation;
 
 /**
  * This class includes all the static function which calculate all the data by the algorithm 1 formulas.
@@ -22,7 +22,7 @@ public class Algorithm1 {
 	 * This method return the weight center.
 	 * @return weightCenter.
 	 */
-	public static EarthCoordinate getWeightCenter(ArrayList<MacLocation> arrayMacLocation) {
+	public static EarthCoordinate getWeightCenter(ArrayList<MacInformation> arrayMacLocation) {
 		return new EarthCoordinate(
 				getSumWeightPointLocation(arrayMacLocation).getLatitude() / getSumWeightSignal(arrayMacLocation),
 				getSumWeightPointLocation(arrayMacLocation).getLongitude() / getSumWeightSignal(arrayMacLocation),
@@ -34,14 +34,14 @@ public class Algorithm1 {
 	 * This method calculates the sum between all pointLocation of the weights.
 	 * @return SumWeightPointLocation.
 	 */
-	private static EarthCoordinate getSumWeightPointLocation(ArrayList<MacLocation> arrayMacLocation) {
+	private static EarthCoordinate getSumWeightPointLocation(ArrayList<MacInformation> arrayMacLocation) {
 		double sumWeigthLatitude = 0;
 		double sumWeigthLongitude = 0;
 		double sumWeigthAltitude = 0;
-		for(MacLocation macLocation : arrayMacLocation) {
-			sumWeigthLatitude += macLocation.getWeightPointLocation().getLatitude();
-			sumWeigthLongitude += macLocation.getWeightPointLocation().getLongitude();
-			sumWeigthAltitude += macLocation.getWeightPointLocation().getAltitude();
+		for(MacInformation macLocation : arrayMacLocation) {
+			sumWeigthLatitude += macLocation.getWeightCoordinates().getLatitude();
+			sumWeigthLongitude += macLocation.getWeightCoordinates().getLongitude();
+			sumWeigthAltitude += macLocation.getWeightCoordinates().getAltitude();
 		}
 		return new EarthCoordinate(
 				sumWeigthLatitude,
@@ -54,9 +54,9 @@ public class Algorithm1 {
 	 * This method calculates the sum between all the signal of the weights.
 	 * @return sumWeigthSignal.
 	 */
-	public static double getSumWeightSignal(ArrayList<MacLocation> arrayMacLocation) {
+	public static double getSumWeightSignal(ArrayList<MacInformation> arrayMacLocation) {
 		double sumWeigthSignal = 0;
-		for(MacLocation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
+		for(MacInformation macLocation : arrayMacLocation) sumWeigthSignal += macLocation.getWeigthSignal();
 		return sumWeigthSignal;
 	}
 	

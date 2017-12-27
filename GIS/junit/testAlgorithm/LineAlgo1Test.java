@@ -8,7 +8,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 import org.junit.Test;
 
-import algorithms.LineAlgo1;
+import objects.LineAlgo1;
 
 public class LineAlgo1Test {
 

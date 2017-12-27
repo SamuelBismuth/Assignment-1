@@ -3,16 +3,16 @@ package mains;
 import java.io.File;
 import java.util.ArrayList;
 
+import cast.CastFromMacToLineAlgo1;
+import cast.CastFromCsvFileToMac;
 import filter.Filtering;
-import filter.FilteringCsvMac;
 import libraries.InputException;
 import libraries.OpenFile;
 import libraries.User;
 import objects.Mac;
+import objects.SampleScan;
 import read.ReadCombo;
 import read.ReadCsv;
-import read.SampleScan;
-import read.SortWigleWifiMac;
 import write.WriteFile;
 
 /**
@@ -55,11 +55,11 @@ public class MainAlgo1 {
 		readCombo.readBuffer();
 
 		//Sort combo (mac)
-		SortWigleWifiMac sortMac = new SortWigleWifiMac();
+		CastFromCsvFileToMac sortMac = new CastFromCsvFileToMac();
 		arrayMac = sortMac.sortBy(arrayScan);
 
 		//Filtering the combo
-		Filtering<Mac> filter = new FilteringCsvMac();		
+		Filtering<Mac> filter = new CastFromMacToLineAlgo1();		
 		WriteFile<Mac> write = null;
 		try {
 			write = filter.filteringBy(arrayMac);

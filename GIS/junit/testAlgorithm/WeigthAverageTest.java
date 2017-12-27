@@ -8,9 +8,9 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
+import objects.SampleScan;
 import objects.WeigthAverage;
 import objects.Wifi;
-import read.SampleScan;
 
 public class WeigthAverageTest {
 
