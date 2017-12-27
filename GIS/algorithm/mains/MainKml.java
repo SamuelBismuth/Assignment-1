@@ -93,7 +93,7 @@ public class MainKml {
 		readCombo.readBuffer();
 		
 		//Choice of the user
-		Filtering<SampleScan> filter = User.userChoice();
+		Filtering<SampleScan> filter = (Filtering<SampleScan>) User.userChoice();
 
 		//Filtering kml
 		try {
