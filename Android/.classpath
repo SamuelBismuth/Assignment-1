@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="GIS/util"/>
+	<classpathentry kind="src" path="GIS/junit"/>
+	<classpathentry kind="src" path="GIS/algorithm"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/commons-csv-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/org.boehn.kmlframework_20090718.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
