@@ -3,12 +3,12 @@ package mains;
 import java.io.File;
 import java.util.ArrayList;
 
-import algorithms.Mac;
 import filter.Filtering;
 import filter.FilteringCsvMac;
 import libraries.InputException;
 import libraries.OpenFile;
-import libraries.UserChoice;
+import libraries.User;
+import objects.Mac;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;
@@ -45,7 +45,7 @@ public class MainAlgo1 {
 		/////////////////////////////
 
 		//Get file combo path
-		String fileComboName = UserChoice.getFileName("combo");
+		String fileComboName = User.getFileName("combo");
 		String fileComboPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Read the combo file

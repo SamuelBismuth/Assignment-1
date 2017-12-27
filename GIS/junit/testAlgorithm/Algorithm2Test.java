@@ -8,10 +8,10 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import algorithms.WeigthAverage;
 import libraries.Algorithm2;
+import objects.WeigthAverage;
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 public class Algorithm2Test {
 	

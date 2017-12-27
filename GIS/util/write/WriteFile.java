@@ -23,5 +23,4 @@ public interface WriteFile <T> {
 	public void writeHeader();
 	public void writeFile() throws InputException;
 	public String getFileName();
-	
 }

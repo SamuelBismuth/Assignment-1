@@ -3,10 +3,8 @@ package filter;
 import java.util.ArrayList;
 
 import algorithms.LineAlgo1;
-import algorithms.Mac;
-import libraries.UserChoice;
+import objects.Mac;
 import write.WriteComboAlgo1;
-import write.WriteFile;
 
 /**
  * This class implements @see {@link Filtering}.
@@ -15,16 +13,11 @@ import write.WriteFile;
  * @param <Mac>.
  */
 public class FilteringCsvMac implements Filtering<Mac> {
-
-	private boolean flag = true;
+	
 	/**
 	 * Empty constructor.
 	 */
 	public FilteringCsvMac() {}
-	
-	public FilteringCsvMac(boolean flag) {
-		this.flag = flag;
-	}
 
 	/**
 	 * This method create an {@link ArrayList} of {@link LineAlgo1} from an ArrayList of {@link Mac}.
@@ -33,7 +26,7 @@ public class FilteringCsvMac implements Filtering<Mac> {
 	 * @return {@link WriteComboAlgo1}.
 	 */
 	@Override
-	public WriteFile<Mac> filteringBy(ArrayList<Mac> arrayMac)  {
+	public ArrayList<Mac> filteringBy(ArrayList<Mac> arrayMac)  {
 		int index = 0;
 		for (Mac mac : arrayMac) {
 			mac.setLineAlgo1(
@@ -48,10 +41,7 @@ public class FilteringCsvMac implements Filtering<Mac> {
 							)
 					);
 		}
-		String fileName;
-		if (flag) fileName = UserChoice.getFileName("csv");
-		else fileName = "algo 1";
-		return new WriteComboAlgo1(fileName);
+		return arrayMac;
 	}
 
 }

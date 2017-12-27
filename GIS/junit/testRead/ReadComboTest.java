@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import libraries.ReadFolder;
+import objects.Wifi;
 import read.ReadCombo;
 import read.SampleScan;
-import read.Wifi;
 
 /**
  * @author Orel and Samuel

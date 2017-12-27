@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import libraries.ReadFolder;
-import read.CsvFile;
+import objects.CsvFile;
 import read.ReadWigleWifi;
 
 /**

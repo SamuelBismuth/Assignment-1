@@ -6,8 +6,8 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 import write.WriteCombo;
 
 /**

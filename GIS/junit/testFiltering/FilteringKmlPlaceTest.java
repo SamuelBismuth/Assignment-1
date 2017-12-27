@@ -8,8 +8,8 @@ import org.junit.Test;
 
 import filter.FilteringKmlPlace;
 import libraries.InputException;
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 /**
  * @author Orel and Samuel.

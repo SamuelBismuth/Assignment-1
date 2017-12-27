@@ -19,6 +19,6 @@ import write.WriteFile;
  */
 public interface Filtering<T> {
 
-	public WriteFile<T> filteringBy(ArrayList<T> array) throws InputException;
+	public ArrayList<T> filteringBy(ArrayList<T> array) throws InputException;
 	
 }

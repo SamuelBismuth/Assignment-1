@@ -3,10 +3,10 @@ package threads;
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
-import algorithms.Mac;
 import filter.Filtering;
 import filter.FilteringCsvMac;
 import libraries.InputException;
+import objects.Mac;
 import write.WriteFile;
 
 public class CallableFiltering implements Callable<WriteArray> {

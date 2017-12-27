@@ -6,6 +6,8 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
+import objects.Wifi;
+
 /**
  * This class define an object scan.
  * @author Orel and Samuel.

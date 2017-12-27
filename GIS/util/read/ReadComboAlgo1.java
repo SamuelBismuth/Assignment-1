@@ -10,6 +10,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 import libraries.ReadFolder;
+import objects.Wifi;
 
 /**
  * This class extends @see {@link ReadCsv} and implements @see {@link Read}.

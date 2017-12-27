@@ -4,10 +4,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import algorithms.WeigthAverage;
 import libraries.Algorithm2;
 import libraries.OpenFile;
-import libraries.UserChoice;
+import libraries.User;
+import objects.WeigthAverage;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.SampleScan;
@@ -42,7 +42,7 @@ public class MainAlgo2 {
 		ArrayList<WeigthAverage> arrayData =  new ArrayList<WeigthAverage>();
 
 		//Get file input path
-		String fileInput = UserChoice.getFileName("combo input");
+		String fileInput = User.getFileName("combo input");
 		String fileInputPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Read the input file
@@ -51,7 +51,7 @@ public class MainAlgo2 {
 		readInput.readBuffer();
 
 		//Get file data path
-		String fileData = UserChoice.getFileName("combo data");
+		String fileData = User.getFileName("combo data");
 		String fileDataPath = folderPathWorkspace.substring(0, folderPathWorkspace.length() - 1);
 
 		//Read the database file

@@ -11,44 +11,44 @@ import java.util.Locale;
  */
 public class ParseDate {
 
-		/**
-		 * Set the string time of the csv into the object {@link GregorianCalendar}.
-		 * Here the time appears like this : yyyy/mm/dd hh/mm/ss ex : 2017-10-27 16:13:51.
-		 * @param time.
-		 * @return {@link GregorianCalendar}.
-		 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
-		 */
-		static public GregorianCalendar stringToDate(String dateString) throws InputException {
-			try {
-				SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
-				GregorianCalendar calendar = new GregorianCalendar();
-				calendar.setTime(parser.parse(dateString));
-				return calendar;
-			}
-			catch (ParseException ex) {
-				return stringToDateSephie(dateString);
-			}
+	/**
+	 * Set the string time of the csv into the object {@link GregorianCalendar}.
+	 * Here the time appears like this : yyyy/mm/dd hh/mm/ss ex : 2017-10-27 16:13:51.
+	 * @param time.
+	 * @return {@link GregorianCalendar}.
+	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
+	 */
+	static public GregorianCalendar stringToDate(String dateString) throws InputException {
+		try {
+			SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
+			GregorianCalendar calendar = new GregorianCalendar();
+			calendar.setTime(parser.parse(dateString));
+			return calendar;
 		}
-		
-		/**
-		 * Set the string time of the csv into the object {@link GregorianCalendar}.
-		 * here the time appears like this : dd/mm/yyyy hh/mm ex : 28/10/2017 20:10.
-		 * @param time.
-		 * @return {@link GregorianCalendar}.
-		 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
-		 */
-		static public GregorianCalendar stringToDateSephie(String dateString) throws InputException {
-			try {
-				SimpleDateFormat parser = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.US);
-				GregorianCalendar calendar = new GregorianCalendar();
-				calendar.setTime(parser.parse(dateString));
-				return calendar;
-			}
-			catch (ParseException ex) {
-				return stringToDateBoaz(dateString);
-			}
+		catch (ParseException ex) {
+			return stringToDateSephie(dateString);
 		}
-		
+	}
+
+	/**
+	 * Set the string time of the csv into the object {@link GregorianCalendar}.
+	 * here the time appears like this : dd/mm/yyyy hh/mm ex : 28/10/2017 20:10.
+	 * @param time.
+	 * @return {@link GregorianCalendar}.
+	 * @exception NumberFormatException | IndexOutOfBoundsException : Error in the input.
+	 */
+	static public GregorianCalendar stringToDateSephie(String dateString) throws InputException {
+		try {
+			SimpleDateFormat parser = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.US);
+			GregorianCalendar calendar = new GregorianCalendar();
+			calendar.setTime(parser.parse(dateString));
+			return calendar;
+		}
+		catch (ParseException ex) {
+			return stringToDateBoaz(dateString);
+		}
+	}
+
 	/**
 	 * Set the string time of the csv into the object {@link GregorianCalendar}.
 	 * here the time appears like this : dd/mm/yy hh/mm AM ex : 12/05/17 11:48 AM.

@@ -5,13 +5,16 @@ import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import algorithms.Mac;
-import algorithms.MacLocation;
-import algorithms.MacLocationAlgo1;
 import libraries.Algorithm2;
 import libraries.InputException;
 import libraries.KmlUtil;
 import libraries.ParseDate;
+import objects.CsvFile;
+import objects.Mac;
+import objects.MacLocation;
+import objects.MacLocationAlgo1;
+import objects.Wifi;
+import objects.WigleWifiLine;
 
 /**
  * This abstract class defines two abtsracts methods : sortBy, needToCreateObject.

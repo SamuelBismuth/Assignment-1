@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="algorithms.Mac" project="GIS" file="/GIS/algorithm/algorithms/Mac.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="objects.Mac" project="GIS" file="/GIS/GIS/util/objects/Mac.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
     <position height="436" width="605" x="11762" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,7 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="libraries.UserChoice" project="GIS" file="/GIS/util/libraries/UserChoice.java" 
+  <class id="2" language="java" name="libraries.User" project="GIS" file="/GIS/GIS/util/libraries/User.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="284" x="129" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="libraries.Comparison" project="GIS" file="/GIS/util/libraries/Comparison.java" 
+  <class id="3" language="java" name="libraries.Comparison" project="GIS" file="/GIS/GIS/util/libraries/Comparison.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="608" x="453" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,7 +28,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="libraries.OpenFile" project="GIS" file="/GIS/util/libraries/OpenFile.java" 
+  <class id="4" language="java" name="libraries.OpenFile" project="GIS" file="/GIS/GIS/util/libraries/OpenFile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="145" x="1101" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="filter.FilteringCsvMac" project="GIS" file="/GIS/util/filter/FilteringCsvMac.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="filter.FilteringCsvMac" project="GIS" 
+    file="/GIS/GIS/util/filter/FilteringCsvMac.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="329" x="12169" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,7 +46,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="read.ReadFile" project="GIS" file="/GIS/util/read/ReadFile.java" 
+  <interface id="6" language="java" name="read.ReadFile" project="GIS" file="/GIS/GIS/util/read/ReadFile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="250" x="6134" y="1636"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -55,7 +55,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="write.WriteKmlPlace" project="GIS" file="/GIS/util/write/WriteKmlPlace.java" 
+  <class id="7" language="java" name="write.WriteKmlPlace" project="GIS" file="/GIS/GIS/util/write/WriteKmlPlace.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="426" x="8955" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -64,7 +64,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="libraries.KmlUtil" project="GIS" file="/GIS/util/libraries/KmlUtil.java" 
+  <class id="8" language="java" name="libraries.KmlUtil" project="GIS" file="/GIS/GIS/util/libraries/KmlUtil.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="276" width="359" x="1286" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="9" language="java" name="algorithms.MacLocation" project="GIS" 
-    file="/GIS/algorithm/algorithms/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="9" language="java" name="objects.MacLocation" project="GIS" 
+    file="/GIS/GIS/util/objects/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="322" x="11400" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="10" language="java" name="read.SortWigleWifiMac" project="GIS" file="/GIS/util/read/SortWigleWifiMac.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="read.SortWigleWifiMac" project="GIS" 
+    file="/GIS/GIS/util/read/SortWigleWifiMac.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="377" x="4901" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -92,7 +92,7 @@
     </display>  
   </class>  
   <class id="11" language="java" name="read.SortWigleWifiTime" project="GIS" 
-    file="/GIS/util/read/SortWigleWifiTime.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/read/SortWigleWifiTime.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="387" x="5318" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,8 +100,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="algorithms.MacLocation.Comparators" project="GIS" 
-    file="/GIS/algorithm/algorithms/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="objects.MacLocation.Comparators" project="GIS" 
+    file="/GIS/GIS/util/objects/MacLocation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="283" x="11400" y="1636"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -110,7 +110,7 @@
     </display>  
   </class>  
   <class id="13" language="java" name="algorithms.LineAlgo1" project="GIS" 
-    file="/GIS/algorithm/algorithms/LineAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/algorithms/LineAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="376" width="541" x="11762" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -118,7 +118,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="14" language="java" name="write.WriteFile" project="GIS" file="/GIS/util/write/WriteFile.java" 
+  <interface id="14" language="java" name="write.WriteFile" project="GIS" file="/GIS/GIS/util/write/WriteFile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="243" x="9421" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -127,7 +127,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="15" language="java" name="libraries.Filter" project="GIS" file="/GIS/util/libraries/Filter.java" 
+  <class id="15" language="java" name="libraries.Filter" project="GIS" file="/GIS/GIS/util/libraries/Filter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="453" x="1685" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -136,7 +136,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="read.ReadWigleWifi" project="GIS" file="/GIS/util/read/ReadWigleWifi.java" 
+  <class id="16" language="java" name="read.ReadWigleWifi" project="GIS" file="/GIS/GIS/util/read/ReadWigleWifi.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="349" x="5745" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -145,8 +145,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="libraries.Algorithm2" project="GIS" file="/GIS/util/libraries/Algorithm2.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="17" language="java" name="libraries.Algorithm2" project="GIS" 
+    file="/GIS/GIS/util/libraries/Algorithm2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="436" width="683" x="2178" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -155,7 +155,7 @@
     </display>  
   </class>  
   <class id="18" language="java" name="threads.CallableSort" project="GIS" 
-    file="/GIS/algorithm/threads/CallableSort.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/threads/CallableSort.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="442" x="5593" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -163,8 +163,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="read.ReadCombo" project="GIS" file="/GIS/util/read/ReadCombo.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="19" language="java" name="read.ReadCombo" project="GIS" file="/GIS/GIS/util/read/ReadCombo.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="196" width="449" x="6134" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -173,7 +173,7 @@
     </display>  
   </class>  
   <class id="20" language="java" name="libraries.InputException" project="GIS" 
-    file="/GIS/util/libraries/InputException.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/libraries/InputException.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="96" width="178" x="2901" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -181,7 +181,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="read.SortWigleWifi" project="GIS" file="/GIS/util/read/SortWigleWifi.java" 
+  <class id="21" language="java" name="read.SortWigleWifi" project="GIS" file="/GIS/GIS/util/read/SortWigleWifi.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="258" width="385" x="5318" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -190,7 +190,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="write.WriteCombo" project="GIS" file="/GIS/util/write/WriteCombo.java" 
+  <class id="22" language="java" name="write.WriteCombo" project="GIS" file="/GIS/GIS/util/write/WriteCombo.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="256" width="324" x="6380" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -199,8 +199,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="algorithms.WeigthAverage.Comparators" project="GIS" 
-    file="/GIS/algorithm/algorithms/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="23" language="java" name="objects.WeigthAverage.Comparators" project="GIS" 
+    file="/GIS/GIS/util/objects/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="258" x="10528" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -209,7 +209,7 @@
     </display>  
   </class>  
   <class id="24" language="java" name="filter.FilteringKmlPlace" project="GIS" 
-    file="/GIS/util/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="449" x="12538" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -217,8 +217,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="libraries.Algorithm1" project="GIS" file="/GIS/util/libraries/Algorithm1.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="25" language="java" name="libraries.Algorithm1" project="GIS" 
+    file="/GIS/GIS/util/libraries/Algorithm1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="524" x="3119" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -226,8 +226,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="libraries.ReadFolder" project="GIS" file="/GIS/util/libraries/ReadFolder.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="26" language="java" name="libraries.ReadFolder" project="GIS" 
+    file="/GIS/GIS/util/libraries/ReadFolder.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="196" x="3683" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -235,7 +235,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="threads.RunRead" project="GIS" file="/GIS/algorithm/threads/RunRead.java" 
+  <class id="27" language="java" name="threads.RunRead" project="GIS" file="/GIS/GIS/algorithm/threads/RunRead.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="319" x="6075" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -244,7 +244,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="28" language="java" name="filter.Filtering" project="GIS" file="/GIS/util/filter/Filtering.java" 
+  <interface id="28" language="java" name="filter.Filtering" project="GIS" file="/GIS/GIS/util/filter/Filtering.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="96" width="287" x="12837" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -253,7 +253,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="29" language="java" name="read.SampleScan" project="GIS" file="/GIS/util/read/SampleScan.java" 
+  <class id="29" language="java" name="read.SampleScan" project="GIS" file="/GIS/GIS/util/read/SampleScan.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="376" width="534" x="10826" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -262,7 +262,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="read.Wifi" project="GIS" file="/GIS/util/read/Wifi.java" binary="false" 
+  <class id="30" language="java" name="objects.Wifi" project="GIS" file="/GIS/GIS/util/objects/Wifi.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="336" width="220" x="10488" y="1636"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -271,8 +271,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="read.CsvFile" project="GIS" file="/GIS/util/read/CsvFile.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="31" language="java" name="objects.CsvFile" project="GIS" file="/GIS/GIS/util/objects/CsvFile.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="336" x="8246" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -280,8 +280,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="algorithms.WeigthAverage" project="GIS" 
-    file="/GIS/algorithm/algorithms/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="32" language="java" name="objects.WeigthAverage" project="GIS" 
+    file="/GIS/GIS/util/objects/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="296" width="252" x="10735" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -289,7 +289,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="mains.MainKml" project="GIS" file="/GIS/algorithm/mains/MainKml.java" 
+  <class id="33" language="java" name="mains.MainKml" project="GIS" file="/GIS/GIS/algorithm/mains/MainKml.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="152" x="3919" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -298,7 +298,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="write.WriteKmlTime" project="GIS" file="/GIS/util/write/WriteKmlTime.java" 
+  <class id="34" language="java" name="write.WriteKmlTime" project="GIS" file="/GIS/GIS/util/write/WriteKmlTime.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="525" x="9421" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -307,8 +307,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="write.WriteKml" project="GIS" file="/GIS/util/write/WriteKml.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="35" language="java" name="write.WriteKml" project="GIS" file="/GIS/GIS/util/write/WriteKml.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="217" width="330" x="10017" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -316,8 +316,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="read.WigleWifiLine" project="GIS" file="/GIS/util/read/WigleWifiLine.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="36" language="java" name="objects.WigleWifiLine" project="GIS" 
+    file="/GIS/GIS/util/objects/WigleWifiLine.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="596" width="669" x="8246" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -326,7 +326,7 @@
     </display>  
   </class>  
   <class id="37" language="java" name="threads.RunWriteCombo" project="GIS" 
-    file="/GIS/algorithm/threads/RunWriteCombo.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/threads/RunWriteCombo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="380" x="6744" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -334,8 +334,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="38" language="java" name="threads.WriteArray" project="GIS" file="/GIS/algorithm/threads/WriteArray.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="38" language="java" name="threads.WriteArray" project="GIS" 
+    file="/GIS/GIS/algorithm/threads/WriteArray.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="335" x="11387" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -344,7 +344,7 @@
     </display>  
   </class>  
   <class id="39" language="java" name="filter.FilteringKmlTime" project="GIS" 
-    file="/GIS/util/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="449" x="13027" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -353,7 +353,7 @@
     </display>  
   </class>  
   <class id="40" language="java" name="threads.CallableFiltering" project="GIS" 
-    file="/GIS/algorithm/threads/CallableFiltering.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/threads/CallableFiltering.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="367" x="11762" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -361,7 +361,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="write.WriteKmlId" project="GIS" file="/GIS/util/write/WriteKmlId.java" 
+  <class id="41" language="java" name="write.WriteKmlId" project="GIS" file="/GIS/GIS/util/write/WriteKmlId.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="324" x="9986" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -370,7 +370,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="42" language="java" name="read.ReadCsv" project="GIS" file="/GIS/util/read/ReadCsv.java" binary="false" 
+  <class id="42" language="java" name="read.ReadCsv" project="GIS" file="/GIS/GIS/util/read/ReadCsv.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="197" width="265" x="6075" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -380,7 +380,7 @@
     </display>  
   </class>  
   <class id="43" language="java" name="filter.FilteringKmlEmpty" project="GIS" 
-    file="/GIS/util/filter/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/filter/FilteringKmlEmpty.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="449" x="13516" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -388,7 +388,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="44" language="java" name="libraries.ParseDate" project="GIS" file="/GIS/util/libraries/ParseDate.java" 
+  <class id="44" language="java" name="libraries.ParseDate" project="GIS" file="/GIS/GIS/util/libraries/ParseDate.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="176" width="374" x="4111" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -397,8 +397,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="45" language="java" name="write.WriteDifference" project="GIS" file="/GIS/util/write/WriteDifference.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="45" language="java" name="write.WriteDifference" project="GIS" 
+    file="/GIS/GIS/util/write/WriteDifference.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="256" width="334" x="7164" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -407,7 +407,7 @@
     </display>  
   </class>  
   <class id="46" language="java" name="write.WriteKmlWithoutFilter" project="GIS" 
-    file="/GIS/util/write/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/util/write/WriteKmlWithoutFilter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="136" width="324" x="10350" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -416,7 +416,7 @@
     </display>  
   </class>  
   <class id="47" language="java" name="threads.RunAlgorithm2" project="GIS" 
-    file="/GIS/algorithm/threads/RunAlgorithm2.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/threads/RunAlgorithm2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="612" x="10735" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -424,8 +424,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="48" language="java" name="filter.FilteringKmlId" project="GIS" file="/GIS/util/filter/FilteringKmlId.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="48" language="java" name="filter.FilteringKmlId" project="GIS" 
+    file="/GIS/GIS/util/filter/FilteringKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="449" x="14005" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -434,7 +434,7 @@
     </display>  
   </class>  
   <class id="49" language="java" name="threads.MainAlgo1Algo2" project="GIS" 
-    file="/GIS/algorithm/threads/MainAlgo1Algo2.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/threads/MainAlgo1Algo2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="165" x="4525" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -442,7 +442,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="50" language="java" name="read.ReadComboAlgo1" project="GIS" file="/GIS/util/read/ReadComboAlgo1.java" 
+  <class id="50" language="java" name="read.ReadComboAlgo1" project="GIS" file="/GIS/GIS/util/read/ReadComboAlgo1.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="156" width="449" x="6623" y="1220"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -451,7 +451,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="51" language="java" name="mains.MainAlgo1" project="GIS" file="/GIS/algorithm/mains/MainAlgo1.java" 
+  <class id="51" language="java" name="mains.MainAlgo1" project="GIS" file="/GIS/GIS/algorithm/mains/MainAlgo1.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="152" x="4730" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -460,7 +460,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="52" language="java" name="mains.MainAlgo2" project="GIS" file="/GIS/algorithm/mains/MainAlgo2.java" 
+  <class id="52" language="java" name="mains.MainAlgo2" project="GIS" file="/GIS/GIS/algorithm/mains/MainAlgo2.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="152" x="4922" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -470,7 +470,7 @@
     </display>  
   </class>  
   <class id="53" language="java" name="mains.MainRepportAlgo1" project="GIS" 
-    file="/GIS/algorithm/mains/MainRepportAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/mains/MainRepportAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="185" x="14494" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -478,8 +478,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="54" language="java" name="algorithms.MacLocationAlgo1" project="GIS" 
-    file="/GIS/algorithm/algorithms/MacLocationAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="54" language="java" name="objects.MacLocationAlgo1" project="GIS" 
+    file="/GIS/GIS/util/objects/MacLocationAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="236" width="364" x="7842" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -488,7 +488,7 @@
     </display>  
   </class>  
   <class id="55" language="java" name="mains.MainRepportAlgo2" project="GIS" 
-    file="/GIS/algorithm/mains/MainRepportAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/mains/MainRepportAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="116" width="185" x="14719" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -496,7 +496,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="56" language="java" name="read.HeaderAlgo1" project="GIS" file="/GIS/util/read/HeaderAlgo1.java" 
+  <enumeration id="56" language="java" name="read.HeaderAlgo1" project="GIS" file="/GIS/GIS/util/read/HeaderAlgo1.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="276" width="225" x="5114" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -505,8 +505,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="57" language="java" name="algorithms.MacLocationAlgo2" project="GIS" 
-    file="/GIS/algorithm/algorithms/MacLocationAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="57" language="java" name="objects.MacLocationAlgo2" project="GIS" 
+    file="/GIS/GIS/util/objects/MacLocationAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="236" width="333" x="11389" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -514,8 +514,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="58" language="java" name="write.WriteComboAlgo1" project="GIS" file="/GIS/util/write/WriteComboAlgo1.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="58" language="java" name="write.WriteComboAlgo1" project="GIS" 
+    file="/GIS/GIS/util/write/WriteComboAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="236" width="264" x="7538" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -524,7 +524,7 @@
     </display>  
   </class>  
   <class id="59" language="java" name="algorithms.Difference" project="GIS" 
-    file="/GIS/algorithm/algorithms/Difference.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/GIS/GIS/algorithm/algorithms/Difference.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="216" width="268" x="14607" y="584"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -532,8 +532,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="60" language="java" name="read.Header" project="GIS" file="/GIS/util/read/Header.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <enumeration id="60" language="java" name="read.Header" project="GIS" file="/GIS/GIS/util/read/Header.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="216" width="174" x="5379" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -542,278 +542,354 @@
     </display>  
   </enumeration>  
   <realization id="61">    
-    <end type="SOURCE" refId="46"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <realization id="62">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="63">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="64" name="sort"/>      
-      <multiplicity id="65" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="66">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="28"/>  
-  </realization>  
-  <association id="67">    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="68" name="sampleScan"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="70">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="71" name="arrayWifi"/>      
-      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="73">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="74" name="arrayMac"/>      
-      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="76">    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="77">    
-    <bendpoint x="11017" y="584"/>    
-    <end type="SOURCE" refId="47" navigable="false">      
-      <attribute id="78" name="input"/>      
-      <multiplicity id="79" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="80">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="23"/>  
-  </nesting>  
-  <realization id="81">    
-    <end type="SOURCE" refId="39"/>    
-    <end type="TARGET" refId="28"/>  
-  </realization>  
-  <generalization id="82">    
-    <end type="SOURCE" refId="50"/>    
-    <end type="TARGET" refId="42"/>  
-  </generalization>  
-  <association id="83">    
-    <bendpoint x="11038" y="584"/>    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="84" name="write"/>      
-      <multiplicity id="85" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="86">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="87" name="readInput"/>      
-      <multiplicity id="88" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="89">    
-    <end type="SOURCE" refId="47" navigable="false">      
-      <attribute id="90" name="arrayTemp"/>      
-      <multiplicity id="91" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="92">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="93" name="lineAlgo1"/>      
-      <multiplicity id="94" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="95">    
-    <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="96" name="arrayMac"/>      
-      <multiplicity id="97" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="98">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <generalization id="99">    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="35"/>  
-  </generalization>  
-  <association id="100">    
-    <end type="SOURCE" refId="53" navigable="false">      
-      <attribute id="101" name="arrayDiffAlgo1"/>      
-      <multiplicity id="102" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="59" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="103">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="21"/>  
-  </generalization>  
-  <realization id="104">    
-    <bendpoint x="10704" y="584"/>    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <realization id="105">    
-    <end type="SOURCE" refId="50"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <generalization id="106">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="42"/>  
-  </generalization>  
-  <realization id="107">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="108">    
-    <end type="SOURCE" refId="47" navigable="false">      
-      <attribute id="109" name="arrayData"/>      
-      <multiplicity id="110" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="111">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <generalization id="112">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="42"/>  
-  </generalization>  
-  <association id="113">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="114" name="arrayMacLocation"/>      
-      <multiplicity id="115" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="116">    
-    <end type="SOURCE" refId="48"/>    
-    <end type="TARGET" refId="28"/>  
-  </realization>  
-  <realization id="117">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="28"/>  
-  </realization>  
-  <association id="118">    
-    <bendpoint x="9174" y="1220"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="119" name="wifi"/>      
-      <multiplicity id="120" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="121">    
-    <end type="SOURCE" refId="58"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="122">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="123" name="arrayWigleWifiLine"/>      
-      <multiplicity id="124" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="125">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="12"/>  
-  </nesting>  
-  <realization id="126">    
-    <end type="SOURCE" refId="57"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <realization id="127">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <generalization id="128">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="35"/>  
-  </generalization>  
-  <realization id="129">    
     <end type="SOURCE" refId="45"/>    
     <end type="TARGET" refId="14"/>  
   </realization>  
-  <realization id="130">    
-    <end type="SOURCE" refId="54"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <association id="131">    
-    <bendpoint x="10497" y="1220"/>    
-    <end type="SOURCE" refId="32" navigable="false">      
-      <attribute id="132" name="arrayWifi"/>      
-      <multiplicity id="133" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="134">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="135" name="write"/>      
-      <multiplicity id="136" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="137">    
-    <end type="SOURCE" refId="46"/>    
-    <end type="TARGET" refId="35"/>  
-  </generalization>  
-  <generalization id="138">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="35"/>  
-  </generalization>  
-  <realization id="139">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="28"/>  
-  </realization>  
-  <association id="140">    
+  <association id="62">    
     <end type="SOURCE" refId="40" navigable="false">      
-      <attribute id="141" name="filter"/>      
-      <multiplicity id="142" minimum="0" maximum="1"/>    
+      <attribute id="63" name="filter">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="143">    
-    <end type="SOURCE" refId="55" navigable="false">      
-      <attribute id="144" name="arrayDiffAlgo2"/>      
-      <multiplicity id="145" minimum="0" maximum="2147483647"/>    
+  <generalization id="65">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <realization id="66">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="67">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="68" name="arrayWifi">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="69" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="71" name="arrayMac">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="72" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="73">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="35"/>  
+  </generalization>  
+  <realization id="74">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="75">    
+    <bendpoint x="10497" y="1220"/>    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="76" name="arrayWifi">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="77" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="78">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <realization id="79">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="80">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="81" name="lineAlgo1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="35"/>  
+  </generalization>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <nesting id="85">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="23"/>  
+  </nesting>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="35"/>  
+  </generalization>  
+  <association id="87">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="88" name="arrayWigleWifiLine">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="89" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="91" name="sampleScan">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="92" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="93">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <association id="94">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="95" name="readInput">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="96" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="97">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="98" name="sort">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="99" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="100">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="101" name="arrayMac">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="102" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="103">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="104">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <realization id="105">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="35"/>  
+  </generalization>  
+  <realization id="107">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="108">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="109">    
+    <bendpoint x="9174" y="1220"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="110" name="wifi">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="111" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="113" name="arrayDiffAlgo1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="114" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="59" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="146">    
+  <realization id="115">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="116">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <association id="117">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="118" name="write">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="119" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="120">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="121">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="122">    
+    <bendpoint x="11017" y="584"/>    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="123" name="input">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="124" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="125">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="14"/>  
   </realization>  
+  <association id="126">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="127" name="arrayMacLocation">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="128" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="129">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="130">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="131" name="arrayTemp">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="132" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="55" navigable="false">      
+      <attribute id="134" name="arrayDiffAlgo2">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="135" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="59" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="136">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </nesting>  
+  <realization id="137">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="138">    
+    <bendpoint x="11038" y="584"/>    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="139" name="write">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="140" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="141">    
+    <bendpoint x="10704" y="584"/>    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="142">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="143" name="arrayData">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="144" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="145">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <generalization id="146">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -19,7 +19,7 @@ import read.SampleScan;
  * @author Orel and Samuel.
  * @param <SampleScan>
  */
-public abstract class WriteKml implements WriteFile<SampleScan> {
+public class WriteKml implements WriteFile<SampleScan> {
 
 	private Document document;
 	private String fileName;
@@ -35,9 +35,17 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 	}
 
 	/**
-	 * abstract method, we define it in the other classes.
+	 * The method check the data, by the id.
+	 * @param array.
+	 * @exception InputException : printStackTrace.
 	 */
-	public abstract void receiveData(ArrayList<SampleScan> array);
+	@Override
+	public void receiveData(ArrayList<SampleScan> array) {
+		writeHeader();
+		for (SampleScan sampleScan : array)
+			KmlUtil.addPlacemark(sampleScan, document);
+		writeFile();
+	}
 
 	/**
 	 * Initialisation of the kml file, write the links with the icons.
@@ -54,7 +62,7 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 	 * @exception IOException | {@link KmlException} : Error writing the file.
 	 */
 	@Override
-	public void writeFile() throws InputException {
+	public void writeFile() {
 		try {
 			Kml kml = new Kml();
 			kml.setFeature(document);
@@ -62,7 +70,6 @@ public abstract class WriteKml implements WriteFile<SampleScan> {
 		}
 		catch(IOException | KmlException | NullPointerException ex) {
 			System.out.println("Error writing the file." + ex);
-			throw new InputException("There is no placemark in the document.");
 		}
 	}
 

@@ -9,8 +9,8 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
 import libraries.Filter;
+import objects.Wifi;
 import read.SampleScan;
-import read.Wifi;
 
 public class FilterTest {
 

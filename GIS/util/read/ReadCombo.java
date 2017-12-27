@@ -12,6 +12,7 @@ import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import libraries.InputException;
 import libraries.ParseDate;
 import libraries.ReadFolder;
+import objects.Wifi;
 
 /**
  * This class extends @see {@link ReadCsv} and implements @see {@link Read}.

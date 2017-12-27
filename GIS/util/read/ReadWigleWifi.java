@@ -9,6 +9,8 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
 import libraries.ReadFolder;
+import objects.CsvFile;
+import objects.WigleWifiLine;
 
 /**
  * This class extends {@link ReadCsv} and implements @see {@link ReadFile}.
