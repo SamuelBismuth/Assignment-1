@@ -26,8 +26,13 @@ import objects.WigleWifiLine;
 
 public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWifiLine> {
 
-	public ReadWigleWifi(String folderName, ArrayList<CsvFile> array, File file) {
-		super(folderName, array, file);
+	/**
+	 * Constructor.
+	 * @param filePath
+	 * @param array
+	 */
+	public ReadWigleWifi(String filePath, ArrayList<CsvFile> array) {
+		super(filePath, array);
 	}
 
 	/**
@@ -39,7 +44,7 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 	@Override
 	public void readBuffer() {
 		try {
-			BufferedReader br = readFile(folderName + file);
+			BufferedReader br = readFile(filePath);
 			String firstLine = br.readLine();
 			ArrayList<WigleWifiLine> arrayLine = new ArrayList<WigleWifiLine>();
 			if (Format.checkTheFile(firstLine)) {
