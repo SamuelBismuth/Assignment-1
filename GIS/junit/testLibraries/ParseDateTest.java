@@ -69,9 +69,9 @@ public class ParseDateTest {
 	@Test
 	public void testStringToDateDataBase() {
 		try {
-			String dateString = "Fri Dec 01 15:37:01 IST 2017";
+			String dateString = "Mon Nov 27 16:16:45 IST 2017";
 			GregorianCalendar calendar = ParseDate.stringToDateDataBase(dateString);
-			assertEquals("Fri Dec 01 15:37:01 IST 2017", calendar.getTime().toString());
+			assertEquals("Mon Nov 27 16:16:45 IST 2017", calendar.getTime().toString());
 		} 
 		catch (InputException e) {
 			e.printStackTrace();

@@ -19,11 +19,11 @@
     <TextView
         android:layout_marginTop="10dp"
         android:textSize="20dp"
-        android:layout_width="122dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Sample Scan :" />
+        android:text="Sample(s) Scan(s) :" />
 
     <TextView
         android:id="@+id/numberOfSampleScan"
@@ -35,14 +35,14 @@
     <TextView
         android:layout_marginTop="10dp"
         android:textSize="20dp"
-        android:layout_width="122dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Sample Wifi :" />
+        android:text="Sample(s) Wifi(s) :" />
 
     <TextView
-        android:id="@+id/numberOfSampleWifi"
+        android:id="@+id/numberOfWifi"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:layout_width="match_parent"
@@ -56,17 +56,17 @@
         android:text="IMPORT" />
 
     <Button
-        android:id="@+id/exportFile"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="exportFile"
         android:text="EXPORT" />
 
     <Button
-        android:id="@+id/filter"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="filter"
         android:text="FILTER" />
 
     <Button
@@ -82,6 +82,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="clearDataBase"
         android:text="CLEAR DATABASE" />
 
 

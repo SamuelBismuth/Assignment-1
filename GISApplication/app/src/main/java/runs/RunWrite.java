@@ -2,28 +2,27 @@ package runs;
 
 import java.util.ArrayList;
 
+import objects.SampleScan;
 import write.WriteFile;
 
-public class RunWrite<T> implements Runnable {
+public class RunWrite implements Runnable {
 
-	private WriteFile<T> write;
-	private String file;
-	private ArrayList<T> array;
+	private WriteFile write;
+	private ArrayList<SampleScan> array;
 	
-	public RunWrite(WriteFile<T> write, String file, ArrayList<T> array) {
+	public RunWrite(WriteFile write, ArrayList<SampleScan> array) {
 		this.write = write;
- 		this.file = file;
  		this.array = array;
 	}
 
 	@Override
 	public void run() {
-		System.out.println("Beginning the write of : " + file);
+		System.out.println("Beginning the writing.");
 		Long start = System.currentTimeMillis();
 		write.receiveData(array);
 		Long end = System.currentTimeMillis();
-		System.out.println("finishing the writing of : " + file);
-		System.out.println("Time of the wrinting : " + (end - start) + "milliseconds");
+		System.out.println("finishing the writing.");
+		System.out.println("Time of the writing : " + (end - start) + "milliseconds");
 	}
 
 }

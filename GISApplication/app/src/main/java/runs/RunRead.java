@@ -1,16 +1,14 @@
 package runs;
 
-import android.util.Log;
-
 import objects.SampleScan;
 import read.ReadCsv;
 
-public class RunRead implements Runnable {
+public class RunRead<T> implements Runnable {
 
-	private ReadCsv<SampleScan> readInput;
+	private ReadCsv<T> readInput;
 	private String combo;
 	
-	public RunRead(ReadCsv<SampleScan> readInput, String combo) {
+	public RunRead(ReadCsv<T> readInput, String combo) {
 		this.readInput = readInput;
 		this.combo = combo;
 	}

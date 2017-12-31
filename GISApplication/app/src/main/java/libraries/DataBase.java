@@ -10,11 +10,11 @@ import objects.WeigthAverage;
 
 public class DataBase {
 
-	private static ArrayList<CsvFile> arrayCsvFile;
-	private static ArrayList<SampleScan> arraySampleScan;
-	private static ArrayList<Mac> arrayMac;
-	private static ArrayList<LineAlgo1> arrayLineAlgo1;
-	private static ArrayList<WeigthAverage> arrayWeightAverage;
+	private static ArrayList<CsvFile> arrayCsvFile = new ArrayList<CsvFile>();
+	private static ArrayList<SampleScan> arraySampleScan = new ArrayList<SampleScan>();
+	private static ArrayList<Mac> arrayMac = new ArrayList<Mac>();
+	private static ArrayList<LineAlgo1> arrayLineAlgo1 = new ArrayList<LineAlgo1>();
+	private static ArrayList<WeigthAverage> arrayWeightAverage= new ArrayList<WeigthAverage>();
 	
 	/**
 	 * @return the arrayCsvFile
@@ -85,7 +85,26 @@ public class DataBase {
 	public static void setArrayWeightAverage(ArrayList<WeigthAverage> arrayWeightAverage) {
 		DataBase.arrayWeightAverage = arrayWeightAverage;
 	}
-	
+
+	public static boolean addArraySampleScan(ArrayList<SampleScan> arrayToAdd) {
+		return arraySampleScan.addAll(arrayToAdd);
+	}
+
+	public static boolean addArrayCsvFile(ArrayList<CsvFile> arrayToAdd) {
+		return arrayCsvFile.addAll(arrayToAdd);
+	}
+
+	public static int numberOfWifi() {
+		int sum = 0;
+		for (SampleScan sampleScan : arraySampleScan)
+			sum += sampleScan.getArrayStrongerWifi().size();
+		return sum;
+	}
+
+	public static void clear() {
+		arraySampleScan.clear();
+	}
+
 	/**
 	 * This method check if the id exist into the database.
 	 * @param id.

@@ -1,6 +1,11 @@
 package write;
 
+import android.os.Environment;
+import android.util.Log;
+
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import org.boehn.kmlframework.kml.Document;
@@ -17,9 +22,9 @@ import objects.SampleScan;
  * This class implements @see {@link WriteFile}.
  * @see NOTICE for more informations about how to run with the api.
  * @author Orel and Samuel.
- * @param <SampleScan>
+ *>
  */
-public class WriteKml implements WriteFile<SampleScan> {
+public class WriteKml implements WriteFile {
 
 	private Document document;
 	private String fileName;
@@ -66,18 +71,13 @@ public class WriteKml implements WriteFile<SampleScan> {
 		try {
 			Kml kml = new Kml();
 			kml.setFeature(document);
-			kml.createKml(fileName);
+			PrintWriter outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));
+			outs.print(kml.toString());
+			outs.close();
 		}
-		catch(IOException | KmlException | NullPointerException ex) {
+		catch(IOException | NullPointerException ex) {
 			System.out.println("Error writing the file." + ex);
 		}
 	}
 
-	/**
-	 * @return fileName.
-	 */
-	@Override
-	public String getFileName() {
-		return fileName;
-	}
 }

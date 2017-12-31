@@ -1,5 +1,7 @@
 package libraries;
 
+import android.util.Log;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
@@ -66,7 +68,7 @@ public class ParseDate {
 		catch (ParseException e) {
 			return stringToDateDataBase(dateString);
 		}
-	}	
+	}
 
 	/**
 	 * Set the string time of the csv into the object {@link GregorianCalendar}.
@@ -77,9 +79,10 @@ public class ParseDate {
 	 */
 	static public GregorianCalendar stringToDateDataBase(String dateString) throws InputException {
 		try {
-			SimpleDateFormat parser = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.US);
+			String newDate = dateString.substring(0, 20) + dateString.substring(24, dateString.length());
+			SimpleDateFormat parser = new SimpleDateFormat("EEE MMM dd HH:mm:ss yyyy", Locale.US);
 			GregorianCalendar calendar = new GregorianCalendar();
-			calendar.setTime(parser.parse(dateString));
+			calendar.setTime(parser.parse(newDate));
 			return calendar;
 		}
 		catch (ParseException e) {

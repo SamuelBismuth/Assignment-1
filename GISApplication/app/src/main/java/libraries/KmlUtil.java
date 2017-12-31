@@ -108,7 +108,7 @@ public class KmlUtil {
 	 * @param time.
 	 * @return yyyy-mm-ddThh:mm:ssZ.
 	 */
-	public static String timeInput(GregorianCalendar time) {//done
+	public static String timeInput(GregorianCalendar time) {
 		return Integer.toString(time.get(Calendar.YEAR)) + "-" + dataChange((time.get(Calendar.MONTH))) + "-" + 
 				dataChange((time.get(Calendar.DATE))) + "T" + dataChange((time.get(Calendar.HOUR_OF_DAY))) 
 				+ ":" + dataChange((time.get(Calendar.MINUTE))) + ":" + dataChange((time.get(Calendar.SECOND))) + "Z";

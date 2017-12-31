@@ -1,6 +1,9 @@
 package write;
 
-import java.io.FileWriter;
+import android.app.Activity;
+import android.os.Environment;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -12,26 +15,24 @@ import objects.Wifi;
  * This class writes the csv file.
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
- * @param <SampleScan>.
  */
-public class WriteCombo implements WriteFile<SampleScan> {
+public class WriteCombo implements WriteFile {
 
-	private FileWriter fw;
+	private Activity activity;
 	private PrintWriter outs;
-	private String fileName;
 
 	/**
 	 * Constructor.
-	 * @param array.
+	 * @param fileName.
 	 * @exception IOException : Error writing the file.
 	 */
-	public WriteCombo(String fileName) {
+	public WriteCombo(String fileName, Activity activity) {
 		try {
+			this.activity = activity;
 			fileName += ".csv";
-			this.fileName = fileName;
-			this.fw = new FileWriter(fileName);
-			this.outs = new PrintWriter(fw);
-		} 
+			if (externalStorageAvailable())
+				this.outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));
+		}
 		catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -45,15 +46,18 @@ public class WriteCombo implements WriteFile<SampleScan> {
 	public void receiveData(ArrayList<SampleScan> array) {
 		writeHeader();
 		for (SampleScan scan : array) {
-			outs.print(scan.getTime().getTime() + ",");
-			outs.print(scan.getId() + ",");
-			if (scan.getPointLocation().getLatitude() != 0) outs.print(scan.getPointLocation().getLatitude() + ",");
-			else outs.print("null,");
-			if (scan.getPointLocation().getLongitude() != 0) outs.print(scan.getPointLocation().getLongitude() + ",");
-			else outs.print("null,");
-			if (scan.getPointLocation().getAltitude() != 0) outs.print(scan.getPointLocation().getAltitude() + ",");
-			else outs.print("null,");
-			outs.print(scan.getWifiNetworks() + ",");
+			this.outs.print(scan.getTime().getTime() + ",");
+			this.outs.print(scan.getId() + ",");
+			if (scan.getPointLocation().getLatitude() != 0)
+				this.outs.print(scan.getPointLocation().getLatitude() + ",");
+			else this.outs.print("null,");
+			if (scan.getPointLocation().getLongitude() != 0)
+				this.outs.print(scan.getPointLocation().getLongitude() + ",");
+			else this.outs.print("null,");
+			if (scan.getPointLocation().getAltitude() != 0)
+				this.outs.print(scan.getPointLocation().getAltitude() + ",");
+			else this.outs.print("null,");
+			this.outs.print(scan.getWifiNetworks() + ",");
 			addNetwork(scan);
 		}
 		writeFile();
@@ -64,10 +68,10 @@ public class WriteCombo implements WriteFile<SampleScan> {
 	 */
 	@Override
 	public void writeHeader() {
-		outs.println("Time," + "ID," + "Lat," + "Lon," + "Alt," + "#Wifi networks," + "SSID1," + "MAC1," + "Frequency1," + "Signal1," +
-				"SSID2," + "MAC2," + "Frequency2," + "Signal2," + "SSID3," + "MAC3," + "Frequency3," + "Signal3," + "SSID4," + "MAC4," + 
-				"Frequency4," + "Signal4," + "SSID5," + "MAC5," + "Frequency5," + "Signal5," + "SSID6," + "MAC6," + "Frequency6," + 
-				"Signal6," + "SSID7," + "MAC7," + "Frequency7," + "Signal7," + "SSID8," + "MAC8," + "Frequency8," + "Signal8," + 
+		this.outs.println("Time," + "ID," + "Lat," + "Lon," + "Alt," + "#Wifi networks," + "SSID1," + "MAC1," + "Frequency1," + "Signal1," +
+				"SSID2," + "MAC2," + "Frequency2," + "Signal2," + "SSID3," + "MAC3," + "Frequency3," + "Signal3," + "SSID4," + "MAC4," +
+				"Frequency4," + "Signal4," + "SSID5," + "MAC5," + "Frequency5," + "Signal5," + "SSID6," + "MAC6," + "Frequency6," +
+				"Signal6," + "SSID7," + "MAC7," + "Frequency7," + "Signal7," + "SSID8," + "MAC8," + "Frequency8," + "Signal8," +
 				"SSID9," + "MAC9," + "Frequency9," + "Signal9," +"SSID10," + "MAC10," + "Frequency10," + "Signal10,");
 	}
 
@@ -76,38 +80,30 @@ public class WriteCombo implements WriteFile<SampleScan> {
 	 * @exception IOException : Error writing file.
 	 */
 	@Override
-	public void writeFile() {	
-		try {
-			outs.close(); 
-			fw.close();
-		} 
-		catch (IOException ex) {
-			System.out.println("Error writing file : " + ex);
-		}
+	public void writeFile() {
+		this.outs.close();
 	}
-	
-	/**
-	 * @return fileName.
-	 */
-	@Override
-	public String getFileName() {
-		return fileName;
-	}
-	
+
 	//Private unimplemented method.
-	
+
 	/**
 	 * This method write the data we need.
 	 * @param scan.
 	 */
 	private void addNetwork(SampleScan scan) {
 		for (Wifi wifi : scan.getArrayStrongerWifi()) {
-			outs.print(wifi.getName() + ",");
-			outs.print(wifi.getMac() + ",");
-			outs.print(wifi.getFrequency() + ",");
-			outs.print(wifi.getSignal() + ",");
+			this.outs.print(wifi.getName() + ",");
+			this.outs.print(wifi.getMac() + ",");
+			this.outs.print(wifi.getFrequency() + ",");
+			this.outs.print(wifi.getSignal() + ",");
 		}
-		outs.println();
+		this.outs.println();
 	}
-	
+
+	private boolean externalStorageAvailable() {
+		return
+				Environment.MEDIA_MOUNTED
+						.equals(Environment.getExternalStorageState());
+	}
+
 }
