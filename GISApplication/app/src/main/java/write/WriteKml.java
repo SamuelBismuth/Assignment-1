@@ -24,7 +24,7 @@ import objects.SampleScan;
  * @author Orel and Samuel.
  *>
  */
-public class WriteKml implements WriteFile {
+public class WriteKml extends WriteFile<SampleScan> {
 
 	private Document document;
 	private String fileName;
@@ -71,7 +71,9 @@ public class WriteKml implements WriteFile {
 		try {
 			Kml kml = new Kml();
 			kml.setFeature(document);
-			PrintWriter outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));
+			PrintWriter outs = null;
+			if (externalStorageAvailable())
+				outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));
 			outs.print(kml.toString());
 			outs.close();
 		}

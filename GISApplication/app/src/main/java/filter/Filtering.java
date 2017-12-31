@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import cast.CastFromMacToLineAlgo1;
 import libraries.InputException;
 import objects.SampleScan;
 import objects.Wifi;

@@ -1,5 +1,9 @@
 package runs;
 
+import android.app.Activity;
+import android.os.Looper;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
 
@@ -10,9 +14,11 @@ import objects.WeigthAverage;
 public class CallableAlgorithm2 implements Callable<ArrayList<SampleScan>> {
 	
 	private ArrayList<SampleScan> arrayInput;
+	private Activity activity;
 	
-	public CallableAlgorithm2(ArrayList<SampleScan> arrayInput) {
+	public CallableAlgorithm2(ArrayList<SampleScan> arrayInput, Activity activity) {
 		this.arrayInput = arrayInput;
+		this.activity = activity;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -29,6 +35,7 @@ public class CallableAlgorithm2 implements Callable<ArrayList<SampleScan>> {
 							)
 					);
 			thread.start();
+			thread.join();
 		}
 		Long end = System.currentTimeMillis();
 		System.out.println("finishing to run the algorithm");

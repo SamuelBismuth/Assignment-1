@@ -10,7 +10,7 @@ import objects.Mac;
  * This class cast the {@link ArrayList} of {@link Mac} to an {@link ArrayList} of {@link LineAlgo1}.
  * @author Orel and Samuel.
  */
-public class CastFromMacToLineAlgo1 implements Cast<Mac, LineAlgo1> {
+public class CastFromMacToLineAlgo1 extends Cast<Mac, LineAlgo1> {
 
 	/**
 	 * Empty constructor.

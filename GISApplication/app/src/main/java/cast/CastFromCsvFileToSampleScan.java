@@ -10,11 +10,11 @@ import objects.SampleScan;
 import objects.WigleWifiLine;
 
 /**
- * This class extends @see {@link CastFromCsvFile} and implements @see {@link Cast}.
+ * This class extends @see {@link Cast} and implements @see {@link Cast}.
  * This class cast the {@link ArrayList} of {@link CsvFile} to an {@link ArrayList} of {@link SampleScan}.
  * @author Orel and Samuel.
  */
-public class CastFromCsvFileToSampleScan extends CastFromCsvFile<SampleScan> implements Cast<CsvFile, SampleScan> {
+public class CastFromCsvFileToSampleScan extends Cast<CsvFile, SampleScan> {
 	
 	/**
 	 * Empty constructor.
@@ -48,7 +48,6 @@ public class CastFromCsvFileToSampleScan extends CastFromCsvFile<SampleScan> imp
 	 * @return true if the time did not change.
 	 * @return false if the time has change.
 	 */
-	@Override
 	public boolean needToCreateObject(String timeString, Object object) {
 		SampleScan scan = (SampleScan) object;
 		GregorianCalendar time = new GregorianCalendar();

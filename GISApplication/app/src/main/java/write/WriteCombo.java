@@ -16,7 +16,7 @@ import objects.Wifi;
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
  */
-public class WriteCombo implements WriteFile {
+public class WriteCombo extends WriteFile<SampleScan> {
 
 	private Activity activity;
 	private PrintWriter outs;
@@ -99,11 +99,4 @@ public class WriteCombo implements WriteFile {
 		}
 		this.outs.println();
 	}
-
-	private boolean externalStorageAvailable() {
-		return
-				Environment.MEDIA_MOUNTED
-						.equals(Environment.getExternalStorageState());
-	}
-
 }

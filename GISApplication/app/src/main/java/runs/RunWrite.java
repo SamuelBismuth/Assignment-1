@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import objects.SampleScan;
 import write.WriteFile;
 
-public class RunWrite implements Runnable {
+public class RunWrite<T> implements Runnable {
 
 	private WriteFile write;
-	private ArrayList<SampleScan> array;
+	private ArrayList<T> array;
 	
-	public RunWrite(WriteFile write, ArrayList<SampleScan> array) {
+	public RunWrite(WriteFile write, ArrayList<T> array) {
 		this.write = write;
  		this.array = array;
 	}

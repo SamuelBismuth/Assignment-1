@@ -80,4 +80,10 @@ public class Format {
 		if (firstLine.contains("WigleWifi") && firstLine.contains("display")) return true;
 		return false;
 	}
+
+	public static boolean noGps(String record) {
+		if (record.contains("?"))
+			return true;
+		return false;
+	}
 }

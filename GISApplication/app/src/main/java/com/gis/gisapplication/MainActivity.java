@@ -25,30 +25,37 @@ import java.util.regex.Pattern;
 
 import cast.Cast;
 import cast.CastFromCsvFileToSampleScan;
+import cast.CastFromMacToLineAlgo1;
+import cast.CastFromSampleScanToMac;
 import libraries.DataBase;
 import objects.CsvFile;
+import objects.LineAlgo1;
+import objects.Mac;
 import objects.SampleScan;
 import read.ReadCombo;
 import read.ReadCsv;
 import read.ReadWigleWifi;
 import runs.CallableCast;
 import runs.RunRead;
+import runs.RunWrite;
+import write.WriteCombo;
+import write.WriteComboAlgo1;
+import write.WriteFile;
 
 /**
- * TODO : Detect the format of the file : wigle wifi, combo, combo no gps ?
- * TODO : reorganize the functions
- * TODO : filter
- * TODO : ASSES LOCALISATION
+ * TODO : reorganize the functions and java doc et tout le bordel
  * TODO : SEE IF THREAD IN A GOOD PLACE
- * TODO : EXEPTION EXPORT (FILENAME EMPTY OR PLACE,ARKS EMPTY)
+ * TODO : filter
+ * TODO : If import new file, possibility to access to all the filter we did.
+ * TODO : UNDO
+ * TODO : show database
  * TODO : DESIGN !!
  * TODO : read folder.
- * TODO : Toast message about the import (successful or algo2)
  */
 public class MainActivity extends AppCompatActivity {
 
-    Button importFile;
-    TextView numberOfSampleScan, numberOfWifi;
+    private Button importFile;
+    private TextView numberOfSampleScan, numberOfWifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 threadRead = new Thread(new RunRead<CsvFile>(readWigleWifi, filePath));
             }
             else {
-                ReadCsv<SampleScan> readCombo= new ReadCombo(filePath, arraySampleScan);
+                ReadCsv<SampleScan> readCombo = new ReadCombo(filePath, arraySampleScan, this);
                 threadRead = new Thread(new RunRead<SampleScan>(readCombo, filePath));
             }
             threadRead.start();
@@ -114,7 +121,10 @@ public class MainActivity extends AppCompatActivity {
                     e1.printStackTrace();
                 }
             }
-            Toast.makeText(this, "File have been successfully read!", Toast.LENGTH_SHORT).show();
+            if (arraySampleScan.size() != 0)
+                Toast.makeText(this, "File have been successfully read!", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(this, "You need to fulfill the Data Base before to read a combo no gps!", Toast.LENGTH_SHORT).show();
             DataBase.addArraySampleScan(arraySampleScan);
             numberOfSampleScan.setText(Integer.toString(DataBase.getArraySampleScan().size()));
             numberOfWifi.setText(Integer.toString(DataBase.numberOfWifi()));
@@ -160,6 +170,35 @@ public class MainActivity extends AppCompatActivity {
         DataBase.clear();
         numberOfSampleScan.setText("0");
         numberOfWifi.setText("0");
+    }
+
+    public void assesLocation(View view) {
+        ArrayList<Mac> arrayMac =  new ArrayList<Mac>();
+        CastFromSampleScanToMac castFromSampleScanToMac = new CastFromSampleScanToMac();
+        ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
+        Future<ArrayList<Mac>> future = execut.submit(new CallableCast<SampleScan, Mac>(castFromSampleScanToMac, DataBase.getArraySampleScan()));
+        while (!future.isDone());
+        try {
+            arrayMac = future.get();
+        }
+        catch (InterruptedException | ExecutionException e1) {
+            e1.printStackTrace();
+        }
+        ArrayList<LineAlgo1> arrayLineAlgo1 =  new ArrayList<LineAlgo1>();
+        CastFromMacToLineAlgo1 castFromMacToLineAlgo1 = new CastFromMacToLineAlgo1();
+        ExecutorService execut2 = (ExecutorService) Executors.newSingleThreadExecutor();
+        Future<ArrayList<LineAlgo1>> future2 = execut2.submit(new CallableCast<Mac, LineAlgo1>(castFromMacToLineAlgo1, arrayMac));
+        while (!future2.isDone());
+        try {
+            arrayLineAlgo1 = future2.get();
+        }
+        catch (InterruptedException | ExecutionException e1) {
+            e1.printStackTrace();
+        }
+        WriteFile writeAlgo1 = new WriteComboAlgo1("AssesLocation", this);
+        Thread threadCsv = new Thread(new RunWrite<LineAlgo1>(writeAlgo1, arrayLineAlgo1));
+        threadCsv.start();
+        Toast.makeText(this, "File AssessLocation have been successfully downloaded !", Toast.LENGTH_SHORT).show();
     }
 
 }

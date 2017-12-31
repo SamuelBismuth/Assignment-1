@@ -34,15 +34,19 @@ public class ExportActivity extends AppCompatActivity {
     }
 
     public void export(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "Your Data base is empty, there is nothing to export!", Toast.LENGTH_SHORT).show();
+            finish();
+        }
         if (kml.isChecked()) {
             Document document = new Document();
             WriteFile writeKml = new WriteKml(fileName.getText().toString(), document);
-            Thread threadKml = new Thread(new RunWrite(writeKml, DataBase.getArraySampleScan()));
+            Thread threadKml = new Thread(new RunWrite<SampleScan>(writeKml, DataBase.getArraySampleScan()));
             threadKml.start();
         }
         if (csv.isChecked()) {
             WriteFile writeCsv = new WriteCombo(fileName.getText().toString(), this);
-            Thread threadCsv = new Thread(new RunWrite(writeCsv, DataBase.getArraySampleScan()));
+            Thread threadCsv = new Thread(new RunWrite<SampleScan>(writeCsv, DataBase.getArraySampleScan()));
             threadCsv.start();
         }
         if(kml.isChecked() || csv.isChecked()) {

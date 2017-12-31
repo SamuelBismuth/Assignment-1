@@ -1,5 +1,7 @@
 package write;
 
+import android.os.Environment;
+
 import java.util.ArrayList;
 
 import libraries.InputException;
@@ -17,9 +19,15 @@ import objects.SampleScan;
  * 
  * @author Orel and Samuel.
  */
-public interface WriteFile {
+public abstract class WriteFile<T> {
 	
-	public abstract void receiveData(ArrayList<SampleScan> array);
-	public void writeHeader();
-	public void writeFile() throws InputException;
+	public abstract void receiveData(ArrayList<T> array);
+	public abstract void writeHeader();
+	public abstract void writeFile() throws InputException;
+
+	public boolean externalStorageAvailable() {
+		return
+				Environment.MEDIA_MOUNTED
+						.equals(Environment.getExternalStorageState());
+	}
 }
