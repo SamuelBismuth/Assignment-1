@@ -22,7 +22,8 @@
         <activity android:name=".FilterActivity" />
         <activity android:name=".TimeActivity" />
         <activity android:name=".PlaceActivity" />
-        <activity android:name=".IdActivity"></activity>
+        <activity android:name=".IdActivity" />
+        <activity android:name=".ShowDatabaseActivity"></activity>
     </application>
 
 </manifest>

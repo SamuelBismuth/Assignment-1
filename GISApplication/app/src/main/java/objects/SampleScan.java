@@ -135,4 +135,14 @@ public class SampleScan {
 		return null;
 	}
 
+	@Override
+	public String toString() {
+		return "SampleScan :" +
+				"Time :" + time.getTime().toString() +
+				"Id :" + id +
+				"Latitude :" + pointLocation.getLatitude().toString() +
+				"Longitude :" + pointLocation.getLongitude().toString() +
+				"Altitude :" + pointLocation.getAltitude().toString() +
+				"Wifi networks :" + getWifiNetworks();
+	}
 }

@@ -43,14 +43,15 @@ import write.WriteComboAlgo1;
 import write.WriteFile;
 
 /**
- * TODO : reorganize the functions and java doc et tout le bordel
- * TODO : SEE IF THREAD IN A GOOD PLACE
  * TODO : filter
+ * TODO : DISPLAY ALL THE FILTER (STACK)
  * TODO : If import new file, possibility to access to all the filter we did.
  * TODO : UNDO
- * TODO : show database
- * TODO : DESIGN !!
  * TODO : read folder.
+ * TODO : ALGO 1 ET 2
+ * TODO : reorganize the functions and java doc et tout le bordel
+ * TODO : SEE IF THREAD IN A GOOD PLACE (always need threads ?)
+ * TODO : DESIGN !!
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -159,20 +160,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void exportFile(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "There is no Database to export !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         startActivity(new Intent(MainActivity.this, ExportActivity.class));
     }
 
     public void filter(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "There is no Database to filter !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         startActivity(new Intent(MainActivity.this, FilterActivity.class));
     }
 
     public void clearDataBase(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "Database is already empty !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         DataBase.clear();
         numberOfSampleScan.setText("0");
         numberOfWifi.setText("0");
     }
 
     public void assesLocation(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "There is not sample scan in the Database !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         ArrayList<Mac> arrayMac =  new ArrayList<Mac>();
         CastFromSampleScanToMac castFromSampleScanToMac = new CastFromSampleScanToMac();
         ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
@@ -199,6 +216,14 @@ public class MainActivity extends AppCompatActivity {
         Thread threadCsv = new Thread(new RunWrite<LineAlgo1>(writeAlgo1, arrayLineAlgo1));
         threadCsv.start();
         Toast.makeText(this, "File AssessLocation have been successfully downloaded !", Toast.LENGTH_SHORT).show();
+    }
+
+    public void showDataBase(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "There is no Database to display !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        startActivity(new Intent(MainActivity.this, ShowDatabaseActivity.class));
     }
 
 }
