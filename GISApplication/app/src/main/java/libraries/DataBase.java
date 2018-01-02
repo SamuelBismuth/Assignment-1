@@ -1,7 +1,9 @@
 package libraries;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
+import filter.Filter;
 import objects.CsvFile;
 import objects.LineAlgo1;
 import objects.Mac;
@@ -15,7 +17,9 @@ public class DataBase {
 	private static ArrayList<Mac> arrayMac = new ArrayList<Mac>();
 	private static ArrayList<LineAlgo1> arrayLineAlgo1 = new ArrayList<LineAlgo1>();
 	private static ArrayList<WeigthAverage> arrayWeightAverage= new ArrayList<WeigthAverage>();
-	
+
+	private static Stack<Filter> filterStack = new Stack<Filter>();
+
 	/**
 	 * @return the arrayCsvFile
 	 */
@@ -116,5 +120,20 @@ public class DataBase {
 			if (csvFile.getId() == id) return true;
 		return false;
 	}
-	
+
+	public static void pushFilter(Filter filter) {
+		filterStack.push(filter);
+	}
+
+	public static Stack<Filter> getFilterStack() {
+		return filterStack;
+	}
+
+	public static void pushStack(Filter filter) {
+		filterStack.push(filter);
+	}
+
+	public static Filter popStack() {
+		return filterStack.pop();
+	}
 }

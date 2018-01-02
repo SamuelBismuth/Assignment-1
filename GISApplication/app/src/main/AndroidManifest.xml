@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gis.gisapplication">
 
+    <uses-sdk android:minSdkVersion="19" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +24,8 @@
         </activity>
         <activity android:name=".ExportActivity" />
         <activity android:name=".FilterActivity" />
-        <activity android:name=".ShowDatabaseActivity"></activity>
+        <activity android:name=".ShowDatabaseActivity" />
+        <activity android:name=".ShowFilterActivity"></activity>
     </application>
 
 </manifest>

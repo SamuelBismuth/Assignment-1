@@ -1,9 +1,11 @@
 package com.gis.gisapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.nbsp.materialfilepicker.ui.FilePickerActivity;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Stack;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -27,6 +30,8 @@ import cast.Cast;
 import cast.CastFromCsvFileToSampleScan;
 import cast.CastFromMacToLineAlgo1;
 import cast.CastFromSampleScanToMac;
+import filter.Filter;
+import filter.Filtering;
 import libraries.DataBase;
 import objects.CsvFile;
 import objects.LineAlgo1;
@@ -43,21 +48,20 @@ import write.WriteComboAlgo1;
 import write.WriteFile;
 
 /**
- * TODO : filter
- * TODO : DISPLAY ALL THE FILTER (STACK)
- * TODO : If import new file, possibility to access to all the filter we did.
- * TODO : UNDO
  * TODO : read folder.
  * TODO : ALGO 1 ET 2
+ * TODO : NUMBER PICKER
+ * TODO : seconds
  * TODO : reorganize the functions and java doc et tout le bordel
  * TODO : SEE IF THREAD IN A GOOD PLACE (always need threads ?) (answer sephie)
  * TODO : REORGANIZE ALL THE THREAD (CLAABLE NEED TO BE IMPROVE : USE OF THE DATRA BASE)
  * TODO : DESIGN !!
+ * TODO : TESTS
  */
 public class MainActivity extends AppCompatActivity {
 
     private Button importFile;
-    private TextView numberOfSampleScan, numberOfWifi;
+    private static TextView numberOfSampleScan, numberOfWifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,14 +97,13 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1000 && resultCode == RESULT_OK) {
             String filePath = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);
-            ArrayList<SampleScan> arraySampleScan =  new ArrayList<SampleScan>();
+            ArrayList<SampleScan> arraySampleScan = new ArrayList<SampleScan>();
             ArrayList<CsvFile> arrayCsvFile = new ArrayList<CsvFile>();
             Thread threadRead;
             if (read(filePath)) {
                 ReadCsv<CsvFile> readWigleWifi = new ReadWigleWifi(filePath, arrayCsvFile);
                 threadRead = new Thread(new RunRead<CsvFile>(readWigleWifi, filePath));
-            }
-            else {
+            } else {
                 ReadCsv<SampleScan> readCombo = new ReadCombo(filePath, arraySampleScan, this);
                 threadRead = new Thread(new RunRead<SampleScan>(readCombo, filePath));
             }
@@ -110,16 +113,15 @@ public class MainActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            if (arrayCsvFile.size() != 0)  {
+            if (arrayCsvFile.size() != 0) {
                 DataBase.addArrayCsvFile(arrayCsvFile);
                 Cast castCsv = new CastFromCsvFileToSampleScan();
                 ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
                 Future<ArrayList<SampleScan>> future = execut.submit(new CallableCast<CsvFile, SampleScan>(castCsv, arrayCsvFile));
-                while (!future.isDone());
+                while (!future.isDone()) ;
                 try {
                     arraySampleScan = future.get();
-                }
-                catch (InterruptedException | ExecutionException e1) {
+                } catch (InterruptedException | ExecutionException e1) {
                     e1.printStackTrace();
                 }
             }
@@ -128,8 +130,29 @@ public class MainActivity extends AppCompatActivity {
             else
                 Toast.makeText(this, "You need to fulfill the Data Base before to read a combo no gps!", Toast.LENGTH_SHORT).show();
             DataBase.addArraySampleScan(arraySampleScan);
-            numberOfSampleScan.setText(Integer.toString(DataBase.getArraySampleScan().size()));
-            numberOfWifi.setText(Integer.toString(DataBase.numberOfWifi()));
+            refreshDataBase();
+            if (DataBase.getFilterStack().size() != 0) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Filter");
+                builder.setMessage("Do you want to use the previous filter in the new import?");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (Filter filter : DataBase.getFilterStack())
+                            filter.run();
+                        dialog.dismiss();
+                    }
+                });
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+
         }
     }
 
@@ -181,6 +204,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Database is already empty !", Toast.LENGTH_SHORT).show();
             return;
         }
+        clear();
+    }
+
+    public static void clear() {
         DataBase.clear();
         numberOfSampleScan.setText("0");
         numberOfWifi.setText("0");
@@ -227,4 +254,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, ShowDatabaseActivity.class));
     }
 
+    public static void refreshDataBase() {
+        numberOfSampleScan.setText(Integer.toString(DataBase.getArraySampleScan().size()));
+        numberOfWifi.setText(Integer.toString(DataBase.numberOfWifi()));
+    }
+
+
+
+    public void showFilter(View view) {
+        if (DataBase.getFilterStack().isEmpty()) {
+            Toast.makeText(this, "There is no Filter to display !", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        startActivity(new Intent(MainActivity.this, ShowFilterActivity.class));
+    }
 }

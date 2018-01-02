@@ -16,10 +16,37 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import org.boehn.kmlframework.coordinates.EarthCoordinate;
+
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import filter.Filter;
+import filter.Filtering;
+import filter.FilteringKmlId;
+import filter.FilteringKmlPlace;
+import filter.FilteringKmlTime;
+import libraries.DataBase;
+import libraries.InputException;
+import libraries.ParseDate;
+import objects.Logic;
+import objects.SampleScan;
 
 public class FilterActivity extends AppCompatActivity {
+
+    private Logic logic = new Logic("None");
+    private Filtering filtering1, filtering2;
+
+    private static int yearBeginning, monthBeginning, dayBeginning, hoursBeginning, minBeginning,
+                yearEnd, monthEnd, dayEnd, hoursEnd, minEnd,
+            yearBeginningFilter2, monthBeginningFilter2, dayBeginningFilter2, hoursBeginningFilter2, minBeginningFilter2,
+            yearEndFilter2, monthEndFilter2, dayEndFilter2, hoursEndFilter2, minEndFilter2;
+
+
+    private String choiceFilter1 = "Time", choiceFilter2;
 
     private Spinner spinnerLogic, spinnerFilter1, spinnerFilter2;
     private EditText editTextIdFilter1, latitudePlaceFilter1, longitudePlaceFilter1, radiusPlaceFilter1,
@@ -27,6 +54,7 @@ public class FilterActivity extends AppCompatActivity {
     private static TextView displayTimeBeginning, displayDateBeginning,displayTimeEnd, displayDateEnd,
             displayTimeBeginningFilter2, displayDateBeginningFilter2, displayTimeEndFilter2, displayDateEndFilter2;
     private LinearLayout filter2, idFilter1, placeFilter1, timeFilter1, idFilter2, placeFilter2, timeFilter2;
+
     private Switch not;
 
     /**
@@ -213,6 +241,7 @@ public class FilterActivity extends AppCompatActivity {
     }
 
     public void onNone() {
+        logic.setLogic("None");
         filter2.setVisibility(View.GONE);
         placeFilter2.setVisibility(View.GONE);
         idFilter2.setVisibility(View.GONE);
@@ -220,28 +249,33 @@ public class FilterActivity extends AppCompatActivity {
     }
 
     public void onAnd() {
+        logic.setLogic("And");
         filter2.setVisibility(View.VISIBLE);
         timeFilter2.setVisibility(View.VISIBLE);
     }
 
     public void onOr() {
+        logic.setLogic("Or");
         filter2.setVisibility(View.VISIBLE);
         timeFilter2.setVisibility(View.VISIBLE);
     }
 
     public void onTime() {
+        choiceFilter1 = "Time";
         placeFilter1.setVisibility(View.GONE);
         idFilter1.setVisibility(View.GONE);
         timeFilter1.setVisibility(View.VISIBLE);
     }
 
     public void onId() {
+        choiceFilter1 = "Id";
         placeFilter1.setVisibility(View.GONE);
         timeFilter1.setVisibility(View.GONE);
         idFilter1.setVisibility(View.VISIBLE);
     }
 
     public void onPlace() {
+        choiceFilter1 = "Place";
         idFilter1.setVisibility(View.GONE);
         timeFilter1.setVisibility(View.GONE);
         placeFilter1.setVisibility(View.VISIBLE);
@@ -268,15 +302,23 @@ public class FilterActivity extends AppCompatActivity {
     public static void setTimeFilter(String tag, int hour, int minute){
         switch (tag) {
             case "timePicker" :
+                hoursBeginning = hour;
+                minBeginning = minute;
                 displayTimeBeginning.setText("You picked : Hour :" + Integer.toString(hour) + "Minute :" + Integer.toString(minute));
                 break;
             case "timePickerEnd" :
+                hoursEnd = hour;
+                minEnd = minute;
                 displayTimeEnd.setText("You picked : Hour :" + Integer.toString(hour) + "Minute :" + Integer.toString(minute));
                 break;
             case "timePickerFilter2" :
+                hoursBeginningFilter2 = hour;
+                minBeginningFilter2 = minute;
                 displayTimeBeginningFilter2.setText("You picked : Hour :" + Integer.toString(hour) + "Minute :" + Integer.toString(minute));
                 break;
             case "timePickerEndFilter2" :
+                hoursEndFilter2 = hour;
+                minEndFilter2 = minute;
                 displayTimeEndFilter2.setText("You picked : Hour :" + Integer.toString(hour) + "Minute :" + Integer.toString(minute));
                 break;
             default:
@@ -286,15 +328,27 @@ public class FilterActivity extends AppCompatActivity {
     public static void setDateFilter(String tag, int year, int month, int day) {
         switch (tag) {
             case "datePicker":
+                yearBeginning = year;
+                monthBeginning = month;
+                dayBeginning = day;
                 displayDateBeginning.setText("You picked : Year :" + Integer.toString(year) + "Month :" + Integer.toString(month) + "Day :" + Integer.toString(day));
                  break;
             case "datePickerEnd" :
+                yearEnd = year;
+                monthEnd = month;
+                dayEnd = day;
                 displayDateEnd.setText("You picked : Year :" + Integer.toString(year) + "Month :" + Integer.toString(month) + "Day :" + Integer.toString(day));
                 break;
             case "datePickerFilter2":
+                yearEndFilter2 = year;
+                monthEndFilter2 = month;
+                dayEndFilter2 = day;
                 displayDateBeginningFilter2.setText("You picked : Year :" + Integer.toString(year) + "Month :" + Integer.toString(month) + "Day :" + Integer.toString(day));
                 break;
             case "datePickerEndFilter2" :
+                yearBeginningFilter2 = year;
+                monthBeginningFilter2 = month;
+                dayBeginningFilter2 = day;
                 displayDateEndFilter2.setText("You picked : Year :" + Integer.toString(year) + "Month :" + Integer.toString(month) + "Day :" + Integer.toString(day));
                 break;
             default:
@@ -302,10 +356,95 @@ public class FilterActivity extends AppCompatActivity {
     }
 
     public void filter(View view) {
-        //logical
-        //not
-        //filter1
-        //filter2?
+        Filter filter = new Filter(
+                (ArrayList< SampleScan>) DataBase.getArraySampleScan().clone(),
+                logic,
+                not.isChecked(),
+                createFilter1(filtering1),
+                createFilter2filtering2(filtering2)
+        );
+        filter.run();
+        DataBase.pushFilter(filter);
+        Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
+        finish();
+    }
+
+    private Filtering createFilter2filtering2(Filtering filtering2) {
+        return null;
+    }
+
+    private Filtering createFilter1(Filtering filtering) {
+        switch(choiceFilter1) {
+            case "Id":
+                return new FilteringKmlId(editTextIdFilter1.getText().toString());
+            case "Place":
+                return new FilteringKmlPlace(
+                        new EarthCoordinate(
+                                Double.parseDouble(latitudePlaceFilter1.getText().toString()),
+                                Double.parseDouble(longitudePlaceFilter1.getText().toString()),
+                                0.0
+                        ),
+                        Double.parseDouble(radiusPlaceFilter1.getText().toString())
+                );
+            case  "Time":
+                return  new FilteringKmlTime(
+                        new GregorianCalendar(
+                                yearBeginning,
+                                monthBeginning,
+                                dayBeginning,
+                                hoursBeginning,
+                                minBeginning
+                        ),
+                        new GregorianCalendar(
+                                yearEnd,
+                                monthEnd,
+                                dayEnd,
+                                hoursEnd,
+                                minEnd
+                        )
+                );
+
+            default:
+                return null;
+        }
+    }
+
+    private Filtering createFilter2(Filtering filtering) {
+        if (choiceFilter1 == null)
+            return null;
+        switch(choiceFilter2) {
+            case "Id":
+                return new FilteringKmlId(editTextIdFilter2.getText().toString());
+            case "Place":
+                return new FilteringKmlPlace(
+                        new EarthCoordinate(
+                                Double.parseDouble(latitudePlaceFilter2.getText().toString()),
+                                Double.parseDouble(longitudePlaceFilter2.getText().toString()),
+                                0.0
+                        ),
+                        Double.parseDouble(radiusPlaceFilter2.getText().toString())
+                );
+            case  "Time":
+                return  new FilteringKmlTime(
+                        new GregorianCalendar(
+                                yearBeginningFilter2,
+                                monthBeginningFilter2,
+                                dayBeginningFilter2,
+                                hoursBeginningFilter2,
+                                minBeginningFilter2
+                        ),
+                        new GregorianCalendar(
+                                yearEndFilter2,
+                                monthEndFilter2,
+                                dayEndFilter2,
+                                hoursEndFilter2,
+                                minEndFilter2
+                        )
+                );
+
+            default:
+                return null;
+        }
     }
 
 }

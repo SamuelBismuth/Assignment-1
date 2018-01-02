@@ -20,8 +20,7 @@ public class FilteringKmlId extends Filtering<SampleScan> {
 	 * Constructor.
 	 * @param id.
 	 */
-	public FilteringKmlId(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, String id) {
-		super(array, logic, not, filter1, filter2);
+	public FilteringKmlId(String id) {
 		this.id = id;
 	}
 	
@@ -33,9 +32,20 @@ public class FilteringKmlId extends Filtering<SampleScan> {
 	@Override
 	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
 		removeDuplicateMac(array);
-		array.removeIf(SampleScan -> !SampleScan.getId().equals(id));
+		//array.removeIf(SampleScan -> !SampleScan.getId().equals(id));
+		ArrayList<SampleScan> arrayClone = (ArrayList<SampleScan>) array.clone();
+		for (SampleScan sampleScan : array) {
+			if (!sampleScan.getId().equals(id))
+				arrayClone.remove(sampleScan);
+		}
 		if (array.size() == 0) throw new InputException("There array is empty.");
-		return array;
+		return arrayClone;
 	}
 
+	@Override
+	public String toString() {
+		return "FilteringKmlId{" +
+				"id='" + id + '\'' +
+				'}';
+	}
 }

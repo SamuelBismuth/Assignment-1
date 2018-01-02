@@ -23,23 +23,35 @@ public class FilteringKmlTime extends Filtering<SampleScan> {
 	 * @param dateBeginning
 	 * @param dateEnd
 	 */
-	public FilteringKmlTime(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, GregorianCalendar dateBeginning, GregorianCalendar dateEnd) {
-		super(array, logic, not, filter1, filter2);
+	public FilteringKmlTime(GregorianCalendar dateBeginning, GregorianCalendar dateEnd) {
 		this.dateBeginning = dateBeginning;
 		this.dateEnd = dateEnd;
 	}
 	
 	/**
 	 * This method filter by the place.
-	 * @param array.
+	 * @param array
 	 * @return array.
 	 */
 	@Override
 	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
 		removeDuplicateMac(array);
-		array.removeIf(SampleScan -> SampleScan.getTime().after(dateBeginning) && SampleScan.getTime().before(dateEnd));
-		if (array.size() == 0) throw new InputException("There array is empty.");
-		return array;
+		//array.removeIf(SampleScan -> SampleScan.getTime().after(dateBeginning) && SampleScan.getTime().before(dateEnd));
+		ArrayList<SampleScan> arrayClone = (ArrayList<SampleScan>) array.clone();
+		for (SampleScan sampleScan : array) {
+			if (!sampleScan.getTime().after(dateBeginning) && sampleScan.getTime().before(dateEnd))
+				arrayClone.remove(sampleScan);
+		}
+		if (array.size() == 0)
+			throw new InputException("There array is empty.");
+		return arrayClone;
 	}
 
+	@Override
+	public String toString() {
+		return "FilteringKmlTime{" +
+				"dateBeginning=" + dateBeginning.getTime().getTime() +
+				", dateEnd=" + dateEnd.getTime().getTime() +
+				'}';
+	}
 }

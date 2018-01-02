@@ -24,23 +24,34 @@ public class FilteringKmlPlace extends Filtering <SampleScan> {
 	 * @param coordinate
 	 * @param radius
 	 */
-	public FilteringKmlPlace(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, EarthCoordinate coordinate, double radius) {
-		super(array, logic, not, filter1, filter2);
+	public FilteringKmlPlace(EarthCoordinate coordinate, double radius) {
 		this.coordinate = coordinate;
 		this.radius = radius;
 	}
 
 	/**
 	 * This method filter by the place.
-	 * @param array.
+	 * @param array
 	 * @return array.
 	 */
 	@Override
 	public ArrayList<SampleScan> filteringBy(ArrayList<SampleScan> array) throws InputException {
+		ArrayList<SampleScan> arrayClone = (ArrayList<SampleScan>) array.clone();
 		removeDuplicateMac(array);
-		array.removeIf(SampleScan -> SampleScan.getPointLocation().distanceTo(coordinate) > radius);
+		//array.removeIf(SampleScan -> SampleScan.getPointLocation().distanceTo(coordinate) > radius);
+		for (SampleScan sampleScan : array) {
+			if (sampleScan.getPointLocation().distanceTo(coordinate) > radius)
+				arrayClone.remove(sampleScan);
+		}
 		if (array.size() == 0) throw new InputException("There array is empty.");
-		return array;
+		return arrayClone;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "FilteringKmlPlace{" +
+				"coordinate=" + coordinate.toString() +
+				", radius=" + radius +
+				'}';
+	}
 }
