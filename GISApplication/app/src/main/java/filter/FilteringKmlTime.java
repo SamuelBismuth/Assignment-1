@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import libraries.InputException;
+import objects.Logic;
 import objects.SampleScan;
 
 /**
@@ -22,7 +23,8 @@ public class FilteringKmlTime extends Filtering<SampleScan> {
 	 * @param dateBeginning
 	 * @param dateEnd
 	 */
-	public FilteringKmlTime(GregorianCalendar dateBeginning, GregorianCalendar dateEnd) {
+	public FilteringKmlTime(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, GregorianCalendar dateBeginning, GregorianCalendar dateEnd) {
+		super(array, logic, not, filter1, filter2);
 		this.dateBeginning = dateBeginning;
 		this.dateEnd = dateEnd;
 	}

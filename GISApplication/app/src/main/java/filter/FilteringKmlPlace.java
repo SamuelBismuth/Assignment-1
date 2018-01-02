@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
 import libraries.InputException;
+import objects.Logic;
 import objects.SampleScan;
 
 /**
@@ -23,7 +24,8 @@ public class FilteringKmlPlace extends Filtering <SampleScan> {
 	 * @param coordinate
 	 * @param radius
 	 */
-	public FilteringKmlPlace(EarthCoordinate coordinate, double radius) {
+	public FilteringKmlPlace(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, EarthCoordinate coordinate, double radius) {
+		super(array, logic, not, filter1, filter2);
 		this.coordinate = coordinate;
 		this.radius = radius;
 	}

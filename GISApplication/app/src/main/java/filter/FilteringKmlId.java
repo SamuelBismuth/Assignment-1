@@ -3,6 +3,7 @@ package filter;
 import java.util.ArrayList;
 
 import libraries.InputException;
+import objects.Logic;
 import objects.SampleScan;
 
 /**
@@ -19,7 +20,8 @@ public class FilteringKmlId extends Filtering<SampleScan> {
 	 * Constructor.
 	 * @param id.
 	 */
-	public FilteringKmlId(String id) {
+	public FilteringKmlId(ArrayList<SampleScan> array, Logic logic, boolean not, Filtering filter1, Filtering filter2, String id) {
+		super(array, logic, not, filter1, filter2);
 		this.id = id;
 	}
 	

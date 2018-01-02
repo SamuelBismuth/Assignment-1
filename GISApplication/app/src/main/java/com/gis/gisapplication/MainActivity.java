@@ -50,7 +50,8 @@ import write.WriteFile;
  * TODO : read folder.
  * TODO : ALGO 1 ET 2
  * TODO : reorganize the functions and java doc et tout le bordel
- * TODO : SEE IF THREAD IN A GOOD PLACE (always need threads ?)
+ * TODO : SEE IF THREAD IN A GOOD PLACE (always need threads ?) (answer sephie)
+ * TODO : REORGANIZE ALL THE THREAD (CLAABLE NEED TO BE IMPROVE : USE OF THE DATRA BASE)
  * TODO : DESIGN !!
  */
 public class MainActivity extends AppCompatActivity {

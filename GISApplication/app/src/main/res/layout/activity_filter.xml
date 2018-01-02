@@ -9,87 +9,333 @@
     android:weightSum="1">
 
     <TextView
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Explication blablabla" />
+        android:text="Choose your logic :" />
+
+    <Spinner
+        android:id="@+id/spinnerLogic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/logic_array" />
 
     <Switch
-        android:id="@+id/time"
-        android:layout_marginTop="10dp"
+        android:id="@+id/not"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TIME" />
-
-    <Switch
-        android:id="@+id/place"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PLACE" />
-
-    <Switch
-        android:id="@+id/id"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID" />
+        android:text="NOT"/>
 
     <TextView
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Explication blablabla" />
+        android:text="Choose a filter :" />
 
-    <RadioGroup
-        android:id="@+id/bool"
-        android:checkedButton="10"
-        android:layout_marginTop="10dp"
+    <Spinner
+        android:id="@+id/spinnerFilter1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible" >
+        android:entries="@array/filter_array" />
 
-        <RadioButton
-            android:id="@+id/and"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AND" />
+    <LinearLayout
+        android:id="@+id/idFilter1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/or"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OR" />
+            android:inputType="textPersonName"
+            android:text="Choose an ID please !" />
 
-        <RadioButton
-            android:id="@+id/not"
+        <EditText
+            android:id="@+id/editTextIdFilter1"
             android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NOT" />
+            android:hint="ID" />
 
-        <RadioButton
-            android:id="@+id/none"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/placeFilter1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NONE"
-            android:checked="true" />
-    </RadioGroup>
+            android:text="Choose some coordinates !" />
+
+        <EditText
+            android:id="@+id/latitudePlaceFilter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Latitude" />
+
+        <EditText
+            android:id="@+id/longitudePlaceFilter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Longitude" />
+
+        <EditText
+            android:id="@+id/radiusPlaceFilter1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Radius" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeFilter1"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_date_beginning"
+                android:onClick="showDatePickerDialog" />
+
+            <TextView
+                android:id="@+id/displayDateBeginning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_time_beginning"
+                android:onClick="showTimePickerDialog" />
+
+            <TextView
+                android:id="@+id/displayTimeBeginning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_date_end"
+                android:onClick="showDatePickerDialogEnd" />
+
+            <TextView
+                android:id="@+id/displayDateEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_time_end"
+                android:onClick="showTimePickerDialogEnd" />
+
+            <TextView
+                android:id="@+id/displayTimeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a second filter :"/>
+
+        <Spinner
+            android:id="@+id/spinnerFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/filter_array" />
+
+    </LinearLayout>
+
+    // IVICICICICICIC
+
+    <LinearLayout
+        android:id="@+id/idFilter2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Choose an ID please !" />
+
+        <EditText
+            android:id="@+id/editTextIdFilter2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/placeFilter2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose some coordinates !" />
+
+        <EditText
+            android:id="@+id/latitudePlaceFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Latitude" />
+
+        <EditText
+            android:id="@+id/longitudePlaceFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Longitude" />
+
+        <EditText
+            android:id="@+id/radiusPlaceFilter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Radius" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeFilter2"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_date_beginning"
+                android:onClick="showDatePickerDialogFilter2" />
+
+            <TextView
+                android:id="@+id/displayDateBeginningFilter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_time_beginning"
+                android:onClick="showTimePickerDialogFilter2" />
+
+            <TextView
+                android:id="@+id/displayTimeBeginningFilter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_date_end"
+                android:onClick="showDatePickerDialogEndFilter2" />
+
+            <TextView
+                android:id="@+id/displayDateEndFilter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pick_time_end"
+                android:onClick="showTimePickerDialogEndFilter2" />
+
+            <TextView
+                android:id="@+id/displayTimeEndFilter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/next"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="next"
-        android:text="NEXT"
-        />
+        android:onClick="filter"
+        android:text="FILTER"/>
 
 </LinearLayout>
