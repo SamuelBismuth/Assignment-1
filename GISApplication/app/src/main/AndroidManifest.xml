@@ -25,7 +25,8 @@
         <activity android:name=".ExportActivity" />
         <activity android:name=".FilterActivity" />
         <activity android:name=".ShowDatabaseActivity" />
-        <activity android:name=".ShowFilterActivity"></activity>
+        <activity android:name=".ShowFilterActivity" />
+        <activity android:name=".MacActivity"></activity>
     </application>
 
 </manifest>

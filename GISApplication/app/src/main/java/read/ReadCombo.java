@@ -39,20 +39,18 @@ import runs.CallableCast;
  * This class extends @see {@link ReadCsv} and implements @see {@link Read}.
  * This class read a combo.
  * @author Orel and Samuel.
- * @param SampleScan.
- * @param Wifi.
+ * @param SampleScan
+ * @param Wifi
  */
 public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 
-	private static Activity activity;
 	/**
 	 * Constructor.
 	 * @param filePath
 	 * @param array
 	 */
-	public ReadCombo(String filePath, ArrayList<SampleScan> array, Activity activity) {
+	public ReadCombo(String filePath, ArrayList<SampleScan> array) {
 		super(filePath, array);
-		this.activity = activity;
 	}
 
 	/**
@@ -82,6 +80,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 				return;
 			}
 			br.close();
+			DataBase.addArraySampleScan(array);
 		}
 		catch(IOException ex) { 
 			System.out.println("Error reading file : " + ex);
@@ -99,7 +98,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 			arrayData.add(new WeigthAverage(data));
 		DataBase.setArrayWeightAverage(arrayData);
 		ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
-		Future<ArrayList<SampleScan>> future = execut.submit(new CallableAlgorithm2(array, activity));
+		Future<ArrayList<SampleScan>> future = execut.submit(new CallableAlgorithm2(array));
 		while (!future.isDone());
 		try {
 			array = future.get();

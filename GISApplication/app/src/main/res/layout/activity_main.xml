@@ -49,11 +49,25 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/importFile"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="IMPORT" />
+        android:onClick="pickFolder"
+        android:text="IMPORT FOLDER" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pickFile"
+        android:text="IMPORT FILE" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="macLocalisation"
+        android:text="MAC LOCALISATION" />
 
     <Button
         android:layout_marginTop="10dp"

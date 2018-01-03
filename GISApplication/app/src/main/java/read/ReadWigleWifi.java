@@ -1,17 +1,28 @@
 package read;
 
+import com.gis.gisapplication.MainActivity;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
+import cast.Cast;
+import cast.CastFromCsvFileToSampleScan;
+import libraries.DataBase;
 import libraries.Format;
 import libraries.ReadFolder;
 import objects.CsvFile;
+import objects.SampleScan;
 import objects.WigleWifiLine;
+import runs.CallableCast;
 
 /**
  * This class extends {@link ReadCsv} and implements @see {@link ReadFile}.
@@ -26,13 +37,15 @@ import objects.WigleWifiLine;
 
 public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWifiLine> {
 
+	private ArrayList<SampleScan> arraySampleScan = new ArrayList<>();
 	/**
 	 * Constructor.
 	 * @param filePath
 	 * @param array
 	 */
-	public ReadWigleWifi(String filePath, ArrayList<CsvFile> array) {
+	public ReadWigleWifi(String filePath, ArrayList<CsvFile> array, ArrayList<SampleScan> arraySampleScan) {
 		super(filePath, array);
+		this.arraySampleScan = arraySampleScan;
 	}
 
 	/**
@@ -54,6 +67,16 @@ public class ReadWigleWifi extends ReadCsv<CsvFile> implements ReadFile<WigleWif
 				array.add(new CsvFile(getId(firstLine), arrayLine));
 				br.close();
 			}
+			Cast castCsv = new CastFromCsvFileToSampleScan();
+			ExecutorService execut = (ExecutorService) Executors.newSingleThreadExecutor();
+			Future<ArrayList<SampleScan>> future = execut.submit(new CallableCast<CsvFile, SampleScan>(castCsv, array));
+			while (!future.isDone()) ;
+			try {
+				arraySampleScan = future.get();
+			} catch (InterruptedException | ExecutionException e1) {
+				e1.printStackTrace();
+			}
+			DataBase.addArraySampleScan(arraySampleScan);
 		}
 		catch(IOException ex) { 
 			System.out.println("Error reading file : " + ex);

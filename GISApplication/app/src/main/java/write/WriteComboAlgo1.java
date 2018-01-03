@@ -15,7 +15,7 @@ import objects.LineAlgo1;
  * This class writes a csv with the format of the algorithm 1.
  * This class implement @see {@link WriteFile}.
  * @author Orel and Samuel.
- * @param LineAlgo1.
+ * @param LineAlgo1
  */
 public class WriteComboAlgo1 extends WriteFile<LineAlgo1> {
 
@@ -24,7 +24,7 @@ public class WriteComboAlgo1 extends WriteFile<LineAlgo1> {
 
 	/**
 	 * Constructor.
-	 * @param fileName.
+	 * @param fileName
 	 * @exception IOException : Error writing the file.
 	 */
 	public WriteComboAlgo1(String fileName, Activity activity) {

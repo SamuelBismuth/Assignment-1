@@ -26,7 +26,17 @@ public class Wifi implements Comparable<Wifi> {
 		this.frequency = frequency;
 		this.signal = signal;
 	}
-	
+
+	/**
+	 * Constructor.
+	 * @param mac.
+	 * @param signal.
+	 */
+	public Wifi(String mac, double signal) {
+		this.mac = mac;
+		this.signal = signal;
+	}
+
 	//Getters and setters.
 
 	/**

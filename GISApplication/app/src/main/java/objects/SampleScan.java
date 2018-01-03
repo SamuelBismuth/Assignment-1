@@ -32,6 +32,17 @@ public class SampleScan {
 		sort();
 	}
 
+	/**
+	 * Constructor.
+	 * @param pointLocation
+	 * @param arrayWifi
+	 */
+	public SampleScan(EarthCoordinate pointLocation, ArrayList<Wifi> arrayWifi) {
+		this.pointLocation = pointLocation;
+		this.arrayWifi = arrayWifi;
+		sort();
+	}
+
 	//Getters and setters.
 	
 	/**

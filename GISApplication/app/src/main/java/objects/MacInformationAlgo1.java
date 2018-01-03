@@ -21,7 +21,15 @@ public class MacInformationAlgo1 extends MacInformation {
 		super(coordinates, wifi);
 		this.signal = signal;
 	}
-	
+
+	/**
+	 * Constructor.
+	 * @param pointLocation.
+	 * @param wifi.
+	 */
+	public MacInformationAlgo1(EarthCoordinate coordinates, Wifi wifi) {
+		super(coordinates, wifi);
+	}
 	//Getters.
 	
 	/**

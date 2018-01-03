@@ -35,6 +35,16 @@ public class Mac  {
 
 	/**
 	 * Constructor.
+	 * @param macName
+	 * @param arrayMacInformation
+	 */
+	public Mac(String macName, ArrayList<MacInformation> arrayMacInformation) {
+		this.macName = macName;
+		sort(arrayMacInformation);
+		this.arrayMacInformation = arrayMacInformation;
+	}
+	/**
+	 * Constructor.
 	 * @param arrayMacLocationInformation.
 	 */
 	public Mac(ArrayList<MacInformation> arrayMacInformation) {
