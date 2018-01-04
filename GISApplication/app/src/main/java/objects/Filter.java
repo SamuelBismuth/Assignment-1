@@ -98,12 +98,10 @@ public class Filter implements Serializable {
      */
     @Override
     public String toString() {
-        return "Filter{" +
-                ", logic=" + logic +
-                ", not=" + not +
-                ", filter1=" + filter1 +
-                ", filter2=" + filter2 +
-                '}';
+        return logic.toString() +
+                ", not =" + not +
+                ", filter1 =" + filter1 +
+                ", filter2 =" + filter2;
     }
 
     /**

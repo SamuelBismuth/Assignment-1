@@ -51,9 +51,7 @@ public class FilteringKmlPlace extends Filtering<SampleScan> {
 
     @Override
     public String toString() {
-        return "FilteringKmlPlace{" +
-                "coordinate=" + coordinate.toString() +
-                ", radius=" + radius +
-                '}';
+        return " coordinate=" + coordinate.toString() +
+                ", radius=" + radius;
     }
 }

@@ -54,13 +54,10 @@ import write.WriteFile;
 
 /**
  * TODO : MOOVIE WHO EXPLAIN THE APPLICATION
- * TODO : SEE IF THREAD IN A GOOD PLACE (always need threads ?) (answer sephie)
- * TODO : REORGANIZE ALL THE THREAD (CALABLE NEED TO BE IMPROVE : USE OF THE DATRA BASE)
- * TODO : NUMBER PICKER
- * TODO : DESIGN !!
  * TODO : TESTS
  * TODO : WEIRD THREAD WHICH FUCKS EVERYTHING AND QUESTION 3
  * TODO : TCHECK SERIALIZABLE
+ * TODO : CHECK EXPORT
  */
 
 /**
@@ -376,7 +373,6 @@ public class MainActivity extends AppCompatActivity {
             });
         }
         File file = new File(filePath);
-        Log.e("Map Key", file.getName());
         DataBase.addMap(file.getName(), arraySampleScan);
     }
 
@@ -666,7 +662,6 @@ public class MainActivity extends AppCompatActivity {
     protected void modificationFileAppears(String path) {
         while (!isVisble()) ;
         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + "/" + path);
-        Log.e("pathAdd", file.getPath());
         if (DataBase.getMap().containsKey(path))
             removeFile(path);
         readFile(file.getAbsolutePath(), false);

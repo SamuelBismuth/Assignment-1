@@ -46,8 +46,6 @@ public class FilteringKmlId extends Filtering<SampleScan> {
 
     @Override
     public String toString() {
-        return "FilteringKmlId{" +
-                "id='" + id + '\'' +
-                '}';
+        return " id='" + id;
     }
 }

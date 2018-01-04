@@ -45,8 +45,6 @@ public class Logic {
      */
     @Override
     public String toString() {
-        return "Logic{" +
-                "logic='" + logic + '\'' +
-                '}';
+        return " logic = " + logic;
     }
 }

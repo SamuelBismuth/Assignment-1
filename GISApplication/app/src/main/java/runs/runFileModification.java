@@ -38,27 +38,21 @@ public class runFileModification extends MainActivity implements Runnable {
             public void onEvent(int event, String path) {
                 switch (event) {
                     case ALL_EVENTS:
-                        Log.e("hi", "ALLEVENT");
                         modificationFileAppears(path);
                         break;
                     case DELETE:
-                        Log.e("hi", "DELETE");
                         removeFile(path);
                         break;
                     case DELETE_SELF:
-                        Log.e("hi", "DELETE");
                         removeFile(path);
                         break;
                     case CREATE:
-                        Log.e("hi", "CREATE");
                         modificationFileAppears(path);
                         break;
                     case MODIFY:
-                        Log.e("hi", "MODIFY");
                         modificationFileAppears(path);
                         break;
                     default:
-                        Log.e("hi", "default");
                         break;
                 }
             }

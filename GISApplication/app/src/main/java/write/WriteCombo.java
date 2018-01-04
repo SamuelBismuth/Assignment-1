@@ -25,7 +25,7 @@ public class WriteCombo extends WriteFile<SampleScan> {
     /**
      * Constructor.
      *
-     * @param fileName
+     * @param fileName.
      * @throws IOException : Error writing the file.
      */
     public WriteCombo(String fileName, Activity activity) {
@@ -42,7 +42,7 @@ public class WriteCombo extends WriteFile<SampleScan> {
     /**
      * This method receives the data and for all the scan into the array, write the csv file.
      *
-     * @param array
+     * @param array.
      */
     @Override
     public void receiveData(ArrayList<SampleScan> array) {
@@ -92,7 +92,7 @@ public class WriteCombo extends WriteFile<SampleScan> {
     /**
      * This method write the data we need.
      *
-     * @param scan
+     * @param scan.
      */
     private void addNetwork(SampleScan scan) {
         for (Wifi wifi : scan.getArrayStrongerWifi()) {

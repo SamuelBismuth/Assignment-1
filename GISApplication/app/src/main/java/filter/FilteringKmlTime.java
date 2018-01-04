@@ -51,9 +51,7 @@ public class FilteringKmlTime extends Filtering<SampleScan> {
 
     @Override
     public String toString() {
-        return "FilteringKmlTime{" +
-                "dateBeginning=" + dateBeginning.getTime().getTime() +
-                ", dateEnd=" + dateEnd.getTime().getTime() +
-                '}';
+        return " dateBeginning=" + dateBeginning.getTime().getTime() +
+                ", dateEnd=" + dateEnd.getTime().getTime();
     }
 }
