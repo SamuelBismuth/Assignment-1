@@ -13,6 +13,8 @@ In addition, by given a Mac, we will evaluate its location by it's information. 
 
 In addition, by given several WiFi samples and signal strength, the user's location will be evaluate. We use the same simple algorithm of Weighted center of gravity combined with a method of testing the suitability of each sample to our input. Each of the samples can be graded with regarding to the similarity of our input, and then we take the 4 most similar samples and calculate their weighted center of gravity according to the formula of evaluating the Mac location. By rating the samples and selecting the four most similar samples, we averaged them. This method is based on several parameters. In general, we can see that only the top four samples are very similar to our input sample, so we used them to approximate the position of the receiver.
 
+We havק added a graphical interface that will allow easy viewing. It will enable GUI input, manipulations (filters / algorithms) on the information, and display it in a geographic information system. We've used the threads to build a handy application that does not get stuck. We allow the user to update the information, which we bulit from it the database not only through our system. Which means that the user can edit and delete or add files to the folders from which the data structure was built and to modify the contents of the CSV files. In such a situation the system detects a change and updates the data structure accordingly. The system can continuously check whether the "sources" of its data structure (files or folders) have changed - if it have changed, it updates the data structure automatically.
+
 # What contains the project ?
 The folder API which contains the two api we used.
 The folder Assignment-1 which contains the code.
@@ -23,3 +25,4 @@ The license.
 The notice you need to read to run the project.
 The report with more explanation about the project.
 The documentation, it's a compress folder which contains the javadoc of the project.
+The GIS app code.
