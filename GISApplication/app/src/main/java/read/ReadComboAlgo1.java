@@ -24,12 +24,11 @@ public class ReadComboAlgo1 extends ReadCsv<SampleScan> implements ReadFile<Wifi
 
 	/**
 	 * Constructor.
-	 * @param folderName
 	 * @param array
-	 * @param file
+	 * @param filePath
 	 */
-	public ReadComboAlgo1(String folderName, ArrayList<SampleScan> array, File file) {
-		super(folderName, array, file);
+	public ReadComboAlgo1(String filePath, ArrayList<SampleScan> array) {
+		super(filePath, array);
 	}
 
 	/**
@@ -41,7 +40,7 @@ public class ReadComboAlgo1 extends ReadCsv<SampleScan> implements ReadFile<Wifi
 	@Override
 	public void readBuffer() {
 		try {
-			BufferedReader br = readFile(folderName + file);
+			BufferedReader br = readFile(filePath);
 			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(HeaderAlgo1.class).parse(br);
 			for (CSVRecord record : records) {
 				ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();

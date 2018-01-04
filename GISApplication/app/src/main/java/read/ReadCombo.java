@@ -2,6 +2,7 @@ package read;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -27,12 +28,11 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 
 	/**
 	 * Constructor.
-	 * @param folderName
+	 * @param filePath
 	 * @param array
-	 * @param file
 	 */
-	public ReadCombo(String folderName, ArrayList<SampleScan> array, File file) {
-		super(folderName, array, file);
+	public ReadCombo(String filePath, ArrayList<SampleScan> array) {
+		super(filePath, array);
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class ReadCombo extends ReadCsv<SampleScan> implements ReadFile<Wifi> {
 	@Override
 	public void readBuffer() {
 		try {
-			BufferedReader br = readFile(folderName + file);
+			BufferedReader br = new BufferedReader(new FileReader(filePath));
 			Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader(HeaderCombo.class).parse(br);
 			for (CSVRecord record : records) {
 				if(Format.goodLine(record)) {

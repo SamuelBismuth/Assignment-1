@@ -14,20 +14,17 @@ import java.util.ArrayList;
  */
 public abstract class ReadCsv <T> {
 	
-	protected String folderName;
+	protected String filePath;
 	protected ArrayList<T> array;
-	protected File file;
 
 	/**
 	 * Constructor.
-	 * @param file.
-	 * @param folderName.
-	 * @param array.
+	 * @param filePath
+	 * @param array
 	 */
-	protected ReadCsv(String folderName, ArrayList<T> array, File file) {
-		this.folderName = folderName;
+	protected ReadCsv(String filePath, ArrayList<T> array) {
+		this.filePath = filePath;
 		this.array = array;
-		this.file = file;
 	}
 
 	/**
