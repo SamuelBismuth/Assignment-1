@@ -15,6 +15,8 @@ In addition, by given several WiFi samples and signal strength, the user's locat
 
 We havק added a graphical interface that will allow easy viewing. It will enable GUI input, manipulations (filters / algorithms) on the information, and display it in a geographic information system. We've used the threads to build a handy application that does not get stuck. We allow the user to update the information, which we bulit from it the database not only through our system. Which means that the user can edit and delete or add files to the folders from which the data structure was built and to modify the contents of the CSV files. In such a situation the system detects a change and updates the data structure accordingly. The system can continuously check whether the "sources" of its data structure (files or folders) have changed - if it have changed, it updates the data structure automatically.
 
+We will add a link to Google Play.
+
 # What contains the project ?
 The folder API which contains the two api we used.
 The folder Assignment-1 which contains the code.
