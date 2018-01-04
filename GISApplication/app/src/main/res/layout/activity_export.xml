@@ -8,42 +8,42 @@
     tools:context="com.gis.gisapplication.ExportActivity">
 
     <TextView
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Choose the type of the file you want to export.\n
-You can choose both !" />
+You can choose both !"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp" />
 
     <Switch
         android:id="@+id/kml"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="KML" />
 
     <Switch
         android:id="@+id/csv"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="CSV" />
 
     <EditText
         android:id="@+id/fileName"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Name of the file" />
+        android:hint="Name of the file"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/exportFile"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:onClick="export"
         android:text="EXPORT FILE !" />
 

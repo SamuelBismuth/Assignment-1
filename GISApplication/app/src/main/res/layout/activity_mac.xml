@@ -1,88 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.gis.gisapplication.MacActivity">
 
-    <EditText
-        android:id="@+id/macAlgo1"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="MAC address"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/latitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Latitude" />
+        <EditText
+            android:id="@+id/macAlgo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MAC address"/>
 
-    <EditText
-        android:id="@+id/longitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Longitude" />
+        <EditText
+            android:id="@+id/latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Latitude" />
 
-    <EditText
-        android:id="@+id/altitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Altitude" />
+        <EditText
+            android:id="@+id/longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Longitude"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="algo1"
-        android:text="ENTER"/>
+        <EditText
+            android:id="@+id/altitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Altitude" />
 
-    <EditText
-        android:id="@+id/mac1Algo2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="First MAC address"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="algo1"
+            android:text="ENTER"/>
 
-    <EditText
-        android:id="@+id/signal1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Signal"/>
+        <EditText
+            android:id="@+id/mac1Algo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First MAC address"/>
 
-    <EditText
-        android:id="@+id/mac2Algo2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Second MAC address"/>
+        <EditText
+            android:id="@+id/signal1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Signal"/>
 
-    <EditText
-        android:id="@+id/signal2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Signal"/>
+        <EditText
+            android:id="@+id/mac2Algo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second MAC address"/>
 
-    <EditText
-        android:id="@+id/mac3Algo3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Third MAC address"/>
+        <EditText
+            android:id="@+id/signal2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Signal"/>
 
-    <EditText
-        android:id="@+id/signal3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Signal"/>
+        <EditText
+            android:id="@+id/mac3Algo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Third MAC address"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="algo2"
-        android:text="ENTER"/>
+        <EditText
+            android:id="@+id/signal3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Signal"/>
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="algo2"
+            android:text="ENTER"/>
+    </LinearLayout>
+</ScrollView>

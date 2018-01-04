@@ -1,61 +1,52 @@
 package com.gis.gisapplication;
 
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import filter.Filter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Stack;
+
+import objects.Filter;
 import libraries.DataBase;
 
 public class ShowFilterActivity extends AppCompatActivity {
 
-    TextSwitcher switcherText;
     private int count = 0;
+    private TextView filterShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_filter);
-        switcherText = (TextSwitcher) findViewById(R.id.switcher);
-        switcherText.setFactory(new ViewSwitcher.ViewFactory() {
-            @Override
-            public View makeView() {
-                TextView textView = new TextView(ShowFilterActivity.this);
-                textView.setGravity(Gravity.CENTER);
-                return textView;
-            }
-        });
-        switcherText.setInAnimation(this, android.R.anim.fade_in);
-        switcherText.setOutAnimation(this, android.R.anim.fade_out);
-        onSwitchNext(null);
+        filterShow = (TextView) findViewById(R.id.showFilter);
+        filterShow.setText(setFilterDatabase());
     }
 
-    public void onSwitchNext(View view) {
-        if (count == DataBase.getFilterStack().size())
-            count = 0;
-        switcherText.setText(
-                DataBase.getFilterStack().get(count++).toString() + "\n"
-        );
+    private String setFilterDatabase() {
+        String str = null;
+        for (Filter filter : DataBase.getFilterStack()) {
+            str += filter.toString();
+            str += "\n";
+        }
+        return str;
     }
 
-    public void onSwitchPrev(View view) {
-        if (DataBase.getFilterStack().size() == 1)
-            return;
-        if (count == 0)
-            count = DataBase.getFilterStack().size() - 1;
-        switcherText.setText(
-                DataBase.getFilterStack().get(count--).toString() + "\n"
-        );
-    }
-
-    public void undo (View view) {
+    public void undo(View view) {
         Filter filter = DataBase.popStack();
         DataBase.setArraySampleScan(filter.getArray());
         MainActivity.refreshDataBase();
         finish();
     }
+
 }

@@ -1,23 +1,24 @@
-package filter;
+package objects;
 
 import com.gis.gisapplication.MainActivity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import filter.Filtering;
 import libraries.DataBase;
-import objects.Logic;
-import objects.SampleScan;
 import runs.CallableFiltering;
 
 /**
- * Created by Samuel on 02/01/2018.
+ * This class represents the object filter.
+ *
+ * @author Orel and Samuel.
  */
-
-public class Filter {
+public class Filter implements Serializable {
 
     private ArrayList<SampleScan> array;
     private Logic logic;
@@ -27,6 +28,7 @@ public class Filter {
 
     /**
      * Constructor.
+     *
      * @param array
      * @param logic
      * @param not
@@ -41,6 +43,11 @@ public class Filter {
         this.filter2 = filter2;
     }
 
+    /**
+     * This method run the filter reflexion.
+     *
+     * @return
+     */
     public ArrayList<SampleScan> run() {
         ArrayList<SampleScan> arrayFilter1 = new ArrayList<SampleScan>();
         ArrayList<SampleScan> arrayFilter2 = new ArrayList<SampleScan>();
@@ -52,15 +59,14 @@ public class Filter {
         if (filter2 != null)
             futureArrayFilter2 = execut.submit(new CallableFiltering<SampleScan>(filter2, (ArrayList<SampleScan>) array.clone()));
         if (filter2 != null)
-            while (!futureArrayFilter1.isDone() && !futureArrayFilter2.isDone());
+            while (!futureArrayFilter1.isDone() && !futureArrayFilter2.isDone()) ;
         else
-            while (!futureArrayFilter1.isDone());
+            while (!futureArrayFilter1.isDone()) ;
         try {
             arrayFilter1 = futureArrayFilter1.get();
             if (filter2 != null)
                 arrayFilter2 = futureArrayFilter2.get();
-        }
-        catch (InterruptedException | ExecutionException e1) {
+        } catch (InterruptedException | ExecutionException e1) {
             e1.printStackTrace();
         }
         switch (this.logic.getLogic()) {
@@ -85,6 +91,11 @@ public class Filter {
         return arrayFilter1;
     }
 
+    /**
+     * toString to display in the show filter.
+     *
+     * @return string.
+     */
     @Override
     public String toString() {
         return "Filter{" +
@@ -95,6 +106,9 @@ public class Filter {
                 '}';
     }
 
+    /**
+     * @return array.
+     */
     public ArrayList<SampleScan> getArray() {
         return array;
     }
