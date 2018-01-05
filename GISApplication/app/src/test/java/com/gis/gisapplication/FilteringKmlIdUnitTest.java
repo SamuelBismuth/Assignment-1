@@ -1,4 +1,4 @@
-package testFiltering;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +17,7 @@ import objects.Wifi;
  * @author Orel and Samuel.
  *
  */
-public class FilteringKmlIdTest {
+public class FilteringKmlIdUnitTest {
 
 	/**
 	 * Test method for {@link filter.FilteringKmlId#filteringBy(java.util.ArrayList)}.
@@ -43,7 +43,11 @@ public class FilteringKmlIdTest {
 		arraySampleScan.add(scan3);
 		assertEquals(arraySampleScan.size(), 3);
 		FilteringKmlId filter = new FilteringKmlId("id2");
-		arraySampleScan = filter.filteringBy(arraySampleScan);		
+		try {
+			arraySampleScan = filter.filteringBy(arraySampleScan);
+		} catch (InputException e) {
+			e.printStackTrace();
+		}
 		assertEquals(arraySampleScan.size(), 1);
 	}
 

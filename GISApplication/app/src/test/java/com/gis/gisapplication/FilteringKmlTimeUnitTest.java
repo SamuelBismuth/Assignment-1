@@ -1,4 +1,4 @@
-package testFiltering;
+package com.gis.gisapplication;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -6,19 +6,19 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
-import filter.FilteringKmlPlace;
+import filter.FilteringKmlTime;
 import libraries.InputException;
 import objects.SampleScan;
 import objects.Wifi;
 
 /**
- * @author Orel and Samuel.
+ * @author Samuel and Orel.
  *
  */
-public class FilteringKmlPlaceTest {
+public class FilteringKmlTimeUnitTest {
 
 	/**
-	 * Test method for {@link filter.FilteringKmlPlace#filteringBy(java.util.ArrayList)}.
+	 * Test method for {@link filter.FilteringKmlTime#filteringBy(java.util.ArrayList)}.
 	 */
 	@Test
 	public void testFilteringBy() {
@@ -39,7 +39,7 @@ public class FilteringKmlPlaceTest {
 		arraySampleScan.add(scan);
 		arraySampleScan.add(scan2);
 		arraySampleScan.add(scan3);
-		FilteringKmlPlace filter = new FilteringKmlPlace();
+		FilteringKmlTime filter = new FilteringKmlTime(date, date2);
 		try {
 			filter.filteringBy(arraySampleScan);			
 		} 

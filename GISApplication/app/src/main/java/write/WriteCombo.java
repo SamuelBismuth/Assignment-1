@@ -19,18 +19,16 @@ import objects.Wifi;
  */
 public class WriteCombo extends WriteFile<SampleScan> {
 
-    private Activity activity;
     private PrintWriter outs;
 
     /**
      * Constructor.
      *
-     * @param fileName.
+     * @param fileName
      * @throws IOException : Error writing the file.
      */
-    public WriteCombo(String fileName, Activity activity) {
+    public WriteCombo(String fileName) {
         try {
-            this.activity = activity;
             fileName += ".csv";
             if (externalStorageAvailable())
                 this.outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));
@@ -42,7 +40,7 @@ public class WriteCombo extends WriteFile<SampleScan> {
     /**
      * This method receives the data and for all the scan into the array, write the csv file.
      *
-     * @param array.
+     * @param array
      */
     @Override
     public void receiveData(ArrayList<SampleScan> array) {
@@ -92,7 +90,7 @@ public class WriteCombo extends WriteFile<SampleScan> {
     /**
      * This method write the data we need.
      *
-     * @param scan.
+     * @param scan
      */
     private void addNetwork(SampleScan scan) {
         for (Wifi wifi : scan.getArrayStrongerWifi()) {

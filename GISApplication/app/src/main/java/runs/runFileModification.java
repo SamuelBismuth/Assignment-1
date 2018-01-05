@@ -1,11 +1,8 @@
 package runs;
 
 import android.os.FileObserver;
-import android.util.Log;
 
 import com.gis.gisapplication.MainActivity;
-
-import java.io.File;
 
 /**
  * This class implements {@link Runnable}.

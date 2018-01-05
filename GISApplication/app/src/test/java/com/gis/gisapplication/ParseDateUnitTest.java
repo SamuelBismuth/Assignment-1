@@ -1,7 +1,7 @@
 /**
  * 
  */
-package testLibraries;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.*;
 
@@ -16,10 +16,9 @@ import libraries.ParseDate;
  * @author Samuel
  *
  */
-public class ParseDateTest {
+public class ParseDateUnitTest {
 
 	/**
-	 * Test method for {@link library.Date#stringToDate(java.lang.String)}.
 	 */
 	@Test
 	public void testStringToDate() {
@@ -34,7 +33,6 @@ public class ParseDateTest {
 	}
 
 	/**
-	 * Test method for {@link library.Date#stringToDate2(java.lang.String)}.
 	 */
 	@Test
 	public void testStringToDateSephie() {
@@ -49,7 +47,6 @@ public class ParseDateTest {
 	}
 
 	/**
-	 * Test method for {@link library.Date#stringToDateBoaz(java.lang.String)}.
 	 */
 	@Test
 	public void testStringToDateBoaz() {

@@ -1,4 +1,4 @@
-package testWrite;
+package com.gis.gisapplication;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -6,21 +6,22 @@ import java.util.GregorianCalendar;
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 import org.junit.Test;
 
+import filter.FilteringKmlPlace;
+import libraries.InputException;
 import objects.SampleScan;
 import objects.Wifi;
-import write.WriteCombo;
 
 /**
- * @author Samuel
+ * @author Orel and Samuel.
  *
  */
-public class WriteComboTest {
+public class FilteringKmlPlaceUnitTest {
 
 	/**
-	 * Test method for {@link write.WriteCombo#receiveData(java.util.ArrayList)}.
+	 * Test method for {@link filter.FilteringKmlPlace#filteringBy(java.util.ArrayList)}.
 	 */
 	@Test
-	public void testReceiveData() {
+	public void testFilteringBy() {
 		ArrayList<SampleScan> arraySampleScan = new ArrayList<SampleScan>();
 		ArrayList<Wifi> arrayWifi = new ArrayList<Wifi>();
 		Wifi wifi = new Wifi("name", "mac", 5000, -70);
@@ -38,8 +39,13 @@ public class WriteComboTest {
 		arraySampleScan.add(scan);
 		arraySampleScan.add(scan2);
 		arraySampleScan.add(scan3);
-		String fileName = "Table";
-		WriteCombo write = new WriteCombo(fileName);
-		write.receiveData(arraySampleScan); 
+		FilteringKmlPlace filter = new FilteringKmlPlace(null, 3.9);
+		try {
+			filter.filteringBy(arraySampleScan);			
+		} 
+		catch (InputException e) {
+			e.printStackTrace();
+		}
 	}
+
 }

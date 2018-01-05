@@ -1,4 +1,4 @@
-package testRead;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.*;
 
@@ -17,21 +17,20 @@ import read.ReadWigleWifi;
  * @author Samuel
  *
  */
-public class SortWigleWifiTimeTest {
+public class SortWigleWifiTimeUnitTest {
 
 	/**
-	 * Test method for {@link cast.CastFromCsvFileToSampleScan#sortBy()}.
 	 */
 	@Test
 	public void testSortBy() {
 		ArrayList<CsvFile> array = new ArrayList<CsvFile>();
 		String fileName = ReadFolder.getAbsolutePath();
 		File file = new File("WigleWifi");
-		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, file);
+		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, null);
 		readWigleWifi.readBuffer();
 		ArrayList<SampleScan> arrayScan = new ArrayList<SampleScan>();
 		CastFromCsvFileToSampleScan sort = new CastFromCsvFileToSampleScan();
-		arrayScan = sort.sortBy(array);
+		arrayScan = sort.cast(array);
 		assertEquals(200,  arrayScan.size());
 	}
 

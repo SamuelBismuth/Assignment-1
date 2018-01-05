@@ -13,7 +13,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -51,14 +50,6 @@ import runs.RunWrite;
 import runs.runFileModification;
 import write.WriteComboAlgo1;
 import write.WriteFile;
-
-/**
- * TODO : MOOVIE WHO EXPLAIN THE APPLICATION
- * TODO : TESTS
- * TODO : WEIRD THREAD WHICH FUCKS EVERYTHING AND QUESTION 3
- * TODO : TCHECK SERIALIZABLE
- * TODO : CHECK EXPORT
- */
 
 /**
  * This class is the main activity.
@@ -409,6 +400,10 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void saveSession(View view) {
+        if (DataBase.getArraySampleScan().size() == 0) {
+            Toast.makeText(this, "There is no Database to save !", Toast.LENGTH_SHORT).show();
+            return;
+        }
         LayoutInflater linf = LayoutInflater.from(this);
         final View inflator = linf.inflate(R.layout.save_session, null);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -473,6 +468,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             String firstLine = br.readLine();
+            br.close();
             if (firstLine.contains("WigleWifi"))
                 return true;
             return false;
@@ -560,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (InterruptedException | ExecutionException e1) {
             e1.printStackTrace();
         }
-        WriteFile writeAlgo1 = new WriteComboAlgo1("AssesLocation", this);
+        WriteFile<LineAlgo1> writeAlgo1 = new WriteComboAlgo1("AssesLocation");
         Thread threadCsv = new Thread(new RunWrite<LineAlgo1>(writeAlgo1, arrayLineAlgo1));
         threadCsv.start();
         Toast.makeText(this, "File AssessLocation have been successfully downloaded !", Toast.LENGTH_SHORT).show();
@@ -640,13 +636,12 @@ public class MainActivity extends AppCompatActivity {
      * @param path
      */
     protected void removeFile(String path) {
-        while (!isVisble()) ;
+        while (!isVisble());
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 while (!isVisble()) ;
                 File file = new File(path);
-                Log.e("pathRemove", path);
                 DataBase.removeArraySampleScan(DataBase.getMap().get(file.getPath()));
                 refreshDataBase();
                 DataBase.removeMap(file.getPath());

@@ -1,24 +1,23 @@
-package testWrite;
+package com.gis.gisapplication;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
-import org.boehn.kmlframework.kml.Document;
 import org.junit.Test;
 
 import objects.SampleScan;
 import objects.Wifi;
-import write.WriteKmlWithoutFilter;
+import write.WriteCombo;
 
 /**
- * @author Orel and Samuel
+ * @author Samuel
+ *
  */
-public class WriteKmlWithoutFilterTest {
-
+public class WriteComboUnitTest {
 
 	/**
-	 * Test method for {@link write.WriteKmlWithoutFilter#receiveData(java.util.ArrayList)}.
+	 * Test method for {@link write.WriteCombo#receiveData(java.util.ArrayList)}.
 	 */
 	@Test
 	public void testReceiveData() {
@@ -33,16 +32,14 @@ public class WriteKmlWithoutFilterTest {
 		GregorianCalendar date = new GregorianCalendar(2017, 8, 12, 22, 00, 10);
 		GregorianCalendar date2 = new GregorianCalendar(2016, 8, 9, 2, 9, 10);
 		EarthCoordinate earth = new EarthCoordinate(100.0, 34.0, 890.0);
-		SampleScan scan = new SampleScan (date, "id", earth, arrayWifi);
-		SampleScan scan2 = new SampleScan(date2, "id", earth, arrayWifi);
-		SampleScan scan3 = new SampleScan(date2, "id", earth, arrayWifi);
+		SampleScan scan = new SampleScan (date, "id1", earth, arrayWifi);
+		SampleScan scan2 = new SampleScan(date2, "id2", earth, arrayWifi);
+		SampleScan scan3 = new SampleScan(date2, "id3", earth, arrayWifi);
 		arraySampleScan.add(scan);
 		arraySampleScan.add(scan2);
 		arraySampleScan.add(scan3);
-		Document document = new Document();
-		String fileName = "Map";
-		WriteKmlWithoutFilter write = new WriteKmlWithoutFilter(fileName, document);
-		write.receiveData(arraySampleScan); // Must print everything i.e : 9 placemarks.
+		String fileName = "Table";
+		WriteCombo write = new WriteCombo(fileName);
+		write.receiveData(arraySampleScan); 
 	}
-
 }

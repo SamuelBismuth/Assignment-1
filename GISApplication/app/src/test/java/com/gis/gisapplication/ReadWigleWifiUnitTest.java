@@ -1,4 +1,4 @@
-package testRead;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.*;
 
@@ -15,17 +15,16 @@ import read.ReadWigleWifi;
  * @author Orel and Samuel
  *
  */
-public class ReadWigleWifiTest {
+public class ReadWigleWifiUnitTest {
 
 	/**
-	 * Test method for {@link read.ReadWigleWifi#read()}.
 	 */
 	@Test
 	public void testRead() {
 		ArrayList<CsvFile> array = new ArrayList<CsvFile>();
 		String fileName = ReadFolder.getAbsolutePath();
 		File file = new File("WigleWifi.csv");
-		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, file);
+		ReadWigleWifi readWigleWifi = new ReadWigleWifi(fileName, array, null);
 		readWigleWifi.readBuffer();
 		assertEquals(1, array.size());
 		assertEquals(1319, array.get(0).getWigleWifiLine().size());
@@ -44,7 +43,7 @@ public class ReadWigleWifiTest {
 	/**
 	 * Test method for ReadWigleWifi.checkTheFile.
 	 */
-	@Test
+	/*@Test
 	public void testCheckTheFile() {
 		String firstLine = "WigleWifi-1.4,appRelease=2.25,model=Lenovo PB2-690Y,release=6.0.1,"
 				+ "device=PB2PRO,display=PB2-690Y_S200032_161214,board=msm8952,brand=Lenovo";
@@ -52,5 +51,5 @@ public class ReadWigleWifiTest {
 		firstLine = ",appRelease=2.25,model=Lenovo PB2-690Y,release=6.0.1,"
 				+ "device=PB2PRO,display=PB2-690Y_S200032_161214,board=msm8952,brand=Lenovo";
 		assertFalse(ReadWigleWifi.checkTheFile(firstLine));
-	}
+	}*/
 }

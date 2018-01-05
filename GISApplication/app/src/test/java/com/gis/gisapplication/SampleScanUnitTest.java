@@ -1,4 +1,4 @@
-package testRead;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import org.junit.Test;
 import objects.SampleScan;
 import objects.Wifi;
 
-public class SampleScanTest {
+public class SampleScanUnitTest {
 
 	/**
 	 * This method check that we got the time of the SampleScan

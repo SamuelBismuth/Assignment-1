@@ -19,7 +19,6 @@ import objects.LineAlgo1;
  */
 public class WriteComboAlgo1 extends WriteFile<LineAlgo1> {
 
-    private Activity activity;
     private PrintWriter outs;
 
     /**
@@ -28,9 +27,8 @@ public class WriteComboAlgo1 extends WriteFile<LineAlgo1> {
      * @param fileName
      * @throws IOException : Error writing the file.
      */
-    public WriteComboAlgo1(String fileName, Activity activity) {
+    public WriteComboAlgo1(String fileName) {
         try {
-            this.activity = activity;
             fileName += ".csv";
             if (externalStorageAvailable())
                 this.outs = new PrintWriter(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileName));

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.gis.gisapplication.MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -46,7 +46,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Sample(s) Wifi(s) :"
-
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
         <TextView
@@ -57,44 +57,51 @@
             android:textSize="20dp" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="pickFolder"
             android:text="IMPORT FOLDER" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="pickFile"
             android:text="IMPORT FILE" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="pickSession"
+            android:text="IMPORT SESSION" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="macLocalisation"
             android:text="MAC LOCALISATION" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="exportFile"
             android:text="EXPORT" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="assesLocation"
             android:text="ASSESS LOCALISATION" />
 
         <Button
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:onClick="clearDataBase"
             android:text="CLEAR DATABASE" />
 
@@ -102,9 +109,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SHOW DATABASE"
             android:onClick="showDataBase"
-            />
+            android:text="SHOW DATABASE" />
 
         <Button
             android:layout_width="match_parent"
@@ -117,9 +123,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SHOW FILTER"
             android:onClick="showFilter"
-            />
+            android:text="SHOW FILTER" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="saveSession"
+            android:text="SAVE SESSION" />
 
     </LinearLayout>
 </ScrollView>

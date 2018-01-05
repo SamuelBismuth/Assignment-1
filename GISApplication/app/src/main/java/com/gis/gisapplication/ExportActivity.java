@@ -62,7 +62,7 @@ public class ExportActivity extends AppCompatActivity {
             threadKml.start();
         }
         if (csv.isChecked()) {
-            WriteFile writeCsv = new WriteCombo(fileName.getText().toString(), this);
+            WriteFile writeCsv = new WriteCombo(fileName.getText().toString());
             Thread threadCsv = new Thread(new RunWrite<SampleScan>(writeCsv, DataBase.getArraySampleScan()));
             threadCsv.start();
         }

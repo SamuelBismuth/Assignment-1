@@ -1,4 +1,4 @@
-package testRead;
+package com.gis.gisapplication;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +16,7 @@ import read.ReadCombo;
  * @author Orel and Samuel
  *
  */
-public class ReadComboTest {
+public class ReadComboUnitTest {
 
 	/**
 	 * Test method for {@link read.ReadCombo#readBuffer()}.
@@ -28,7 +28,7 @@ public class ReadComboTest {
 		ArrayList<SampleScan> array = new ArrayList<SampleScan>();
 		String fileName = ReadFolder.getAbsolutePath();
 		File file = new File("SortedTable.csv");
-		ReadCombo readCombo = new ReadCombo(fileName, array, file);
+		ReadCombo readCombo = new ReadCombo(fileName, array);
 		readCombo.readBuffer();
 		for (SampleScan scan : array) {
 			System.out.print(scan.toString() + " ### ");
@@ -41,13 +41,13 @@ public class ReadComboTest {
 		//Boaz combo
 		array.clear();
 		file = new File("combo.csv");
-		readCombo = new ReadCombo(fileName, array, file);
+		readCombo = new ReadCombo(fileName, array);
 		readCombo.readBuffer();
 		assertEquals(347, array.size());
 		//Boaz combo no gps
 		array.clear();
 		file = new File("comboNoGps.csv");
-		readCombo = new ReadCombo(fileName, array, file);
+		readCombo = new ReadCombo(fileName, array);
 		readCombo.readBuffer();
 		assertEquals(33, array.size());
 	}
