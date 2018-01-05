@@ -1,7 +1,7 @@
-![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/MainActivity.png | width=100))
-![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ExportActivity.pn | width=100))
-![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/FilterActivity.png | width=100))
-![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ShowDatabaseActivity.png | width=100))
+![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/MainActivity.png | width=50)
+![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ExportActivity.pn | width=50)
+![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/FilterActivity.png | width=50)
+![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ShowDatabaseActivity.png | width=50)
 
 # Assignment
 This is a project coding in java. This project gradually develop a complex system, which enables the collection of geographic information, the production of insights from this information, and the presentation of information in graphical tools. It contains the java files, the folders you need to run the project, a report with more explanation about the project, and the documentation. To run the project you need to put the folders in workspace.
