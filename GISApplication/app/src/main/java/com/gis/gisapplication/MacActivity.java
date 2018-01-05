@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import org.boehn.kmlframework.coordinates.EarthCoordinate;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

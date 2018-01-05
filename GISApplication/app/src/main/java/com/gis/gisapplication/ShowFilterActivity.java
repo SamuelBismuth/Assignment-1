@@ -10,7 +10,6 @@ import libraries.DataBase;
 
 public class ShowFilterActivity extends AppCompatActivity {
 
-    private int count = 0;
     private TextView filterShow;
 
     @Override
