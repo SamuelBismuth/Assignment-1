@@ -2,28 +2,38 @@ package runs;
 
 import java.util.ArrayList;
 
+import objects.SampleScan;
 import write.WriteFile;
 
+/**
+ * This class implements {@link Runnable}.
+ * The call method is use for writing a file.
+ *
+ * @param <T>
+ * @author Orel and Samuel.
+ */
 public class RunWrite<T> implements Runnable {
 
-	private WriteFile<T> write;
-	private String file;
-	private ArrayList<T> array;
-	
-	public RunWrite(WriteFile<T> write, String file, ArrayList<T> array) {
-		this.write = write;
- 		this.file = file;
- 		this.array = array;
-	}
+    private WriteFile write;
+    private ArrayList<T> array;
 
-	@Override
-	public void run() {
-		System.out.println("Beginning the write of : " + file);
-		Long start = System.currentTimeMillis();
-		write.receiveData(array);
-		Long end = System.currentTimeMillis();
-		System.out.println("finishing the writing of : " + file);
-		System.out.println("Time of the wrinting : " + (end - start) + "milliseconds");
-	}
+    /**
+     * Constructor.
+     *
+     * @param write
+     * @param array
+     */
+    public RunWrite(WriteFile write, ArrayList<T> array) {
+        this.write = write;
+        this.array = array;
+    }
+
+    /**
+     * This run method write a file.
+     */
+    @Override
+    public void run() {
+        write.receiveData(array);
+    }
 
 }

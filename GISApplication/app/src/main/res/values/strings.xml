@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">GISApplication</string>
+
+    <string-array name="logic_array">
+        <item>None</item>
+        <item>And</item>
+        <item>Or</item>
+    </string-array>
+
+    <string-array name="filter_array">
+        <item>Time</item>
+        <item>ID</item>
+        <item>Place</item>
+    </string-array>
+
 </resources>

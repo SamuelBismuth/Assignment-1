@@ -5,20 +5,33 @@ import java.util.concurrent.Callable;
 
 import cast.Cast;
 
-public class CallableCast<T, Y> implements Callable<ArrayList<Y>> {
+/**
+ * This class implements {@link Callable}.
+ * The call method is use for the cast.
+ *
+ * @param <F>
+ * @param <T>
+ *
+ * @author Orel and Samuel.
+ */
+public class CallableCast<F, T> implements Callable<ArrayList<T>> {
 
-	private Cast<T, Y> cast;		
-	private ArrayList<T> array;
+    private Cast<F, T> cast;
+    private ArrayList<F> array;
 
-	public CallableCast(Cast<T, Y> cast, ArrayList<T> array) {
-		this.cast = cast;
-		this.array = array;
-	}
+    /**
+     * {@link java.lang.reflect.Constructor}.
+     * @param cast
+     * @param array
+     */
+    public CallableCast(Cast<F, T> cast, ArrayList<F> array) {
+        this.cast = cast;
+        this.array = array;
+    }
 
-	@Override
-	public ArrayList<Y> call() throws Exception {
-		System.out.println("Beginning the" + cast.toString());
-		return cast.cast(array);
-	}
+    @Override
+    public ArrayList<T> call() throws Exception {
+        return cast.cast(array);
+    }
 
 }

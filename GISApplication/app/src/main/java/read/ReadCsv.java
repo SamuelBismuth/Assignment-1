@@ -9,46 +9,48 @@ import java.util.ArrayList;
 
 /**
  * This abstract class read a csv file. (it's could be a combo file, or a wigle Wifi file).
- * @author Orel and Samuel.
+ *
  * @param <T>.
+ * @author Orel and Samuel.
  */
-public abstract class ReadCsv <T> {
-	
-	protected String filePath;
-	protected ArrayList<T> array;
+public abstract class ReadCsv<T> {
 
-	/**
-	 * Constructor.
-	 * @param filePath
-	 * @param array
-	 */
-	protected ReadCsv(String filePath, ArrayList<T> array) {
-		this.filePath = filePath;
-		this.array = array;
-	}
+    protected String filePath;
+    protected ArrayList<T> array;
 
-	/**
-	 * abstract method, we define it in the other classes.
-	 */
-	public abstract void readBuffer();
-	
-	/**
-	 * This method read the buffer.
-	 * @param path.
-	 * @return the buffer.
-	 * @exception IOException : error reading file.
-	 */
-	public BufferedReader readFile(String path) {
-		try {
-			Reader in = new FileReader(path);
-			BufferedReader br = new BufferedReader(in);
-			return br;
-		} 
-		catch (IOException ex) {
-			System.out.println("Error reading file : " + ex);
-			System.exit(0);
-			return null;
-		}
-	}
-	
+    /**
+     * Constructor.
+     *
+     * @param filePath
+     * @param array
+     */
+    protected ReadCsv(String filePath, ArrayList<T> array) {
+        this.filePath = filePath;
+        this.array = array;
+    }
+
+    /**
+     * abstract method, we define it in the other classes.
+     */
+    public abstract void readBuffer();
+
+    /**
+     * This method read the buffer.
+     *
+     * @param path
+     * @return the buffer.
+     * @throws IOException : error reading file.
+     */
+    public BufferedReader readFile(String path) {
+        try {
+            Reader in = new FileReader(path);
+            BufferedReader br = new BufferedReader(in);
+            return br;
+        } catch (IOException ex) {
+            System.out.println("Error reading file : " + ex);
+            System.exit(0);
+            return null;
+        }
+    }
+
 }
