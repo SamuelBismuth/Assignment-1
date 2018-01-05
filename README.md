@@ -1,4 +1,4 @@
-![test](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/MainActivity.png | width=48)
+![test](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/MainActivity.png = 24x48)
 ![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ExportActivity.pn | width=50)
 ![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/FilterActivity.png | width=50)
 ![alt text](https://github.com/SamuelBismuth/GIS/blob/master/GISApplication/ScreenShot/ShowDatabaseActivity.png | width=50)
