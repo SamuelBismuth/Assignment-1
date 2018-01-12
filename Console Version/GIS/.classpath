@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="algorithm"/>
+	<classpathentry kind="src" path="junit"/>
+	<classpathentry kind="src" path="util"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/commons-csv-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/org.boehn.kmlframework_20090718.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

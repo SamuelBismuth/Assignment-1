@@ -39,6 +39,7 @@ dependencies {
     compile 'lib.kashif:folderpicker:2.2'
     testCompile 'junit:junit:4.12'
     compile files('libs/org.boehn.kmlframework_20090718.jar')
+    compile files('libs/mysql-connector-java-5.1.45-bin.jar')
 }
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->

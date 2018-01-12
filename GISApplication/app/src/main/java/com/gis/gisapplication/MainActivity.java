@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -25,12 +26,18 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import cast.Cast;
+import cast.CastFromLineDataBaseToSampleScan;
 import cast.CastFromMacToLineAlgo1;
 import cast.CastFromSampleScanToMac;
 import objects.Filter;
@@ -39,6 +46,7 @@ import libraries.DataBase;
 import libraries.ReadFolder;
 import objects.CsvFile;
 import objects.LineAlgo1;
+import objects.LineDataBase;
 import objects.Mac;
 import objects.SampleScan;
 import objects.Session;
@@ -46,8 +54,10 @@ import read.ReadCombo;
 import read.ReadCsv;
 import read.ReadWigleWifi;
 import runs.CallableCast;
+import runs.DataBaseObserver;
 import runs.RunWrite;
-import runs.runFileModification;
+import runs.RunFileModification;
+import sql.MySql;
 import write.WriteComboAlgo1;
 import write.WriteFile;
 
@@ -308,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
     protected void readFolder(String folderLocation, boolean flag) {
         if (flag) {
             try {
-                runOnUiThread(new runFileModification(folderLocation));
+                runOnUiThread(new RunFileModification(folderLocation));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -328,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
     protected void readFile(String filePath, boolean flag) {
         if (flag) {
             try {
-                runOnUiThread(new runFileModification(filePath));
+                runOnUiThread(new RunFileModification(filePath));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -636,7 +646,7 @@ public class MainActivity extends AppCompatActivity {
      * @param path
      */
     protected void removeFile(String path) {
-        while (!isVisble());
+        while (!isVisble()) ;
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -661,5 +671,93 @@ public class MainActivity extends AppCompatActivity {
             removeFile(path);
         readFile(file.getAbsolutePath(), false);
     }
+
+    public void pickFromDataBase(View view) {
+        LayoutInflater linf = LayoutInflater.from(this);
+        final View inflator = linf.inflate(R.layout.database, null);
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Database chooser");
+        alert.setMessage("Please, enter all the fields");
+        alert.setView(inflator);
+        final EditText port = (EditText) inflator.findViewById(R.id.port);
+        final EditText password = (EditText) inflator.findViewById(R.id.password);
+        final EditText ip = (EditText) inflator.findViewById(R.id.ip);
+        final EditText user = (EditText) inflator.findViewById(R.id.user);
+        final EditText table = (EditText) inflator.findViewById(R.id.table);
+        final EditText server = (EditText) inflator.findViewById(R.id.server);
+        alert.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                if (android.os.Build.VERSION.SDK_INT > 9) {
+                    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                    StrictMode.setThreadPolicy(policy);
+                }
+                final CountDownLatch latch = new CountDownLatch(1);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            ArrayList<LineDataBase> array = MySql.pickFromDataBase(
+                                    port.getText().toString(),
+                                    password.getText().toString(),
+                                    ip.getText().toString(),
+                                    user.getText().toString(),
+                                    table.getText().toString(),
+                                    server.getText().toString()
+                            );
+                            Cast cast = new CastFromLineDataBaseToSampleScan();
+                            ArrayList<SampleScan> arraySampleScan = cast.cast(array);
+                            DataBase.addAllArraySampleScan(arraySampleScan);
+                            MainActivity.refreshDataBase();
+                            Toast.makeText(thisActivity, "The data of the server have been add to the DataBase !", Toast.LENGTH_SHORT).show();
+                            latch.countDown();
+                            try {
+                                latch.await();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        } catch (SQLException ex) {
+                            Logger lgr = Logger.getLogger(MySql.class.getName());
+                            lgr.log(Level.SEVERE, ex.getMessage(), ex);
+                            Toast.makeText(thisActivity, "Error, the data is not available !", Toast.LENGTH_SHORT).show();
+                            return;
+                        } catch (ClassNotFoundException e) {
+                            e.printStackTrace();
+                            Toast.makeText(thisActivity, "Error, the data is not available !", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
+                });
+                //observation();
+                alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.cancel();
+                    }
+                });
+                alert.show();
+            }
+
+
+        });
+    }
+    /*private void observation() {
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                new DataBaseObserver(
+                        port.getText().toString(),
+                        password.getText().toString(),
+                        ip.getText().toString(),
+                        user.getText().toString(),
+                        table.getText().toString(),
+                        server.getText().toString()
+                ).startService();
+            }
+        });
+    }/*/
 
 }
