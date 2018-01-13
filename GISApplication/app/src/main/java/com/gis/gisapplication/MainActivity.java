@@ -14,6 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -672,6 +673,14 @@ public class MainActivity extends AppCompatActivity {
         readFile(file.getAbsolutePath(), false);
     }
 
+    /**
+     * This function allows to read in the my sql data base of our professor Boaz.
+     * To do this, we ask from the user to enter the password, the port, the ip, the username, the table and the server.
+     * If the reading have been done successfully, we send a thread which always check if the data from the data base is changed.
+     * If the data is changed, we apply the change into our database.
+     *
+     * @param view
+     */
     public void pickFromDataBase(View view) {
         LayoutInflater linf = LayoutInflater.from(this);
         final View inflator = linf.inflate(R.layout.database, null);
@@ -692,7 +701,6 @@ public class MainActivity extends AppCompatActivity {
                     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                     StrictMode.setThreadPolicy(policy);
                 }
-                final CountDownLatch latch = new CountDownLatch(1);
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -707,15 +715,23 @@ public class MainActivity extends AppCompatActivity {
                             );
                             Cast cast = new CastFromLineDataBaseToSampleScan();
                             ArrayList<SampleScan> arraySampleScan = cast.cast(array);
+                            DataBase.addMapSql(table.getText().toString(), arraySampleScan);
                             DataBase.addAllArraySampleScan(arraySampleScan);
                             MainActivity.refreshDataBase();
                             Toast.makeText(thisActivity, "The data of the server have been add to the DataBase !", Toast.LENGTH_SHORT).show();
-                            latch.countDown();
-                            try {
-                                latch.await();
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    new DataBaseObserver(
+                                            port.getText().toString(),
+                                            password.getText().toString(),
+                                            ip.getText().toString(),
+                                            user.getText().toString(),
+                                            table.getText().toString(),
+                                            server.getText().toString()
+                                    ).startService();
+                                }
+                            }).start();
                         } catch (SQLException ex) {
                             Logger lgr = Logger.getLogger(MySql.class.getName());
                             lgr.log(Level.SEVERE, ex.getMessage(), ex);
@@ -726,38 +742,17 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(thisActivity, "Error, the data is not available !", Toast.LENGTH_SHORT).show();
                             return;
                         }
+                        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.cancel();
+                                return;
+                            }
+                        });
                     }
                 });
-                //observation();
-                alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        dialog.cancel();
-                    }
-                });
-                alert.show();
             }
-
-
         });
+        alert.show();
     }
-    /*private void observation() {
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                new DataBaseObserver(
-                        port.getText().toString(),
-                        password.getText().toString(),
-                        ip.getText().toString(),
-                        user.getText().toString(),
-                        table.getText().toString(),
-                        server.getText().toString()
-                ).startService();
-            }
-        });
-    }/*/
 
 }

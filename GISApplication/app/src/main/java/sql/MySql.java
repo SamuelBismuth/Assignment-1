@@ -13,27 +13,40 @@ import java.sql.Statement;
 import objects.LineDataBase;
 import objects.LineDataBaseWifi;
 
+/**
+ * This class read the data from mysql database and sent him into our database.
+ *
+ * @author Orel and Samuel.
+ */
 public class MySql {
 
     /**
+     * All the data that the user need to put to be connect with the data base.
      * port = 3306
      * user = oop1
      * password = Lambda1();
      * ip = 5.29.193.52
-     * table = ex4_db
-     * server = oop_course_ariel
+     * table = ex4_db...
+     * server = oop_course_ariel...
      */
 
     private static Connection _con = null;
 
     /**
-     * TODO : THREAD WHICH REFRESH THE DATA
-     * TODO : IF TIME : WHEN
+     * This function try to connect with the mysal database, and if it's a success, enter the data into our database.
      *
+     * @param port
+     * @param password
+     * @param ip
+     * @param user
+     * @param table
+     * @param server
      * @return array list of line data base.
+     * @throws SQLException
+     * @throws ClassNotFoundException
      */
     public static ArrayList<LineDataBase> pickFromDataBase(String port, String password, String ip, String user, String table, String server) throws SQLException, ClassNotFoundException {
-        String url = "jdbc:mysql://" + ip + ":" + port + "/" + server;
+        String url = "jdbc:mysql://" + ip + ":" + port + "/" + server + "?useSSL=false";
         return db(password, url, user, table, server);
     }
 
@@ -75,6 +88,13 @@ public class MySql {
         return array;
     }
 
+    /**
+     * To read a line from the database.
+     *
+     * @param rs
+     * @return
+     * @throws SQLException
+     */
     private static LineDataBase newLineDataBase(ResultSet rs) throws SQLException {
         ArrayList<LineDataBaseWifi> arrayWifi = newLineDataBaseWifi(rs);
         return new LineDataBase(
@@ -88,6 +108,13 @@ public class MySql {
         );
     }
 
+    /**
+     * To fulfill the array of wifi.
+     *
+     * @param rs
+     * @return
+     * @throws SQLException
+     */
     private static ArrayList<LineDataBaseWifi> newLineDataBaseWifi(ResultSet rs) throws SQLException {
         ArrayList<LineDataBaseWifi> arrayWifi = new ArrayList<>();
         for (int i = 8; i <= 7 + 2 * rs.getInt(7); i++) {

@@ -12,11 +12,20 @@ import objects.SampleScan;
 import objects.Wifi;
 
 /**
- * Created by Samuel on 11/01/2018.
+ * This class extends @see {@link Cast}.
+ * This class cast the {@link ArrayList} of {@link LineDataBase} to an {@link ArrayList} of {@link SampleScan}.
+ *
+ * @author Orel and Samuel.
  */
-
 public class CastFromLineDataBaseToSampleScan extends Cast<LineDataBase, SampleScan> {
 
+
+    /**
+     * This method fulfill the array of scan.
+     *
+     * @param array
+     * @return array.
+     */
     @Override
     public ArrayList<SampleScan> cast(ArrayList<LineDataBase> array) {
         ArrayList<SampleScan> arraySampleScan = new ArrayList<>();
@@ -40,6 +49,12 @@ public class CastFromLineDataBaseToSampleScan extends Cast<LineDataBase, SampleS
         return arraySampleScan;
     }
 
+    /**
+     * This method should say if needs to create a {@link Wifi} object.
+     *
+     * @param line
+     * @return array wifi.
+     */
     private ArrayList<Wifi> newArrayListWifi(LineDataBase line) {
         ArrayList<Wifi> arrayWifi = new ArrayList<>();
         for (LineDataBaseWifi wifi : line.getArrayWifi())
