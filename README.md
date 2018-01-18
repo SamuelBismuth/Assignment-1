@@ -29,4 +29,4 @@ The license.
 The notice you need to read to run the project.
 The report with more explanation about the project.
 The documentation, it's a compress folder which contains the javadoc of the project.
-The GIS app code.
+The GIS app code. A guide that explain how to run and compile the application.
