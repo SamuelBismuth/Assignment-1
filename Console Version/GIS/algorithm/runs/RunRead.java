@@ -1,4 +1,4 @@
-package util.java.runs;
+package runs;
 
 import objects.SampleScan;
 import read.ReadCsv;

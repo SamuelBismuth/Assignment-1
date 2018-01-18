@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import objects.CsvFile;
 import objects.Mac;
+import objects.SampleScan;
 import objects.WigleWifiLine;
 
 /**
@@ -49,6 +50,11 @@ public class CastFromCsvFileToMac extends CastFromCsvFile<Mac> implements Cast<C
 	public boolean needToCreateObject(String mac, Object object) {
 		Mac macLocation = (Mac) object;
 		return macLocation.getMacName().equals(mac);
+	}
+
+	public ArrayList<Mac> todo(ArrayList<SampleScan> arrayScan) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

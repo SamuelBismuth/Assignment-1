@@ -39,7 +39,7 @@ public class MainKml {
 	 * @See NOTICE for more details.
 	 * @param args.
 	 */
-	@SuppressWarnings("resource")
+	@SuppressWarnings({ "resource", "unchecked" })
 	public static void main(String[] args) {
 
 		//Get workspace path
@@ -72,7 +72,7 @@ public class MainKml {
 
 		//Sort Csv (time)
 		CastFromCsvFileToSampleScan sortScan = new CastFromCsvFileToSampleScan();
-		arrayScan = sortScan.sortBy(arrayCsv);
+		arrayScan = sortScan.cast(arrayCsv);
 
 		//Write Csv
 		String fileNameCombo = User.getFileName("csv file");
@@ -97,7 +97,7 @@ public class MainKml {
 
 		//Filtering kml
 		try {
-			write = filter.filteringBy(arrayScan);
+			write = (WriteFile<SampleScan>) filter.filteringBy(arrayScan);
 		} 
 		catch (InputException e) {
 			e.printStackTrace();

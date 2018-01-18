@@ -11,24 +11,6 @@ import libraries.KmlUtil;
 public class KmlUtilTest {
 
 	/**
-	 * This method check that the longitude value is in the right range
-	 */
-	@Test
-	public void checkLongitudeTest() {
-		double lon = 361;
-		assertEquals(false, KmlUtil.checkLongitude(lon));
-	}
-	
-	/**
-	 * This method check that the latitude value is in the right range
-	 */
-	@Test
-	public void checkLatitudeTest() {
-		double lat = -91;
-		assertEquals(false, KmlUtil.checkLatitude(lat));
-	}
-	
-	/**
 	 * This method check that the data is set in by right conditions
 	 */
 	@Test
