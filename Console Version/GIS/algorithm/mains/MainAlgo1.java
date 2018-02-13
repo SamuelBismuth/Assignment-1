@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 import cast.CastFromMacToLineAlgo1;
 import cast.CastFromCsvFileToMac;
-import filter.Filtering;
-import libraries.InputException;
 import libraries.OpenFile;
 import libraries.User;
 import objects.Mac;
@@ -27,6 +25,7 @@ import write.WriteFile;
  */
 public class MainAlgo1 {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
 		//Get workspace path
@@ -56,17 +55,12 @@ public class MainAlgo1 {
 
 		//Sort combo (mac)
 		CastFromCsvFileToMac sortMac = new CastFromCsvFileToMac();
-		arrayMac = sortMac.sortBy(arrayScan);
+		arrayMac = sortMac.todo(arrayScan);
 
 		//Filtering the combo
-		Filtering<Mac> filter = new CastFromMacToLineAlgo1();		
+		CastFromMacToLineAlgo1 filter = new CastFromMacToLineAlgo1();		
 		WriteFile<Mac> write = null;
-		try {
-			write = filter.filteringBy(arrayMac);
-		} 
-		catch (InputException e) {
-			e.printStackTrace();
-		}
+		write = (WriteFile<Mac>) filter.cast(arrayMac);
 
 		//Write the Csv
 		write.receiveData(arrayMac);

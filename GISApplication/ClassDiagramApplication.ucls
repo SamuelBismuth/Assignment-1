@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="MacInformationAlgo1" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/MacInformationAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="380" x="8001" y="2431"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="WeigthAverage" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="296" width="252" x="8842" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="MacInformationAlgo2" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/MacInformationAlgo2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="380" x="8421" y="2431"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="4" language="java" name="HeaderCombo" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/read/HeaderCombo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="226" x="322" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="5" language="java" name="MySql" project="ClassDiagram" file="/ClassDiagram/src/main/java/sql/MySql.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="624" x="588" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="Wifi" project="ClassDiagram" file="/ClassDiagram/src/main/java/objects/Wifi.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="356" width="220" x="9180" y="2431"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="LineDataBaseWifi" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/LineDataBaseWifi.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="250" x="15562" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="gis.gisapplication.MacActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/MacActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="392" x="1252" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="InputException" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/InputException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="96" width="178" x="1684" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="WriteComboAlgo1" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/write/WriteComboAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="305" x="15852" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="gis.gisapplication.FilterActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/FilterActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1596" width="337" x="9456" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ReadWigleWifi" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/read/ReadWigleWifi.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="493" x="11931" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="CallableFiltering" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/CallableFiltering.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="325" x="1902" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="CallableAlgorithm2" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/CallableAlgorithm2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="338" x="2267" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="Logic" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/Logic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="170" x="12948" y="1975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="DataBaseObserver" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/DataBaseObserver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="316" width="437" x="2645" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="RunWrite" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/RunWrite.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="256" x="3122" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="RunFileModification" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/RunFileModification.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="215" x="3418" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="FilteringKmlId" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/filter/FilteringKmlId.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="448" x="10467" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="CsvFile" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/CsvFile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="336" x="9833" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="LineAlgo1" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/LineAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="416" width="561" x="3673" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="CastFromCsvFileToSampleScan" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/cast/CastFromCsvFileToSampleScan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="372" x="13931" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="gis.gisapplication.ShowFilterActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/ShowFilterActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="176" width="206" x="4274" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="WeigthAverage.Comparators" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/WeigthAverage.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="258" x="8882" y="1975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="Mac" project="ClassDiagram" file="/ClassDiagram/src/main/java/objects/Mac.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="356" width="637" x="8165" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="SampleScan" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/SampleScan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="416" width="534" x="9180" y="1975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="Algorithm1" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/Algorithm1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="540" x="4520" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="Algorithm2" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/Algorithm2.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="436" width="583" x="5100" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="DataBase" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/DataBase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="836" width="437" x="5723" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="gis.gisapplication.ExportActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/ExportActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="182" x="6200" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="Filtering" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/filter/Filtering.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="137" width="387" x="10955" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="FilteringKmlPlace" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/filter/FilteringKmlPlace.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="448" x="10955" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="KmlUtil" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/KmlUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="236" width="359" x="6422" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="Cast" project="ClassDiagram" file="/ClassDiagram/src/main/java/cast/Cast.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="197" width="426" x="14549" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="WriteKml" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/write/WriteKml.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="324" x="16197" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="ReadFolder" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/ReadFolder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="196" x="6821" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="LineDataBase" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/LineDataBase.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="356" width="615" x="15552" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="OpenFile" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/OpenFile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="145" x="7057" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="CallableCast" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/CallableCast.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="292" x="7242" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="WriteCombo" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/write/WriteCombo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="324" x="16561" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="ParseDate" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/ParseDate.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="374" x="7574" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="gis.gisapplication.ShowDatabaseActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/ShowDatabaseActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="216" width="221" x="7988" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="MacInformation" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/MacInformation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="218" width="312" x="8421" y="1975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="MacInformation.Comparators" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/MacInformation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="116" width="299" x="8841" y="2431"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="Format" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/libraries/Format.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="256" width="261" x="8249" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="ReadCsv" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/read/ReadCsv.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="177" width="250" x="12197" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="gis.gisapplication.FilterActivity.DatePickerFragment" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/FilterActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="282" x="9134" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="CastFromSampleScanToMac" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/cast/CastFromSampleScanToMac.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="349" x="14343" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="FilteringKmlTime" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/filter/FilteringKmlTime.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="448" x="11443" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="gis.gisapplication.FilterActivity.TimePickerFragment" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/FilterActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="262" x="9456" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="WigleWifiLine" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/WigleWifiLine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="596" width="669" x="9758" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="CastFromLineDataBaseToSampleScan" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/cast/CastFromLineDataBaseToSampleScan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="420" x="14732" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="Filter" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/Filter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="464" x="12948" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="CastFromMacToLineAlgo1" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/cast/CastFromMacToLineAlgo1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="330" x="15192" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="gis.gisapplication.MainActivity" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/com/gis/gisapplication/MainActivity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="996" width="371" x="8550" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="Session" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/Session.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="196" width="622" x="13200" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="ReadCombo" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/read/ReadCombo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="176" width="444" x="12464" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="58" language="java" name="ReadFile" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/read/ReadFile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="136" width="250" x="12197" y="1975"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="59" language="java" name="WriteFile" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/write/WriteFile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="179" width="270" x="16207" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" name="SampleScanSerializable" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/objects/SampleScanSerializable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="216" width="439" x="13452" y="1339"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="RunSetCoordinates" project="ClassDiagram" 
+    file="/ClassDiagram/src/main/java/runs/RunSetCoordinates.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="156" width="455" x="8961" y="-297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <nesting id="62">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="47"/>  
+  </nesting>  
+  <generalization id="63">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="43"/>  
+  </generalization>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="46"/>  
+  </generalization>  
+  <nesting id="65">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="44"/>  
+  </nesting>  
+  <association id="66">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="67" name="arrayWifi"/>      
+      <multiplicity id="68" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="70" name="arrayMacInformation"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <association id="73">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="74" name="arrayWifi"/>      
+      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="76">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <generalization id="78">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="46"/>  
+  </generalization>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <association id="80">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="81" name="arrayWigleWifiLine"/>      
+      <multiplicity id="82" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="84" name="array"/>      
+      <multiplicity id="85" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="43"/>  
+  </generalization>  
+  <association id="88">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="89" name="arraySampleScanSerializable"/>      
+      <multiplicity id="90" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="60" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <realization id="92">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="58"/>  
+  </realization>  
+  <realization id="93">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="58"/>  
+  </realization>  
+  <association id="94">    
+    <bendpoint x="8851" y="1975"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="95" name="arrayWifi"/>      
+      <multiplicity id="96" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="97">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <nesting id="98">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="50"/>  
+  </nesting>  
+  <association id="99">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="100" name="filterStack"/>      
+      <multiplicity id="101" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="102">    
+    <bendpoint x="13148" y="1975"/>    
+    <end type="SOURCE" refId="60" navigable="false">      
+      <attribute id="103" name="arrayWifi"/>      
+      <multiplicity id="104" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="105">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="59"/>  
+  </generalization>  
+  <association id="107">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="108" name="wifi"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="110">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <association id="111">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="112" name="sampleScan"/>      
+      <multiplicity id="113" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="115" name="logic"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="117">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="24"/>  
+  </nesting>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

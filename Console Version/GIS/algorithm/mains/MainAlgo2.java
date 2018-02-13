@@ -67,7 +67,7 @@ public class MainAlgo2 {
 		//Algorithm 2
 		for (SampleScan input : arrayInput) {
 			Algorithm2.mmeset(arrayData);
-			arrayTemp = Algorithm2.setArrayRelevantNumber(input, arrayData);
+			Algorithm2.setArrayRelevantNumber(input, arrayData);
 			double sum = 0;
 			for (WeigthAverage scan : arrayData) {
 				sum += scan.getRelevantNumber();

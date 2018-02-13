@@ -33,6 +33,7 @@ public class DataBase {
     private static ArrayList<WeigthAverage> arrayWeightAverage = new ArrayList<WeigthAverage>();
     private static Stack<Filter> filterStack = new Stack<Filter>();
     private static HashMap<String, ArrayList<SampleScan>> map = new HashMap<>();
+    private static HashMap<String, ArrayList<SampleScan>> mapSql = new HashMap<>();
 
     /**
      * Add a element to the map.
@@ -51,6 +52,29 @@ public class DataBase {
      */
     public static void removeMap(String path) {
         map.remove(path);
+    }
+
+    /**
+     * Add a element to the map.
+     *
+     * @param table
+     * @param arraySampleScan
+     */
+    public static void addMapSql(String table, ArrayList<SampleScan> arraySampleScan) {
+        map.put(table, arraySampleScan);
+    }
+
+    public static HashMap<String, ArrayList<SampleScan>> getMapSql() {
+        return mapSql;
+    }
+
+    /**
+     * This function remove an element from the map.
+     *
+     * @param table
+     */
+    public static void removeMapSql(String table) {
+        map.remove(table);
     }
 
     /**

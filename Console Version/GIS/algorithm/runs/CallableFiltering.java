@@ -1,4 +1,4 @@
-package util.java.runs;
+package runs;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;

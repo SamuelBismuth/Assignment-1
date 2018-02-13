@@ -3,9 +3,24 @@
 	<classpathentry kind="src" path="GIS/util"/>
 	<classpathentry kind="src" path="GIS/junit"/>
 	<classpathentry kind="src" path="GIS/algorithm"/>
+	<classpathentry kind="src" path="Console Version/GIS/algorithm/mains"/>
+	<classpathentry kind="src" path="Console Version/GIS/algorithm/runs"/>
+	<classpathentry excluding="mains/|runs/" kind="src" path="Console Version/GIS/algorithm"/>
+	<classpathentry kind="src" path="Console Version/GIS/junit/testAlgorithm"/>
+	<classpathentry kind="src" path="Console Version/GIS/junit/testFiltering"/>
+	<classpathentry kind="src" path="Console Version/GIS/junit/testLibraries"/>
+	<classpathentry kind="src" path="Console Version/GIS/junit/testRead"/>
+	<classpathentry kind="src" path="Console Version/GIS/junit/testWrite"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/cast"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/filter"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/libraries"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/objects"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/read"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/userChoice"/>
+	<classpathentry kind="src" path="Console Version/GIS/util/write"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/commons-csv-1.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Samuel/Downloads/kml.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Samuel/Desktop/אוניברסיטה/תשעח/מונחה עצמים/Assignment 1/API/org.boehn.kmlframework_20090718.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
